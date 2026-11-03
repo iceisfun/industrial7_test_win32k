@@ -253,7 +253,8 @@ TEST(clipboard_dde_listener_foreign_process_window_denied) {
     DWORD e = GetLastError();
     CHECK(r == 0 || r == 5);
     if (r) U(RemoveClipboardFormatListener)(sh);
-    else EQ(e, CD_ERR_ACCESS_DENIED);
+    /* one check on either outcome, so the check count does not depend on the token's mode */
+    CHECKF(r != 0 || e == CD_ERR_ACCESS_DENIED, "refused with error %lu, want %lu", e, (unsigned long)CD_ERR_ACCESS_DENIED);
     t_note("AddClipboardFormatListener(foreign window) -> %d err %lu", r, e);
 }
 
