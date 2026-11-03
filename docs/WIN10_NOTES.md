@@ -231,3 +231,7 @@ The frame rate that GetCursorFrameInfo reports for an animated stock cursor (for
 ## r2_teb_peb_field_matrix: ClientInfo spin counter
 
 The ClientInfo cSpins counter of the main GUI thread counts message-loop spins and differs between fresh guests (seen as 20 and 21). The compat-flags report test now prints it through t_info only; the compat flags themselves stay in the note line, and the check that cSpins is zero before the thread becomes a GUI thread is unchanged.
+
+## r2_ntusercall_codes_matrix: cursor position
+
+NtUserCallTwoParam(0x7f) modes 1 and 2 return the current cursor position, which belongs to the interactive user and differs from guest to guest. The position is therefore reported with t_info only (it stays out of the deterministic output); the checks on it (agreement with the public call, inside the virtual screen) are unchanged.

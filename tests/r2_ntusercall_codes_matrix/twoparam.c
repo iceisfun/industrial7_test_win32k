@@ -52,7 +52,7 @@ T(twoparam_0x7f_mode2_matches_mode1_for_thread_dpi_context) {
         apoint c; TP(&c.p, 1, 0x7f);
         if (a.p.x == c.p.x && a.p.y == c.p.y) {
             /* both modes derive the position through the thread's DPI awareness context */
-            t_note("mode1 (%ld,%ld) mode2 (%ld,%ld)", a.p.x, a.p.y, b.p.x, b.p.y);
+            t_info("mode1 (%ld,%ld) mode2 (%ld,%ld)", a.p.x, a.p.y, b.p.x, b.p.y);
             return;
         }
         Sleep(10);
