@@ -5,15 +5,15 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 
 ## Size
 
-- Areas: 103 (85 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
-- Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16131
+- Areas: 104 (86 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
+- Tests (`TEST()` registrations plus generated ones, counted from the built exes for the earlier 85 areas; the pass 3 additions are counted statically, 16568 with the `dx_` areas, to be re-measured with `--list`): 16131
 
 ## Tests by category (area name prefix)
 
 | Prefix | Areas | Tests | What |
 |---|---|---|---|
 | x_ | 14 | 3249 | extended negative and matrix areas |
-| gdi_ | 12 | 2954 | GDI objects and drawing |
+| gdi_ | 13 | 2954 | GDI objects and drawing |
 | r2_ | 12 | 1766 | second-round matrices (internals, tables, quotas, display) |
 | gap_ | 12 | 1434 | gap-fill areas for syscall families |
 | user_ | 3 | 980 | USER handle table, shared info, desktop heap |
@@ -64,6 +64,8 @@ Pass = tests - failed - skipped. Skips are conditional and carry a reason (`docs
 |---|---|---|---|---|---|---|
 | adm (elevated Administrator token) | 85 | 16131 | 16082 | 0 | 49 | 374875 |
 | std (unprivileged token) | 85 | 16131 | 16020 | 0 | 111 | 374395 |
+
+Areas without a Windows 10 result: gdi_init_order
 
 ## Determinism
 

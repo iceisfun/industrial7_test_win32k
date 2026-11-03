@@ -6,8 +6,8 @@ into per-area and per-test results. The tooling described here was verified end 
 
 ## Where things stand
 
-- 103 areas, 16511 tests (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
-- The 85 other areas (16131 tests) were run on Windows 10 22H2 in both modes:
+- 104 areas, 16568 tests (`results/STATS.md`; the pass 3 additions were counted statically and are to be re-measured with `--list`). The 18 `dx_` areas change system state and are only run on purpose.
+- The 85 other areas of the earlier run (16131 tests) were run on Windows 10 22H2 in both modes; the pass 3 additions and the changed areas are pending a new run, and these numbers will be updated after it. `--mode user` (a real standard account) is also available:
 
   | Mode | Areas | Tests | Pass | Fail | Skip |
   |---|---|---|---|---|---|
