@@ -745,8 +745,11 @@ TEST(win_position_zorder_swp_topmost_window_destroyed_leaves_chain_consistent) {
     UN(NtUserSetWindowPos)(a, HWND_TOPMOST, 0, 0, 0, 0, ZO_SWP_ZONLY);
     U(DestroyWindow)(a);
     CHECK(!U(IsWindow)(a));
-    HWND cur = U(GetTopWindow)(NULL); int n = 0, seen_b = 0;
-    while (cur && n++ < 5000) { if (cur == b) seen_b = 1; CHECK(cur != a); cur = U(GetWindow)(cur, GW_HWNDNEXT); }
+    /* the chain length is the number of top-level windows on the desktop, which other processes change: one aggregate check,
+     * so that the number of checks does not depend on it */
+    HWND cur = U(GetTopWindow)(NULL); int n = 0, seen_b = 0, seen_a = 0;
+    while (cur && n++ < 5000) { if (cur == b) seen_b = 1; if (cur == a) seen_a = 1; cur = U(GetWindow)(cur, GW_HWNDNEXT); }
+    CHECK(!seen_a);
     CHECK(seen_b);
     zo_reset();
 }
