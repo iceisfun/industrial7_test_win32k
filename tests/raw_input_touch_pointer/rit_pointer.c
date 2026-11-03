@@ -646,6 +646,13 @@ static LRESULT CALLBACK rit_pt_proc(HWND w, UINT m, WPARAM wp, LPARAM lp) {
     if (m == WM_POINTERUP && seen) seen[2]++;
     return U(DefWindowProcW)(w, m, wp, lp);
 }
+/* Pump until a counter reaches `want` (or `ms` pass): an injected contact is delivered asynchronously, and the next stage must
+ * not be injected before the previous one arrived, otherwise a slow guest stretches the gap and the contact is not the same one. */
+static void rit_pump_until(const int *cnt, int want, unsigned ms) {
+    DWORD t0 = GetTickCount();
+    while (*cnt < want && GetTickCount() - t0 < ms) k_pump(20);
+    k_pump(20);
+}
 RT(ptr_synthetic_touch_injection_reaches_window) {
     REQUIRE(U(CreateSyntheticPointerDevice) && U(InjectSyntheticPointerInput) && U(RegisterClassW) && U(CreateWindowExW));
     SYNTH_AUTO(sy);
@@ -669,19 +676,21 @@ RT(ptr_synthetic_touch_injection_reaches_window) {
     SET_ERR(0);
     BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
     DWORD e1 = GetLastError();
-    k_pump(300);
+    rit_pump_until(&seen[0], 1, 3000);
     t->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
     t->pointerInfo.ptPixelLocation.x = 410; t->rcContact.left = 405; t->rcContact.right = 415;
     SET_ERR(0);
     BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    DWORD e2 = GetLastError();
     k_pump(300);
     t->pointerInfo.pointerFlags = POINTER_FLAG_UP;
     SET_ERR(0);
     BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    DWORD e3 = GetLastError();
     k_pump(300);
     CHECKF(r1, "inject down gle=%lu", e1);
-    CHECK(r2);
-    CHECK(r3);
+    CHECKF(r2, "inject update gle=%lu", e2);
+    CHECKF(r3, "inject up gle=%lu", e3);
     /* observed on Windows 10 22H2: one WM_POINTERDOWN, at least one WM_POINTERUPDATE, one WM_POINTERUP reach the window under the contact */
     CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d", seen[0]);
     CHECKF(seen[1] > 0, "WM_POINTERUPDATE x%d", seen[1]);
@@ -710,14 +719,15 @@ RT(ptr_synthetic_pen_injection_reaches_window) {
     SET_ERR(0);
     BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
     DWORD e1 = GetLastError();
-    k_pump(300);
+    rit_pump_until(&seen[0], 1, 3000);
     p->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
     p->pointerInfo.ptPixelLocation.x = 410;
     BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    k_pump(300);
+    rit_pump_until(&seen[1], 1, 3000);
     p->pointerInfo.pointerFlags = POINTER_FLAG_UP;
     BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    k_pump(300);
+    rit_pump_until(&seen[2], 1, 3000);
+    k_pump(200);    /* settle: a stray extra message would show up in the counts */
     CHECKF(r1, "inject down gle=%lu", e1);
     CHECK(r2);
     CHECK(r3);

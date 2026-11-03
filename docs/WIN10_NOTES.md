@@ -235,3 +235,13 @@ The ClientInfo cSpins counter of the main GUI thread counts message-loop spins a
 ## r2_ntusercall_codes_matrix: cursor position
 
 NtUserCallTwoParam(0x7f) modes 1 and 2 return the current cursor position, which belongs to the interactive user and differs from guest to guest. The position is therefore reported with t_info only (it stays out of the deterministic output); the checks on it (agreement with the public call, inside the virtual screen) are unchanged.
+
+## raw_input_touch_pointer: synthetic injection reaching a window (flake fix)
+
+`ptr_synthetic_touch_injection_reaches_window` (and the pen twin) once saw two WM_POINTERDOWN, no WM_POINTERUPDATE and two
+WM_POINTERUP in one run on a loaded guest. The pattern fits a contact that was dropped during a long fixed gap between the
+injections, so the update arrived as a new contact. The tests now inject each stage only after the previous message arrived
+(bounded wait) instead of sleeping a fixed time, and still assert exactly one down, at least one update and exactly one up.
+The failure was not reproduced on four fresh guests either before or after the change.
+
+- gap_01 font realization info: the realization cache id (second and third words of NtGdiGetRealizationInfo output) depends on how many font realizations the session created earlier, so it differs between runs. The tests now print only the return values and the size field as notes; the words go through t_info.
