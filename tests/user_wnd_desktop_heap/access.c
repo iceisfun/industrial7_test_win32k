@@ -26,7 +26,7 @@ TEST(user_wnd_desktop_heap_entry_index_below_count) {
     /* every user32 validator starts with (hwnd & 0xffff) < *(ULONG64*)(shared server info + 8) */
     CHECKF((uint64_t)((ULONG_PTR)h & 0xffff) < w.e.count, "index %lu count %llu", (unsigned long)((ULONG_PTR)h & 0xffff), (unsigned long long)w.e.count);
     CHECK(w.e.count > 0 && w.e.count <= 0x10000);
-    t_note("cHandleEntries=%llu HeEntrySize=0x%lx", (unsigned long long)w.e.count, w.e.esize);
+    t_info("cHandleEntries=%llu HeEntrySize=0x%lx", (unsigned long long)w.e.count, w.e.esize);
     END();
 }
 TEST(user_wnd_desktop_heap_entry_size_covers_fields) {
