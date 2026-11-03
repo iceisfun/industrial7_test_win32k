@@ -160,6 +160,11 @@ the same area. They are reported as skipped, not passed.
   area asserts relations (same table and callback table on every thread, object count is process wide) and never prints
   addresses or handles. If the fixture executable is not next to the test (a bare build without the tools folder) the
   tests skip with "fixture executable not available next to the test"; in a packed payload they always run.
+- Mitigation policy attribute (`win32k_mitigation`, tests `attrsize_*`): the accepted payload sizes (4, 8, 16 bytes; any other size fails with
+  ERROR_BAD_LENGTH) and the second-word flags used (downgrade of the dynamic code policy, indirect branch prediction restriction,
+  speculative store bypass disable) are the behaviour of build 19045. The second-word flags are read back through the process
+  mitigation policy API, which on 22H2 reports them regardless of CPU support; no skip was added, a later build that reads them
+  differently would need these expectations revisited. Undefined second-word flags are rejected with ERROR_INVALID_PARAMETER on this build.
 - `dx_` areas are guarded, change system state and have not been run on Windows 10, so they have no Windows 10 skips or
   reasons recorded yet.
 
