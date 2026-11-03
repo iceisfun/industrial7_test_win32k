@@ -341,16 +341,22 @@ TEST(win32k_modules_sysinfo_kuser_suite_mask_note) {
 }
 
 TEST(win32k_modules_sysinfo_kuser_shared_data_flags_note) {
+    /* Bit 0 (DbgErrorPortPresent) depends on boot timing and differs between fresh guests; print only the stable
+     * bits, the full value goes through t_info. */
     unsigned long f = 0; REQUIRE(ms_ku_u32(0x2F0, &f));
-    t_note("SharedDataFlags=0x%lx: ErrorPort=%lu Elevation=%lu Virt=%lu Installer=%lu LKG=%lu DynProc=%lu ConsoleBroker=%lu SecureBoot=%lu MultiSession=%lu MultiUsers=%lu StateSep=%lu",
-           f, f & 1, (f >> 1) & 1, (f >> 2) & 1, (f >> 3) & 1, (f >> 4) & 1, (f >> 5) & 1, (f >> 6) & 1, (f >> 7) & 1, (f >> 8) & 1, (f >> 9) & 1, (f >> 10) & 1);
+    t_info("SharedDataFlags=0x%lx", f);
+    t_note("SharedDataFlags(stable bits)=0x%lx: Elevation=%lu Virt=%lu Installer=%lu LKG=%lu DynProc=%lu ConsoleBroker=%lu SecureBoot=%lu MultiSession=%lu MultiUsers=%lu StateSep=%lu",
+           f & ~1ul, (f >> 1) & 1, (f >> 2) & 1, (f >> 3) & 1, (f >> 4) & 1, (f >> 5) & 1, (f >> 6) & 1, (f >> 7) & 1, (f >> 8) & 1, (f >> 9) & 1, (f >> 10) & 1);
 }
 
 TEST(win32k_modules_sysinfo_kuser_error_port_flag_matches_system_information) {
-    /* SystemErrorPortTimeouts-like probing is not exposed; instead DbgErrorPortPresent mirrors the kernel's
-     * DbgkErrorPort being registered, which csrss does at boot - on an interactive system it is set. */
+    /* DbgErrorPortPresent (bit 0) is set once the error port is registered during boot; whether that has happened
+     * when the test runs varies between fresh guests, so only the value is reported (t_info) and the bit is
+     * not asserted; the remaining bits are checked to be stable between two reads. */
     unsigned long f = 0; REQUIRE(ms_ku_u32(0x2F0, &f));
-    t_note("DbgErrorPortPresent=%lu", f & 1);
+    t_info("DbgErrorPortPresent=%lu", f & 1);
+    unsigned long g = 0; REQUIRE(ms_ku_u32(0x2F0, &g));
+    CHECK((g & ~1ul) == (f & ~1ul));   /* the other flag bits do not change between reads */
 }
 
 TEST(win32k_modules_sysinfo_kuser_xstate_enabled_features_note) {
