@@ -56,7 +56,12 @@ TEST(kbd_layouts_state_list_fill_matches_count) {
 TEST(kbd_layouts_state_list_small_buffer_truncates) {
     KLS_NEED();
     int base = UN(NtUserGetKeyboardLayoutList)(0, NULL);
-    if (base < 2) { t_skip("only %d layout", base); return; }
+    if (base < 2) {
+        /* one installed layout: load a second one for the duration of the test (kls_cleanup unloads it again) */
+        HKL o = kls_other(kls_cur());
+        base = UN(NtUserGetKeyboardLayoutList)(0, NULL);
+        if (!o || base < 2) { kls_cleanup(); t_skip("only %d layout and no second one is loadable", base); return; }
+    }
     HKL all[KLS_MAXL]; UN(NtUserGetKeyboardLayoutList)(KLS_MAXL, all);
     HKL b[3]; b[0] = b[1] = b[2] = (HKL)(ULONG_PTR)0x1111222233334444ull;
     int n = UN(NtUserGetKeyboardLayoutList)(1, b);
@@ -65,6 +70,22 @@ TEST(kbd_layouts_state_list_small_buffer_truncates) {
     CHECK(b[0] == all[0]);
     CHECK(b[1] == (HKL)(ULONG_PTR)0x1111222233334444ull);
     CHECK(b[2] == (HKL)(ULONG_PTR)0x1111222233334444ull);
+    kls_cleanup();
+}
+
+TEST(kbd_layouts_state_load_then_unload_restores_the_list) {
+    KLS_NEED(); REQUIRE(U(UnloadKeyboardLayout));
+    if (t_is_wine()) { t_skip("layout unloading is win32k specific"); return; }
+    HKL b0[KLS_MAXL]; int n0 = kls_list(b0, KLS_MAXL);
+    HKL o = kls_other(kls_cur());
+    if (!o) { kls_cleanup(); t_skip("no second layout is loadable"); return; }
+    int n1 = UN(NtUserGetKeyboardLayoutList)(0, NULL);
+    kls_cleanup();
+    int n2 = UN(NtUserGetKeyboardLayoutList)(0, NULL);
+    HKL b2[KLS_MAXL]; int m2 = kls_list(b2, KLS_MAXL);
+    CHECKF(n1 >= n0, "after load %d before %d", n1, n0);
+    CHECKF(n2 == n0, "after unload %d before %d", n2, n0);
+    for (int i = 0; i < n0 && i < m2; i++) CHECK(b0[i] == b2[i]);       /* the original layouts keep their order */
 }
 
 TEST(kbd_layouts_state_list_large_buffer_leaves_tail) {

@@ -2,6 +2,7 @@
  * win32kfull/win32kbase, plus count/size negotiation protocols. A VM usually has no touch or pen digitizer, so
  * checks that depend on the number of devices are conditional on the reported count. */
 #include "g7.h"
+#include "synth.h"
 
 #define DEVINFO_SIZE 0x438   /* stride used by NtUserGetPointerDevices */
 static HANDLE bogus_dev(void) { return (HANDLE)(ULONG_PTR)0x7ffe1234; }
@@ -45,7 +46,7 @@ TEST(gap7_ptrdevs_zero_capacity_with_buffer) {
 TEST(gap7_ptrdevs_capacity_too_small_reports_required) {
     NtUserGetPointerDevices_pfn f = G7N(NtUserGetPointerDevices); REQUIRE(f);
     UINT n = 0; f(&n, NULL);
-    if (n == 0) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_AUTO(sy2); SYNTH_ENSURE2_OR_SKIP(sy, sy2, n);
     UINT cap = n - 1;
     char *buf = (char *)calloc(n + 1, DEVINFO_SIZE);
     SetLastError(0);
@@ -58,7 +59,7 @@ TEST(gap7_ptrdevs_full_read_matches_per_device_query) {
     NtUserGetPointerDevices_pfn f = G7N(NtUserGetPointerDevices);
     NtUserGetPointerDevice_pfn g = G7N(NtUserGetPointerDevice); REQUIRE(f && g);
     UINT n = 0; f(&n, NULL);
-    if (n == 0) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_ENSURE_OR_SKIP(sy, n);
     char *buf = (char *)calloc(n, DEVINFO_SIZE);
     UINT cap = n;
     EXPECT_EQ(f(&cap, buf), TRUE);
@@ -160,7 +161,7 @@ TEST(gap7_ptrdev_real_devices_cursors_and_rects) {
     NtUserGetPointerDeviceCursors_pfn fc = G7N(NtUserGetPointerDeviceCursors);
     NtUserGetPointerDeviceRects_pfn fr = G7N(NtUserGetPointerDeviceRects); REQUIRE(fd && fc && fr);
     UINT n = 0; fd(&n, NULL);
-    if (n == 0) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_ENSURE_OR_SKIP(sy, n);
     char *buf = (char *)calloc(n, DEVINFO_SIZE);
     UINT cap = n;
     if (!fd(&cap, buf)) { free(buf); return; }
