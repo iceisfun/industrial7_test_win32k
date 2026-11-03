@@ -2,8 +2,13 @@
 
 > ## STATUS: verified on genuine Windows 10 22H2
 >
-> 103 areas and 16511 tests. The 85 non-`dx_` areas (16131 tests) pass on a genuine Windows 10 22H2 x64 guest
+> 104 areas. The 85 non-`dx_` areas of the earlier run (16131 tests) pass on a genuine Windows 10 22H2 x64 guest
 > (build 19045, interactive session) in both modes, with 0 failed tests:
+>
+> Areas and test totals include the pass 3 additions (104 areas, 16568 tests; the added tests were counted statically, to be
+> re-measured with `--list`). The Windows 10 numbers below are from the earlier run of the 85 areas and 16131 tests; the pass 3
+> additions and changed areas are pending a new Windows 10 run, and the figures will be updated after it. `--mode user` (a real
+> standard account) is available besides adm and std.
 >
 > | Mode | Pass | Fail | Skip |
 > |---|---|---|---|
@@ -132,6 +137,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | gdi_blit_raster | BitBlt/StretchBlt/raster ops results | safe (non-destructive) | 258 | 0 | 0 |
 | gdi_d3dkmt_dd | D3DKMT thunks, DirectDraw/DxEng syscalls | safe (non-destructive) | 215 | 0 | 0 |
 | gdi_dc_objects | DC creation/selection/save/restore, object types | safe (non-destructive) | 169 | 0 | 0 |
+| gdi_init_order | process GDI/USER initialisation state before and after the first win32k service (fixture exe, relations only) | safe (non-destructive) | 5 | - | - |
 | gdi_dcattr_batching | DC_ATTR pages, GDI TEB batch, flushing | safe (non-destructive) | 143 | 0 | 0 |
 | gdi_font_enum_resources | font enumeration and private font resources | safe (non-destructive) | 187 | 0 | 0 |
 | gdi_font_metrics_text | font creation, text metrics, glyph/text syscalls | safe (non-destructive) | 230 | 1 | 1 |
