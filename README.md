@@ -139,7 +139,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | gdi_metafile_print_neg | metafile/printing syscall negatives | safe (non-destructive) | 204 | 3 | 3 |
 | gdi_paths_xform_draw | paths, transforms, drawing results | safe (non-destructive) | 321 | 0 | 0 |
 | gdi_pens_brushes_palettes | pens, brushes, palettes, BRUSHATTR | safe (non-destructive) | 182 | 0 | 0 |
-| gdi_regions_clip | regions and clipping | safe (non-destructive) | 136 | 0 | 0 |
+| gdi_regions_clip | regions and clipping | safe (non-destructive) | 141 | 0 | 0 |
 | gui_thread_conversion | first-GUI-call thread conversion, TEB/PEB win32 fields (child processes) | safe (non-destructive); child processes | 123 | 0 | 0 |
 | hooks_winevents | SetWindowsHookEx / WinEvent hooks and callbacks | safe (non-destructive) | 96 | 0 | 0 |
 | ime_hotkeys_misc | IME, hotkeys, assorted NtUser queries | safe (non-destructive) | 333 | 0 | 0 |
