@@ -249,3 +249,7 @@ The failure was not reproduced on four fresh guests either before or after the c
 
 ## user_handle_table: SERVERINFO.dwSRVIFlags
 Only bits 1..3 (DBCS, IME, MidEast) of SERVERINFO.dwSRVIFlags are stable across fresh Windows 10 guests; a higher bit (0x100) was seen to differ between boots. The test now prints only `flags & 0xe` as a note and reports the full value through t_info.
+
+## gap_05 realization cache id
+
+The cache id reported by GetFontRealizationInfo for Arial is a per-boot, per-process counter (observed 44, 309, 658 across runs), so it is no longer part of the printed NOTE. The cache id and instance id go through t_info; the stable fields (kind, file count, face index, simulations) remain in the NOTE.

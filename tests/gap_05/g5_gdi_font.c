@@ -343,7 +343,8 @@ TEST(gap5_fontfile_realization_fields) {
     CHECK(ri.size == 0x18);
     CHECK(ri.files >= 1 && ri.files < 64);
     CHECK(ri.instance != 0);
-    t_note("Arial realization: kind=%u/%u cache=%lu instance=%lu files=%lu face=%u sim=%u", ri.kind, ri.kind2, (unsigned long)ri.cache, (unsigned long)ri.instance, (unsigned long)ri.files, ri.face, ri.sim);
+    t_note("Arial realization: kind=%u/%u files=%lu face=%u sim=%u", ri.kind, ri.kind2, (unsigned long)ri.files, ri.face, ri.sim);
+    t_info("Arial realization cache=%lu instance=%lu", (unsigned long)ri.cache, (unsigned long)ri.instance);
     g5_fdc_close(&d);
 }
 TEST(gap5_fontfile_info_size_protocol) {
