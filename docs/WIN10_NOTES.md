@@ -296,3 +296,10 @@ the count is reported through t_info instead of t_note.
 The shared-info WinEvent hook mask also carries categories hooked by unrelated system processes, so its raw value
 differs between boots (for example one extra category bit). The test now prints before/during/after only through
 t_info; the relational checks (mask nonzero while hooked, existing bits preserved, IsWinEventHookInstalled true) are unchanged.
+
+## raw_input_touch_pointer: synthetic injection timing
+
+`ptr_synthetic_touch_injection_reaches_window` (and the pen twin) injects the down, update and up frames of one contact. Observed on Windows 10 22H2: if the
+frames are injected with message pumping in between, the system occasionally (a few percent of runs) drops the contact before the update arrives and
+reports a second, separate down/up pair (down x2, update x0, up x2). Injected back to back, 100 of 100 repetitions delivered one down, an update and one up. The
+tests now inject the three frames without pumping in between and then wait for the up before counting. The expectations are unchanged.
