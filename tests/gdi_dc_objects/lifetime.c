@@ -74,7 +74,7 @@ TEST(gdi_dc_objects_handle_reuse_never_revives_old_handle) {
         U(DeleteDC)(d);
         prev = d;
     }
-    t_note("slot reused %d times in 64 create/delete rounds", same_index);
+    t_info("slot reused %d times in 64 create/delete rounds", same_index);
 }
 
 TEST(gdi_dc_objects_attr_defaults_of_new_dc) {
