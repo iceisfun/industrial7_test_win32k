@@ -510,6 +510,12 @@ TEST(msc_cross_hung_receiver_abortifhung_waits_for_timeout) {
     LRESULT r = SendMessageTimeoutW(wk.w, MSC_ECHO, 1, 2, SMTO_ABORTIFHUNG, 150, &res);
     double ms = msc_ms_since(t1);
     DWORD err = GetLastError();
+    if (r != 0 && (wk.pumping || msc_ms_since(t0) >= 6200.0)) {
+        /* the caller was stalled past the receiver's 6.5 s silence: the receiver pumps again, nothing is measured */
+        t_skip("caller stalled until the receiver resumed pumping");
+        msc_worker_stop(&wk);
+        return;
+    }
     /* Windows 10 reports the receiver as hung, yet SMTO_ABORTIFHUNG does not cut the wait short (same for a receiver in a
      * busy loop and for one in another process): the call waits out its timeout and fails with ERROR_TIMEOUT. */
     EQ(r, 0);
