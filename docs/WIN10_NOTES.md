@@ -303,3 +303,5 @@ t_info; the relational checks (mask nonzero while hooked, existing bits preserve
 frames are injected with message pumping in between, the system occasionally (a few percent of runs) drops the contact before the update arrives and
 reports a second, separate down/up pair (down x2, update x0, up x2). Injected back to back, 100 of 100 repetitions delivered one down, an update and one up. The
 tests now inject the three frames without pumping in between and then wait for the up before counting. The expectations are unchanged.
+
+- gui_thread_conversion: the shared-info note (table pointers and the handle-entry count) varies with the session's handle table size, so it is now diagnostic-only (t_info); the 0 < count <= 0x10000 range check is unchanged. Three fresh guests, all three token modes: identical output, no failures.

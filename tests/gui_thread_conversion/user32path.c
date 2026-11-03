@@ -91,7 +91,7 @@ SCEN(user32_load_shared_info_published) {
         GC(cHandleEntries > 0);
         GC(cHandleEntries <= 0x10000);
     } else GC(0);
-    t_note("psi=%p aheList=%p heEntrySize=%lu cHandleEntries=%llu", si.psi, si.aheList, si.heEntrySize, cHandleEntries);
+    t_info("psi=%p aheList=%p heEntrySize=%lu cHandleEntries=%llu", si.psi, si.aheList, si.heEntrySize, cHandleEntries);
 }
 
 SCEN(user32_load_converts_loading_thread) {
