@@ -236,7 +236,9 @@ TEST(sc_stub_layout_thunk_sweep_user32_gdi32) {
             if (!slot || !k_try_read_ptr(slot, &tgt)) continue;
             thunks++;
             const unsigned char *w32u = (const unsigned char *)GetModuleHandleA("win32u.dll");
-            if ((const unsigned char *)tgt < w32u || (const unsigned char *)tgt >= w32u + 0x40000) continue;
+            /* "inside win32u" is decided by the mapped image's own SizeOfImage: a fixed window above the base would also
+             * cover a neighbouring module whenever the loader happens to place one right behind win32u. */
+            if ((const unsigned char *)tgt < w32u || (const unsigned char *)tgt >= w32u + (have_w ? wpe.size_of_image : 0x40000)) continue;
             to_win32u++;
             int hit = 0;
             for (unsigned k = 0; k < SC_COUNT && !hit; k++) hit = (stubs[k] == tgt);
@@ -252,6 +254,37 @@ TEST(sc_stub_layout_thunk_sweep_user32_gdi32) {
         }
         t_info("%s: %d import-thunk exports, %d into win32u", mods[m], thunks, to_win32u);
     }
+}
+
+TEST(sc_stub_layout_thunk_sweep_owner_module_agrees_with_image_range) {
+    /* the sweep decides "this thunk lands in win32u" by the image range; the loader's own answer (the module that owns the
+     * target address) must agree for every import thunk of the three modules, whatever the module placement of this run. */
+    if (sc_skip_wine("thunk sweep owner")) return;
+    static const char *const mods[] = { "user32.dll", "gdi32.dll", "gdi32full.dll" };
+    struct sc_pe wpe; if (!sc_pe_open("win32u.dll", &wpe)) { t_skip("win32u headers unreadable"); return; }
+    const unsigned char *w32u = (const unsigned char *)GetModuleHandleA("win32u.dll");
+    int wrong = 0, total = 0, first_m = -1;
+    for (unsigned m = 0; m < 3; m++) {
+        struct sc_pe pe;
+        if (!sc_pe_open(mods[m], &pe)) continue;
+        for (DWORD i = 0; i < pe.ed->NumberOfNames; i++) {
+            DWORD rva = pe.funcs[pe.ords[i]];
+            if (rva >= pe.ed_rva && rva < pe.ed_rva + pe.ed_size) continue;
+            const IMAGE_SECTION_HEADER *s = sc_pe_section(&pe, rva);
+            if (!s || !(s->Characteristics & IMAGE_SCN_MEM_EXECUTE)) continue;
+            const unsigned char *slot = thunk_slot(pe.base + rva, NULL);
+            void *tgt;
+            if (!slot || !k_try_read_ptr(slot, &tgt) || !tgt) continue;
+            HMODULE owner = NULL;
+            if (!GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCSTR)tgt, &owner)) owner = NULL;
+            int in_range = (const unsigned char *)tgt >= w32u && (const unsigned char *)tgt < w32u + wpe.size_of_image;
+            total++;
+            if (in_range != ((const unsigned char *)owner == w32u)) { wrong++; if (first_m < 0) first_m = (int)m; }
+        }
+    }
+    CHECKF(wrong == 0, "%d of %d thunk targets are classified differently by image range and by owner module (first in module %d)", wrong, total, first_m);
+    CHECK(total > 100);
+    t_info("%d thunk targets compared", total);
 }
 
 /* ---- ntdll contrast: a different service table --------------------------- */

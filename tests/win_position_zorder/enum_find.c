@@ -66,7 +66,9 @@ TEST(win_position_zorder_enum_bhl_buffer_protocol) {
     CHECK(st >= 0);
     EXPECT_EQ(need2, need);
     EXPECT_EQ((ULONG_PTR)buf[need - 1], 1);             /* terminator qword */
-    for (UINT i = 0; i + 1 < need; i++) CHECK(buf[i] != NULL && buf[i] != (HWND)1);
+    { UINT badent = 0;   /* one check for all entries: need is the desktop's window count, which varies */
+      for (UINT i = 0; i + 1 < need; i++) if (buf[i] == NULL || buf[i] == (HWND)1) badent++;
+      CHECKF(!badent, "%u list entries are null or the terminator value", badent); }
     for (int i = 0; i < 3; i++) CHECK(zo_idx(buf, need - 1, w[i]) >= 0);
     /* one slot short */
     UINT need3 = 0;
@@ -158,7 +160,9 @@ TEST(win_position_zorder_enum_bhl_hwndnext_starts_at_that_window) {
         int nc = 0, lu = 0, cu = 0, same = 1;
         for (HWND cur = w[1]; cur && nc < MAXL; cur = U(GetWindow)(cur, GW_HWNDNEXT)) ch[nc++] = cur;
         CHECKF(nc == n, "chain length %d list length %d", nc, n);
-        for (int i = 0; i < n; i++) CHECKF(zo_idx(ch, nc, l[i]) >= 0, "list entry %d (%p) is not in the sibling chain", i, (void *)l[i]);
+        { int missing = 0, first = -1;   /* one check for the whole list: its length is the desktop's window count, which varies */
+          for (int i = 0; i < n; i++) if (zo_idx(ch, nc, l[i]) < 0) { if (first < 0) first = i; missing++; }
+          CHECKF(!missing, "%d list entries (first %d) are not in the sibling chain", missing, first); }
         HWND *ul = (HWND *)calloc(MAXL, sizeof(HWND)), *uc = (HWND *)calloc(MAXL, sizeof(HWND));
         for (int i = 0; i < n; i++) if (!U(GetWindow)(l[i], GW_OWNER)) ul[lu++] = l[i];
         for (int i = 0; i < nc; i++) if (!U(GetWindow)(ch[i], GW_OWNER)) uc[cu++] = ch[i];
