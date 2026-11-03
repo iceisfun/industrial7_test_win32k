@@ -278,3 +278,9 @@ The DDE monitor flags value and the raw clipboard sequence counters (before and 
 ## gdi_handle_table: cross-thread delete
 
 `gdi_handle_table_reuse_cross_thread_use_and_delete` used to require the deleted object's cell to be free. The cell table is system wide, so another process can already have taken the slot (which bumps the reuse byte); the check was flaky. It now asserts that the handle no longer names a live object: either the cell is free or its generation differs from the handle's. `GetObjectType` on the deleted brush handle is not asserted: on Windows 10 it still reports a brush for it.
+
+## win32k_modules_sysinfo: SharedDataFlags bit 0
+
+Bit 0 of the shared-data flags (DbgErrorPortPresent) depends on boot timing and differs between fresh guests (0x10e vs
+0x10f). The note prints only the stable bits (0x10e on 22H2); the full value and bit 0 go through t_info. The error-port
+test no longer prints bit 0 and instead checks that the remaining bits are identical across two reads.
