@@ -284,3 +284,9 @@ The DDE monitor flags value and the raw clipboard sequence counters (before and 
 Bit 0 of the shared-data flags (DbgErrorPortPresent) depends on boot timing and differs between fresh guests (0x10e vs
 0x10f). The note prints only the stable bits (0x10e on 22H2); the full value and bit 0 go through t_info. The error-port
 test no longer prints bit 0 and instead checks that the remaining bits are identical across two reads.
+
+### gdi_dc_objects: slot-reuse count
+The number of times a freshly created and deleted memory DC lands in the same handle-table slot as its predecessor
+(handle_reuse_never_revives_old_handle) depends on what else allocates GDI objects in the session, so it differs
+between guests (63 versus 43 seen). The assertions (old handle is dead, reissued handle differs) are unchanged; only
+the count is reported through t_info instead of t_note.
