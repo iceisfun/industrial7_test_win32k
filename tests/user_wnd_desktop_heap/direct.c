@@ -195,7 +195,10 @@ TEST(user_wnd_desktop_heap_querywindow_hung_is_zero_for_responsive_own_window) {
     HWND h = mk_plain();
     if (!h) { t_skip("window creation failed"); return; }
     REQUIRE(UN(NtUserQueryWindow));
-    /* the calling thread is running, so IsHungWindow on its own window is false; IsHungAppWindow agrees */
+    /* the calling thread is running, so IsHungWindow on its own window is false; IsHungAppWindow agrees.
+     * A thread counts as hung when it has not read its queue for several seconds, and the earlier tests of the
+     * area can keep it busy that long on a slow run: read the queue first so the check does not depend on that. */
+    k_pump(5);
     EXPECT_EQ(UN(NtUserQueryWindow)(h, 5), 0);
     if (U(IsHungAppWindow)) CHECK(!U(IsHungAppWindow)(h));
     END();

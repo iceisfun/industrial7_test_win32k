@@ -2,6 +2,7 @@
 """Compare several Windows 10 run logs (COM1 serial logs, see win10_results.py) for determinism.
 
 usage: win10_compare.py <serial.log> <serial.log> [...] [--lines]
+       win10_compare.py <serial.log> --across-modes      (one log: tests whose result differs between adm, std and user)
 
 Per (mode, exe) it reports tests whose result differs between the logs and, with --lines, every printed output line
 (NOTE, FAIL and SKIP detail, test results) that is not present the same number of times in all logs. Timing fields
@@ -25,7 +26,24 @@ def outlines(text):
             d[(mode, exe.strip())][body] += 1
     return d
 
+def across_modes(path):
+    p = wr.parse(open(path, errors="replace").read())
+    by = collections.defaultdict(dict)   # (exe, test) -> {mode: result}
+    modes = []
+    for r in p["runs"]:
+        if r["mode"] not in modes: modes.append(r["mode"])
+        for st, n in r["results"]: by[(r["exe"], n)][r["mode"]] = st
+    bad = 0
+    for k in sorted(by):
+        d = by[k]
+        if len(set(d.get(m, "-") for m in modes)) > 1:
+            print("%s %s: %s" % (k[0], k[1], " ".join("%s=%s" % (m, d.get(m, "-")) for m in modes))); bad += 1
+    print("# %d test(s) differ between modes %s" % (bad, ",".join(modes)))
+    return 0
+
 def main(argv):
+    if "--across-modes" in argv:
+        return across_modes([a for a in argv if not a.startswith("--")][0])
     lines = "--lines" in argv
     logs = [a for a in argv if not a.startswith("--")]
     texts = [open(p, errors="replace").read() for p in logs]
