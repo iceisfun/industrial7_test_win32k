@@ -212,3 +212,15 @@ enable, enable); every disable, including a repeated one, sends WM_CANCELMODE be
 on a real change; with capture the order is WM_CANCELMODE, WM_CAPTURECHANGED, WM_ENABLE(FALSE) and capture is gone afterwards;
 IsWindowEnabled reads only the window's own WS_DISABLED bit, so a child of a disabled parent still reports enabled and receives no
 WM_ENABLE, and enabling the parent does not enable a separately disabled child. Both modes give identical logs.
+
+## Handle count around CreateChannel (r2_composition_surface_channel, chan.c)
+
+The absolute process handle count before and after creating a composition channel differs between fresh guests and between modes
+(it depends on what the session has open), so it is printed with t_info instead of t_note. The assertion is unchanged: handles
+after destroying the channel never exceed the count with the channel open.
+
+## gdi_d3dkmt_dd: NT handle count note
+
+The process-wide NT handle count around an adapter open/close varies between fresh guests (it depends on
+what the system has already opened in the process), so the before/open/closed counts are reported through
+t_info only. The test records a measurement and asserts nothing about the absolute values.
