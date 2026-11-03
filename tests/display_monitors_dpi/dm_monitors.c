@@ -347,7 +347,12 @@ TEST(display_monitors_dpi_from_rect_prefers_largest_intersection_between_monitor
     DM_CTX_GUARD();
     dm_set_ctx(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
     struct dm_enum e; dm_enum_all(&e, NULL, NULL);
-    if (e.n < 2) { t_skip("needs two monitors"); return; }
+    if (e.n < 2) {
+        /* one display adapter with one monitor; a second monitor cannot be created from user mode (it needs a display
+         * driver or hardware), and a mirrored or duplicated topology still enumerates one monitor */
+        t_skip("needs two monitors, the system has one and a virtual second display cannot be created without a display driver");
+        return;
+    }
     for (int i = 0; i < e.n; i++) for (int j = 0; j < e.n; j++) {
         if (i == j) continue;
         const RECT *a = &e.m[i].rc, *b = &e.m[j].rc;

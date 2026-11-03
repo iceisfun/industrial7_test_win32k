@@ -1,8 +1,9 @@
 # Windows 10 notes: skips and environment dependence
 
 The authority is genuine Windows 10 22H2 x64 (build 19045). The reference guest is a Windows 10 **Home** image
-(operating system SKU 101), one interactive session, one virtual display, one monitor, no network, no pointer, touch or
-HID devices, one keyboard layout, no OpenGL-capable display driver. The tests ran in three modes (the third, user, was added later and has been run on a representative subset, see the last section):
+(operating system SKU 101), one interactive session, one virtual display, one monitor, no network, a PS/2 keyboard and mouse plus one USB tablet in the raw
+input list, no pointer (touch or pen) device and no other HID device, one keyboard layout, no OpenGL-capable display driver. The tests ran in three modes
+(the third, user, was added later and has been run on a representative subset, see the last section):
 
 - **adm**: the session's own token, an elevated local Administrator (High integrity, Administrators enabled, 24 privileges).
 - **std** (restricted-admin, not a real standard account): a restricted copy of that token in the same interactive session (Medium integrity, only the change-notify
@@ -22,12 +23,10 @@ These are the same in both modes. A machine with the missing hardware or setting
 
 | Area | Tests | Reason (printed) | Dependence |
 |---|---|---|---|
-| display_monitors_dpi | 1 | needs two monitors | the guest has one monitor; the test compares monitor-from-rect choices between two |
-| gap_07, raw_input_touch_pointer | 3 + 6 | no pointer devices; no HID device; no HID device with preparsed data | no mouse, touch, pen or HID device is attached; one raw-input test is the converse and skips when devices are present |
-| kbd_layouts_state | 1 | only 1 layout | one keyboard layout installed; the layout-switching test needs two |
+| display_monitors_dpi | 1 | needs two monitors, the system has one and a virtual second display cannot be created without a display driver | the guest has one display adapter with one monitor (`EnumDisplayDevices` lists one adapter and one monitor); the test compares monitor-from-rect choices between two. A second monitor needs a display driver or hardware, which user mode cannot add, and a duplicated or mirrored topology still enumerates one monitor |
+| raw_input_touch_pointer | 1 | devices present | the converse test (an empty raw input list) needs a machine with no raw input device at all; the guest lists a PS/2 keyboard and mouse and a tablet, and a device cannot be removed from user mode. It runs where the list is empty |
 | gdi_metafile_print_neg | 3 | display driver without OpenGL pixel formats; one export the build lacks | the basic display driver reports no pixel formats, so SetPixelFormat is accepted but nothing is retained |
 | gdi_font_metrics_text | 1 | face wingdings not mapped (not installed) | font set of the image |
-| gap_11 | 1 | none to query | nothing to enumerate in this configuration |
 | r2_teb_peb_field_matrix | 1 | no batching | GDI attribute batching is not active for the test's DC in this configuration, so the batch-dependent field cannot be exercised |
 | user_wnd_desktop_heap | 1 | HWND_TOP does not move a window that owns a default IME window | a window that owns a default IME window is not moved by HWND_TOP on Windows 10; the check that needs the move is skipped |
 | win32k_mitigation | 13 | no audit attribute | CreateProcess rejects the audit-only mitigation creation attribute (error 87) on this build, so the audit-mode tests cannot create their child |
@@ -39,6 +38,28 @@ These are the same in both modes. A machine with the missing hardware or setting
 | focus_capture_attach | 1 | not foreground | the test process is not the foreground process of the interactive session; Windows decides this and the test must not steal the foreground |
 | gdi_handle_table | 8 | handle count not asserted for emf, emf_dc, wmf, wmf_dc, brush_pattern, brush_dibpat; never got the same slot back; the deleted region cell is still held by the handle cache | GDI slot reuse and the per-process handle cache are timing and history dependent; only relations that hold for every outcome are asserted, the rest is skipped |
 | r2_input_pointer_rim_state | 3 | input injection is granted to this process, the denied path is not reachable | the session token holds the right to inject input, so the refusal paths cannot be reached. A token without the right would run them |
+
+## Dependences that replaced skips (synthetic input, extra layouts)
+
+These tests used to skip on the reference guest and now run, in both modes. They build the missing precondition themselves
+and put the session back as they found it.
+
+| Area | Tests | What the test builds | Observed on Windows 10 22H2 |
+|---|---|---|---|
+| gap_07 | 3 | a synthetic touch device (`CreateSyntheticPointerDevice`, a second synthetic pen device where two entries are needed) when the system lists no pointer device | the device is listed by `GetPointerDevices` at once; the full read, the per-device query, the cursors and the rects work on it |
+| gap_11 | 1 | the same | the enumerated-device consistency test runs on the synthetic device |
+| raw_input_touch_pointer | 5 | the same, for the pointer device tests; for the two HID tests a synthetic touch device, which is a HID digitizer (usage page 0x0d, usage 4) with preparsed data in the raw input list | `GetRawInputDeviceInfo(RIDI_PREPARSEDDATA)` returns the size and the `HidP KDR` data |
+| kbd_layouts_state | 1 | a second keyboard layout, loaded with `LoadKeyboardLayout` and unloaded again by the test (`kls_cleanup`) | `kbd_layouts_state_load_then_unload_restores_the_list` checks that the list is back as it was |
+
+`common/synth.h` creates the devices. After `DestroySyntheticPointerDevice` the device can stay listed for a short time
+(queries on it fail with 0x3bc3), so the helper waits until the count is back to its starting value before the next test
+runs. A device name carries a counter and is never printed. Both modes can create the devices and inject (the restricted
+token holds the injection right, see `r2_input_pointer_rim_state`).
+
+New tests built on the same devices: the shape of a synthetic touch device (type, contacts, 10 properties, one cursor per
+contact, a HID digitizer in the raw list), of a synthetic pen (integrated pen, 12 properties, pen and eraser cursors), the
+device leaving the list after destruction, and `InjectSyntheticPointerInput` touch and pen down, update and up reaching a topmost
+test window as one `WM_POINTERDOWN`, at least one `WM_POINTERUPDATE` and one `WM_POINTERUP`.
 
 ## Privilege dependence (std mode only, or tests that branch on the token)
 
