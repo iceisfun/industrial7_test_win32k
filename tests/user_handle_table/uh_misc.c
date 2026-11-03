@@ -54,7 +54,7 @@ TEST(user_handle_table_enumwindows_handles_match_table) {
     EXPECT_EQ(s.bad, 0);
     EXPECT_EQ(s.badowner, 0); /* GetWindowThreadProcessId tid == entry.owner for every live top-level window of this process */
     CHECK(s.foreign * 20 <= s.n); /* and for nearly all windows of other processes */
-    if (s.foreign) t_note("%u of %u windows of other processes report a different thread id than the entry owner", s.foreign, s.n);
+    if (s.foreign) t_info("%u of %u windows of other processes report a different thread id than the entry owner", s.foreign, s.n);
 }
 static BOOL CALLBACK enum_child_cb(HWND h, LPARAM l) { struct { unsigned n, bad; } *s = (void *)l; uh_entry_t e; s->n++; if (!entry_is(h, UT_WINDOW, &e) && U(IsWindow)(h)) s->bad++; return s->n < 4000; }
 TEST(user_handle_table_enum_desktop_children_match_table) {

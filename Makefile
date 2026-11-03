@@ -9,7 +9,7 @@ all: $(EXES) $(TOOLEXES)
 # Guest-side helpers used by tools/win10_pack.py (not test areas).
 build/tools/%.exe: tools/guest/%.c
 	@mkdir -p build/tools
-	$(CC) $(CFLAGS) -o $@ $< -static -ladvapi32
+	$(CC) $(CFLAGS) -o $@ $< -static -ladvapi32 -lshell32
 .SECONDEXPANSION:
 build/%.exe: $$(wildcard tests/$$*/*.c) common/t.c common/t.h common/k.c common/k.h common/modules.h
 	@mkdir -p build
