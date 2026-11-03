@@ -59,7 +59,7 @@ def main():
     b = os.path.join(a.out_dir, "bin"); os.makedirs(b)
     for n in names:
         if n not in helpers: shutil.copy(os.path.join(build, n + ".exe"), b)
-    for h in ("w32k_runas.exe", "w32k_probe.exe"):
+    for h in ("w32k_runas.exe", "w32k_probe.exe", "w32k_gdiinit.exe"):
         src = os.path.join(build, "tools", h)
         if not os.path.isfile(src): ap.error("build/tools/%s missing (run make)" % h)
         shutil.copy(src, b)
