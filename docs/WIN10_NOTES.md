@@ -72,6 +72,11 @@ the same area. They are reported as skipped, not passed.
 - Loading order: the first win32k syscall of a process without user32 loaded is fatal on Windows 10 (the callback table is
   missing and the process ends with a fatal user-callback exception). Tests that need to observe a fresh process run in
   child processes that load user32 first or install a callback table; this is a property of the build, not of a SKU.
+- Mitigation policy attribute (`win32k_mitigation`, tests `attrsize_*`): the accepted payload sizes (4, 8, 16 bytes; any other size fails with
+  ERROR_BAD_LENGTH) and the second-word flags used (downgrade of the dynamic code policy, indirect branch prediction restriction,
+  speculative store bypass disable) are the behaviour of build 19045. The second-word flags are read back through the process
+  mitigation policy API, which on 22H2 reports them regardless of CPU support; no skip was added, a later build that reads them
+  differently would need these expectations revisited. Undefined second-word flags are rejected with ERROR_INVALID_PARAMETER on this build.
 - `dx_` areas are guarded, change system state and have not been run on Windows 10, so they have no Windows 10 skips or
   reasons recorded yet.
 
