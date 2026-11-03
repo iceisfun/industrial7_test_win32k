@@ -74,7 +74,9 @@ TEST(user_handle_table_serverinfo_readable) {
     unsigned char buf[0x400];
     CHECK(k_try_read(si.psi, buf, 0x368)); /* SERVERINFO is read at +0, +8 and +0x360 by the kernel */
     unsigned long f = 0; CHECK(k_try_read_u32(si.psi, &f));
-    t_note("SERVERINFO.dwSRVIFlags = 0x%lx (bit 2 = IME enabled)", f);
+    /* only the DBCS/IME/MidEast bits (1..3) are stable; higher bits vary across fresh guests */
+    t_note("SERVERINFO.dwSRVIFlags & 0xe = 0x%lx (bit 2 = IME enabled)", f & 0xe);
+    t_info("SERVERINFO.dwSRVIFlags = 0x%lx", f);
 }
 TEST(user_handle_table_pdispinfo_pointer) {
     UH_NEED();
