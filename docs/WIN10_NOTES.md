@@ -227,3 +227,7 @@ t_info only. The test records a measurement and asserts nothing about the absolu
 ## r2_input_pointer_rim_state: stock cursor frame rate
 
 The frame rate that GetCursorFrameInfo reports for an animated stock cursor (for example the wait cursor) is not stable across fresh guests (seen as both 2 and 3). The test now prints that line through t_info only; the stable relation (a non-animated cursor reports one step and rate 0) is still asserted.
+
+## r2_teb_peb_field_matrix: ClientInfo spin counter
+
+The ClientInfo cSpins counter of the main GUI thread counts message-loop spins and differs between fresh guests (seen as 20 and 21). The compat-flags report test now prints it through t_info only; the compat flags themselves stay in the note line, and the check that cSpins is zero before the thread becomes a GUI thread is unchanged.
