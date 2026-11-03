@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Build a payload directory for a Windows 10 run of the corpus.
 
-usage: win10_pack.py <out_dir> [--exes a,b,c | --all] [--mode std|adm|both] [--timeout SECS]
+usage: win10_pack.py <out_dir> [--exes a,b,c | --all] [--mode std|adm|user|both|all] [--timeout SECS]
                      [--filter SUBSTR] [--destructive] [--full]
 
 The payload holds bin/ (the selected test exes plus the helper exes), list.txt, runner.ps1 and run.cmd.
 run.cmd sets COM1 to 115200,n,8,1 and drives runner.ps1, which frames every line on COM1 with the prefix
 "W32K " (see tools/win10_results.py for the grammar). Modes: adm = the session's own (elevated Administrator)
-token; std = a restricted-admin token (not a real standard account) in the same interactive session (tools/guest/w32k_runas.c). The payload
+token; std = a restricted-admin token (not a real standard account) in the same interactive session (tools/guest/w32k_runas.c);
+user = a real throwaway local standard account created by the runner inside the guest (random password, Users group only,
+Medium integrity, not elevated), launched with the secondary logon service into the interactive session. --mode both = adm,std;
+--mode all = adm,std,user. The payload
 exits 0 only when the runner reached "W32K done"; a test failing or timing out does not change that.
 Exes named dx_* change system state and are refused unless --destructive is given.
 Build first with `make -j8`."""
@@ -31,7 +34,7 @@ def main():
     ap.add_argument("out_dir")
     ap.add_argument("--exes", help="comma-separated area names (without .exe)")
     ap.add_argument("--all", action="store_true", help="every non-dx_ area in build/")
-    ap.add_argument("--mode", choices=["std", "adm", "both"], default="adm")
+    ap.add_argument("--mode", choices=["std", "adm", "user", "both", "all"], default="adm")
     ap.add_argument("--timeout", type=int, default=300, help="per-exe timeout in seconds")
     ap.add_argument("--filter", default="", help="test-name substring passed to every exe")
     ap.add_argument("--destructive", action="store_true", help="allow dx_* areas")
@@ -51,7 +54,7 @@ def main():
     for n in names:
         if n in helpers: continue
         if not os.path.isfile(os.path.join(build, n + ".exe")): ap.error("build/%s.exe missing (run make)" % n)
-    modes = {"std": "std", "adm": "adm", "both": "adm,std"}[a.mode]
+    modes = {"std": "std", "adm": "adm", "user": "user", "both": "adm,std", "all": "adm,std,user"}[a.mode]
     if os.path.exists(a.out_dir): shutil.rmtree(a.out_dir)
     b = os.path.join(a.out_dir, "bin"); os.makedirs(b)
     for n in names:

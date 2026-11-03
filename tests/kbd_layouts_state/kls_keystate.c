@@ -139,7 +139,7 @@ static int ks_async_denied(void) {
 }
 TEST(kbd_layouts_state_ks_getasynckeystate_invalid_vk) {
     NEED_KS();
-    if (ks_async_denied()) { t_skip("GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token"); return; }
+    if (ks_async_denied()) { t_skip("GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token"); return; }
     static const int v[] = { 0x100, 0x400, 0x8000, 0x10000, 0x7fff0000 };
     for (unsigned i = 0; i < sizeof v / sizeof *v; i++) {
         SET_ERR(0);
@@ -200,7 +200,7 @@ TEST(kbd_layouts_state_ks_ci_keystate_cache_published_by_getkeystate) {
 
 TEST(kbd_layouts_state_ks_ci_async_cache_published_by_getasynckeystate) {
     NEED_KS();
-    if (ks_async_denied()) { t_skip("GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token: no cache is published"); return; }
+    if (ks_async_denied()) { t_skip("GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token: no cache is published"); return; }
     if (t_is_wine()) { t_skip("CLIENTINFO async cache is win32k specific"); return; }
     int ok = 0;
     for (int attempt = 0; attempt < 4 && !ok; attempt++) {
