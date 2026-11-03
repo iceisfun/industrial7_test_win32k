@@ -110,3 +110,10 @@ the same area. They are reported as skipped, not passed.
    skip only when it fails. A skip that always fires is listed above as unconditional and needs a stated reason.
 3. A check whose result varies from run to run is not a skip: assert the relation that always holds, or print the value
    with `t_info` (shown only with `W32K_INFO=1`).
+
+## Timing-sensitive cross-thread send tests
+
+On a loaded guest the calling thread can be descheduled for longer than a receiver's sleep. Two tests are
+therefore tolerant of that: the 100 ms SendMessageTimeout test retries (bounded) when the send completed
+because the caller was stalled, and the hung-receiver test skips (conditional, with a plain reason) when the
+caller was stalled until the receiver resumed pumping. An un-stalled attempt is still asserted exactly.
