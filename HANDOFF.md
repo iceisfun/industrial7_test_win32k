@@ -6,13 +6,13 @@ into per-area and per-test results. The tooling described here was verified end 
 
 ## Where things stand
 
-- 103 areas, 16501 tests (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
-- The 85 other areas (16121 tests) were run on Windows 10 22H2 in both modes:
+- 103 areas, 16511 tests (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
+- The 85 other areas (16131 tests) were run on Windows 10 22H2 in both modes:
 
   | Mode | Areas | Tests | Pass | Fail | Skip |
   |---|---|---|---|---|---|
-  | adm | 85 | 16121 | 16070 | 0 | 51 |
-  | std | 85 | 16121 | 16008 | 0 | 113 |
+  | adm | 85 | 16131 | 16082 | 0 | 49 |
+  | std | 85 | 16131 | 16020 | 0 | 111 |
 
 - Every skip is conditional, has a printed reason and is stable (`docs/WIN10_NOTES.md`).
 - Three runs of the same build gave identical per-test results and printed lines (`results/win10/DETERMINISM.md`).

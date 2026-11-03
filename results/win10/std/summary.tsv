@@ -1,6 +1,6 @@
 exe	tests	failed	skipped	checks_pass	checks_fail	rc	status
 class_registration	147	0	0	1830	0	0	OK
-clipboard_dde	203	0	0	2197	0	0	OK
+clipboard_dde	209	0	0	2261	0	0	OK
 core_k_helpers	9	0	0	22	0	0	OK
 cursor_icon_menu	273	0	0	2584	0	0	OK
 dcomp_flip_dxgk_neg	166	0	0	12905	0	0	OK
@@ -15,7 +15,7 @@ gap_05	111	0	0	1724	0	0	OK
 gap_06	112	0	0	320	0	0	OK
 gap_07	147	0	3	705	0	0	OK
 gap_08	117	0	0	1997	0	0	OK
-gap_09	137	0	2	927	0	0	OK
+gap_09	141	0	0	965	0	0	OK
 gap_10	134	0	0	982	0	0	OK
 gap_11	66	0	1	2397	0	0	OK
 gdi_bitmaps_dib	430	0	0	1972	0	0	OK
@@ -52,7 +52,7 @@ r2_ntusercall_codes_matrix	129	0	0	2399	0	0	OK
 r2_teb_peb_field_matrix	159	0	1	874	0	0	OK
 r2_user_handle_types_entries	95	0	0	1006	0	0	OK
 r2_win32k_process_lifecycle_quotas	104	0	0	466	0	0	OK
-r2_winsta_activation_group_session	188	0	15	856	0	0	OK
+r2_winsta_activation_group_session	188	0	15	860	0	0	OK
 r2_wnd_cls_heap_fields	136	0	0	784	0	0	OK
 raw_input_touch_pointer	424	0	6	2110	0	0	OK
 sc_callxxx_dispatch	74	0	0	368	0	0	OK

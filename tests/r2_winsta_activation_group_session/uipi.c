@@ -26,14 +26,56 @@ RT(cwmfex_window_of_other_process_is_denied) {
     CHECK(R_D(UN(NtUserChangeWindowMessageFilterEx)(dw, WM_USER + 1, 1, NULL)) == 0);
     EXPECT_ERR(ERR_ACCESS_DENIED);
 }
-RT(cwmfex_shell_window_of_other_process_is_denied) {
-    REQUIRE(UN(NtUserChangeWindowMessageFilterEx)); REQUIRE(U(GetShellWindow));
-    HWND sh = U(GetShellWindow)();
-    DWORD pid = 0;
-    if (!sh || !U(GetWindowThreadProcessId)(sh, &pid) || pid == GetCurrentProcessId()) { t_skip("no foreign shell window"); return; }
-    SET_ERR(SENT);
-    CHECK(R_D(UN(NtUserChangeWindowMessageFilterEx)(sh, WM_USER + 1, 1, NULL)) == 0);
-    EXPECT_ERR(ERR_ACCESS_DENIED);
+/* A helper process owning one hidden window (class named after the parent's process id), pumping until WM_CLOSE. */
+static LRESULT CALLBACK uipi_xw_proc(HWND h, UINT m, WPARAM w, LPARAM l) {
+    if (m == WM_CLOSE) { PostQuitMessage(0); return 0; }
+    return DefWindowProcA(h, m, w, l);
+}
+CHILD(r2_uipi_xwin) {
+    (void)argc;
+    char cls[64];
+    wsprintfA(cls, "win32kt_r2xw_%lu", strtoul(argv[1], NULL, 10));
+    WNDCLASSA wc; memset(&wc, 0, sizeof wc);
+    wc.lpfnWndProc = uipi_xw_proc; wc.hInstance = GetModuleHandleA(NULL); wc.lpszClassName = cls;
+    RegisterClassA(&wc);
+    HWND h = CreateWindowExA(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE, cls, "xw", WS_POPUP, 10, 10, 40, 40, NULL, NULL, wc.hInstance, NULL);
+    if (!h) return 90;
+    MSG m; DWORD t0 = GetTickCount();
+    while (GetTickCount() - t0 < 25000) {
+        while (PeekMessageA(&m, NULL, 0, 0, PM_REMOVE)) { if (m.message == WM_QUIT) return 100; TranslateMessage(&m); DispatchMessageA(&m); }
+        Sleep(5);
+    }
+    return 93;
+}
+RT(cwmfex_window_of_other_process_is_denied_helper_window) {
+    REQUIRE(UN(NtUserChangeWindowMessageFilterEx)); REQUIRE(U(FindWindowA)); REQUIRE(U(PostMessageA));
+    NEED_WIN(own);
+    char a[32], cls[64];
+    wsprintfA(a, "%lu", GetCurrentProcessId());
+    wsprintfA(cls, "win32kt_r2xw_%lu", GetCurrentProcessId());
+    PROCESS_INFORMATION pi;
+    HANDLE hp = t_spawn_child("r2_uipi_xwin", a, 0, NULL, NULL, NULL, FALSE, NULL, &pi);
+    CHECK(hp != NULL);
+    HWND xw = NULL;
+    for (int i = 0; hp && i < 500 && !xw; i++) { xw = U(FindWindowA)(cls, NULL); if (!xw) Sleep(20); }
+    CHECK(xw != NULL);
+    if (xw) {
+        DWORD pid = 0;
+        U(GetWindowThreadProcessId)(xw, &pid);
+        CHECK(pid != 0 && pid != GetCurrentProcessId());
+        /* a plain user window of another process: the same ownership rule as for the desktop window */
+        SET_ERR(SENT);
+        CHECK(R_D(UN(NtUserChangeWindowMessageFilterEx)(xw, WM_USER + 1, 1, NULL)) == 0);
+        EXPECT_ERR(ERR_ACCESS_DENIED);
+        U(PostMessageA)(xw, WM_CLOSE, 0, 0);
+    }
+    if (hp) {
+        if (WaitForSingleObject(hp, 8000) != WAIT_OBJECT_0) { TerminateProcess(hp, 1); WaitForSingleObject(hp, 3000); }
+        DWORD c = 0; GetExitCodeProcess(hp, &c);
+        EXPECT_EQ(c, 100);
+        CloseHandle(pi.hProcess); CloseHandle(pi.hThread);
+    }
+    END_WIN(own);
 }
 /* action must be 0 (reset), 1 (allow) or 2 (disallow): anything else is ERROR_INVALID_PARAMETER */
 RT(cwmfex_invalid_action_values) {
