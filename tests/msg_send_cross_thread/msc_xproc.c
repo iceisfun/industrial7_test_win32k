@@ -384,7 +384,9 @@ CHILD(msc_lowclient) {
     int bad = 0; (void)argc;
     DWORD ppid = argc > 1 ? (DWORD)strtoul(argv[1], NULL, 10) : 0;
     if (!msc_have_gui()) return 0x100;
-    HWND mine = msc_create(NULL, NULL, 0, NULL);
+    /* a distinctive title: msc_have_gui() above made and destroyed a transient window of the same class, and the parent
+     * must not pick that one up while it looks for the window to serve */
+    HWND mine = msc_create_ex(NULL, NULL, 0, NULL, L"win32ktMscLowServed");
     /* The parent created two windows with titles ..._0 (default filter) and ..._1 (MSC_ECHO allowed). */
     WCHAR cls[64], t0[64], t1[64];
     swprintf(cls, 64, L"win32ktMscW_%lu", ppid); xtitle(t0, ppid, 0); xtitle(t1, ppid, 1);
@@ -458,7 +460,7 @@ TEST(msc_xproc_uipi_low_integrity_sender_is_denied) {
     WCHAR lcls[64]; swprintf(lcls, 64, L"win32ktMscW_%lu", pi.dwProcessId);
     while (msc_ms_since(t) < 10000) {
         msc_pump(30);
-        if (!lw) lw = FindWindowW(lcls, NULL);
+        if (!lw) lw = FindWindowW(lcls, L"win32ktMscLowServed");
         if (lw) { ready = TRUE; break; }
         if (WaitForSingleObject(pi.hProcess, 0) == WAIT_OBJECT_0) break;
     }

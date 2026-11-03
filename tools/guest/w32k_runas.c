@@ -86,7 +86,7 @@ static int run_user(const wchar_t *user, const wchar_t *pass, const wchar_t *cmd
         }
     }
     PROCESS_INFORMATION pi;
-    if (!CreateProcessWithLogonW(user, L".", pass, LOGON_WITH_PROFILE, NULL, cl, CREATE_SUSPENDED | CREATE_NEW_PROCESS_GROUP, NULL, L"C:\\w32kt\\cwd", &si, &pi)) { fprintf(stderr, "w32k_runas: std handles %p %p %p\n", si.hStdInput, si.hStdOutput, si.hStdError); FAIL(8, "CreateProcessWithLogonW"); }
+    if (!CreateProcessWithLogonW(user, L".", pass, LOGON_WITH_PROFILE, NULL, cl, CREATE_SUSPENDED | CREATE_NEW_PROCESS_GROUP | CREATE_NO_WINDOW, NULL, L"C:\\w32kt\\cwd", &si, &pi)) { fprintf(stderr, "w32k_runas: std handles %p %p %p\n", si.hStdInput, si.hStdOutput, si.hStdError); FAIL(8, "CreateProcessWithLogonW"); }
     if (job && !AssignProcessToJobObject(job, pi.hProcess)) fprintf(stderr, "w32k_runas: warning, job assign failed %lu\n", GetLastError());
     DWORD sess = (DWORD)-1; ProcessIdToSessionId(pi.dwProcessId, &sess);
     if (getenv("W32K_RUNAS_VERBOSE")) fprintf(stderr, "w32k_runas: child started, session %lu\n", sess);

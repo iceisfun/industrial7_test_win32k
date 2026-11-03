@@ -2,12 +2,15 @@
 
 The authority is genuine Windows 10 22H2 x64 (build 19045). The reference guest is a Windows 10 **Home** image
 (operating system SKU 101), one interactive session, one virtual display, one monitor, no network, no pointer, touch or
-HID devices, one keyboard layout, no OpenGL-capable display driver. The tests ran in two modes:
+HID devices, one keyboard layout, no OpenGL-capable display driver. The tests ran in three modes (the third, user, was added later and has been run on a representative subset, see the last section):
 
 - **adm**: the session's own token, an elevated local Administrator (High integrity, Administrators enabled, 24 privileges).
 - **std** (restricted-admin, not a real standard account): a restricted copy of that token in the same interactive session (Medium integrity, only the change-notify
   privilege, Administrators deny-only), see `HANDOFF.md`. `TokenIsElevated` still reads 1 on that token, so no test decides
   on it; tests decide on integrity level, privileges or the observed refusal.
+- **user**: a real throwaway local standard account created by the runner inside the guest (Users group only, own SID,
+  Medium integrity, `TokenIsElevated` 0, five standard privileges), started with the secondary logon service in the same
+  interactive session on `WinSta0\Default`.
 
 Every test either asserts what Windows does or skips with a printed reason. A skip never counts as a pass: it is listed
 per mode in `results/win10/*/failing_tests.tsv`. All skips below were identical in all three determinism runs. The
@@ -46,12 +49,37 @@ In adm mode these run; in std mode the refusal is expected, observed and the dep
 | winsta_desktop_objects | 36 | object creation denied (error 5): needs a high-integrity administrator token | creating window stations and desktops needs a High integrity token |
 | r2_winsta_activation_group_session | 14 + 1 | CreateWindowStation refused for the unprivileged token; directory not readable | same, plus one object directory that a Medium token may not read |
 | win32k_modules_sysinfo | 9 | CreateWindowStation failed (5); object directories denied for this token | `\ObjectTypes`, `\Sessions\<n>`, window station directories need administrator access |
-| kbd_layouts_state | 2 (plus the layout skip) | GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token | the restricted token cannot read the async key state; the result is the same on Windows, only the token differs |
+| kbd_layouts_state | 2 (plus the layout skip) | GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token | the restricted token cannot read the async key state; the result is the same on Windows, only the token differs; the real standard account (user mode) is refused too |
 | gap_09 | 2 in adm, 2 in std | absolute open denied (error 5); rooted open denied (error 5) in adm; cannot open the window station directory (access denied status) in std | opens of the window station directory by absolute or rooted name are refused with access denied for both tokens, and the std token is refused the directory itself |
 
 Other tests branch on integrity or privilege without skipping: they assert the Windows 10 outcome for the token they run under
 (for example the clipboard-owner and foreign-window checks pick the expectation from the integrity level). Where adm and std give
 different outcomes the test names both.
+
+## User mode: a real standard account
+
+`--mode user` (HANDOFF.md) runs every exe as a genuine local standard user. The runner creates the account in the guest
+(random password, Users group only), starts the exe with the secondary logon service (`CreateProcessWithLogonW`, profile
+loaded, no console window) and checks with `w32k_probe.exe` that the account is a separate one, not elevated, in the
+interactive window station before it trusts the mode (`W32K userkind real-user`). Facts observed on Windows 10 22H2:
+
+- The child lands in the caller's session on `WinSta0\Default` when `lpDesktop` is left NULL. Naming `WinSta0\Default`
+  explicitly makes the child hang at start-up, and `CreateProcessWithLogonW` fails with error 87 if the standard handles
+  it is given are not valid. A console child gets its own visible console window unless `CREATE_NO_WINDOW` is used; that
+  window is the foreground window of the process and changes the focus, foreground and handle-table tests, so user mode
+  uses `CREATE_NO_WINDOW` and the process has no window of its own, as in adm and std.
+- Token: Medium integrity, `TokenIsElevated` 0, elevation type default, no restriction flag, Users enabled and
+  Administrators absent from the token (std has it deny-only), privileges change-notify, shutdown, undock, increase
+  working set and time zone (std: change-notify only, adm: 24).
+- Results on the sampled areas (29 areas, 6263 tests; see HANDOFF.md for the list): user behaves exactly like std in
+  every one of them: same skips for the same reasons (winsta_desktop_objects 36, r2_winsta_activation_group_session 15,
+  win32k_modules_sysinfo 9, kbd_layouts_state 2 plus the layout skip), and adm differs only in those. Input injection
+  (`r2_input_pointer_rim_state`) is granted to the standard account as well, so its three denied-path skips are the same
+  in all three modes. The `Create/Open WindowStation` refusal (error 5), the object directory refusals and the
+  `GetAsyncKeyState` refusal are therefore properties of "not an administrator", not of the restricted token.
+- What the real account adds over std that no sampled test decides on: its own user SID and profile, no Administrators
+  membership at all, `TokenIsElevated` 0. A test that depends on them would branch on `CheckTokenMembership` or the
+  elevation flag.
 
 ## Unconditional skips by design
 
