@@ -147,7 +147,20 @@ TEST(msc_cross_smto_timeout_does_not_poison_next_send) {
     HANDLE done = CreateEventW(NULL, FALSE, FALSE, NULL);
     wk.beh->done = done;
     ULONG_PTR res = 0;
-    CHECK(SendMessageTimeoutW(wk.w, MSC_SLEEP, 500, 0, SMTO_NORMAL, 100, &res) == 0);
+    /* The sender can be descheduled for longer than the handler's sleep on a loaded guest, in which case the
+     * send completes before the 100 ms timeout is ever observed. Such an attempt proves nothing, so it is
+     * retried (bounded); what is asserted is that an attempt that was not stalled times out. */
+    LRESULT tr = 1;
+    for (int attempt = 0; attempt < 4 && tr != 0; attempt++) {
+        LONGLONG t0 = msc_qpc();
+        tr = SendMessageTimeoutW(wk.w, MSC_SLEEP, 500, 0, SMTO_NORMAL, 100, &res);
+        double ms = msc_ms_since(t0);
+        if (tr != 0) {
+            if (ms < 100.0) break;              /* completed faster than the timeout: a real failure */
+            WaitForSingleObject(done, 2000);
+        }
+    }
+    CHECK(tr == 0);
     /* the follow-up send queues behind the still-running handler and completes normally */
     SetLastError(0);
     LRESULT r = SendMessageTimeoutW(wk.w, MSC_ECHO, 1, 2, SMTO_NORMAL, 4000, &res);

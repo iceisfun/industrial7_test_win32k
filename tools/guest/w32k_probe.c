@@ -26,7 +26,8 @@ int main(int argc, char **argv) {
         if (!strncmp(s, "S-1-5-21-", 9) && strrchr(s, '-')) printf("PROBE user_sid=S-1-5-21-<machine>%s\n", strrchr(s, '-'));
         else printf("PROBE user_sid=%s\n", s);
         /* the account's own RID is guest-specific: classify with well-known RIDs only */
-        const char *k = strstr(s, "-500") ? "builtin-administrator" : strstr(s, "-501") ? "guest" : "other-account";
+        const char *rid = strrchr(s, '-');
+        const char *k = rid && !strcmp(rid, "-500") ? "builtin-administrator" : rid && !strcmp(rid, "-501") ? "guest" : "other-account";
         printf("PROBE account=%s\n", k);
     }
     TOKEN_MANDATORY_LABEL *il = tinfo(t, TokenIntegrityLevel);
