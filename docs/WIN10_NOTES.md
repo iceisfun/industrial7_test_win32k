@@ -170,3 +170,12 @@ On a loaded guest the calling thread can be descheduled for longer than a receiv
 therefore tolerant of that: the 100 ms SendMessageTimeout test retries (bounded) when the send completed
 because the caller was stalled, and the hung-receiver test skips (conditional, with a plain reason) when the
 caller was stalled until the receiver resumed pumping. An un-stalled attempt is still asserted exactly.
+
+## EnableWindow lifecycle (focus_capture_attach, fc_enable_life.c)
+
+No skips and no environment dependence were added; the capture tests skip only when the process cannot take capture. Observed on
+Windows 10 22H2 and asserted exactly: the result is the previous disabled state (0, nonzero, nonzero, 0 for disable, disable,
+enable, enable); every disable, including a repeated one, sends WM_CANCELMODE before the style bit changes; WM_ENABLE is sent only
+on a real change; with capture the order is WM_CANCELMODE, WM_CAPTURECHANGED, WM_ENABLE(FALSE) and capture is gone afterwards;
+IsWindowEnabled reads only the window's own WS_DISABLED bit, so a child of a disabled parent still reports enabled and receives no
+WM_ENABLE, and enabling the parent does not enable a separately disabled child. Both modes give identical logs.
