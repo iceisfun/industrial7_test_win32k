@@ -1,0 +1,7 @@
+exe	detail
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests

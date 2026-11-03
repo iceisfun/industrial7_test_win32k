@@ -1,0 +1,6918 @@
+[
+{
+"name": null,
+"ordinal": 1000,
+"rva": 32928,
+"forwarder": null,
+"ref": "gdi32.dll!0x80a0"
+},
+{
+"name": null,
+"ordinal": 1001,
+"rva": 32960,
+"forwarder": null,
+"ref": "gdi32.dll!0x80c0"
+},
+{
+"name": null,
+"ordinal": 1002,
+"rva": 32992,
+"forwarder": null,
+"ref": "gdi32.dll!0x80e0"
+},
+{
+"name": null,
+"ordinal": 1003,
+"rva": 32800,
+"forwarder": null,
+"ref": "gdi32.dll!0x8020"
+},
+{
+"name": null,
+"ordinal": 1004,
+"rva": 20080,
+"forwarder": null,
+"ref": "gdi32.dll!0x4e70"
+},
+{
+"name": null,
+"ordinal": 1005,
+"rva": 33024,
+"forwarder": null,
+"ref": "gdi32.dll!0x8100"
+},
+{
+"name": null,
+"ordinal": 1006,
+"rva": 32768,
+"forwarder": null,
+"ref": "gdi32.dll!0x8000"
+},
+{
+"name": null,
+"ordinal": 1007,
+"rva": 32864,
+"forwarder": null,
+"ref": "gdi32.dll!0x8060"
+},
+{
+"name": null,
+"ordinal": 1008,
+"rva": 58016,
+"forwarder": null,
+"ref": "gdi32.dll!0xe2a0"
+},
+{
+"name": null,
+"ordinal": 1009,
+"rva": 32896,
+"forwarder": null,
+"ref": "gdi32.dll!0x8080"
+},
+{
+"name": null,
+"ordinal": 1010,
+"rva": 32832,
+"forwarder": null,
+"ref": "gdi32.dll!0x8040"
+},
+{
+"name": "AbortDoc",
+"ordinal": 1011,
+"rva": 56288,
+"forwarder": null,
+"ref": "gdi32.dll!0xdbe0"
+},
+{
+"name": "AbortPath",
+"ordinal": 1012,
+"rva": 33760,
+"forwarder": null,
+"ref": "gdi32.dll!0x83e0"
+},
+{
+"name": null,
+"ordinal": 1013,
+"rva": 32608,
+"forwarder": null,
+"ref": "gdi32.dll!0x7f60"
+},
+{
+"name": "DwmCreatedBitmapRemotingOutput",
+"ordinal": 1014,
+"rva": 37120,
+"forwarder": null,
+"ref": "gdi32.dll!0x9100"
+},
+{
+"name": null,
+"ordinal": 1015,
+"rva": 54240,
+"forwarder": null,
+"ref": "gdi32.dll!0xd3e0"
+},
+{
+"name": null,
+"ordinal": 1016,
+"rva": 21328,
+"forwarder": null,
+"ref": "gdi32.dll!0x5350"
+},
+{
+"name": "AddFontMemResourceEx",
+"ordinal": 1017,
+"rva": 29424,
+"forwarder": null,
+"ref": "gdi32.dll!0x72f0"
+},
+{
+"name": "AddFontResourceA",
+"ordinal": 1018,
+"rva": 56320,
+"forwarder": null,
+"ref": "gdi32.dll!0xdc00"
+},
+{
+"name": "AddFontResourceExA",
+"ordinal": 1019,
+"rva": 33920,
+"forwarder": null,
+"ref": "gdi32.dll!0x8480"
+},
+{
+"name": "AddFontResourceExW",
+"ordinal": 1020,
+"rva": 33952,
+"forwarder": null,
+"ref": "gdi32.dll!0x84a0"
+},
+{
+"name": "AddFontResourceTracking",
+"ordinal": 1021,
+"rva": 33984,
+"forwarder": null,
+"ref": "gdi32.dll!0x84c0"
+},
+{
+"name": "AddFontResourceW",
+"ordinal": 1022,
+"rva": 56384,
+"forwarder": null,
+"ref": "gdi32.dll!0xdc40"
+},
+{
+"name": "AngleArc",
+"ordinal": 1023,
+"rva": 34016,
+"forwarder": null,
+"ref": "gdi32.dll!0x84e0"
+},
+{
+"name": "AnimatePalette",
+"ordinal": 1024,
+"rva": 56448,
+"forwarder": null,
+"ref": "gdi32.dll!0xdc80"
+},
+{
+"name": "AnyLinkedFonts",
+"ordinal": 1025,
+"rva": 34048,
+"forwarder": null,
+"ref": "gdi32.dll!0x8500"
+},
+{
+"name": "Arc",
+"ordinal": 1026,
+"rva": 56560,
+"forwarder": null,
+"ref": "gdi32.dll!0xdcf0"
+},
+{
+"name": "ArcTo",
+"ordinal": 1027,
+"rva": 34080,
+"forwarder": null,
+"ref": "gdi32.dll!0x8520"
+},
+{
+"name": "BRUSHOBJ_hGetColorTransform",
+"ordinal": 1028,
+"rva": 24832,
+"forwarder": null,
+"ref": "gdi32.dll!0x6100"
+},
+{
+"name": "BRUSHOBJ_pvAllocRbrush",
+"ordinal": 1029,
+"rva": 24848,
+"forwarder": null,
+"ref": "gdi32.dll!0x6110"
+},
+{
+"name": "BRUSHOBJ_pvGetRbrush",
+"ordinal": 1030,
+"rva": 24864,
+"forwarder": null,
+"ref": "gdi32.dll!0x6120"
+},
+{
+"name": "BRUSHOBJ_ulGetBrushColor",
+"ordinal": 1031,
+"rva": 24880,
+"forwarder": null,
+"ref": "gdi32.dll!0x6130"
+},
+{
+"name": "BeginGdiRendering",
+"ordinal": 1032,
+"rva": 24896,
+"forwarder": null,
+"ref": "gdi32.dll!0x6140"
+},
+{
+"name": "BeginPath",
+"ordinal": 1033,
+"rva": 22656,
+"forwarder": null,
+"ref": "gdi32.dll!0x5880"
+},
+{
+"name": "BitBlt",
+"ordinal": 1034,
+"rva": 14928,
+"forwarder": null,
+"ref": "gdi32.dll!0x3a50"
+},
+{
+"name": "CLIPOBJ_bEnum",
+"ordinal": 1035,
+"rva": 24912,
+"forwarder": null,
+"ref": "gdi32.dll!0x6150"
+},
+{
+"name": "CLIPOBJ_cEnumStart",
+"ordinal": 1036,
+"rva": 24928,
+"forwarder": null,
+"ref": "gdi32.dll!0x6160"
+},
+{
+"name": "CLIPOBJ_ppoGetPath",
+"ordinal": 1037,
+"rva": 24944,
+"forwarder": null,
+"ref": "gdi32.dll!0x6170"
+},
+{
+"name": "CancelDC",
+"ordinal": 1038,
+"rva": 34112,
+"forwarder": null,
+"ref": "gdi32.dll!0x8540"
+},
+{
+"name": "CheckColorsInGamut",
+"ordinal": 1039,
+"rva": 34144,
+"forwarder": null,
+"ref": "gdi32.dll!0x8560"
+},
+{
+"name": "ChoosePixelFormat",
+"ordinal": 1040,
+"rva": 27440,
+"forwarder": null,
+"ref": "gdi32.dll!0x6b30"
+},
+{
+"name": "Chord",
+"ordinal": 1041,
+"rva": 34176,
+"forwarder": null,
+"ref": "gdi32.dll!0x8580"
+},
+{
+"name": "ClearBitmapAttributes",
+"ordinal": 1042,
+"rva": 34208,
+"forwarder": null,
+"ref": "gdi32.dll!0x85a0"
+},
+{
+"name": "ClearBrushAttributes",
+"ordinal": 1043,
+"rva": 34240,
+"forwarder": null,
+"ref": "gdi32.dll!0x85c0"
+},
+{
+"name": "CloseEnhMetaFile",
+"ordinal": 1044,
+"rva": 56736,
+"forwarder": null,
+"ref": "gdi32.dll!0xdda0"
+},
+{
+"name": "CloseFigure",
+"ordinal": 1045,
+"rva": 23072,
+"forwarder": null,
+"ref": "gdi32.dll!0x5a20"
+},
+{
+"name": "CloseMetaFile",
+"ordinal": 1046,
+"rva": 56848,
+"forwarder": null,
+"ref": "gdi32.dll!0xde10"
+},
+{
+"name": "ColorCorrectPalette",
+"ordinal": 1047,
+"rva": 34272,
+"forwarder": null,
+"ref": "gdi32.dll!0x85e0"
+},
+{
+"name": "ColorMatchToTarget",
+"ordinal": 1048,
+"rva": 34304,
+"forwarder": null,
+"ref": "gdi32.dll!0x8600"
+},
+{
+"name": "CombineRgn",
+"ordinal": 1049,
+"rva": 6752,
+"forwarder": null,
+"ref": "gdi32.dll!0x1a60"
+},
+{
+"name": "CombineTransform",
+"ordinal": 1050,
+"rva": 34336,
+"forwarder": null,
+"ref": "gdi32.dll!0x8620"
+},
+{
+"name": "ConfigureOPMProtectedOutput",
+"ordinal": 1051,
+"rva": 24960,
+"forwarder": null,
+"ref": "gdi32.dll!0x6180"
+},
+{
+"name": "CopyEnhMetaFileA",
+"ordinal": 1052,
+"rva": 34368,
+"forwarder": null,
+"ref": "gdi32.dll!0x8640"
+},
+{
+"name": "CopyEnhMetaFileW",
+"ordinal": 1053,
+"rva": 34400,
+"forwarder": null,
+"ref": "gdi32.dll!0x8660"
+},
+{
+"name": "CopyMetaFileA",
+"ordinal": 1054,
+"rva": 34432,
+"forwarder": null,
+"ref": "gdi32.dll!0x8680"
+},
+{
+"name": "CopyMetaFileW",
+"ordinal": 1055,
+"rva": 34464,
+"forwarder": null,
+"ref": "gdi32.dll!0x86a0"
+},
+{
+"name": "CreateBitmap",
+"ordinal": 1056,
+"rva": 17712,
+"forwarder": null,
+"ref": "gdi32.dll!0x4530"
+},
+{
+"name": "CreateBitmapFromDxSurface",
+"ordinal": 1057,
+"rva": 24976,
+"forwarder": null,
+"ref": "gdi32.dll!0x6190"
+},
+{
+"name": "CreateBitmapFromDxSurface2",
+"ordinal": 1058,
+"rva": 24992,
+"forwarder": null,
+"ref": "gdi32.dll!0x61a0"
+},
+{
+"name": "CreateBitmapIndirect",
+"ordinal": 1059,
+"rva": 56912,
+"forwarder": null,
+"ref": "gdi32.dll!0xde50"
+},
+{
+"name": "CreateBrushIndirect",
+"ordinal": 1060,
+"rva": 20112,
+"forwarder": null,
+"ref": "gdi32.dll!0x4e90"
+},
+{
+"name": "CreateColorSpaceA",
+"ordinal": 1061,
+"rva": 34496,
+"forwarder": null,
+"ref": "gdi32.dll!0x86c0"
+},
+{
+"name": "CreateColorSpaceW",
+"ordinal": 1062,
+"rva": 34528,
+"forwarder": null,
+"ref": "gdi32.dll!0x86e0"
+},
+{
+"name": "CreateCompatibleBitmap",
+"ordinal": 1063,
+"rva": 19312,
+"forwarder": null,
+"ref": "gdi32.dll!0x4b70"
+},
+{
+"name": "CreateCompatibleDC",
+"ordinal": 1064,
+"rva": 15424,
+"forwarder": null,
+"ref": "gdi32.dll!0x3c40"
+},
+{
+"name": "CreateDCA",
+"ordinal": 1065,
+"rva": 19040,
+"forwarder": null,
+"ref": "gdi32.dll!0x4a60"
+},
+{
+"name": "CreateDCW",
+"ordinal": 1066,
+"rva": 5200,
+"forwarder": null,
+"ref": "gdi32.dll!0x1450"
+},
+{
+"name": "CreateDIBPatternBrush",
+"ordinal": 1067,
+"rva": 34592,
+"forwarder": null,
+"ref": "gdi32.dll!0x8720"
+},
+{
+"name": "CreateDIBPatternBrushPt",
+"ordinal": 1068,
+"rva": 27600,
+"forwarder": null,
+"ref": "gdi32.dll!0x6bd0"
+},
+{
+"name": "CreateDIBSection",
+"ordinal": 1069,
+"rva": 10432,
+"forwarder": null,
+"ref": "gdi32.dll!0x28c0"
+},
+{
+"name": "CreateDIBitmap",
+"ordinal": 1070,
+"rva": 18640,
+"forwarder": null,
+"ref": "gdi32.dll!0x48d0"
+},
+{
+"name": "CreateDPIScaledDIBSection",
+"ordinal": 1071,
+"rva": 34624,
+"forwarder": null,
+"ref": "gdi32.dll!0x8740"
+},
+{
+"name": "CreateDiscardableBitmap",
+"ordinal": 1072,
+"rva": 34784,
+"forwarder": null,
+"ref": "gdi32.dll!0x87e0"
+},
+{
+"name": "CreateEllipticRgn",
+"ordinal": 1073,
+"rva": 34816,
+"forwarder": null,
+"ref": "gdi32.dll!0x8800"
+},
+{
+"name": "CreateEllipticRgnIndirect",
+"ordinal": 1074,
+"rva": 56976,
+"forwarder": null,
+"ref": "gdi32.dll!0xde90"
+},
+{
+"name": "CreateEnhMetaFileA",
+"ordinal": 1075,
+"rva": 57040,
+"forwarder": null,
+"ref": "gdi32.dll!0xded0"
+},
+{
+"name": "CreateEnhMetaFileW",
+"ordinal": 1076,
+"rva": 31152,
+"forwarder": null,
+"ref": "gdi32.dll!0x79b0"
+},
+{
+"name": "CreateFontA",
+"ordinal": 1077,
+"rva": 57152,
+"forwarder": null,
+"ref": "gdi32.dll!0xdf40"
+},
+{
+"name": "CreateFontIndirectA",
+"ordinal": 1078,
+"rva": 57376,
+"forwarder": null,
+"ref": "gdi32.dll!0xe020"
+},
+{
+"name": "CreateFontIndirectExA",
+"ordinal": 1079,
+"rva": 34848,
+"forwarder": null,
+"ref": "gdi32.dll!0x8820"
+},
+{
+"name": "CreateFontIndirectExW",
+"ordinal": 1080,
+"rva": 34880,
+"forwarder": null,
+"ref": "gdi32.dll!0x8840"
+},
+{
+"name": "CreateFontIndirectW",
+"ordinal": 1081,
+"rva": 5680,
+"forwarder": null,
+"ref": "gdi32.dll!0x1630"
+},
+{
+"name": "CreateFontW",
+"ordinal": 1082,
+"rva": 4624,
+"forwarder": null,
+"ref": "gdi32.dll!0x1210"
+},
+{
+"name": "CreateHalftonePalette",
+"ordinal": 1083,
+"rva": 22000,
+"forwarder": null,
+"ref": "gdi32.dll!0x55f0"
+},
+{
+"name": "CreateHatchBrush",
+"ordinal": 1084,
+"rva": 34912,
+"forwarder": null,
+"ref": "gdi32.dll!0x8860"
+},
+{
+"name": "CreateICA",
+"ordinal": 1085,
+"rva": 34944,
+"forwarder": null,
+"ref": "gdi32.dll!0x8880"
+},
+{
+"name": "CreateICW",
+"ordinal": 1086,
+"rva": 23376,
+"forwarder": null,
+"ref": "gdi32.dll!0x5b50"
+},
+{
+"name": "CreateMetaFileA",
+"ordinal": 1087,
+"rva": 57440,
+"forwarder": null,
+"ref": "gdi32.dll!0xe060"
+},
+{
+"name": "CreateMetaFileW",
+"ordinal": 1088,
+"rva": 31312,
+"forwarder": null,
+"ref": "gdi32.dll!0x7a50"
+},
+{
+"name": "CreateOPMProtectedOutput",
+"ordinal": 1089,
+"rva": 25008,
+"forwarder": null,
+"ref": "gdi32.dll!0x61b0"
+},
+{
+"name": "CreateOPMProtectedOutputs",
+"ordinal": 1090,
+"rva": 25024,
+"forwarder": null,
+"ref": "gdi32.dll!0x61c0"
+},
+{
+"name": "CreatePalette",
+"ordinal": 1091,
+"rva": 21504,
+"forwarder": null,
+"ref": "gdi32.dll!0x5400"
+},
+{
+"name": "CreatePatternBrush",
+"ordinal": 1092,
+"rva": 21680,
+"forwarder": null,
+"ref": "gdi32.dll!0x54b0"
+},
+{
+"name": "CreatePen",
+"ordinal": 1093,
+"rva": 24064,
+"forwarder": null,
+"ref": "gdi32.dll!0x5e00"
+},
+{
+"name": "CreatePenIndirect",
+"ordinal": 1094,
+"rva": 57504,
+"forwarder": null,
+"ref": "gdi32.dll!0xe0a0"
+},
+{
+"name": "CreatePolyPolygonRgn",
+"ordinal": 1095,
+"rva": 57568,
+"forwarder": null,
+"ref": "gdi32.dll!0xe0e0"
+},
+{
+"name": "CreatePolygonRgn",
+"ordinal": 1096,
+"rva": 55552,
+"forwarder": null,
+"ref": "gdi32.dll!0xd900"
+},
+{
+"name": "CreateRectRgn",
+"ordinal": 1097,
+"rva": 10688,
+"forwarder": null,
+"ref": "gdi32.dll!0x29c0"
+},
+{
+"name": "CreateRectRgnIndirect",
+"ordinal": 1098,
+"rva": 10656,
+"forwarder": null,
+"ref": "gdi32.dll!0x29a0"
+},
+{
+"name": "CreateRoundRectRgn",
+"ordinal": 1099,
+"rva": 20304,
+"forwarder": null,
+"ref": "gdi32.dll!0x4f50"
+},
+{
+"name": "CreateScalableFontResourceA",
+"ordinal": 1100,
+"rva": 34976,
+"forwarder": null,
+"ref": "gdi32.dll!0x88a0"
+},
+{
+"name": "CreateScalableFontResourceW",
+"ordinal": 1101,
+"rva": 57680,
+"forwarder": null,
+"ref": "gdi32.dll!0xe150"
+},
+{
+"name": "CreateScaledCompatibleBitmap",
+"ordinal": 1102,
+"rva": 35008,
+"forwarder": null,
+"ref": "gdi32.dll!0x88c0"
+},
+{
+"name": "CreateSessionMappedDIBSection",
+"ordinal": 1103,
+"rva": 35168,
+"forwarder": null,
+"ref": "gdi32.dll!0x8960"
+},
+{
+"name": "CreateSolidBrush",
+"ordinal": 1104,
+"rva": 19520,
+"forwarder": null,
+"ref": "gdi32.dll!0x4c40"
+},
+{
+"name": "D3DKMTAbandonSwapChain",
+"ordinal": 1105,
+"rva": 115420,
+"forwarder": "WIN32U.NtGdiDdDDIAbandonSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTAcquireKeyedMutex",
+"ordinal": 1106,
+"rva": 115478,
+"forwarder": "WIN32U.NtGdiDdDDIAcquireKeyedMutex",
+"ref": null
+},
+{
+"name": "D3DKMTAcquireKeyedMutex2",
+"ordinal": 1107,
+"rva": 115538,
+"forwarder": "WIN32U.NtGdiDdDDIAcquireKeyedMutex2",
+"ref": null
+},
+{
+"name": "D3DKMTAcquireSwapChain",
+"ordinal": 1108,
+"rva": 115597,
+"forwarder": "WIN32U.NtGdiDdDDIAcquireSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTAddSurfaceToSwapChain",
+"ordinal": 1109,
+"rva": 115659,
+"forwarder": "WIN32U.NtGdiDdDDIAddSurfaceToSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTAdjustFullscreenGamma",
+"ordinal": 1110,
+"rva": 115726,
+"forwarder": "WIN32U.NtGdiDdDDIAdjustFullscreenGamma",
+"ref": null
+},
+{
+"name": "D3DKMTCacheHybridQueryValue",
+"ordinal": 1111,
+"rva": 115793,
+"forwarder": "WIN32U.NtGdiDdDDICacheHybridQueryValue",
+"ref": null
+},
+{
+"name": "D3DKMTChangeVideoMemoryReservation",
+"ordinal": 1112,
+"rva": 115867,
+"forwarder": "WIN32U.NtGdiDdDDIChangeVideoMemoryReservation",
+"ref": null
+},
+{
+"name": "D3DKMTCheckExclusiveOwnership",
+"ordinal": 1113,
+"rva": 115943,
+"forwarder": "WIN32U.NtGdiDdDDICheckExclusiveOwnership",
+"ref": null
+},
+{
+"name": "D3DKMTCheckMonitorPowerState",
+"ordinal": 1114,
+"rva": 116013,
+"forwarder": "WIN32U.NtGdiDdDDICheckMonitorPowerState",
+"ref": null
+},
+{
+"name": "D3DKMTCheckMultiPlaneOverlaySupport",
+"ordinal": 1115,
+"rva": 116089,
+"forwarder": "WIN32U.NtGdiDdDDICheckMultiPlaneOverlaySupport",
+"ref": null
+},
+{
+"name": "D3DKMTCheckMultiPlaneOverlaySupport2",
+"ordinal": 1116,
+"rva": 116173,
+"forwarder": "WIN32U.NtGdiDdDDICheckMultiPlaneOverlaySupport2",
+"ref": null
+},
+{
+"name": "D3DKMTCheckMultiPlaneOverlaySupport3",
+"ordinal": 1117,
+"rva": 116258,
+"forwarder": "WIN32U.NtGdiDdDDICheckMultiPlaneOverlaySupport3",
+"ref": null
+},
+{
+"name": "D3DKMTCheckOcclusion",
+"ordinal": 1118,
+"rva": 116327,
+"forwarder": "WIN32U.NtGdiDdDDICheckOcclusion",
+"ref": null
+},
+{
+"name": "D3DKMTCheckSharedResourceAccess",
+"ordinal": 1119,
+"rva": 116391,
+"forwarder": "WIN32U.NtGdiDdDDICheckSharedResourceAccess",
+"ref": null
+},
+{
+"name": "D3DKMTCheckVidPnExclusiveOwnership",
+"ordinal": 1120,
+"rva": 116469,
+"forwarder": "WIN32U.NtGdiDdDDICheckVidPnExclusiveOwnership",
+"ref": null
+},
+{
+"name": "D3DKMTCloseAdapter",
+"ordinal": 1121,
+"rva": 116534,
+"forwarder": "WIN32U.NtGdiDdDDICloseAdapter",
+"ref": null
+},
+{
+"name": "D3DKMTConfigureSharedResource",
+"ordinal": 1122,
+"rva": 116594,
+"forwarder": "WIN32U.NtGdiDdDDIConfigureSharedResource",
+"ref": null
+},
+{
+"name": "D3DKMTCreateAllocation",
+"ordinal": 1123,
+"rva": 14400,
+"forwarder": null,
+"ref": "gdi32.dll!0x3840"
+},
+{
+"name": "D3DKMTCreateAllocation2",
+"ordinal": 1124,
+"rva": 116682,
+"forwarder": "WIN32U.NtGdiDdDDICreateAllocation",
+"ref": null
+},
+{
+"name": "D3DKMTCreateBundleObject",
+"ordinal": 1125,
+"rva": 116741,
+"forwarder": "WIN32U.NtGdiDdDDICreateBundleObject",
+"ref": null
+},
+{
+"name": "D3DKMTCreateContext",
+"ordinal": 1126,
+"rva": 116797,
+"forwarder": "WIN32U.NtGdiDdDDICreateContext",
+"ref": null
+},
+{
+"name": "D3DKMTCreateContextVirtual",
+"ordinal": 1127,
+"rva": 116855,
+"forwarder": "WIN32U.NtGdiDdDDICreateContextVirtual",
+"ref": null
+},
+{
+"name": "D3DKMTCreateDCFromMemory",
+"ordinal": 1128,
+"rva": 116918,
+"forwarder": "WIN32U.NtGdiDdDDICreateDCFromMemory",
+"ref": null
+},
+{
+"name": "D3DKMTCreateDevice",
+"ordinal": 1129,
+"rva": 116973,
+"forwarder": "WIN32U.NtGdiDdDDICreateDevice",
+"ref": null
+},
+{
+"name": "D3DKMTCreateHwContext",
+"ordinal": 1130,
+"rva": 117025,
+"forwarder": "WIN32U.NtGdiDdDDICreateHwContext",
+"ref": null
+},
+{
+"name": "D3DKMTCreateHwQueue",
+"ordinal": 1131,
+"rva": 117078,
+"forwarder": "WIN32U.NtGdiDdDDICreateHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTCreateKeyedMutex",
+"ordinal": 1132,
+"rva": 117132,
+"forwarder": "WIN32U.NtGdiDdDDICreateKeyedMutex",
+"ref": null
+},
+{
+"name": "D3DKMTCreateKeyedMutex2",
+"ordinal": 1133,
+"rva": 117190,
+"forwarder": "WIN32U.NtGdiDdDDICreateKeyedMutex2",
+"ref": null
+},
+{
+"name": "D3DKMTCreateOutputDupl",
+"ordinal": 1134,
+"rva": 117248,
+"forwarder": "WIN32U.NtGdiDdDDICreateOutputDupl",
+"ref": null
+},
+{
+"name": "D3DKMTCreateOverlay",
+"ordinal": 1135,
+"rva": 117302,
+"forwarder": "WIN32U.NtGdiDdDDICreateOverlay",
+"ref": null
+},
+{
+"name": "D3DKMTCreatePagingQueue",
+"ordinal": 1136,
+"rva": 117357,
+"forwarder": "WIN32U.NtGdiDdDDICreatePagingQueue",
+"ref": null
+},
+{
+"name": "D3DKMTCreateProtectedSession",
+"ordinal": 1137,
+"rva": 117421,
+"forwarder": "WIN32U.NtGdiDdDDICreateProtectedSession",
+"ref": null
+},
+{
+"name": "D3DKMTCreateSwapChain",
+"ordinal": 1138,
+"rva": 117483,
+"forwarder": "WIN32U.NtGdiDdDDICreateSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTCreateSynchronizationObject",
+"ordinal": 1139,
+"rva": 19760,
+"forwarder": null,
+"ref": "gdi32.dll!0x4d30"
+},
+{
+"name": "D3DKMTCreateSynchronizationObject2",
+"ordinal": 1140,
+"rva": 117585,
+"forwarder": "WIN32U.NtGdiDdDDICreateSynchronizationObject",
+"ref": null
+},
+{
+"name": "D3DKMTCreateTrackedWorkload",
+"ordinal": 1141,
+"rva": 117658,
+"forwarder": "WIN32U.NtDxgkCreateTrackedWorkload",
+"ref": null
+},
+{
+"name": "D3DKMTDDisplayEnum",
+"ordinal": 1142,
+"rva": 117712,
+"forwarder": "WIN32U.NtGdiDdDDIDDisplayEnum",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyAllocation",
+"ordinal": 1143,
+"rva": 117766,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyAllocation",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyAllocation2",
+"ordinal": 1144,
+"rva": 117826,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyAllocation2",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyContext",
+"ordinal": 1145,
+"rva": 117883,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyContext",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyDCFromMemory",
+"ordinal": 1146,
+"rva": 117941,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyDCFromMemory",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyDevice",
+"ordinal": 1147,
+"rva": 117998,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyDevice",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyHwContext",
+"ordinal": 1148,
+"rva": 118052,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyHwContext",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyHwQueue",
+"ordinal": 1149,
+"rva": 118107,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyKeyedMutex",
+"ordinal": 1150,
+"rva": 118163,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyKeyedMutex",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyOutputDupl",
+"ordinal": 1151,
+"rva": 118222,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyOutputDupl",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyOverlay",
+"ordinal": 1152,
+"rva": 118278,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyOverlay",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyPagingQueue",
+"ordinal": 1153,
+"rva": 118335,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyPagingQueue",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyProtectedSession",
+"ordinal": 1154,
+"rva": 118401,
+"forwarder": "WIN32U.NtGdiDdDDIDestroyProtectedSession",
+"ref": null
+},
+{
+"name": "D3DKMTDestroySynchronizationObject",
+"ordinal": 1155,
+"rva": 118477,
+"forwarder": "WIN32U.NtGdiDdDDIDestroySynchronizationObject",
+"ref": null
+},
+{
+"name": "D3DKMTDestroyTrackedWorkload",
+"ordinal": 1156,
+"rva": 118552,
+"forwarder": "WIN32U.NtDxgkDestroyTrackedWorkload",
+"ref": null
+},
+{
+"name": "D3DKMTDispMgrCreate",
+"ordinal": 1157,
+"rva": 118608,
+"forwarder": "WIN32U.NtGdiDdDDIDispMgrCreate",
+"ref": null
+},
+{
+"name": "D3DKMTDispMgrOperation",
+"ordinal": 1158,
+"rva": 118662,
+"forwarder": "WIN32U.NtDxgkDispMgrOperation",
+"ref": null
+},
+{
+"name": "D3DKMTDispMgrSourceOperation",
+"ordinal": 1159,
+"rva": 118721,
+"forwarder": "WIN32U.NtGdiDdDDIDispMgrSourceOperation",
+"ref": null
+},
+{
+"name": "D3DKMTDispMgrTargetOperation",
+"ordinal": 1160,
+"rva": 118790,
+"forwarder": "WIN32U.NtGdiDdDDIDispMgrTargetOperation",
+"ref": null
+},
+{
+"name": "D3DKMTDisplayPortOperation",
+"ordinal": 1161,
+"rva": 118857,
+"forwarder": "WIN32U.NtDxgkDisplayPortOperation",
+"ref": null
+},
+{
+"name": "D3DKMTDuplicateHandle",
+"ordinal": 1162,
+"rva": 118913,
+"forwarder": "WIN32U.NtDxgkDuplicateHandle",
+"ref": null
+},
+{
+"name": "D3DKMTEnumAdapters",
+"ordinal": 1163,
+"rva": 118961,
+"forwarder": "WIN32U.NtGdiDdDDIEnumAdapters",
+"ref": null
+},
+{
+"name": "D3DKMTEnumAdapters2",
+"ordinal": 1164,
+"rva": 119011,
+"forwarder": "WIN32U.NtGdiDdDDIEnumAdapters2",
+"ref": null
+},
+{
+"name": "D3DKMTEnumAdapters3",
+"ordinal": 1165,
+"rva": 119062,
+"forwarder": "WIN32U.NtDxgkEnumAdapters3",
+"ref": null
+},
+{
+"name": "D3DKMTEscape",
+"ordinal": 1166,
+"rva": 119102,
+"forwarder": "WIN32U.NtGdiDdDDIEscape",
+"ref": null
+},
+{
+"name": "D3DKMTEvict",
+"ordinal": 1167,
+"rva": 119138,
+"forwarder": "WIN32U.NtGdiDdDDIEvict",
+"ref": null
+},
+{
+"name": "D3DKMTExtractBundleObject",
+"ordinal": 1168,
+"rva": 119187,
+"forwarder": "WIN32U.NtGdiDdDDIExtractBundleObject",
+"ref": null
+},
+{
+"name": "D3DKMTFlipOverlay",
+"ordinal": 1169,
+"rva": 119242,
+"forwarder": "WIN32U.NtGdiDdDDIFlipOverlay",
+"ref": null
+},
+{
+"name": "D3DKMTFlushHeapTransitions",
+"ordinal": 1170,
+"rva": 119298,
+"forwarder": "WIN32U.NtGdiDdDDIFlushHeapTransitions",
+"ref": null
+},
+{
+"name": "D3DKMTFreeGpuVirtualAddress",
+"ordinal": 1171,
+"rva": 119364,
+"forwarder": "WIN32U.NtGdiDdDDIFreeGpuVirtualAddress",
+"ref": null
+},
+{
+"name": "D3DKMTGetAllocationPriority",
+"ordinal": 1172,
+"rva": 119431,
+"forwarder": "WIN32U.NtGdiDdDDIGetAllocationPriority",
+"ref": null
+},
+{
+"name": "D3DKMTGetAvailableTrackedWorkloadIndex",
+"ordinal": 1173,
+"rva": 119509,
+"forwarder": "WIN32U.NtDxgkGetAvailableTrackedWorkloadIndex",
+"ref": null
+},
+{
+"name": "D3DKMTGetCachedHybridQueryValue",
+"ordinal": 1174,
+"rva": 119587,
+"forwarder": "WIN32U.NtGdiDdDDIGetCachedHybridQueryValue",
+"ref": null
+},
+{
+"name": "D3DKMTGetContextInProcessSchedulingPriority",
+"ordinal": 1175,
+"rva": 119674,
+"forwarder": "WIN32U.NtGdiDdDDIGetContextInProcessSchedulingPriority",
+"ref": null
+},
+{
+"name": "D3DKMTGetContextSchedulingPriority",
+"ordinal": 1176,
+"rva": 119764,
+"forwarder": "WIN32U.NtGdiDdDDIGetContextSchedulingPriority",
+"ref": null
+},
+{
+"name": "D3DKMTGetDWMVerticalBlankEvent",
+"ordinal": 1177,
+"rva": 119841,
+"forwarder": "WIN32U.NtGdiDdDDIGetDWMVerticalBlankEvent",
+"ref": null
+},
+{
+"name": "D3DKMTGetDeviceState",
+"ordinal": 1178,
+"rva": 119904,
+"forwarder": "WIN32U.NtGdiDdDDIGetDeviceState",
+"ref": null
+},
+{
+"name": "D3DKMTGetDisplayModeList",
+"ordinal": 1179,
+"rva": 119961,
+"forwarder": "WIN32U.NtGdiDdDDIGetDisplayModeList",
+"ref": null
+},
+{
+"name": "D3DKMTGetMemoryBudgetTarget",
+"ordinal": 1180,
+"rva": 120025,
+"forwarder": "WIN32U.NtGdiDdDDIGetMemoryBudgetTarget",
+"ref": null
+},
+{
+"name": "D3DKMTGetMultiPlaneOverlayCaps",
+"ordinal": 1181,
+"rva": 120095,
+"forwarder": "WIN32U.NtGdiDdDDIGetMultiPlaneOverlayCaps",
+"ref": null
+},
+{
+"name": "D3DKMTGetMultisampleMethodList",
+"ordinal": 1182,
+"rva": 120168,
+"forwarder": "WIN32U.NtGdiDdDDIGetMultisampleMethodList",
+"ref": null
+},
+{
+"name": "D3DKMTGetOverlayState",
+"ordinal": 1183,
+"rva": 120232,
+"forwarder": "WIN32U.NtGdiDdDDIGetOverlayState",
+"ref": null
+},
+{
+"name": "D3DKMTGetPostCompositionCaps",
+"ordinal": 1184,
+"rva": 120294,
+"forwarder": "WIN32U.NtGdiDdDDIGetPostCompositionCaps",
+"ref": null
+},
+{
+"name": "D3DKMTGetPresentHistory",
+"ordinal": 1185,
+"rva": 120358,
+"forwarder": "WIN32U.NtGdiDdDDIGetPresentHistory",
+"ref": null
+},
+{
+"name": "D3DKMTGetPresentQueueEvent",
+"ordinal": 1186,
+"rva": 120420,
+"forwarder": "WIN32U.NtGdiDdDDIGetPresentQueueEvent",
+"ref": null
+},
+{
+"name": "D3DKMTGetProcessDeviceRemovalSupport",
+"ordinal": 1187,
+"rva": 120495,
+"forwarder": "WIN32U.NtGdiDdDDIGetProcessDeviceRemovalSupport",
+"ref": null
+},
+{
+"name": "D3DKMTGetProcessList",
+"ordinal": 1188,
+"rva": 120564,
+"forwarder": "WIN32U.NtDxgkGetProcessList",
+"ref": null
+},
+{
+"name": "D3DKMTGetProcessSchedulingPriorityBand",
+"ordinal": 1189,
+"rva": 120631,
+"forwarder": "WIN32U.NtGdiDdDDIGetProcessSchedulingPriorityBand",
+"ref": null
+},
+{
+"name": "D3DKMTGetProcessSchedulingPriorityClass",
+"ordinal": 1190,
+"rva": 120721,
+"forwarder": "WIN32U.NtGdiDdDDIGetProcessSchedulingPriorityClass",
+"ref": null
+},
+{
+"name": "D3DKMTGetResourcePresentPrivateDriverData",
+"ordinal": 1191,
+"rva": 120814,
+"forwarder": "WIN32U.NtGdiDdDDIGetResourcePresentPrivateDriverData",
+"ref": null
+},
+{
+"name": "D3DKMTGetRuntimeData",
+"ordinal": 1192,
+"rva": 120888,
+"forwarder": "WIN32U.NtGdiDdDDIGetRuntimeData",
+"ref": null
+},
+{
+"name": "D3DKMTGetScanLine",
+"ordinal": 1193,
+"rva": 120938,
+"forwarder": "WIN32U.NtGdiDdDDIGetScanLine",
+"ref": null
+},
+{
+"name": "D3DKMTGetSetSwapChainMetadata",
+"ordinal": 1194,
+"rva": 120997,
+"forwarder": "WIN32U.NtGdiDdDDIGetSetSwapChainMetadata",
+"ref": null
+},
+{
+"name": "D3DKMTGetSharedPrimaryHandle",
+"ordinal": 1195,
+"rva": 121067,
+"forwarder": "WIN32U.NtGdiDdDDIGetSharedPrimaryHandle",
+"ref": null
+},
+{
+"name": "D3DKMTGetSharedResourceAdapterLuid",
+"ordinal": 1196,
+"rva": 121142,
+"forwarder": "WIN32U.NtGdiDdDDIGetSharedResourceAdapterLuid",
+"ref": null
+},
+{
+"name": "D3DKMTGetTrackedWorkloadStatistics",
+"ordinal": 1197,
+"rva": 121223,
+"forwarder": "WIN32U.NtDxgkGetTrackedWorkloadStatistics",
+"ref": null
+},
+{
+"name": "D3DKMTGetYieldPercentage",
+"ordinal": 1198,
+"rva": 121290,
+"forwarder": "WIN32U.NtGdiDdDDIGetYieldPercentage",
+"ref": null
+},
+{
+"name": "D3DKMTInvalidateActiveVidPn",
+"ordinal": 1199,
+"rva": 121354,
+"forwarder": "WIN32U.NtGdiDdDDIInvalidateActiveVidPn",
+"ref": null
+},
+{
+"name": "D3DKMTInvalidateCache",
+"ordinal": 1200,
+"rva": 121415,
+"forwarder": "WIN32U.NtGdiDdDDIInvalidateCache",
+"ref": null
+},
+{
+"name": "D3DKMTLock",
+"ordinal": 1201,
+"rva": 121459,
+"forwarder": "WIN32U.NtGdiDdDDILock",
+"ref": null
+},
+{
+"name": "D3DKMTLock2",
+"ordinal": 1202,
+"rva": 121493,
+"forwarder": "WIN32U.NtGdiDdDDILock2",
+"ref": null
+},
+{
+"name": "D3DKMTMakeResident",
+"ordinal": 1203,
+"rva": 121535,
+"forwarder": "WIN32U.NtGdiDdDDIMakeResident",
+"ref": null
+},
+{
+"name": "D3DKMTMapGpuVirtualAddress",
+"ordinal": 1204,
+"rva": 121592,
+"forwarder": "WIN32U.NtGdiDdDDIMapGpuVirtualAddress",
+"ref": null
+},
+{
+"name": "D3DKMTMarkDeviceAsError",
+"ordinal": 1205,
+"rva": 121654,
+"forwarder": "WIN32U.NtGdiDdDDIMarkDeviceAsError",
+"ref": null
+},
+{
+"name": "D3DKMTNetDispGetNextChunkInfo",
+"ordinal": 1206,
+"rva": 121719,
+"forwarder": "WIN32U.NtGdiDdDDINetDispGetNextChunkInfo",
+"ref": null
+},
+{
+"name": "D3DKMTNetDispQueryMiracastDisplayDeviceStatus",
+"ordinal": 1207,
+"rva": 121806,
+"forwarder": "WIN32U.NtGdiDdDDINetDispQueryMiracastDisplayDeviceStatus",
+"ref": null
+},
+{
+"name": "D3DKMTNetDispQueryMiracastDisplayDeviceSupport",
+"ordinal": 1208,
+"rva": 121910,
+"forwarder": "WIN32U.NtGdiDdDDINetDispQueryMiracastDisplayDeviceSupport",
+"ref": null
+},
+{
+"name": "D3DKMTNetDispStartMiracastDisplayDevice",
+"ordinal": 1209,
+"rva": 54272,
+"forwarder": null,
+"ref": "gdi32.dll!0xd400"
+},
+{
+"name": "D3DKMTNetDispStartMiracastDisplayDevice2",
+"ordinal": 1210,
+"rva": 54304,
+"forwarder": null,
+"ref": "gdi32.dll!0xd420"
+},
+{
+"name": "D3DKMTNetDispStartMiracastDisplayDeviceEx",
+"ordinal": 1211,
+"rva": 122091,
+"forwarder": "WIN32U.NtGdiDdDDINetDispStartMiracastDisplayDevice",
+"ref": null
+},
+{
+"name": "D3DKMTNetDispStopMiracastDisplayDevice",
+"ordinal": 1212,
+"rva": 122181,
+"forwarder": "WIN32U.NtGdiDdDDINetDispStopMiracastDisplayDevice",
+"ref": null
+},
+{
+"name": "D3DKMTOfferAllocations",
+"ordinal": 1213,
+"rva": 122254,
+"forwarder": "WIN32U.NtGdiDdDDIOfferAllocations",
+"ref": null
+},
+{
+"name": "D3DKMTOpenAdapterFromDeviceName",
+"ordinal": 1214,
+"rva": 122320,
+"forwarder": "WIN32U.NtGdiDdDDIOpenAdapterFromDeviceName",
+"ref": null
+},
+{
+"name": "D3DKMTOpenAdapterFromGdiDisplayName",
+"ordinal": 1215,
+"rva": 4272,
+"forwarder": null,
+"ref": "gdi32.dll!0x10b0"
+},
+{
+"name": "D3DKMTOpenAdapterFromHdc",
+"ordinal": 1216,
+"rva": 10160,
+"forwarder": null,
+"ref": "gdi32.dll!0x27b0"
+},
+{
+"name": "D3DKMTOpenAdapterFromLuid",
+"ordinal": 1217,
+"rva": 122450,
+"forwarder": "WIN32U.NtGdiDdDDIOpenAdapterFromLuid",
+"ref": null
+},
+{
+"name": "D3DKMTOpenBundleObjectNtHandleFromName",
+"ordinal": 1218,
+"rva": 122526,
+"forwarder": "WIN32U.NtGdiDdDDIOpenBundleObjectNtHandleFromName",
+"ref": null
+},
+{
+"name": "D3DKMTOpenKeyedMutex",
+"ordinal": 1219,
+"rva": 122597,
+"forwarder": "WIN32U.NtGdiDdDDIOpenKeyedMutex",
+"ref": null
+},
+{
+"name": "D3DKMTOpenKeyedMutex2",
+"ordinal": 1220,
+"rva": 122651,
+"forwarder": "WIN32U.NtGdiDdDDIOpenKeyedMutex2",
+"ref": null
+},
+{
+"name": "D3DKMTOpenKeyedMutexFromNtHandle",
+"ordinal": 1221,
+"rva": 122717,
+"forwarder": "WIN32U.NtGdiDdDDIOpenKeyedMutexFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTOpenNtHandleFromName",
+"ordinal": 1222,
+"rva": 122788,
+"forwarder": "WIN32U.NtGdiDdDDIOpenNtHandleFromName",
+"ref": null
+},
+{
+"name": "D3DKMTOpenProtectedSessionFromNtHandle",
+"ordinal": 1223,
+"rva": 122865,
+"forwarder": "WIN32U.NtGdiDdDDIOpenProtectedSessionFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTOpenResource",
+"ordinal": 1224,
+"rva": 18112,
+"forwarder": null,
+"ref": "gdi32.dll!0x46c0"
+},
+{
+"name": "D3DKMTOpenResource2",
+"ordinal": 1225,
+"rva": 122954,
+"forwarder": "WIN32U.NtGdiDdDDIOpenResource",
+"ref": null
+},
+{
+"name": "D3DKMTOpenResourceFromNtHandle",
+"ordinal": 1226,
+"rva": 123015,
+"forwarder": "WIN32U.NtGdiDdDDIOpenResourceFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTOpenSwapChain",
+"ordinal": 1227,
+"rva": 123077,
+"forwarder": "WIN32U.NtGdiDdDDIOpenSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTOpenSyncObjectFromNtHandle",
+"ordinal": 1228,
+"rva": 123141,
+"forwarder": "WIN32U.NtGdiDdDDIOpenSyncObjectFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTOpenSyncObjectFromNtHandle2",
+"ordinal": 1229,
+"rva": 123219,
+"forwarder": "WIN32U.NtGdiDdDDIOpenSyncObjectFromNtHandle2",
+"ref": null
+},
+{
+"name": "D3DKMTOpenSyncObjectNtHandleFromName",
+"ordinal": 1230,
+"rva": 123301,
+"forwarder": "WIN32U.NtGdiDdDDIOpenSyncObjectNtHandleFromName",
+"ref": null
+},
+{
+"name": "D3DKMTOpenSynchronizationObject",
+"ordinal": 1231,
+"rva": 123381,
+"forwarder": "WIN32U.NtGdiDdDDIOpenSynchronizationObject",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplGetFrameInfo",
+"ordinal": 1232,
+"rva": 123453,
+"forwarder": "WIN32U.NtGdiDdDDIOutputDuplGetFrameInfo",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplGetMetaData",
+"ordinal": 1233,
+"rva": 123521,
+"forwarder": "WIN32U.NtGdiDdDDIOutputDuplGetMetaData",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplGetPointerShapeData",
+"ordinal": 1234,
+"rva": 123596,
+"forwarder": "WIN32U.NtGdiDdDDIOutputDuplGetPointerShapeData",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplPresent",
+"ordinal": 1235,
+"rva": 123667,
+"forwarder": "WIN32U.NtGdiDdDDIOutputDuplPresent",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplPresentToHwQueue",
+"ordinal": 1236,
+"rva": 123735,
+"forwarder": "WIN32U.NtDxgkOutputDuplPresentToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTOutputDuplReleaseFrame",
+"ordinal": 1237,
+"rva": 123804,
+"forwarder": "WIN32U.NtGdiDdDDIOutputDuplReleaseFrame",
+"ref": null
+},
+{
+"name": "D3DKMTPinDirectFlipResources",
+"ordinal": 1238,
+"rva": 4544,
+"forwarder": null,
+"ref": "gdi32.dll!0x11c0"
+},
+{
+"name": "D3DKMTPinResources",
+"ordinal": 1239,
+"rva": 123892,
+"forwarder": "WIN32U.NtDxgkPinResources",
+"ref": null
+},
+{
+"name": "D3DKMTPollDisplayChildren",
+"ordinal": 1240,
+"rva": 123944,
+"forwarder": "WIN32U.NtGdiDdDDIPollDisplayChildren",
+"ref": null
+},
+{
+"name": "D3DKMTPresent",
+"ordinal": 1241,
+"rva": 123995,
+"forwarder": "WIN32U.NtGdiDdDDIPresent",
+"ref": null
+},
+{
+"name": "D3DKMTPresentMultiPlaneOverlay",
+"ordinal": 1242,
+"rva": 124051,
+"forwarder": "WIN32U.NtGdiDdDDIPresentMultiPlaneOverlay",
+"ref": null
+},
+{
+"name": "D3DKMTPresentMultiPlaneOverlay2",
+"ordinal": 1243,
+"rva": 124125,
+"forwarder": "WIN32U.NtGdiDdDDIPresentMultiPlaneOverlay2",
+"ref": null
+},
+{
+"name": "D3DKMTPresentMultiPlaneOverlay3",
+"ordinal": 1244,
+"rva": 124200,
+"forwarder": "WIN32U.NtGdiDdDDIPresentMultiPlaneOverlay3",
+"ref": null
+},
+{
+"name": "D3DKMTPresentRedirected",
+"ordinal": 1245,
+"rva": 124267,
+"forwarder": "WIN32U.NtGdiDdDDIPresentRedirected",
+"ref": null
+},
+{
+"name": "D3DKMTQueryAdapterInfo",
+"ordinal": 1246,
+"rva": 124325,
+"forwarder": "WIN32U.NtGdiDdDDIQueryAdapterInfo",
+"ref": null
+},
+{
+"name": "D3DKMTQueryAllocationResidency",
+"ordinal": 1247,
+"rva": 124390,
+"forwarder": "WIN32U.NtGdiDdDDIQueryAllocationResidency",
+"ref": null
+},
+{
+"name": "D3DKMTQueryClockCalibration",
+"ordinal": 1248,
+"rva": 124460,
+"forwarder": "WIN32U.NtGdiDdDDIQueryClockCalibration",
+"ref": null
+},
+{
+"name": "D3DKMTQueryFSEBlock",
+"ordinal": 1249,
+"rva": 124519,
+"forwarder": "WIN32U.NtGdiDdDDIQueryFSEBlock",
+"ref": null
+},
+{
+"name": "D3DKMTQueryProcessOfferInfo",
+"ordinal": 1250,
+"rva": 124578,
+"forwarder": "WIN32U.NtGdiDdDDIQueryProcessOfferInfo",
+"ref": null
+},
+{
+"name": "D3DKMTQueryProtectedSessionInfoFromNtHandle",
+"ordinal": 1251,
+"rva": 124661,
+"forwarder": "WIN32U.NtGdiDdDDIQueryProtectedSessionInfoFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTQueryProtectedSessionStatus",
+"ordinal": 1252,
+"rva": 124750,
+"forwarder": "WIN32U.NtGdiDdDDIQueryProtectedSessionStatus",
+"ref": null
+},
+{
+"name": "D3DKMTQueryRemoteVidPnSourceFromGdiDisplayName",
+"ordinal": 1253,
+"rva": 124842,
+"forwarder": "WIN32U.NtGdiDdDDIQueryRemoteVidPnSourceFromGdiDisplayName",
+"ref": null
+},
+{
+"name": "D3DKMTQueryResourceInfo",
+"ordinal": 1254,
+"rva": 124924,
+"forwarder": "WIN32U.NtGdiDdDDIQueryResourceInfo",
+"ref": null
+},
+{
+"name": "D3DKMTQueryResourceInfoFromNtHandle",
+"ordinal": 1255,
+"rva": 124995,
+"forwarder": "WIN32U.NtGdiDdDDIQueryResourceInfoFromNtHandle",
+"ref": null
+},
+{
+"name": "D3DKMTQueryStatistics",
+"ordinal": 1256,
+"rva": 125064,
+"forwarder": "WIN32U.NtGdiDdDDIQueryStatistics",
+"ref": null
+},
+{
+"name": "D3DKMTQueryVidPnExclusiveOwnership",
+"ordinal": 1257,
+"rva": 125132,
+"forwarder": "WIN32U.NtGdiDdDDIQueryVidPnExclusiveOwnership",
+"ref": null
+},
+{
+"name": "D3DKMTQueryVideoMemoryInfo",
+"ordinal": 1258,
+"rva": 125205,
+"forwarder": "WIN32U.NtGdiDdDDIQueryVideoMemoryInfo",
+"ref": null
+},
+{
+"name": "D3DKMTReclaimAllocations",
+"ordinal": 1259,
+"rva": 125268,
+"forwarder": "WIN32U.NtGdiDdDDIReclaimAllocations",
+"ref": null
+},
+{
+"name": "D3DKMTReclaimAllocations2",
+"ordinal": 1260,
+"rva": 125330,
+"forwarder": "WIN32U.NtGdiDdDDIReclaimAllocations2",
+"ref": null
+},
+{
+"name": "D3DKMTRegisterTrimNotification",
+"ordinal": 1261,
+"rva": 21088,
+"forwarder": null,
+"ref": "gdi32.dll!0x5260"
+},
+{
+"name": "D3DKMTRegisterVailProcess",
+"ordinal": 1262,
+"rva": 125424,
+"forwarder": "WIN32U.NtDxgkRegisterVailProcess",
+"ref": null
+},
+{
+"name": "D3DKMTReleaseKeyedMutex",
+"ordinal": 1263,
+"rva": 125481,
+"forwarder": "WIN32U.NtGdiDdDDIReleaseKeyedMutex",
+"ref": null
+},
+{
+"name": "D3DKMTReleaseKeyedMutex2",
+"ordinal": 1264,
+"rva": 125541,
+"forwarder": "WIN32U.NtGdiDdDDIReleaseKeyedMutex2",
+"ref": null
+},
+{
+"name": "D3DKMTReleaseProcessVidPnSourceOwners",
+"ordinal": 1265,
+"rva": 125615,
+"forwarder": "WIN32U.NtGdiDdDDIReleaseProcessVidPnSourceOwners",
+"ref": null
+},
+{
+"name": "D3DKMTReleaseSwapChain",
+"ordinal": 1266,
+"rva": 125687,
+"forwarder": "WIN32U.NtGdiDdDDIReleaseSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTRemoveSurfaceFromSwapChain",
+"ordinal": 1267,
+"rva": 125754,
+"forwarder": "WIN32U.NtGdiDdDDIRemoveSurfaceFromSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTRender",
+"ordinal": 1268,
+"rva": 125811,
+"forwarder": "WIN32U.NtGdiDdDDIRender",
+"ref": null
+},
+{
+"name": "D3DKMTReserveGpuVirtualAddress",
+"ordinal": 1269,
+"rva": 125866,
+"forwarder": "WIN32U.NtGdiDdDDIReserveGpuVirtualAddress",
+"ref": null
+},
+{
+"name": "D3DKMTResetTrackedWorkloadStatistics",
+"ordinal": 1270,
+"rva": 125945,
+"forwarder": "WIN32U.NtDxgkResetTrackedWorkloadStatistics",
+"ref": null
+},
+{
+"name": "D3DKMTSetAllocationPriority",
+"ordinal": 1271,
+"rva": 126017,
+"forwarder": "WIN32U.NtGdiDdDDISetAllocationPriority",
+"ref": null
+},
+{
+"name": "D3DKMTSetContextInProcessSchedulingPriority",
+"ordinal": 1272,
+"rva": 126100,
+"forwarder": "WIN32U.NtGdiDdDDISetContextInProcessSchedulingPriority",
+"ref": null
+},
+{
+"name": "D3DKMTSetContextSchedulingPriority",
+"ordinal": 1273,
+"rva": 126190,
+"forwarder": "WIN32U.NtGdiDdDDISetContextSchedulingPriority",
+"ref": null
+},
+{
+"name": "D3DKMTSetDisplayMode",
+"ordinal": 1274,
+"rva": 126257,
+"forwarder": "WIN32U.NtGdiDdDDISetDisplayMode",
+"ref": null
+},
+{
+"name": "D3DKMTSetDisplayPrivateDriverFormat",
+"ordinal": 1275,
+"rva": 54496,
+"forwarder": null,
+"ref": "gdi32.dll!0xd4e0"
+},
+{
+"name": "D3DKMTSetDodIndirectSwapchain",
+"ordinal": 1276,
+"rva": 126355,
+"forwarder": "WIN32U.NtGdiDdDDISetDodIndirectSwapchain",
+"ref": null
+},
+{
+"name": "D3DKMTSetFSEBlock",
+"ordinal": 1277,
+"rva": 126414,
+"forwarder": "WIN32U.NtGdiDdDDISetFSEBlock",
+"ref": null
+},
+{
+"name": "D3DKMTSetGammaRamp",
+"ordinal": 1278,
+"rva": 126462,
+"forwarder": "WIN32U.NtGdiDdDDISetGammaRamp",
+"ref": null
+},
+{
+"name": "D3DKMTSetHwProtectionTeardownRecovery",
+"ordinal": 1279,
+"rva": 126530,
+"forwarder": "WIN32U.NtGdiDdDDISetHwProtectionTeardownRecovery",
+"ref": null
+},
+{
+"name": "D3DKMTSetMemoryBudgetTarget",
+"ordinal": 1280,
+"rva": 126607,
+"forwarder": "WIN32U.NtGdiDdDDISetMemoryBudgetTarget",
+"ref": null
+},
+{
+"name": "D3DKMTSetMonitorColorSpaceTransform",
+"ordinal": 1281,
+"rva": 126682,
+"forwarder": "WIN32U.NtGdiDdDDISetMonitorColorSpaceTransform",
+"ref": null
+},
+{
+"name": "D3DKMTSetProcessDeviceRemovalSupport",
+"ordinal": 1282,
+"rva": 126766,
+"forwarder": "WIN32U.NtGdiDdDDISetProcessDeviceRemovalSupport",
+"ref": null
+},
+{
+"name": "D3DKMTSetProcessSchedulingPriorityBand",
+"ordinal": 1283,
+"rva": 126853,
+"forwarder": "WIN32U.NtGdiDdDDISetProcessSchedulingPriorityBand",
+"ref": null
+},
+{
+"name": "D3DKMTSetProcessSchedulingPriorityClass",
+"ordinal": 1284,
+"rva": 126943,
+"forwarder": "WIN32U.NtGdiDdDDISetProcessSchedulingPriorityClass",
+"ref": null
+},
+{
+"name": "D3DKMTSetQueuedLimit",
+"ordinal": 1285,
+"rva": 127015,
+"forwarder": "WIN32U.NtGdiDdDDISetQueuedLimit",
+"ref": null
+},
+{
+"name": "D3DKMTSetStablePowerState",
+"ordinal": 1286,
+"rva": 127073,
+"forwarder": "WIN32U.NtGdiDdDDISetStablePowerState",
+"ref": null
+},
+{
+"name": "D3DKMTSetStereoEnabled",
+"ordinal": 1287,
+"rva": 127133,
+"forwarder": "WIN32U.NtGdiDdDDISetStereoEnabled",
+"ref": null
+},
+{
+"name": "D3DKMTSetSyncRefreshCountWaitTarget",
+"ordinal": 1288,
+"rva": 127203,
+"forwarder": "WIN32U.NtGdiDdDDISetSyncRefreshCountWaitTarget",
+"ref": null
+},
+{
+"name": "D3DKMTSetVidPnSourceHwProtection",
+"ordinal": 1289,
+"rva": 127283,
+"forwarder": "WIN32U.NtGdiDdDDISetVidPnSourceHwProtection",
+"ref": null
+},
+{
+"name": "D3DKMTSetVidPnSourceOwner",
+"ordinal": 1290,
+"rva": 24160,
+"forwarder": null,
+"ref": "gdi32.dll!0x5e60"
+},
+{
+"name": "D3DKMTSetVidPnSourceOwner1",
+"ordinal": 1291,
+"rva": 22080,
+"forwarder": null,
+"ref": "gdi32.dll!0x5640"
+},
+{
+"name": "D3DKMTSetVidPnSourceOwner2",
+"ordinal": 1292,
+"rva": 127407,
+"forwarder": "WIN32U.NtGdiDdDDISetVidPnSourceOwner",
+"ref": null
+},
+{
+"name": "D3DKMTSetYieldPercentage",
+"ordinal": 1293,
+"rva": 127469,
+"forwarder": "WIN32U.NtGdiDdDDISetYieldPercentage",
+"ref": null
+},
+{
+"name": "D3DKMTShareObjects",
+"ordinal": 1294,
+"rva": 127524,
+"forwarder": "WIN32U.NtGdiDdDDIShareObjects",
+"ref": null
+},
+{
+"name": "D3DKMTSharedPrimaryLockNotification",
+"ordinal": 1295,
+"rva": 127590,
+"forwarder": "WIN32U.NtGdiDdDDISharedPrimaryLockNotification",
+"ref": null
+},
+{
+"name": "D3DKMTSharedPrimaryUnLockNotification",
+"ordinal": 1296,
+"rva": 127675,
+"forwarder": "WIN32U.NtGdiDdDDISharedPrimaryUnLockNotification",
+"ref": null
+},
+{
+"name": "D3DKMTSignalSynchronizationObject",
+"ordinal": 1297,
+"rva": 54528,
+"forwarder": null,
+"ref": "gdi32.dll!0xd500"
+},
+{
+"name": "D3DKMTSignalSynchronizationObject2",
+"ordinal": 1298,
+"rva": 127793,
+"forwarder": "WIN32U.NtGdiDdDDISignalSynchronizationObject",
+"ref": null
+},
+{
+"name": "D3DKMTSignalSynchronizationObjectFromCpu",
+"ordinal": 1299,
+"rva": 127879,
+"forwarder": "WIN32U.NtGdiDdDDISignalSynchronizationObjectFromCpu",
+"ref": null
+},
+{
+"name": "D3DKMTSignalSynchronizationObjectFromGpu",
+"ordinal": 1300,
+"rva": 127972,
+"forwarder": "WIN32U.NtGdiDdDDISignalSynchronizationObjectFromGpu",
+"ref": null
+},
+{
+"name": "D3DKMTSignalSynchronizationObjectFromGpu2",
+"ordinal": 1301,
+"rva": 128066,
+"forwarder": "WIN32U.NtGdiDdDDISignalSynchronizationObjectFromGpu2",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitCommand",
+"ordinal": 1302,
+"rva": 128139,
+"forwarder": "WIN32U.NtGdiDdDDISubmitCommand",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitCommandToHwQueue",
+"ordinal": 1303,
+"rva": 128199,
+"forwarder": "WIN32U.NtGdiDdDDISubmitCommandToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitPresentBltToHwQueue",
+"ordinal": 1304,
+"rva": 128271,
+"forwarder": "WIN32U.NtDxgkSubmitPresentBltToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitPresentToHwQueue",
+"ordinal": 1305,
+"rva": 128339,
+"forwarder": "WIN32U.NtDxgkSubmitPresentToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitSignalSyncObjectsToHwQueue",
+"ordinal": 1306,
+"rva": 128414,
+"forwarder": "WIN32U.NtGdiDdDDISubmitSignalSyncObjectsToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTSubmitWaitForSyncObjectsToHwQueue",
+"ordinal": 1307,
+"rva": 128504,
+"forwarder": "WIN32U.NtGdiDdDDISubmitWaitForSyncObjectsToHwQueue",
+"ref": null
+},
+{
+"name": "D3DKMTTrimProcessCommitment",
+"ordinal": 1308,
+"rva": 128583,
+"forwarder": "WIN32U.NtGdiDdDDITrimProcessCommitment",
+"ref": null
+},
+{
+"name": "D3DKMTUnOrderedPresentSwapChain",
+"ordinal": 1309,
+"rva": 128654,
+"forwarder": "WIN32U.NtGdiDdDDIUnOrderedPresentSwapChain",
+"ref": null
+},
+{
+"name": "D3DKMTUnlock",
+"ordinal": 1310,
+"rva": 128710,
+"forwarder": "WIN32U.NtGdiDdDDIUnlock",
+"ref": null
+},
+{
+"name": "D3DKMTUnlock2",
+"ordinal": 1311,
+"rva": 128748,
+"forwarder": "WIN32U.NtGdiDdDDIUnlock2",
+"ref": null
+},
+{
+"name": "D3DKMTUnpinDirectFlipResources",
+"ordinal": 1312,
+"rva": 4480,
+"forwarder": null,
+"ref": "gdi32.dll!0x1180"
+},
+{
+"name": "D3DKMTUnpinResources",
+"ordinal": 1313,
+"rva": 128825,
+"forwarder": "WIN32U.NtDxgkUnpinResources",
+"ref": null
+},
+{
+"name": "D3DKMTUnregisterTrimNotification",
+"ordinal": 1314,
+"rva": 20944,
+"forwarder": null,
+"ref": "gdi32.dll!0x51d0"
+},
+{
+"name": "D3DKMTUpdateAllocationProperty",
+"ordinal": 1315,
+"rva": 128917,
+"forwarder": "WIN32U.NtGdiDdDDIUpdateAllocationProperty",
+"ref": null
+},
+{
+"name": "D3DKMTUpdateGpuVirtualAddress",
+"ordinal": 1316,
+"rva": 128989,
+"forwarder": "WIN32U.NtGdiDdDDIUpdateGpuVirtualAddress",
+"ref": null
+},
+{
+"name": "D3DKMTUpdateOverlay",
+"ordinal": 1317,
+"rva": 129050,
+"forwarder": "WIN32U.NtGdiDdDDIUpdateOverlay",
+"ref": null
+},
+{
+"name": "D3DKMTUpdateTrackedWorkload",
+"ordinal": 1318,
+"rva": 129109,
+"forwarder": "WIN32U.NtDxgkUpdateTrackedWorkload",
+"ref": null
+},
+{
+"name": "D3DKMTVailConnect",
+"ordinal": 1319,
+"rva": 129162,
+"forwarder": "WIN32U.NtDxgkVailConnect",
+"ref": null
+},
+{
+"name": "D3DKMTVailDisconnect",
+"ordinal": 1320,
+"rva": 129208,
+"forwarder": "WIN32U.NtDxgkVailDisconnect",
+"ref": null
+},
+{
+"name": "D3DKMTVailPromoteCompositionSurface",
+"ordinal": 1321,
+"rva": 129272,
+"forwarder": "WIN32U.NtDxgkVailPromoteCompositionSurface",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForIdle",
+"ordinal": 1322,
+"rva": 129333,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForIdle",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForSynchronizationObject",
+"ordinal": 1323,
+"rva": 54720,
+"forwarder": null,
+"ref": "gdi32.dll!0xd5c0"
+},
+{
+"name": "D3DKMTWaitForSynchronizationObject2",
+"ordinal": 1324,
+"rva": 129433,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForSynchronizationObject",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForSynchronizationObjectFromCpu",
+"ordinal": 1325,
+"rva": 129521,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForSynchronizationObjectFromCpu",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForSynchronizationObjectFromGpu",
+"ordinal": 1326,
+"rva": 129616,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForSynchronizationObjectFromGpu",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForVerticalBlankEvent",
+"ordinal": 1327,
+"rva": 129701,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForVerticalBlankEvent",
+"ref": null
+},
+{
+"name": "D3DKMTWaitForVerticalBlankEvent2",
+"ordinal": 1328,
+"rva": 129777,
+"forwarder": "WIN32U.NtGdiDdDDIWaitForVerticalBlankEvent2",
+"ref": null
+},
+{
+"name": "DDCCIGetCapabilitiesString",
+"ordinal": 1329,
+"rva": 25040,
+"forwarder": null,
+"ref": "gdi32.dll!0x61d0"
+},
+{
+"name": "DDCCIGetCapabilitiesStringLength",
+"ordinal": 1330,
+"rva": 25056,
+"forwarder": null,
+"ref": "gdi32.dll!0x61e0"
+},
+{
+"name": "DDCCIGetTimingReport",
+"ordinal": 1331,
+"rva": 25072,
+"forwarder": null,
+"ref": "gdi32.dll!0x61f0"
+},
+{
+"name": "DDCCIGetVCPFeature",
+"ordinal": 1332,
+"rva": 25088,
+"forwarder": null,
+"ref": "gdi32.dll!0x6200"
+},
+{
+"name": "DDCCISaveCurrentSettings",
+"ordinal": 1333,
+"rva": 25104,
+"forwarder": null,
+"ref": "gdi32.dll!0x6210"
+},
+{
+"name": "DDCCISetVCPFeature",
+"ordinal": 1334,
+"rva": 25120,
+"forwarder": null,
+"ref": "gdi32.dll!0x6220"
+},
+{
+"name": "DPtoLP",
+"ordinal": 1335,
+"rva": 57792,
+"forwarder": null,
+"ref": "gdi32.dll!0xe1c0"
+},
+{
+"name": "DdCreateFullscreenSprite",
+"ordinal": 1336,
+"rva": 25136,
+"forwarder": null,
+"ref": "gdi32.dll!0x6230"
+},
+{
+"name": "DdDestroyFullscreenSprite",
+"ordinal": 1337,
+"rva": 25152,
+"forwarder": null,
+"ref": "gdi32.dll!0x6240"
+},
+{
+"name": "DdEntry0",
+"ordinal": 1338,
+"rva": 35200,
+"forwarder": null,
+"ref": "gdi32.dll!0x8980"
+},
+{
+"name": "DdEntry1",
+"ordinal": 1339,
+"rva": 35232,
+"forwarder": null,
+"ref": "gdi32.dll!0x89a0"
+},
+{
+"name": "DdEntry10",
+"ordinal": 1340,
+"rva": 35264,
+"forwarder": null,
+"ref": "gdi32.dll!0x89c0"
+},
+{
+"name": "DdEntry11",
+"ordinal": 1341,
+"rva": 35296,
+"forwarder": null,
+"ref": "gdi32.dll!0x89e0"
+},
+{
+"name": "DdEntry12",
+"ordinal": 1342,
+"rva": 35328,
+"forwarder": null,
+"ref": "gdi32.dll!0x8a00"
+},
+{
+"name": "DdEntry13",
+"ordinal": 1343,
+"rva": 35360,
+"forwarder": null,
+"ref": "gdi32.dll!0x8a20"
+},
+{
+"name": "DdEntry14",
+"ordinal": 1344,
+"rva": 35392,
+"forwarder": null,
+"ref": "gdi32.dll!0x8a40"
+},
+{
+"name": "DdEntry15",
+"ordinal": 1345,
+"rva": 35424,
+"forwarder": null,
+"ref": "gdi32.dll!0x8a60"
+},
+{
+"name": "DdEntry16",
+"ordinal": 1346,
+"rva": 35456,
+"forwarder": null,
+"ref": "gdi32.dll!0x8a80"
+},
+{
+"name": "DdEntry17",
+"ordinal": 1347,
+"rva": 35488,
+"forwarder": null,
+"ref": "gdi32.dll!0x8aa0"
+},
+{
+"name": "DdEntry18",
+"ordinal": 1348,
+"rva": 35520,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ac0"
+},
+{
+"name": "DdEntry19",
+"ordinal": 1349,
+"rva": 35552,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ae0"
+},
+{
+"name": "DdEntry2",
+"ordinal": 1350,
+"rva": 35584,
+"forwarder": null,
+"ref": "gdi32.dll!0x8b00"
+},
+{
+"name": "DdEntry20",
+"ordinal": 1351,
+"rva": 35616,
+"forwarder": null,
+"ref": "gdi32.dll!0x8b20"
+},
+{
+"name": "DdEntry21",
+"ordinal": 1352,
+"rva": 35648,
+"forwarder": null,
+"ref": "gdi32.dll!0x8b40"
+},
+{
+"name": "DdEntry22",
+"ordinal": 1353,
+"rva": 35680,
+"forwarder": null,
+"ref": "gdi32.dll!0x8b60"
+},
+{
+"name": "DdEntry23",
+"ordinal": 1354,
+"rva": 35712,
+"forwarder": null,
+"ref": "gdi32.dll!0x8b80"
+},
+{
+"name": "DdEntry24",
+"ordinal": 1355,
+"rva": 35744,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ba0"
+},
+{
+"name": "DdEntry25",
+"ordinal": 1356,
+"rva": 35776,
+"forwarder": null,
+"ref": "gdi32.dll!0x8bc0"
+},
+{
+"name": "DdEntry26",
+"ordinal": 1357,
+"rva": 35808,
+"forwarder": null,
+"ref": "gdi32.dll!0x8be0"
+},
+{
+"name": "DdEntry27",
+"ordinal": 1358,
+"rva": 35840,
+"forwarder": null,
+"ref": "gdi32.dll!0x8c00"
+},
+{
+"name": "DdEntry28",
+"ordinal": 1359,
+"rva": 35872,
+"forwarder": null,
+"ref": "gdi32.dll!0x8c20"
+},
+{
+"name": "DdEntry29",
+"ordinal": 1360,
+"rva": 35904,
+"forwarder": null,
+"ref": "gdi32.dll!0x8c40"
+},
+{
+"name": "DdEntry3",
+"ordinal": 1361,
+"rva": 35936,
+"forwarder": null,
+"ref": "gdi32.dll!0x8c60"
+},
+{
+"name": "DdEntry30",
+"ordinal": 1362,
+"rva": 35968,
+"forwarder": null,
+"ref": "gdi32.dll!0x8c80"
+},
+{
+"name": "DdEntry31",
+"ordinal": 1363,
+"rva": 36000,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ca0"
+},
+{
+"name": "DdEntry32",
+"ordinal": 1364,
+"rva": 36032,
+"forwarder": null,
+"ref": "gdi32.dll!0x8cc0"
+},
+{
+"name": "DdEntry33",
+"ordinal": 1365,
+"rva": 36064,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ce0"
+},
+{
+"name": "DdEntry34",
+"ordinal": 1366,
+"rva": 36096,
+"forwarder": null,
+"ref": "gdi32.dll!0x8d00"
+},
+{
+"name": "DdEntry35",
+"ordinal": 1367,
+"rva": 36128,
+"forwarder": null,
+"ref": "gdi32.dll!0x8d20"
+},
+{
+"name": "DdEntry36",
+"ordinal": 1368,
+"rva": 36160,
+"forwarder": null,
+"ref": "gdi32.dll!0x8d40"
+},
+{
+"name": "DdEntry37",
+"ordinal": 1369,
+"rva": 36192,
+"forwarder": null,
+"ref": "gdi32.dll!0x8d60"
+},
+{
+"name": "DdEntry38",
+"ordinal": 1370,
+"rva": 36224,
+"forwarder": null,
+"ref": "gdi32.dll!0x8d80"
+},
+{
+"name": "DdEntry39",
+"ordinal": 1371,
+"rva": 36256,
+"forwarder": null,
+"ref": "gdi32.dll!0x8da0"
+},
+{
+"name": "DdEntry4",
+"ordinal": 1372,
+"rva": 36288,
+"forwarder": null,
+"ref": "gdi32.dll!0x8dc0"
+},
+{
+"name": "DdEntry40",
+"ordinal": 1373,
+"rva": 36320,
+"forwarder": null,
+"ref": "gdi32.dll!0x8de0"
+},
+{
+"name": "DdEntry41",
+"ordinal": 1374,
+"rva": 36352,
+"forwarder": null,
+"ref": "gdi32.dll!0x8e00"
+},
+{
+"name": "DdEntry42",
+"ordinal": 1375,
+"rva": 36384,
+"forwarder": null,
+"ref": "gdi32.dll!0x8e20"
+},
+{
+"name": "DdEntry43",
+"ordinal": 1376,
+"rva": 36416,
+"forwarder": null,
+"ref": "gdi32.dll!0x8e40"
+},
+{
+"name": "DdEntry44",
+"ordinal": 1377,
+"rva": 36448,
+"forwarder": null,
+"ref": "gdi32.dll!0x8e60"
+},
+{
+"name": "DdEntry45",
+"ordinal": 1378,
+"rva": 36480,
+"forwarder": null,
+"ref": "gdi32.dll!0x8e80"
+},
+{
+"name": "DdEntry46",
+"ordinal": 1379,
+"rva": 36512,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ea0"
+},
+{
+"name": "DdEntry47",
+"ordinal": 1380,
+"rva": 36544,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ec0"
+},
+{
+"name": "DdEntry48",
+"ordinal": 1381,
+"rva": 36576,
+"forwarder": null,
+"ref": "gdi32.dll!0x8ee0"
+},
+{
+"name": "DdEntry49",
+"ordinal": 1382,
+"rva": 36608,
+"forwarder": null,
+"ref": "gdi32.dll!0x8f00"
+},
+{
+"name": "DdEntry5",
+"ordinal": 1383,
+"rva": 36640,
+"forwarder": null,
+"ref": "gdi32.dll!0x8f20"
+},
+{
+"name": "DdEntry50",
+"ordinal": 1384,
+"rva": 36672,
+"forwarder": null,
+"ref": "gdi32.dll!0x8f40"
+},
+{
+"name": "DdEntry51",
+"ordinal": 1385,
+"rva": 36704,
+"forwarder": null,
+"ref": "gdi32.dll!0x8f60"
+},
+{
+"name": "DdEntry52",
+"ordinal": 1386,
+"rva": 36736,
+"forwarder": null,
+"ref": "gdi32.dll!0x8f80"
+},
+{
+"name": "DdEntry53",
+"ordinal": 1387,
+"rva": 36768,
+"forwarder": null,
+"ref": "gdi32.dll!0x8fa0"
+},
+{
+"name": "DdEntry54",
+"ordinal": 1388,
+"rva": 36800,
+"forwarder": null,
+"ref": "gdi32.dll!0x8fc0"
+},
+{
+"name": "DdEntry55",
+"ordinal": 1389,
+"rva": 36832,
+"forwarder": null,
+"ref": "gdi32.dll!0x8fe0"
+},
+{
+"name": "DdEntry56",
+"ordinal": 1390,
+"rva": 36864,
+"forwarder": null,
+"ref": "gdi32.dll!0x9000"
+},
+{
+"name": "DdEntry6",
+"ordinal": 1391,
+"rva": 36896,
+"forwarder": null,
+"ref": "gdi32.dll!0x9020"
+},
+{
+"name": "DdEntry7",
+"ordinal": 1392,
+"rva": 36928,
+"forwarder": null,
+"ref": "gdi32.dll!0x9040"
+},
+{
+"name": "DdEntry8",
+"ordinal": 1393,
+"rva": 36960,
+"forwarder": null,
+"ref": "gdi32.dll!0x9060"
+},
+{
+"name": "DdEntry9",
+"ordinal": 1394,
+"rva": 36992,
+"forwarder": null,
+"ref": "gdi32.dll!0x9080"
+},
+{
+"name": "DdNotifyFullscreenSpriteUpdate",
+"ordinal": 1395,
+"rva": 25168,
+"forwarder": null,
+"ref": "gdi32.dll!0x6250"
+},
+{
+"name": "DdQueryVisRgnUniqueness",
+"ordinal": 1396,
+"rva": 25184,
+"forwarder": null,
+"ref": "gdi32.dll!0x6260"
+},
+{
+"name": "DeleteColorSpace",
+"ordinal": 1397,
+"rva": 33632,
+"forwarder": null,
+"ref": "gdi32.dll!0x8360"
+},
+{
+"name": "DeleteDC",
+"ordinal": 1398,
+"rva": 11536,
+"forwarder": null,
+"ref": "gdi32.dll!0x2d10"
+},
+{
+"name": "DeleteEnhMetaFile",
+"ordinal": 1399,
+"rva": 57888,
+"forwarder": null,
+"ref": "gdi32.dll!0xe220"
+},
+{
+"name": "DeleteMetaFile",
+"ordinal": 1400,
+"rva": 57952,
+"forwarder": null,
+"ref": "gdi32.dll!0xe260"
+},
+{
+"name": "DeleteObject",
+"ordinal": 1401,
+"rva": 8496,
+"forwarder": null,
+"ref": "gdi32.dll!0x2130"
+},
+{
+"name": "DescribePixelFormat",
+"ordinal": 1402,
+"rva": 37024,
+"forwarder": null,
+"ref": "gdi32.dll!0x90a0"
+},
+{
+"name": "DestroyOPMProtectedOutput",
+"ordinal": 1403,
+"rva": 25200,
+"forwarder": null,
+"ref": "gdi32.dll!0x6270"
+},
+{
+"name": "DestroyPhysicalMonitorInternal",
+"ordinal": 1404,
+"rva": 25216,
+"forwarder": null,
+"ref": "gdi32.dll!0x6280"
+},
+{
+"name": "DeviceCapabilitiesExA",
+"ordinal": 1405,
+"rva": 37056,
+"forwarder": null,
+"ref": "gdi32.dll!0x90c0"
+},
+{
+"name": "DeviceCapabilitiesExW",
+"ordinal": 1406,
+"rva": 130831,
+"forwarder": "ext-ms-win-gdi-desktop-l1-1-0.DeviceCapabilitiesExA",
+"ref": null
+},
+{
+"name": "DrawEscape",
+"ordinal": 1407,
+"rva": 37088,
+"forwarder": null,
+"ref": "gdi32.dll!0x90e0"
+},
+{
+"name": "DxTrimNotificationListHead",
+"ordinal": 1408,
+"rva": 153552,
+"forwarder": null,
+"ref": "gdi32.dll!0x257d0"
+},
+{
+"name": "Ellipse",
+"ordinal": 1409,
+"rva": 58128,
+"forwarder": null,
+"ref": "gdi32.dll!0xe310"
+},
+{
+"name": "EnableEUDC",
+"ordinal": 1410,
+"rva": 25232,
+"forwarder": null,
+"ref": "gdi32.dll!0x6290"
+},
+{
+"name": "EndDoc",
+"ordinal": 1411,
+"rva": 24000,
+"forwarder": null,
+"ref": "gdi32.dll!0x5dc0"
+},
+{
+"name": "EndFormPage",
+"ordinal": 1412,
+"rva": 37152,
+"forwarder": null,
+"ref": "gdi32.dll!0x9120"
+},
+{
+"name": "EndGdiRendering",
+"ordinal": 1413,
+"rva": 25248,
+"forwarder": null,
+"ref": "gdi32.dll!0x62a0"
+},
+{
+"name": "EndPage",
+"ordinal": 1414,
+"rva": 23264,
+"forwarder": null,
+"ref": "gdi32.dll!0x5ae0"
+},
+{
+"name": "EndPath",
+"ordinal": 1415,
+"rva": 22592,
+"forwarder": null,
+"ref": "gdi32.dll!0x5840"
+},
+{
+"name": "EngAcquireSemaphore",
+"ordinal": 1416,
+"rva": 37184,
+"forwarder": null,
+"ref": "gdi32.dll!0x9140"
+},
+{
+"name": "EngAlphaBlend",
+"ordinal": 1417,
+"rva": 25264,
+"forwarder": null,
+"ref": "gdi32.dll!0x62b0"
+},
+{
+"name": "EngAssociateSurface",
+"ordinal": 1418,
+"rva": 25280,
+"forwarder": null,
+"ref": "gdi32.dll!0x62c0"
+},
+{
+"name": "EngBitBlt",
+"ordinal": 1419,
+"rva": 25296,
+"forwarder": null,
+"ref": "gdi32.dll!0x62d0"
+},
+{
+"name": "EngCheckAbort",
+"ordinal": 1420,
+"rva": 25312,
+"forwarder": null,
+"ref": "gdi32.dll!0x62e0"
+},
+{
+"name": "EngComputeGlyphSet",
+"ordinal": 1421,
+"rva": 37216,
+"forwarder": null,
+"ref": "gdi32.dll!0x9160"
+},
+{
+"name": "EngCopyBits",
+"ordinal": 1422,
+"rva": 25328,
+"forwarder": null,
+"ref": "gdi32.dll!0x62f0"
+},
+{
+"name": "EngCreateBitmap",
+"ordinal": 1423,
+"rva": 37248,
+"forwarder": null,
+"ref": "gdi32.dll!0x9180"
+},
+{
+"name": "EngCreateClip",
+"ordinal": 1424,
+"rva": 25344,
+"forwarder": null,
+"ref": "gdi32.dll!0x6300"
+},
+{
+"name": "EngCreateDeviceBitmap",
+"ordinal": 1425,
+"rva": 37280,
+"forwarder": null,
+"ref": "gdi32.dll!0x91a0"
+},
+{
+"name": "EngCreateDeviceSurface",
+"ordinal": 1426,
+"rva": 37312,
+"forwarder": null,
+"ref": "gdi32.dll!0x91c0"
+},
+{
+"name": "EngCreatePalette",
+"ordinal": 1427,
+"rva": 37344,
+"forwarder": null,
+"ref": "gdi32.dll!0x91e0"
+},
+{
+"name": "EngCreateSemaphore",
+"ordinal": 1428,
+"rva": 37376,
+"forwarder": null,
+"ref": "gdi32.dll!0x9200"
+},
+{
+"name": "EngDeleteClip",
+"ordinal": 1429,
+"rva": 25360,
+"forwarder": null,
+"ref": "gdi32.dll!0x6310"
+},
+{
+"name": "EngDeletePalette",
+"ordinal": 1430,
+"rva": 37408,
+"forwarder": null,
+"ref": "gdi32.dll!0x9220"
+},
+{
+"name": "EngDeletePath",
+"ordinal": 1431,
+"rva": 25376,
+"forwarder": null,
+"ref": "gdi32.dll!0x6320"
+},
+{
+"name": "EngDeleteSemaphore",
+"ordinal": 1432,
+"rva": 37440,
+"forwarder": null,
+"ref": "gdi32.dll!0x9240"
+},
+{
+"name": "EngDeleteSurface",
+"ordinal": 1433,
+"rva": 37472,
+"forwarder": null,
+"ref": "gdi32.dll!0x9260"
+},
+{
+"name": "EngEraseSurface",
+"ordinal": 1434,
+"rva": 25392,
+"forwarder": null,
+"ref": "gdi32.dll!0x6330"
+},
+{
+"name": "EngFillPath",
+"ordinal": 1435,
+"rva": 25408,
+"forwarder": null,
+"ref": "gdi32.dll!0x6340"
+},
+{
+"name": "EngFindResource",
+"ordinal": 1436,
+"rva": 37504,
+"forwarder": null,
+"ref": "gdi32.dll!0x9280"
+},
+{
+"name": "EngFreeModule",
+"ordinal": 1437,
+"rva": 37536,
+"forwarder": null,
+"ref": "gdi32.dll!0x92a0"
+},
+{
+"name": "EngGetCurrentCodePage",
+"ordinal": 1438,
+"rva": 37568,
+"forwarder": null,
+"ref": "gdi32.dll!0x92c0"
+},
+{
+"name": "EngGetDriverName",
+"ordinal": 1439,
+"rva": 37600,
+"forwarder": null,
+"ref": "gdi32.dll!0x92e0"
+},
+{
+"name": "EngGetPrinterDataFileName",
+"ordinal": 1440,
+"rva": 37632,
+"forwarder": null,
+"ref": "gdi32.dll!0x9300"
+},
+{
+"name": "EngGradientFill",
+"ordinal": 1441,
+"rva": 25424,
+"forwarder": null,
+"ref": "gdi32.dll!0x6350"
+},
+{
+"name": "EngLineTo",
+"ordinal": 1442,
+"rva": 25440,
+"forwarder": null,
+"ref": "gdi32.dll!0x6360"
+},
+{
+"name": "EngLoadModule",
+"ordinal": 1443,
+"rva": 37664,
+"forwarder": null,
+"ref": "gdi32.dll!0x9320"
+},
+{
+"name": "EngLockSurface",
+"ordinal": 1444,
+"rva": 25456,
+"forwarder": null,
+"ref": "gdi32.dll!0x6370"
+},
+{
+"name": "EngMarkBandingSurface",
+"ordinal": 1445,
+"rva": 25472,
+"forwarder": null,
+"ref": "gdi32.dll!0x6380"
+},
+{
+"name": "EngMultiByteToUnicodeN",
+"ordinal": 1446,
+"rva": 37696,
+"forwarder": null,
+"ref": "gdi32.dll!0x9340"
+},
+{
+"name": "EngMultiByteToWideChar",
+"ordinal": 1447,
+"rva": 37728,
+"forwarder": null,
+"ref": "gdi32.dll!0x9360"
+},
+{
+"name": "EngPaint",
+"ordinal": 1448,
+"rva": 25488,
+"forwarder": null,
+"ref": "gdi32.dll!0x6390"
+},
+{
+"name": "EngPlgBlt",
+"ordinal": 1449,
+"rva": 25504,
+"forwarder": null,
+"ref": "gdi32.dll!0x63a0"
+},
+{
+"name": "EngQueryEMFInfo",
+"ordinal": 1450,
+"rva": 37760,
+"forwarder": null,
+"ref": "gdi32.dll!0x9380"
+},
+{
+"name": "EngQueryLocalTime",
+"ordinal": 1451,
+"rva": 37792,
+"forwarder": null,
+"ref": "gdi32.dll!0x93a0"
+},
+{
+"name": "EngReleaseSemaphore",
+"ordinal": 1452,
+"rva": 37824,
+"forwarder": null,
+"ref": "gdi32.dll!0x93c0"
+},
+{
+"name": "EngStretchBlt",
+"ordinal": 1453,
+"rva": 25520,
+"forwarder": null,
+"ref": "gdi32.dll!0x63b0"
+},
+{
+"name": "EngStretchBltROP",
+"ordinal": 1454,
+"rva": 25536,
+"forwarder": null,
+"ref": "gdi32.dll!0x63c0"
+},
+{
+"name": "EngStrokeAndFillPath",
+"ordinal": 1455,
+"rva": 25552,
+"forwarder": null,
+"ref": "gdi32.dll!0x63d0"
+},
+{
+"name": "EngStrokePath",
+"ordinal": 1456,
+"rva": 25568,
+"forwarder": null,
+"ref": "gdi32.dll!0x63e0"
+},
+{
+"name": "EngTextOut",
+"ordinal": 1457,
+"rva": 25584,
+"forwarder": null,
+"ref": "gdi32.dll!0x63f0"
+},
+{
+"name": "EngTransparentBlt",
+"ordinal": 1458,
+"rva": 25600,
+"forwarder": null,
+"ref": "gdi32.dll!0x6400"
+},
+{
+"name": "EngUnicodeToMultiByteN",
+"ordinal": 1459,
+"rva": 37856,
+"forwarder": null,
+"ref": "gdi32.dll!0x93e0"
+},
+{
+"name": "EngUnlockSurface",
+"ordinal": 1460,
+"rva": 25616,
+"forwarder": null,
+"ref": "gdi32.dll!0x6410"
+},
+{
+"name": "EngWideCharToMultiByte",
+"ordinal": 1461,
+"rva": 37888,
+"forwarder": null,
+"ref": "gdi32.dll!0x9400"
+},
+{
+"name": "EnumEnhMetaFile",
+"ordinal": 1462,
+"rva": 58240,
+"forwarder": null,
+"ref": "gdi32.dll!0xe380"
+},
+{
+"name": "EnumFontFamiliesA",
+"ordinal": 1463,
+"rva": 58368,
+"forwarder": null,
+"ref": "gdi32.dll!0xe400"
+},
+{
+"name": "EnumFontFamiliesExA",
+"ordinal": 1464,
+"rva": 58480,
+"forwarder": null,
+"ref": "gdi32.dll!0xe470"
+},
+{
+"name": "EnumFontFamiliesExW",
+"ordinal": 1465,
+"rva": 29584,
+"forwarder": null,
+"ref": "gdi32.dll!0x7390"
+},
+{
+"name": "EnumFontFamiliesW",
+"ordinal": 1466,
+"rva": 37920,
+"forwarder": null,
+"ref": "gdi32.dll!0x9420"
+},
+{
+"name": "EnumFontsA",
+"ordinal": 1467,
+"rva": 37952,
+"forwarder": null,
+"ref": "gdi32.dll!0x9440"
+},
+{
+"name": "EnumFontsW",
+"ordinal": 1468,
+"rva": 29744,
+"forwarder": null,
+"ref": "gdi32.dll!0x7430"
+},
+{
+"name": "EnumICMProfilesA",
+"ordinal": 1469,
+"rva": 37984,
+"forwarder": null,
+"ref": "gdi32.dll!0x9460"
+},
+{
+"name": "EnumICMProfilesW",
+"ordinal": 1470,
+"rva": 38016,
+"forwarder": null,
+"ref": "gdi32.dll!0x9480"
+},
+{
+"name": "EnumMetaFile",
+"ordinal": 1471,
+"rva": 58608,
+"forwarder": null,
+"ref": "gdi32.dll!0xe4f0"
+},
+{
+"name": "EnumObjects",
+"ordinal": 1472,
+"rva": 26432,
+"forwarder": null,
+"ref": "gdi32.dll!0x6740"
+},
+{
+"name": "EqualRgn",
+"ordinal": 1473,
+"rva": 4416,
+"forwarder": null,
+"ref": "gdi32.dll!0x1140"
+},
+{
+"name": "Escape",
+"ordinal": 1474,
+"rva": 58720,
+"forwarder": null,
+"ref": "gdi32.dll!0xe560"
+},
+{
+"name": "EudcLoadLinkW",
+"ordinal": 1475,
+"rva": 38048,
+"forwarder": null,
+"ref": "gdi32.dll!0x94a0"
+},
+{
+"name": "EudcUnloadLinkW",
+"ordinal": 1476,
+"rva": 38080,
+"forwarder": null,
+"ref": "gdi32.dll!0x94c0"
+},
+{
+"name": "ExcludeClipRect",
+"ordinal": 1477,
+"rva": 33216,
+"forwarder": null,
+"ref": "gdi32.dll!0x81c0"
+},
+{
+"name": "ExtCreatePen",
+"ordinal": 1478,
+"rva": 38112,
+"forwarder": null,
+"ref": "gdi32.dll!0x94e0"
+},
+{
+"name": "ExtCreateRegion",
+"ordinal": 1479,
+"rva": 10240,
+"forwarder": null,
+"ref": "gdi32.dll!0x2800"
+},
+{
+"name": "ExtEscape",
+"ordinal": 1480,
+"rva": 23872,
+"forwarder": null,
+"ref": "gdi32.dll!0x5d40"
+},
+{
+"name": "ExtFloodFill",
+"ordinal": 1481,
+"rva": 38144,
+"forwarder": null,
+"ref": "gdi32.dll!0x9500"
+},
+{
+"name": "ExtSelectClipRgn",
+"ordinal": 1482,
+"rva": 15536,
+"forwarder": null,
+"ref": "gdi32.dll!0x3cb0"
+},
+{
+"name": "ExtTextOutA",
+"ordinal": 1483,
+"rva": 58848,
+"forwarder": null,
+"ref": "gdi32.dll!0xe5e0"
+},
+{
+"name": "ExtTextOutW",
+"ordinal": 1484,
+"rva": 14192,
+"forwarder": null,
+"ref": "gdi32.dll!0x3770"
+},
+{
+"name": "FONTOBJ_cGetAllGlyphHandles",
+"ordinal": 1485,
+"rva": 25632,
+"forwarder": null,
+"ref": "gdi32.dll!0x6420"
+},
+{
+"name": "FONTOBJ_cGetGlyphs",
+"ordinal": 1486,
+"rva": 25648,
+"forwarder": null,
+"ref": "gdi32.dll!0x6430"
+},
+{
+"name": "FONTOBJ_pQueryGlyphAttrs",
+"ordinal": 1487,
+"rva": 25664,
+"forwarder": null,
+"ref": "gdi32.dll!0x6440"
+},
+{
+"name": "FONTOBJ_pfdg",
+"ordinal": 1488,
+"rva": 25680,
+"forwarder": null,
+"ref": "gdi32.dll!0x6450"
+},
+{
+"name": "FONTOBJ_pifi",
+"ordinal": 1489,
+"rva": 25696,
+"forwarder": null,
+"ref": "gdi32.dll!0x6460"
+},
+{
+"name": "FONTOBJ_pvTrueTypeFontFile",
+"ordinal": 1490,
+"rva": 25712,
+"forwarder": null,
+"ref": "gdi32.dll!0x6470"
+},
+{
+"name": "FONTOBJ_pxoGetXform",
+"ordinal": 1491,
+"rva": 25728,
+"forwarder": null,
+"ref": "gdi32.dll!0x6480"
+},
+{
+"name": "FONTOBJ_vGetInfo",
+"ordinal": 1492,
+"rva": 25744,
+"forwarder": null,
+"ref": "gdi32.dll!0x6490"
+},
+{
+"name": "FillPath",
+"ordinal": 1493,
+"rva": 23136,
+"forwarder": null,
+"ref": "gdi32.dll!0x5a60"
+},
+{
+"name": "FillRgn",
+"ordinal": 1494,
+"rva": 59056,
+"forwarder": null,
+"ref": "gdi32.dll!0xe6b0"
+},
+{
+"name": "FixBrushOrgEx",
+"ordinal": 1495,
+"rva": 38176,
+"forwarder": null,
+"ref": "gdi32.dll!0x9520"
+},
+{
+"name": "FlattenPath",
+"ordinal": 1496,
+"rva": 38208,
+"forwarder": null,
+"ref": "gdi32.dll!0x9540"
+},
+{
+"name": "FloodFill",
+"ordinal": 1497,
+"rva": 38240,
+"forwarder": null,
+"ref": "gdi32.dll!0x9560"
+},
+{
+"name": "FontIsLinked",
+"ordinal": 1498,
+"rva": 38272,
+"forwarder": null,
+"ref": "gdi32.dll!0x9580"
+},
+{
+"name": "FrameRgn",
+"ordinal": 1499,
+"rva": 59088,
+"forwarder": null,
+"ref": "gdi32.dll!0xe6d0"
+},
+{
+"name": "Gdi32DllInitialize",
+"ordinal": 1500,
+"rva": 18848,
+"forwarder": null,
+"ref": "gdi32.dll!0x49a0"
+},
+{
+"name": "GdiAddFontResourceW",
+"ordinal": 1501,
+"rva": 38304,
+"forwarder": null,
+"ref": "gdi32.dll!0x95a0"
+},
+{
+"name": "GdiAddGlsBounds",
+"ordinal": 1502,
+"rva": 38336,
+"forwarder": null,
+"ref": "gdi32.dll!0x95c0"
+},
+{
+"name": "GdiAddGlsRecord",
+"ordinal": 1503,
+"rva": 38368,
+"forwarder": null,
+"ref": "gdi32.dll!0x95e0"
+},
+{
+"name": "GdiAddInitialFonts",
+"ordinal": 1504,
+"rva": 38400,
+"forwarder": null,
+"ref": "gdi32.dll!0x9600"
+},
+{
+"name": "GdiAlphaBlend",
+"ordinal": 1505,
+"rva": 27760,
+"forwarder": null,
+"ref": "gdi32.dll!0x6c70"
+},
+{
+"name": "GdiArtificialDecrementDriver",
+"ordinal": 1506,
+"rva": 38432,
+"forwarder": null,
+"ref": "gdi32.dll!0x9620"
+},
+{
+"name": "GdiBatchLimit",
+"ordinal": 1507,
+"rva": 153520,
+"forwarder": null,
+"ref": "gdi32.dll!0x257b0"
+},
+{
+"name": "GdiCleanCacheDC",
+"ordinal": 1508,
+"rva": 38464,
+"forwarder": null,
+"ref": "gdi32.dll!0x9640"
+},
+{
+"name": "GdiComment",
+"ordinal": 1509,
+"rva": 59216,
+"forwarder": null,
+"ref": "gdi32.dll!0xe750"
+},
+{
+"name": "GdiConsoleTextOut",
+"ordinal": 1510,
+"rva": 38496,
+"forwarder": null,
+"ref": "gdi32.dll!0x9660"
+},
+{
+"name": "GdiConvertAndCheckDC",
+"ordinal": 1511,
+"rva": 38528,
+"forwarder": null,
+"ref": "gdi32.dll!0x9680"
+},
+{
+"name": "GdiConvertBitmap",
+"ordinal": 1512,
+"rva": 38560,
+"forwarder": null,
+"ref": "gdi32.dll!0x96a0"
+},
+{
+"name": "GdiConvertBitmapV5",
+"ordinal": 1513,
+"rva": 38592,
+"forwarder": null,
+"ref": "gdi32.dll!0x96c0"
+},
+{
+"name": "GdiConvertBrush",
+"ordinal": 1514,
+"rva": 38624,
+"forwarder": null,
+"ref": "gdi32.dll!0x96e0"
+},
+{
+"name": "GdiConvertDC",
+"ordinal": 1515,
+"rva": 38656,
+"forwarder": null,
+"ref": "gdi32.dll!0x9700"
+},
+{
+"name": "GdiConvertEnhMetaFile",
+"ordinal": 1516,
+"rva": 38688,
+"forwarder": null,
+"ref": "gdi32.dll!0x9720"
+},
+{
+"name": "GdiConvertFont",
+"ordinal": 1517,
+"rva": 38720,
+"forwarder": null,
+"ref": "gdi32.dll!0x9740"
+},
+{
+"name": "GdiConvertMetaFilePict",
+"ordinal": 1518,
+"rva": 38752,
+"forwarder": null,
+"ref": "gdi32.dll!0x9760"
+},
+{
+"name": "GdiConvertPalette",
+"ordinal": 1519,
+"rva": 38784,
+"forwarder": null,
+"ref": "gdi32.dll!0x9780"
+},
+{
+"name": "GdiConvertRegion",
+"ordinal": 1520,
+"rva": 38816,
+"forwarder": null,
+"ref": "gdi32.dll!0x97a0"
+},
+{
+"name": "GdiConvertToDevmodeW",
+"ordinal": 1521,
+"rva": 38848,
+"forwarder": null,
+"ref": "gdi32.dll!0x97c0"
+},
+{
+"name": "GdiCreateLocalEnhMetaFile",
+"ordinal": 1522,
+"rva": 38880,
+"forwarder": null,
+"ref": "gdi32.dll!0x97e0"
+},
+{
+"name": "GdiCreateLocalMetaFilePict",
+"ordinal": 1523,
+"rva": 38912,
+"forwarder": null,
+"ref": "gdi32.dll!0x9800"
+},
+{
+"name": "GdiCurrentProcessSplWow64",
+"ordinal": 1524,
+"rva": 38944,
+"forwarder": null,
+"ref": "gdi32.dll!0x9820"
+},
+{
+"name": "GdiDeleteLocalDC",
+"ordinal": 1525,
+"rva": 39104,
+"forwarder": null,
+"ref": "gdi32.dll!0x98c0"
+},
+{
+"name": "GdiDeleteSpoolFileHandle",
+"ordinal": 1526,
+"rva": 39136,
+"forwarder": null,
+"ref": "gdi32.dll!0x98e0"
+},
+{
+"name": "GdiDescribePixelFormat",
+"ordinal": 1527,
+"rva": 39168,
+"forwarder": null,
+"ref": "gdi32.dll!0x9900"
+},
+{
+"name": "GdiDllInitialize",
+"ordinal": 1528,
+"rva": 33648,
+"forwarder": null,
+"ref": "gdi32.dll!0x8370"
+},
+{
+"name": "GdiDrawStream",
+"ordinal": 1529,
+"rva": 39200,
+"forwarder": null,
+"ref": "gdi32.dll!0x9920"
+},
+{
+"name": "GdiEndDocEMF",
+"ordinal": 1530,
+"rva": 39232,
+"forwarder": null,
+"ref": "gdi32.dll!0x9940"
+},
+{
+"name": "GdiEndPageEMF",
+"ordinal": 1531,
+"rva": 39264,
+"forwarder": null,
+"ref": "gdi32.dll!0x9960"
+},
+{
+"name": "GdiEntry1",
+"ordinal": 1532,
+"rva": 39296,
+"forwarder": null,
+"ref": "gdi32.dll!0x9980"
+},
+{
+"name": "GdiEntry10",
+"ordinal": 1533,
+"rva": 39328,
+"forwarder": null,
+"ref": "gdi32.dll!0x99a0"
+},
+{
+"name": "GdiEntry11",
+"ordinal": 1534,
+"rva": 39360,
+"forwarder": null,
+"ref": "gdi32.dll!0x99c0"
+},
+{
+"name": "GdiEntry12",
+"ordinal": 1535,
+"rva": 39392,
+"forwarder": null,
+"ref": "gdi32.dll!0x99e0"
+},
+{
+"name": "GdiEntry13",
+"ordinal": 1536,
+"rva": 17472,
+"forwarder": null,
+"ref": "gdi32.dll!0x4440"
+},
+{
+"name": "GdiEntry14",
+"ordinal": 1537,
+"rva": 39424,
+"forwarder": null,
+"ref": "gdi32.dll!0x9a00"
+},
+{
+"name": "GdiEntry15",
+"ordinal": 1538,
+"rva": 39456,
+"forwarder": null,
+"ref": "gdi32.dll!0x9a20"
+},
+{
+"name": "GdiEntry16",
+"ordinal": 1539,
+"rva": 39488,
+"forwarder": null,
+"ref": "gdi32.dll!0x9a40"
+},
+{
+"name": "GdiEntry2",
+"ordinal": 1540,
+"rva": 39520,
+"forwarder": null,
+"ref": "gdi32.dll!0x9a60"
+},
+{
+"name": "GdiEntry3",
+"ordinal": 1541,
+"rva": 39552,
+"forwarder": null,
+"ref": "gdi32.dll!0x9a80"
+},
+{
+"name": "GdiEntry4",
+"ordinal": 1542,
+"rva": 39584,
+"forwarder": null,
+"ref": "gdi32.dll!0x9aa0"
+},
+{
+"name": "GdiEntry5",
+"ordinal": 1543,
+"rva": 39616,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ac0"
+},
+{
+"name": "GdiEntry6",
+"ordinal": 1544,
+"rva": 39648,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ae0"
+},
+{
+"name": "GdiEntry7",
+"ordinal": 1545,
+"rva": 39680,
+"forwarder": null,
+"ref": "gdi32.dll!0x9b00"
+},
+{
+"name": "GdiEntry8",
+"ordinal": 1546,
+"rva": 39712,
+"forwarder": null,
+"ref": "gdi32.dll!0x9b20"
+},
+{
+"name": "GdiEntry9",
+"ordinal": 1547,
+"rva": 39744,
+"forwarder": null,
+"ref": "gdi32.dll!0x9b40"
+},
+{
+"name": "GdiFixUpHandle",
+"ordinal": 1548,
+"rva": 39776,
+"forwarder": null,
+"ref": "gdi32.dll!0x9b60"
+},
+{
+"name": "GdiFlush",
+"ordinal": 1549,
+"rva": 27920,
+"forwarder": null,
+"ref": "gdi32.dll!0x6d10"
+},
+{
+"name": "GdiFullscreenControl",
+"ordinal": 1550,
+"rva": 25760,
+"forwarder": null,
+"ref": "gdi32.dll!0x64a0"
+},
+{
+"name": "GdiGetBatchLimit",
+"ordinal": 1551,
+"rva": 39808,
+"forwarder": null,
+"ref": "gdi32.dll!0x9b80"
+},
+{
+"name": "GdiGetBitmapBitsSize",
+"ordinal": 1552,
+"rva": 39840,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ba0"
+},
+{
+"name": "GdiGetCharDimensions",
+"ordinal": 1553,
+"rva": 39872,
+"forwarder": null,
+"ref": "gdi32.dll!0x9bc0"
+},
+{
+"name": "GdiGetCodePage",
+"ordinal": 1554,
+"rva": 39904,
+"forwarder": null,
+"ref": "gdi32.dll!0x9be0"
+},
+{
+"name": "GdiGetDC",
+"ordinal": 1555,
+"rva": 39936,
+"forwarder": null,
+"ref": "gdi32.dll!0x9c00"
+},
+{
+"name": "GdiGetDevmodeForPage",
+"ordinal": 1556,
+"rva": 39968,
+"forwarder": null,
+"ref": "gdi32.dll!0x9c20"
+},
+{
+"name": "GdiGetEntry",
+"ordinal": 1557,
+"rva": 10064,
+"forwarder": null,
+"ref": "gdi32.dll!0x2750"
+},
+{
+"name": "GdiGetLocalBrush",
+"ordinal": 1558,
+"rva": 40000,
+"forwarder": null,
+"ref": "gdi32.dll!0x9c40"
+},
+{
+"name": "GdiGetLocalDC",
+"ordinal": 1559,
+"rva": 40032,
+"forwarder": null,
+"ref": "gdi32.dll!0x9c60"
+},
+{
+"name": "GdiGetLocalFont",
+"ordinal": 1560,
+"rva": 40064,
+"forwarder": null,
+"ref": "gdi32.dll!0x9c80"
+},
+{
+"name": "GdiGetPageCount",
+"ordinal": 1561,
+"rva": 40096,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ca0"
+},
+{
+"name": "GdiGetPageHandle",
+"ordinal": 1562,
+"rva": 40128,
+"forwarder": null,
+"ref": "gdi32.dll!0x9cc0"
+},
+{
+"name": "GdiGetSpoolFileHandle",
+"ordinal": 1563,
+"rva": 40160,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ce0"
+},
+{
+"name": "GdiGetSpoolMessage",
+"ordinal": 1564,
+"rva": 25776,
+"forwarder": null,
+"ref": "gdi32.dll!0x64b0"
+},
+{
+"name": "GdiGetVariationStoreDelta",
+"ordinal": 1565,
+"rva": 40192,
+"forwarder": null,
+"ref": "gdi32.dll!0x9d00"
+},
+{
+"name": "GdiGradientFill",
+"ordinal": 1566,
+"rva": 28080,
+"forwarder": null,
+"ref": "gdi32.dll!0x6db0"
+},
+{
+"name": "GdiHandleBeingTracked",
+"ordinal": 1567,
+"rva": 40224,
+"forwarder": null,
+"ref": "gdi32.dll!0x9d20"
+},
+{
+"name": "GdiInitSpool",
+"ordinal": 1568,
+"rva": 25792,
+"forwarder": null,
+"ref": "gdi32.dll!0x64c0"
+},
+{
+"name": "GdiInitializeLanguagePack",
+"ordinal": 1569,
+"rva": 40256,
+"forwarder": null,
+"ref": "gdi32.dll!0x9d40"
+},
+{
+"name": "GdiIsMetaFileDC",
+"ordinal": 1570,
+"rva": 40288,
+"forwarder": null,
+"ref": "gdi32.dll!0x9d60"
+},
+{
+"name": "GdiIsMetaPrintDC",
+"ordinal": 1571,
+"rva": 40320,
+"forwarder": null,
+"ref": "gdi32.dll!0x9d80"
+},
+{
+"name": "GdiIsPlayMetafileDC",
+"ordinal": 1572,
+"rva": 40352,
+"forwarder": null,
+"ref": "gdi32.dll!0x9da0"
+},
+{
+"name": "GdiIsScreenDC",
+"ordinal": 1573,
+"rva": 40384,
+"forwarder": null,
+"ref": "gdi32.dll!0x9dc0"
+},
+{
+"name": "GdiIsTrackingEnabled",
+"ordinal": 1574,
+"rva": 40416,
+"forwarder": null,
+"ref": "gdi32.dll!0x9de0"
+},
+{
+"name": "GdiIsUMPDSandboxingEnabled",
+"ordinal": 1575,
+"rva": 40448,
+"forwarder": null,
+"ref": "gdi32.dll!0x9e00"
+},
+{
+"name": "GdiLoadType1Fonts",
+"ordinal": 1576,
+"rva": 40480,
+"forwarder": null,
+"ref": "gdi32.dll!0x9e20"
+},
+{
+"name": "GdiPlayDCScript",
+"ordinal": 1577,
+"rva": 40512,
+"forwarder": null,
+"ref": "gdi32.dll!0x9e40"
+},
+{
+"name": "GdiPlayEMF",
+"ordinal": 1578,
+"rva": 40544,
+"forwarder": null,
+"ref": "gdi32.dll!0x9e60"
+},
+{
+"name": "GdiPlayJournal",
+"ordinal": 1579,
+"rva": 40576,
+"forwarder": null,
+"ref": "gdi32.dll!0x9e80"
+},
+{
+"name": "GdiPlayPageEMF",
+"ordinal": 1580,
+"rva": 40608,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ea0"
+},
+{
+"name": "GdiPlayPrivatePageEMF",
+"ordinal": 1581,
+"rva": 40640,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ec0"
+},
+{
+"name": "GdiPlayScript",
+"ordinal": 1582,
+"rva": 40672,
+"forwarder": null,
+"ref": "gdi32.dll!0x9ee0"
+},
+{
+"name": "GdiPrinterThunk",
+"ordinal": 1583,
+"rva": 40704,
+"forwarder": null,
+"ref": "gdi32.dll!0x9f00"
+},
+{
+"name": "GdiProcessSetup",
+"ordinal": 1584,
+"rva": 40736,
+"forwarder": null,
+"ref": "gdi32.dll!0x9f20"
+},
+{
+"name": "GdiQueryFonts",
+"ordinal": 1585,
+"rva": 25808,
+"forwarder": null,
+"ref": "gdi32.dll!0x64d0"
+},
+{
+"name": "GdiQueryTable",
+"ordinal": 1586,
+"rva": 40768,
+"forwarder": null,
+"ref": "gdi32.dll!0x9f40"
+},
+{
+"name": "GdiRealizationInfo",
+"ordinal": 1587,
+"rva": 40800,
+"forwarder": null,
+"ref": "gdi32.dll!0x9f60"
+},
+{
+"name": "GdiReleaseDC",
+"ordinal": 1588,
+"rva": 12688,
+"forwarder": null,
+"ref": "gdi32.dll!0x3190"
+},
+{
+"name": "GdiReleaseLocalDC",
+"ordinal": 1589,
+"rva": 40832,
+"forwarder": null,
+"ref": "gdi32.dll!0x9f80"
+},
+{
+"name": "GdiResetDCEMF",
+"ordinal": 1590,
+"rva": 40864,
+"forwarder": null,
+"ref": "gdi32.dll!0x9fa0"
+},
+{
+"name": "GdiSetAttrs",
+"ordinal": 1591,
+"rva": 40896,
+"forwarder": null,
+"ref": "gdi32.dll!0x9fc0"
+},
+{
+"name": "GdiSetBatchLimit",
+"ordinal": 1592,
+"rva": 40928,
+"forwarder": null,
+"ref": "gdi32.dll!0x9fe0"
+},
+{
+"name": "GdiSetLastError",
+"ordinal": 1593,
+"rva": 21472,
+"forwarder": null,
+"ref": "gdi32.dll!0x53e0"
+},
+{
+"name": "GdiSetPixelFormat",
+"ordinal": 1594,
+"rva": 40960,
+"forwarder": null,
+"ref": "gdi32.dll!0xa000"
+},
+{
+"name": "GdiSetServerAttr",
+"ordinal": 1595,
+"rva": 40992,
+"forwarder": null,
+"ref": "gdi32.dll!0xa020"
+},
+{
+"name": "GdiStartDocEMF",
+"ordinal": 1596,
+"rva": 41024,
+"forwarder": null,
+"ref": "gdi32.dll!0xa040"
+},
+{
+"name": "GdiStartPageEMF",
+"ordinal": 1597,
+"rva": 41056,
+"forwarder": null,
+"ref": "gdi32.dll!0xa060"
+},
+{
+"name": "GdiSupportsFontChangeEvent",
+"ordinal": 1598,
+"rva": 33664,
+"forwarder": null,
+"ref": "gdi32.dll!0x8380"
+},
+{
+"name": "GdiSwapBuffers",
+"ordinal": 1599,
+"rva": 41088,
+"forwarder": null,
+"ref": "gdi32.dll!0xa080"
+},
+{
+"name": "GdiTrackHCreate",
+"ordinal": 1600,
+"rva": 41120,
+"forwarder": null,
+"ref": "gdi32.dll!0xa0a0"
+},
+{
+"name": "GdiTrackHDelete",
+"ordinal": 1601,
+"rva": 41152,
+"forwarder": null,
+"ref": "gdi32.dll!0xa0c0"
+},
+{
+"name": "GdiTransparentBlt",
+"ordinal": 1602,
+"rva": 28112,
+"forwarder": null,
+"ref": "gdi32.dll!0x6dd0"
+},
+{
+"name": "GdiValidateHandle",
+"ordinal": 1603,
+"rva": 41184,
+"forwarder": null,
+"ref": "gdi32.dll!0xa0e0"
+},
+{
+"name": "GditGetCallerTLStorage",
+"ordinal": 1604,
+"rva": 41216,
+"forwarder": null,
+"ref": "gdi32.dll!0xa100"
+},
+{
+"name": "GditPopCallerInfo",
+"ordinal": 1605,
+"rva": 41376,
+"forwarder": null,
+"ref": "gdi32.dll!0xa1a0"
+},
+{
+"name": "GditPushCallerInfo",
+"ordinal": 1606,
+"rva": 41408,
+"forwarder": null,
+"ref": "gdi32.dll!0xa1c0"
+},
+{
+"name": "GetArcDirection",
+"ordinal": 1607,
+"rva": 41440,
+"forwarder": null,
+"ref": "gdi32.dll!0xa1e0"
+},
+{
+"name": "GetAspectRatioFilterEx",
+"ordinal": 1608,
+"rva": 41472,
+"forwarder": null,
+"ref": "gdi32.dll!0xa200"
+},
+{
+"name": "GetBitmapAttributes",
+"ordinal": 1609,
+"rva": 41504,
+"forwarder": null,
+"ref": "gdi32.dll!0xa220"
+},
+{
+"name": "GetBitmapBits",
+"ordinal": 1610,
+"rva": 20752,
+"forwarder": null,
+"ref": "gdi32.dll!0x5110"
+},
+{
+"name": "GetBitmapDimensionEx",
+"ordinal": 1611,
+"rva": 41536,
+"forwarder": null,
+"ref": "gdi32.dll!0xa240"
+},
+{
+"name": "GetBitmapDpiScaleValue",
+"ordinal": 1612,
+"rva": 25824,
+"forwarder": null,
+"ref": "gdi32.dll!0x64e0"
+},
+{
+"name": "GetBkColor",
+"ordinal": 1613,
+"rva": 20448,
+"forwarder": null,
+"ref": "gdi32.dll!0x4fe0"
+},
+{
+"name": "GetBkMode",
+"ordinal": 1614,
+"rva": 28144,
+"forwarder": null,
+"ref": "gdi32.dll!0x6df0"
+},
+{
+"name": "GetBoundsRect",
+"ordinal": 1615,
+"rva": 41568,
+"forwarder": null,
+"ref": "gdi32.dll!0xa260"
+},
+{
+"name": "GetBrushAttributes",
+"ordinal": 1616,
+"rva": 41600,
+"forwarder": null,
+"ref": "gdi32.dll!0xa280"
+},
+{
+"name": "GetBrushOrgEx",
+"ordinal": 1617,
+"rva": 28176,
+"forwarder": null,
+"ref": "gdi32.dll!0x6e10"
+},
+{
+"name": "GetCOPPCompatibleOPMInformation",
+"ordinal": 1618,
+"rva": 25840,
+"forwarder": null,
+"ref": "gdi32.dll!0x64f0"
+},
+{
+"name": "GetCertificate",
+"ordinal": 1619,
+"rva": 25856,
+"forwarder": null,
+"ref": "gdi32.dll!0x6500"
+},
+{
+"name": "GetCertificateByHandle",
+"ordinal": 1620,
+"rva": 25872,
+"forwarder": null,
+"ref": "gdi32.dll!0x6510"
+},
+{
+"name": "GetCertificateSize",
+"ordinal": 1621,
+"rva": 25888,
+"forwarder": null,
+"ref": "gdi32.dll!0x6520"
+},
+{
+"name": "GetCertificateSizeByHandle",
+"ordinal": 1622,
+"rva": 25904,
+"forwarder": null,
+"ref": "gdi32.dll!0x6530"
+},
+{
+"name": "GetCharABCWidthsA",
+"ordinal": 1623,
+"rva": 41632,
+"forwarder": null,
+"ref": "gdi32.dll!0xa2a0"
+},
+{
+"name": "GetCharABCWidthsFloatA",
+"ordinal": 1624,
+"rva": 41664,
+"forwarder": null,
+"ref": "gdi32.dll!0xa2c0"
+},
+{
+"name": "GetCharABCWidthsFloatI",
+"ordinal": 1625,
+"rva": 41696,
+"forwarder": null,
+"ref": "gdi32.dll!0xa2e0"
+},
+{
+"name": "GetCharABCWidthsFloatW",
+"ordinal": 1626,
+"rva": 41728,
+"forwarder": null,
+"ref": "gdi32.dll!0xa300"
+},
+{
+"name": "GetCharABCWidthsI",
+"ordinal": 1627,
+"rva": 41760,
+"forwarder": null,
+"ref": "gdi32.dll!0xa320"
+},
+{
+"name": "GetCharABCWidthsW",
+"ordinal": 1628,
+"rva": 29776,
+"forwarder": null,
+"ref": "gdi32.dll!0x7450"
+},
+{
+"name": "GetCharWidth32A",
+"ordinal": 1629,
+"rva": 29936,
+"forwarder": null,
+"ref": "gdi32.dll!0x74f0"
+},
+{
+"name": "GetCharWidth32W",
+"ordinal": 1630,
+"rva": 41792,
+"forwarder": null,
+"ref": "gdi32.dll!0xa340"
+},
+{
+"name": "GetCharWidthA",
+"ordinal": 1631,
+"rva": 59312,
+"forwarder": null,
+"ref": "gdi32.dll!0xe7b0"
+},
+{
+"name": "GetCharWidthFloatA",
+"ordinal": 1632,
+"rva": 41824,
+"forwarder": null,
+"ref": "gdi32.dll!0xa360"
+},
+{
+"name": "GetCharWidthFloatW",
+"ordinal": 1633,
+"rva": 41856,
+"forwarder": null,
+"ref": "gdi32.dll!0xa380"
+},
+{
+"name": "GetCharWidthI",
+"ordinal": 1634,
+"rva": 41888,
+"forwarder": null,
+"ref": "gdi32.dll!0xa3a0"
+},
+{
+"name": "GetCharWidthInfo",
+"ordinal": 1635,
+"rva": 25920,
+"forwarder": null,
+"ref": "gdi32.dll!0x6540"
+},
+{
+"name": "GetCharWidthW",
+"ordinal": 1636,
+"rva": 29968,
+"forwarder": null,
+"ref": "gdi32.dll!0x7510"
+},
+{
+"name": "GetCharacterPlacementA",
+"ordinal": 1637,
+"rva": 41920,
+"forwarder": null,
+"ref": "gdi32.dll!0xa3c0"
+},
+{
+"name": "GetCharacterPlacementW",
+"ordinal": 1638,
+"rva": 41952,
+"forwarder": null,
+"ref": "gdi32.dll!0xa3e0"
+},
+{
+"name": "GetClipBox",
+"ordinal": 1639,
+"rva": 19152,
+"forwarder": null,
+"ref": "gdi32.dll!0x4ad0"
+},
+{
+"name": "GetClipRgn",
+"ordinal": 1640,
+"rva": 16384,
+"forwarder": null,
+"ref": "gdi32.dll!0x4000"
+},
+{
+"name": "GetColorAdjustment",
+"ordinal": 1641,
+"rva": 41984,
+"forwarder": null,
+"ref": "gdi32.dll!0xa400"
+},
+{
+"name": "GetColorSpace",
+"ordinal": 1642,
+"rva": 42016,
+"forwarder": null,
+"ref": "gdi32.dll!0xa420"
+},
+{
+"name": "GetCurrentDpiInfo",
+"ordinal": 1643,
+"rva": 20848,
+"forwarder": null,
+"ref": "gdi32.dll!0x5170"
+},
+{
+"name": "GetCurrentObject",
+"ordinal": 1644,
+"rva": 18768,
+"forwarder": null,
+"ref": "gdi32.dll!0x4950"
+},
+{
+"name": "GetCurrentPositionEx",
+"ordinal": 1645,
+"rva": 59424,
+"forwarder": null,
+"ref": "gdi32.dll!0xe820"
+},
+{
+"name": "GetDCBrushColor",
+"ordinal": 1646,
+"rva": 26592,
+"forwarder": null,
+"ref": "gdi32.dll!0x67e0"
+},
+{
+"name": "GetDCDpiScaleValue",
+"ordinal": 1647,
+"rva": 42048,
+"forwarder": null,
+"ref": "gdi32.dll!0xa440"
+},
+{
+"name": "GetDCOrgEx",
+"ordinal": 1648,
+"rva": 26624,
+"forwarder": null,
+"ref": "gdi32.dll!0x6800"
+},
+{
+"name": "GetDCPenColor",
+"ordinal": 1649,
+"rva": 42080,
+"forwarder": null,
+"ref": "gdi32.dll!0xa460"
+},
+{
+"name": "GetDIBColorTable",
+"ordinal": 1650,
+"rva": 28208,
+"forwarder": null,
+"ref": "gdi32.dll!0x6e30"
+},
+{
+"name": "GetDIBits",
+"ordinal": 1651,
+"rva": 17968,
+"forwarder": null,
+"ref": "gdi32.dll!0x4630"
+},
+{
+"name": "GetDeviceCaps",
+"ordinal": 1652,
+"rva": 13104,
+"forwarder": null,
+"ref": "gdi32.dll!0x3330"
+},
+{
+"name": "GetDeviceGammaRamp",
+"ordinal": 1653,
+"rva": 42112,
+"forwarder": null,
+"ref": "gdi32.dll!0xa480"
+},
+{
+"name": "GetETM",
+"ordinal": 1654,
+"rva": 42144,
+"forwarder": null,
+"ref": "gdi32.dll!0xa4a0"
+},
+{
+"name": "GetEUDCTimeStamp",
+"ordinal": 1655,
+"rva": 42176,
+"forwarder": null,
+"ref": "gdi32.dll!0xa4c0"
+},
+{
+"name": "GetEUDCTimeStampExW",
+"ordinal": 1656,
+"rva": 42208,
+"forwarder": null,
+"ref": "gdi32.dll!0xa4e0"
+},
+{
+"name": "GetEnhMetaFileA",
+"ordinal": 1657,
+"rva": 59504,
+"forwarder": null,
+"ref": "gdi32.dll!0xe870"
+},
+{
+"name": "GetEnhMetaFileBits",
+"ordinal": 1658,
+"rva": 59568,
+"forwarder": null,
+"ref": "gdi32.dll!0xe8b0"
+},
+{
+"name": "GetEnhMetaFileDescriptionA",
+"ordinal": 1659,
+"rva": 59664,
+"forwarder": null,
+"ref": "gdi32.dll!0xe910"
+},
+{
+"name": "GetEnhMetaFileDescriptionW",
+"ordinal": 1660,
+"rva": 42240,
+"forwarder": null,
+"ref": "gdi32.dll!0xa500"
+},
+{
+"name": "GetEnhMetaFileHeader",
+"ordinal": 1661,
+"rva": 31344,
+"forwarder": null,
+"ref": "gdi32.dll!0x7a70"
+},
+{
+"name": "GetEnhMetaFilePaletteEntries",
+"ordinal": 1662,
+"rva": 31504,
+"forwarder": null,
+"ref": "gdi32.dll!0x7b10"
+},
+{
+"name": "GetEnhMetaFilePixelFormat",
+"ordinal": 1663,
+"rva": 42272,
+"forwarder": null,
+"ref": "gdi32.dll!0xa520"
+},
+{
+"name": "GetEnhMetaFileW",
+"ordinal": 1664,
+"rva": 31536,
+"forwarder": null,
+"ref": "gdi32.dll!0x7b30"
+},
+{
+"name": "GetFontAssocStatus",
+"ordinal": 1665,
+"rva": 42304,
+"forwarder": null,
+"ref": "gdi32.dll!0xa540"
+},
+{
+"name": "GetFontData",
+"ordinal": 1666,
+"rva": 20176,
+"forwarder": null,
+"ref": "gdi32.dll!0x4ed0"
+},
+{
+"name": "GetFontFileData",
+"ordinal": 1667,
+"rva": 30000,
+"forwarder": null,
+"ref": "gdi32.dll!0x7530"
+},
+{
+"name": "GetFontFileInfo",
+"ordinal": 1668,
+"rva": 30032,
+"forwarder": null,
+"ref": "gdi32.dll!0x7550"
+},
+{
+"name": "GetFontLanguageInfo",
+"ordinal": 1669,
+"rva": 42336,
+"forwarder": null,
+"ref": "gdi32.dll!0xa560"
+},
+{
+"name": "GetFontRealizationInfo",
+"ordinal": 1670,
+"rva": 30064,
+"forwarder": null,
+"ref": "gdi32.dll!0x7570"
+},
+{
+"name": "GetFontResourceInfoW",
+"ordinal": 1671,
+"rva": 42368,
+"forwarder": null,
+"ref": "gdi32.dll!0xa580"
+},
+{
+"name": "GetFontUnicodeRanges",
+"ordinal": 1672,
+"rva": 25936,
+"forwarder": null,
+"ref": "gdi32.dll!0x6550"
+},
+{
+"name": "GetGlyphIndicesA",
+"ordinal": 1673,
+"rva": 42400,
+"forwarder": null,
+"ref": "gdi32.dll!0xa5a0"
+},
+{
+"name": "GetGlyphIndicesW",
+"ordinal": 1674,
+"rva": 30096,
+"forwarder": null,
+"ref": "gdi32.dll!0x7590"
+},
+{
+"name": "GetGlyphOutline",
+"ordinal": 1675,
+"rva": 59760,
+"forwarder": null,
+"ref": "gdi32.dll!0xe970"
+},
+{
+"name": "GetGlyphOutlineA",
+"ordinal": 1676,
+"rva": 59792,
+"forwarder": null,
+"ref": "gdi32.dll!0xe990"
+},
+{
+"name": "GetGlyphOutlineW",
+"ordinal": 1677,
+"rva": 21856,
+"forwarder": null,
+"ref": "gdi32.dll!0x5560"
+},
+{
+"name": "GetGlyphOutlineWow",
+"ordinal": 1678,
+"rva": 42432,
+"forwarder": null,
+"ref": "gdi32.dll!0xa5c0"
+},
+{
+"name": "GetGraphicsMode",
+"ordinal": 1679,
+"rva": 42464,
+"forwarder": null,
+"ref": "gdi32.dll!0xa5e0"
+},
+{
+"name": "GetHFONT",
+"ordinal": 1680,
+"rva": 42496,
+"forwarder": null,
+"ref": "gdi32.dll!0xa600"
+},
+{
+"name": "GetICMProfileA",
+"ordinal": 1681,
+"rva": 42528,
+"forwarder": null,
+"ref": "gdi32.dll!0xa620"
+},
+{
+"name": "GetICMProfileW",
+"ordinal": 1682,
+"rva": 42560,
+"forwarder": null,
+"ref": "gdi32.dll!0xa640"
+},
+{
+"name": "GetKerningPairs",
+"ordinal": 1683,
+"rva": 59936,
+"forwarder": null,
+"ref": "gdi32.dll!0xea20"
+},
+{
+"name": "GetKerningPairsA",
+"ordinal": 1684,
+"rva": 59936,
+"forwarder": null,
+"ref": "gdi32.dll!0xea20"
+},
+{
+"name": "GetKerningPairsW",
+"ordinal": 1685,
+"rva": 30128,
+"forwarder": null,
+"ref": "gdi32.dll!0x75b0"
+},
+{
+"name": "GetLayout",
+"ordinal": 1686,
+"rva": 26784,
+"forwarder": null,
+"ref": "gdi32.dll!0x68a0"
+},
+{
+"name": "GetLogColorSpaceA",
+"ordinal": 1687,
+"rva": 42592,
+"forwarder": null,
+"ref": "gdi32.dll!0xa660"
+},
+{
+"name": "GetLogColorSpaceW",
+"ordinal": 1688,
+"rva": 42624,
+"forwarder": null,
+"ref": "gdi32.dll!0xa680"
+},
+{
+"name": "GetMapMode",
+"ordinal": 1689,
+"rva": 28240,
+"forwarder": null,
+"ref": "gdi32.dll!0x6e50"
+},
+{
+"name": "GetMetaFileA",
+"ordinal": 1690,
+"rva": 42656,
+"forwarder": null,
+"ref": "gdi32.dll!0xa6a0"
+},
+{
+"name": "GetMetaFileBitsEx",
+"ordinal": 1691,
+"rva": 60032,
+"forwarder": null,
+"ref": "gdi32.dll!0xea80"
+},
+{
+"name": "GetMetaFileW",
+"ordinal": 1692,
+"rva": 42688,
+"forwarder": null,
+"ref": "gdi32.dll!0xa6c0"
+},
+{
+"name": "GetMetaRgn",
+"ordinal": 1693,
+"rva": 42720,
+"forwarder": null,
+"ref": "gdi32.dll!0xa6e0"
+},
+{
+"name": "GetMiterLimit",
+"ordinal": 1694,
+"rva": 42752,
+"forwarder": null,
+"ref": "gdi32.dll!0xa700"
+},
+{
+"name": "GetNearestColor",
+"ordinal": 1695,
+"rva": 42784,
+"forwarder": null,
+"ref": "gdi32.dll!0xa720"
+},
+{
+"name": "GetNearestPaletteIndex",
+"ordinal": 1696,
+"rva": 60128,
+"forwarder": null,
+"ref": "gdi32.dll!0xeae0"
+},
+{
+"name": "GetNumberOfPhysicalMonitors",
+"ordinal": 1697,
+"rva": 25952,
+"forwarder": null,
+"ref": "gdi32.dll!0x6560"
+},
+{
+"name": "GetOPMInformation",
+"ordinal": 1698,
+"rva": 25968,
+"forwarder": null,
+"ref": "gdi32.dll!0x6570"
+},
+{
+"name": "GetOPMRandomNumber",
+"ordinal": 1699,
+"rva": 25984,
+"forwarder": null,
+"ref": "gdi32.dll!0x6580"
+},
+{
+"name": "GetObjectA",
+"ordinal": 1700,
+"rva": 18544,
+"forwarder": null,
+"ref": "gdi32.dll!0x4870"
+},
+{
+"name": "GetObjectType",
+"ordinal": 1701,
+"rva": 15840,
+"forwarder": null,
+"ref": "gdi32.dll!0x3de0"
+},
+{
+"name": "GetObjectW",
+"ordinal": 1702,
+"rva": 16464,
+"forwarder": null,
+"ref": "gdi32.dll!0x4050"
+},
+{
+"name": "GetOutlineTextMetricsA",
+"ordinal": 1703,
+"rva": 60208,
+"forwarder": null,
+"ref": "gdi32.dll!0xeb30"
+},
+{
+"name": "GetOutlineTextMetricsW",
+"ordinal": 1704,
+"rva": 30160,
+"forwarder": null,
+"ref": "gdi32.dll!0x75d0"
+},
+{
+"name": "GetPaletteEntries",
+"ordinal": 1705,
+"rva": 21744,
+"forwarder": null,
+"ref": "gdi32.dll!0x54f0"
+},
+{
+"name": "GetPath",
+"ordinal": 1706,
+"rva": 42816,
+"forwarder": null,
+"ref": "gdi32.dll!0xa740"
+},
+{
+"name": "GetPhysicalMonitorDescription",
+"ordinal": 1707,
+"rva": 26000,
+"forwarder": null,
+"ref": "gdi32.dll!0x6590"
+},
+{
+"name": "GetPhysicalMonitors",
+"ordinal": 1708,
+"rva": 26016,
+"forwarder": null,
+"ref": "gdi32.dll!0x65a0"
+},
+{
+"name": "GetPixel",
+"ordinal": 1709,
+"rva": 21232,
+"forwarder": null,
+"ref": "gdi32.dll!0x52f0"
+},
+{
+"name": "GetPixelFormat",
+"ordinal": 1710,
+"rva": 42848,
+"forwarder": null,
+"ref": "gdi32.dll!0xa760"
+},
+{
+"name": "GetPolyFillMode",
+"ordinal": 1711,
+"rva": 42880,
+"forwarder": null,
+"ref": "gdi32.dll!0xa780"
+},
+{
+"name": "GetProcessSessionFonts",
+"ordinal": 1712,
+"rva": 30192,
+"forwarder": null,
+"ref": "gdi32.dll!0x75f0"
+},
+{
+"name": "GetROP2",
+"ordinal": 1713,
+"rva": 60304,
+"forwarder": null,
+"ref": "gdi32.dll!0xeb90"
+},
+{
+"name": "GetRandomRgn",
+"ordinal": 1714,
+"rva": 33680,
+"forwarder": null,
+"ref": "gdi32.dll!0x8390"
+},
+{
+"name": "GetRasterizerCaps",
+"ordinal": 1715,
+"rva": 60368,
+"forwarder": null,
+"ref": "gdi32.dll!0xebd0"
+},
+{
+"name": "GetRegionData",
+"ordinal": 1716,
+"rva": 15712,
+"forwarder": null,
+"ref": "gdi32.dll!0x3d60"
+},
+{
+"name": "GetRelAbs",
+"ordinal": 1717,
+"rva": 42912,
+"forwarder": null,
+"ref": "gdi32.dll!0xa7a0"
+},
+{
+"name": "GetRgnBox",
+"ordinal": 1718,
+"rva": 4848,
+"forwarder": null,
+"ref": "gdi32.dll!0x12f0"
+},
+{
+"name": "GetStockObject",
+"ordinal": 1719,
+"rva": 14816,
+"forwarder": null,
+"ref": "gdi32.dll!0x39e0"
+},
+{
+"name": "GetStretchBltMode",
+"ordinal": 1720,
+"rva": 42944,
+"forwarder": null,
+"ref": "gdi32.dll!0xa7c0"
+},
+{
+"name": "GetStringBitmapA",
+"ordinal": 1721,
+"rva": 42976,
+"forwarder": null,
+"ref": "gdi32.dll!0xa7e0"
+},
+{
+"name": "GetStringBitmapW",
+"ordinal": 1722,
+"rva": 26032,
+"forwarder": null,
+"ref": "gdi32.dll!0x65b0"
+},
+{
+"name": "GetSuggestedOPMProtectedOutputArraySize",
+"ordinal": 1723,
+"rva": 26048,
+"forwarder": null,
+"ref": "gdi32.dll!0x65c0"
+},
+{
+"name": "GetSystemPaletteEntries",
+"ordinal": 1724,
+"rva": 21360,
+"forwarder": null,
+"ref": "gdi32.dll!0x5370"
+},
+{
+"name": "GetSystemPaletteUse",
+"ordinal": 1725,
+"rva": 43008,
+"forwarder": null,
+"ref": "gdi32.dll!0xa800"
+},
+{
+"name": "GetTextAlign",
+"ordinal": 1726,
+"rva": 20688,
+"forwarder": null,
+"ref": "gdi32.dll!0x50d0"
+},
+{
+"name": "GetTextCharacterExtra",
+"ordinal": 1727,
+"rva": 60448,
+"forwarder": null,
+"ref": "gdi32.dll!0xec20"
+},
+{
+"name": "GetTextCharset",
+"ordinal": 1728,
+"rva": 30224,
+"forwarder": null,
+"ref": "gdi32.dll!0x7610"
+},
+{
+"name": "GetTextCharsetInfo",
+"ordinal": 1729,
+"rva": 26064,
+"forwarder": null,
+"ref": "gdi32.dll!0x65d0"
+},
+{
+"name": "GetTextColor",
+"ordinal": 1730,
+"rva": 20624,
+"forwarder": null,
+"ref": "gdi32.dll!0x5090"
+},
+{
+"name": "GetTextExtentExPointA",
+"ordinal": 1731,
+"rva": 60512,
+"forwarder": null,
+"ref": "gdi32.dll!0xec60"
+},
+{
+"name": "GetTextExtentExPointI",
+"ordinal": 1732,
+"rva": 60656,
+"forwarder": null,
+"ref": "gdi32.dll!0xecf0"
+},
+{
+"name": "GetTextExtentExPointW",
+"ordinal": 1733,
+"rva": 60800,
+"forwarder": null,
+"ref": "gdi32.dll!0xed80"
+},
+{
+"name": "GetTextExtentExPointWPri",
+"ordinal": 1734,
+"rva": 43040,
+"forwarder": null,
+"ref": "gdi32.dll!0xa820"
+},
+{
+"name": "GetTextExtentPoint32A",
+"ordinal": 1735,
+"rva": 60944,
+"forwarder": null,
+"ref": "gdi32.dll!0xee10"
+},
+{
+"name": "GetTextExtentPoint32W",
+"ordinal": 1736,
+"rva": 5072,
+"forwarder": null,
+"ref": "gdi32.dll!0x13d0"
+},
+{
+"name": "GetTextExtentPointA",
+"ordinal": 1737,
+"rva": 61056,
+"forwarder": null,
+"ref": "gdi32.dll!0xee80"
+},
+{
+"name": "GetTextExtentPointI",
+"ordinal": 1738,
+"rva": 61168,
+"forwarder": null,
+"ref": "gdi32.dll!0xeef0"
+},
+{
+"name": "GetTextExtentPointW",
+"ordinal": 1739,
+"rva": 20512,
+"forwarder": null,
+"ref": "gdi32.dll!0x5020"
+},
+{
+"name": "GetTextFaceA",
+"ordinal": 1740,
+"rva": 61280,
+"forwarder": null,
+"ref": "gdi32.dll!0xef60"
+},
+{
+"name": "GetTextFaceAliasW",
+"ordinal": 1741,
+"rva": 43072,
+"forwarder": null,
+"ref": "gdi32.dll!0xa840"
+},
+{
+"name": "GetTextFaceW",
+"ordinal": 1742,
+"rva": 30256,
+"forwarder": null,
+"ref": "gdi32.dll!0x7630"
+},
+{
+"name": "GetTextMetricsA",
+"ordinal": 1743,
+"rva": 4192,
+"forwarder": null,
+"ref": "gdi32.dll!0x1060"
+},
+{
+"name": "GetTextMetricsW",
+"ordinal": 1744,
+"rva": 16192,
+"forwarder": null,
+"ref": "gdi32.dll!0x3f40"
+},
+{
+"name": "GetTransform",
+"ordinal": 1745,
+"rva": 43104,
+"forwarder": null,
+"ref": "gdi32.dll!0xa860"
+},
+{
+"name": "GetViewportExtEx",
+"ordinal": 1746,
+"rva": 43136,
+"forwarder": null,
+"ref": "gdi32.dll!0xa880"
+},
+{
+"name": "GetViewportOrgEx",
+"ordinal": 1747,
+"rva": 18464,
+"forwarder": null,
+"ref": "gdi32.dll!0x4820"
+},
+{
+"name": "GetWinMetaFileBits",
+"ordinal": 1748,
+"rva": 31568,
+"forwarder": null,
+"ref": "gdi32.dll!0x7b50"
+},
+{
+"name": "GetWindowExtEx",
+"ordinal": 1749,
+"rva": 28272,
+"forwarder": null,
+"ref": "gdi32.dll!0x6e70"
+},
+{
+"name": "GetWindowOrgEx",
+"ordinal": 1750,
+"rva": 28304,
+"forwarder": null,
+"ref": "gdi32.dll!0x6e90"
+},
+{
+"name": "GetWorldTransform",
+"ordinal": 1751,
+"rva": 28336,
+"forwarder": null,
+"ref": "gdi32.dll!0x6eb0"
+},
+{
+"name": "HT_Get8BPPFormatPalette",
+"ordinal": 1752,
+"rva": 26080,
+"forwarder": null,
+"ref": "gdi32.dll!0x65e0"
+},
+{
+"name": "HT_Get8BPPMaskPalette",
+"ordinal": 1753,
+"rva": 26096,
+"forwarder": null,
+"ref": "gdi32.dll!0x65f0"
+},
+{
+"name": "InternalDeleteDC",
+"ordinal": 1754,
+"rva": 11664,
+"forwarder": null,
+"ref": "gdi32.dll!0x2d90"
+},
+{
+"name": "InternalDeleteObject",
+"ordinal": 1755,
+"rva": 8624,
+"forwarder": null,
+"ref": "gdi32.dll!0x21b0"
+},
+{
+"name": "IntersectClipRect",
+"ordinal": 1756,
+"rva": 17424,
+"forwarder": null,
+"ref": "gdi32.dll!0x4410"
+},
+{
+"name": "InvertRgn",
+"ordinal": 1757,
+"rva": 61376,
+"forwarder": null,
+"ref": "gdi32.dll!0xefc0"
+},
+{
+"name": "IsValidEnhMetaRecord",
+"ordinal": 1758,
+"rva": 43168,
+"forwarder": null,
+"ref": "gdi32.dll!0xa8a0"
+},
+{
+"name": "IsValidEnhMetaRecordOffExt",
+"ordinal": 1759,
+"rva": 43200,
+"forwarder": null,
+"ref": "gdi32.dll!0xa8c0"
+},
+{
+"name": "LPtoDP",
+"ordinal": 1760,
+"rva": 17616,
+"forwarder": null,
+"ref": "gdi32.dll!0x44d0"
+},
+{
+"name": "LineDDA",
+"ordinal": 1761,
+"rva": 43232,
+"forwarder": null,
+"ref": "gdi32.dll!0xa8e0"
+},
+{
+"name": "LineTo",
+"ordinal": 1762,
+"rva": 22880,
+"forwarder": null,
+"ref": "gdi32.dll!0x5960"
+},
+{
+"name": "LpkDrawTextEx",
+"ordinal": 1763,
+"rva": 136893,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkDrawTextEx",
+"ref": null
+},
+{
+"name": "LpkEditControl",
+"ordinal": 1764,
+"rva": 153408,
+"forwarder": null,
+"ref": "gdi32.dll!0x25740"
+},
+{
+"name": "LpkExtTextOut",
+"ordinal": 1765,
+"rva": 136975,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkExtTextOut",
+"ref": null
+},
+{
+"name": "LpkGetCharacterPlacement",
+"ordinal": 1766,
+"rva": 137053,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkGetCharacterPlacement",
+"ref": null
+},
+{
+"name": "LpkGetEditControl",
+"ordinal": 1767,
+"rva": 20928,
+"forwarder": null,
+"ref": "gdi32.dll!0x51c0"
+},
+{
+"name": "LpkGetTextExtentExPoint",
+"ordinal": 1768,
+"rva": 137159,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkGetTextExtentExPoint",
+"ref": null
+},
+{
+"name": "LpkInitialize",
+"ordinal": 1769,
+"rva": 137236,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkInitialize",
+"ref": null
+},
+{
+"name": "LpkPSMTextOut",
+"ordinal": 1770,
+"rva": 137303,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkPSMTextOut",
+"ref": null
+},
+{
+"name": "LpkPresent",
+"ordinal": 1771,
+"rva": 137367,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkPresent",
+"ref": null
+},
+{
+"name": "LpkTabbedTextOut",
+"ordinal": 1772,
+"rva": 137434,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkTabbedTextOut",
+"ref": null
+},
+{
+"name": "LpkUseGDIWidthCache",
+"ordinal": 1773,
+"rva": 137510,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.LpkUseGDIWidthCache",
+"ref": null
+},
+{
+"name": "LpkpEditControlSize",
+"ordinal": 1774,
+"rva": 78916,
+"forwarder": null,
+"ref": "gdi32.dll!0x13444"
+},
+{
+"name": "LpkpInitializeEditControl",
+"ordinal": 1775,
+"rva": 19408,
+"forwarder": null,
+"ref": "gdi32.dll!0x4bd0"
+},
+{
+"name": "MaskBlt",
+"ordinal": 1776,
+"rva": 43264,
+"forwarder": null,
+"ref": "gdi32.dll!0xa900"
+},
+{
+"name": "MirrorRgn",
+"ordinal": 1777,
+"rva": 43296,
+"forwarder": null,
+"ref": "gdi32.dll!0xa920"
+},
+{
+"name": "ModerncoreCreateICW",
+"ordinal": 1778,
+"rva": 55280,
+"forwarder": null,
+"ref": "gdi32.dll!0xd7f0"
+},
+{
+"name": "ModerncoreDeleteDC",
+"ordinal": 1779,
+"rva": 55440,
+"forwarder": null,
+"ref": "gdi32.dll!0xd890"
+},
+{
+"name": "ModerncoreGdiInit",
+"ordinal": 1780,
+"rva": 33696,
+"forwarder": null,
+"ref": "gdi32.dll!0x83a0"
+},
+{
+"name": "ModifyWorldTransform",
+"ordinal": 1781,
+"rva": 43328,
+"forwarder": null,
+"ref": "gdi32.dll!0xa940"
+},
+{
+"name": "MoveToEx",
+"ordinal": 1782,
+"rva": 15152,
+"forwarder": null,
+"ref": "gdi32.dll!0x3b30"
+},
+{
+"name": "NamedEscape",
+"ordinal": 1783,
+"rva": 43360,
+"forwarder": null,
+"ref": "gdi32.dll!0xa960"
+},
+{
+"name": "OffsetClipRgn",
+"ordinal": 1784,
+"rva": 43392,
+"forwarder": null,
+"ref": "gdi32.dll!0xa980"
+},
+{
+"name": "OffsetRgn",
+"ordinal": 1785,
+"rva": 5952,
+"forwarder": null,
+"ref": "gdi32.dll!0x1740"
+},
+{
+"name": "OffsetViewportOrgEx",
+"ordinal": 1786,
+"rva": 28368,
+"forwarder": null,
+"ref": "gdi32.dll!0x6ed0"
+},
+{
+"name": "OffsetWindowOrgEx",
+"ordinal": 1787,
+"rva": 28400,
+"forwarder": null,
+"ref": "gdi32.dll!0x6ef0"
+},
+{
+"name": "PATHOBJ_bEnum",
+"ordinal": 1788,
+"rva": 26112,
+"forwarder": null,
+"ref": "gdi32.dll!0x6600"
+},
+{
+"name": "PATHOBJ_bEnumClipLines",
+"ordinal": 1789,
+"rva": 26128,
+"forwarder": null,
+"ref": "gdi32.dll!0x6610"
+},
+{
+"name": "PATHOBJ_vEnumStart",
+"ordinal": 1790,
+"rva": 26144,
+"forwarder": null,
+"ref": "gdi32.dll!0x6620"
+},
+{
+"name": "PATHOBJ_vEnumStartClipLines",
+"ordinal": 1791,
+"rva": 26160,
+"forwarder": null,
+"ref": "gdi32.dll!0x6630"
+},
+{
+"name": "PATHOBJ_vGetBounds",
+"ordinal": 1792,
+"rva": 26176,
+"forwarder": null,
+"ref": "gdi32.dll!0x6640"
+},
+{
+"name": "PaintRgn",
+"ordinal": 1793,
+"rva": 43424,
+"forwarder": null,
+"ref": "gdi32.dll!0xa9a0"
+},
+{
+"name": "PatBlt",
+"ordinal": 1794,
+"rva": 15952,
+"forwarder": null,
+"ref": "gdi32.dll!0x3e50"
+},
+{
+"name": "PathToRegion",
+"ordinal": 1795,
+"rva": 32224,
+"forwarder": null,
+"ref": "gdi32.dll!0x7de0"
+},
+{
+"name": "Pie",
+"ordinal": 1796,
+"rva": 61456,
+"forwarder": null,
+"ref": "gdi32.dll!0xf010"
+},
+{
+"name": "PlayEnhMetaFile",
+"ordinal": 1797,
+"rva": 61632,
+"forwarder": null,
+"ref": "gdi32.dll!0xf0c0"
+},
+{
+"name": "PlayEnhMetaFileRecord",
+"ordinal": 1798,
+"rva": 43456,
+"forwarder": null,
+"ref": "gdi32.dll!0xa9c0"
+},
+{
+"name": "PlayMetaFile",
+"ordinal": 1799,
+"rva": 61728,
+"forwarder": null,
+"ref": "gdi32.dll!0xf120"
+},
+{
+"name": "PlayMetaFileRecord",
+"ordinal": 1800,
+"rva": 43488,
+"forwarder": null,
+"ref": "gdi32.dll!0xa9e0"
+},
+{
+"name": "PlgBlt",
+"ordinal": 1801,
+"rva": 28432,
+"forwarder": null,
+"ref": "gdi32.dll!0x6f10"
+},
+{
+"name": "PolyBezier",
+"ordinal": 1802,
+"rva": 61808,
+"forwarder": null,
+"ref": "gdi32.dll!0xf170"
+},
+{
+"name": "PolyBezierTo",
+"ordinal": 1803,
+"rva": 22784,
+"forwarder": null,
+"ref": "gdi32.dll!0x5900"
+},
+{
+"name": "PolyDraw",
+"ordinal": 1804,
+"rva": 61904,
+"forwarder": null,
+"ref": "gdi32.dll!0xf1d0"
+},
+{
+"name": "PolyPatBlt",
+"ordinal": 1805,
+"rva": 43520,
+"forwarder": null,
+"ref": "gdi32.dll!0xaa00"
+},
+{
+"name": "PolyPolygon",
+"ordinal": 1806,
+"rva": 62016,
+"forwarder": null,
+"ref": "gdi32.dll!0xf240"
+},
+{
+"name": "PolyPolyline",
+"ordinal": 1807,
+"rva": 43552,
+"forwarder": null,
+"ref": "gdi32.dll!0xaa20"
+},
+{
+"name": "PolyTextOutA",
+"ordinal": 1808,
+"rva": 43584,
+"forwarder": null,
+"ref": "gdi32.dll!0xaa40"
+},
+{
+"name": "PolyTextOutW",
+"ordinal": 1809,
+"rva": 43616,
+"forwarder": null,
+"ref": "gdi32.dll!0xaa60"
+},
+{
+"name": "Polygon",
+"ordinal": 1810,
+"rva": 62128,
+"forwarder": null,
+"ref": "gdi32.dll!0xf2b0"
+},
+{
+"name": "Polyline",
+"ordinal": 1811,
+"rva": 62224,
+"forwarder": null,
+"ref": "gdi32.dll!0xf310"
+},
+{
+"name": "PolylineTo",
+"ordinal": 1812,
+"rva": 22976,
+"forwarder": null,
+"ref": "gdi32.dll!0x59c0"
+},
+{
+"name": "PtInRegion",
+"ordinal": 1813,
+"rva": 33712,
+"forwarder": null,
+"ref": "gdi32.dll!0x83b0"
+},
+{
+"name": "PtVisible",
+"ordinal": 1814,
+"rva": 43648,
+"forwarder": null,
+"ref": "gdi32.dll!0xaa80"
+},
+{
+"name": "QueryFontAssocStatus",
+"ordinal": 1815,
+"rva": 43680,
+"forwarder": null,
+"ref": "gdi32.dll!0xaaa0"
+},
+{
+"name": "RealizePalette",
+"ordinal": 1816,
+"rva": 22720,
+"forwarder": null,
+"ref": "gdi32.dll!0x58c0"
+},
+{
+"name": "RectInRegion",
+"ordinal": 1817,
+"rva": 55984,
+"forwarder": null,
+"ref": "gdi32.dll!0xdab0"
+},
+{
+"name": "RectVisible",
+"ordinal": 1818,
+"rva": 17344,
+"forwarder": null,
+"ref": "gdi32.dll!0x43c0"
+},
+{
+"name": "Rectangle",
+"ordinal": 1819,
+"rva": 23648,
+"forwarder": null,
+"ref": "gdi32.dll!0x5c60"
+},
+{
+"name": "RemoveFontMemResourceEx",
+"ordinal": 1820,
+"rva": 30288,
+"forwarder": null,
+"ref": "gdi32.dll!0x7650"
+},
+{
+"name": "RemoveFontResourceA",
+"ordinal": 1821,
+"rva": 62320,
+"forwarder": null,
+"ref": "gdi32.dll!0xf370"
+},
+{
+"name": "RemoveFontResourceExA",
+"ordinal": 1822,
+"rva": 43712,
+"forwarder": null,
+"ref": "gdi32.dll!0xaac0"
+},
+{
+"name": "RemoveFontResourceExW",
+"ordinal": 1823,
+"rva": 43744,
+"forwarder": null,
+"ref": "gdi32.dll!0xaae0"
+},
+{
+"name": "RemoveFontResourceTracking",
+"ordinal": 1824,
+"rva": 43776,
+"forwarder": null,
+"ref": "gdi32.dll!0xab00"
+},
+{
+"name": "RemoveFontResourceW",
+"ordinal": 1825,
+"rva": 62384,
+"forwarder": null,
+"ref": "gdi32.dll!0xf3b0"
+},
+{
+"name": "ResetDCA",
+"ordinal": 1826,
+"rva": 43808,
+"forwarder": null,
+"ref": "gdi32.dll!0xab20"
+},
+{
+"name": "ResetDCW",
+"ordinal": 1827,
+"rva": 62448,
+"forwarder": null,
+"ref": "gdi32.dll!0xf3f0"
+},
+{
+"name": "ResizePalette",
+"ordinal": 1828,
+"rva": 62528,
+"forwarder": null,
+"ref": "gdi32.dll!0xf440"
+},
+{
+"name": "RestoreDC",
+"ordinal": 1829,
+"rva": 16816,
+"forwarder": null,
+"ref": "gdi32.dll!0x41b0"
+},
+{
+"name": "RoundRect",
+"ordinal": 1830,
+"rva": 62608,
+"forwarder": null,
+"ref": "gdi32.dll!0xf490"
+},
+{
+"name": "STROBJ_bEnum",
+"ordinal": 1831,
+"rva": 26192,
+"forwarder": null,
+"ref": "gdi32.dll!0x6650"
+},
+{
+"name": "STROBJ_bEnumPositionsOnly",
+"ordinal": 1832,
+"rva": 26208,
+"forwarder": null,
+"ref": "gdi32.dll!0x6660"
+},
+{
+"name": "STROBJ_bGetAdvanceWidths",
+"ordinal": 1833,
+"rva": 26224,
+"forwarder": null,
+"ref": "gdi32.dll!0x6670"
+},
+{
+"name": "STROBJ_dwGetCodePage",
+"ordinal": 1834,
+"rva": 26240,
+"forwarder": null,
+"ref": "gdi32.dll!0x6680"
+},
+{
+"name": "STROBJ_vEnumStart",
+"ordinal": 1835,
+"rva": 26256,
+"forwarder": null,
+"ref": "gdi32.dll!0x6690"
+},
+{
+"name": "SaveDC",
+"ordinal": 1836,
+"rva": 17088,
+"forwarder": null,
+"ref": "gdi32.dll!0x42c0"
+},
+{
+"name": "ScaleRgn",
+"ordinal": 1837,
+"rva": 26272,
+"forwarder": null,
+"ref": "gdi32.dll!0x66a0"
+},
+{
+"name": "ScaleValues",
+"ordinal": 1838,
+"rva": 26288,
+"forwarder": null,
+"ref": "gdi32.dll!0x66b0"
+},
+{
+"name": "ScaleViewportExtEx",
+"ordinal": 1839,
+"rva": 43840,
+"forwarder": null,
+"ref": "gdi32.dll!0xab40"
+},
+{
+"name": "ScaleWindowExtEx",
+"ordinal": 1840,
+"rva": 43872,
+"forwarder": null,
+"ref": "gdi32.dll!0xab60"
+},
+{
+"name": "ScriptApplyDigitSubstitution",
+"ordinal": 1841,
+"rva": 138605,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptApplyDigitSubstitution",
+"ref": null
+},
+{
+"name": "ScriptApplyLogicalWidth",
+"ordinal": 1842,
+"rva": 138697,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptApplyLogicalWidth",
+"ref": null
+},
+{
+"name": "ScriptBreak",
+"ordinal": 1843,
+"rva": 138772,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptBreak",
+"ref": null
+},
+{
+"name": "ScriptCPtoX",
+"ordinal": 1844,
+"rva": 138820,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptCPtoX",
+"ref": null
+},
+{
+"name": "ScriptCacheGetHeight",
+"ordinal": 1845,
+"rva": 138892,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptCacheGetHeight",
+"ref": null
+},
+{
+"name": "ScriptFreeCache",
+"ordinal": 1846,
+"rva": 138968,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptFreeCache",
+"ref": null
+},
+{
+"name": "ScriptGetCMap",
+"ordinal": 1847,
+"rva": 139022,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptGetCMap",
+"ref": null
+},
+{
+"name": "ScriptGetFontAlternateGlyphs",
+"ordinal": 1848,
+"rva": 139089,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetFontAlternateGlyphs",
+"ref": null
+},
+{
+"name": "ScriptGetFontFeatureTags",
+"ordinal": 1849,
+"rva": 139182,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetFontFeatureTags",
+"ref": null
+},
+{
+"name": "ScriptGetFontLanguageTags",
+"ordinal": 1850,
+"rva": 139272,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetFontLanguageTags",
+"ref": null
+},
+{
+"name": "ScriptGetFontProperties",
+"ordinal": 1851,
+"rva": 139361,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetFontProperties",
+"ref": null
+},
+{
+"name": "ScriptGetFontScriptTags",
+"ordinal": 1852,
+"rva": 139448,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetFontScriptTags",
+"ref": null
+},
+{
+"name": "ScriptGetGlyphABCWidth",
+"ordinal": 1853,
+"rva": 139534,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptGetGlyphABCWidth",
+"ref": null
+},
+{
+"name": "ScriptGetLogicalWidths",
+"ordinal": 1854,
+"rva": 139619,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptGetLogicalWidths",
+"ref": null
+},
+{
+"name": "ScriptGetProperties",
+"ordinal": 1855,
+"rva": 139686,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptGetProperties",
+"ref": null
+},
+{
+"name": "ScriptIsComplex",
+"ordinal": 1856,
+"rva": 139746,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptIsComplex",
+"ref": null
+},
+{
+"name": "ScriptItemize",
+"ordinal": 1857,
+"rva": 139815,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptItemize",
+"ref": null
+},
+{
+"name": "ScriptItemizeOpenType",
+"ordinal": 1858,
+"rva": 139875,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptItemizeOpenType",
+"ref": null
+},
+{
+"name": "ScriptJustify",
+"ordinal": 1859,
+"rva": 139950,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptJustify",
+"ref": null
+},
+{
+"name": "ScriptLayout",
+"ordinal": 1860,
+"rva": 140016,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptLayout",
+"ref": null
+},
+{
+"name": "ScriptPlace",
+"ordinal": 1861,
+"rva": 140080,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptPlace",
+"ref": null
+},
+{
+"name": "ScriptPlaceOpenType",
+"ordinal": 1862,
+"rva": 140136,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptPlaceOpenType",
+"ref": null
+},
+{
+"name": "ScriptPositionSingleGlyph",
+"ordinal": 1863,
+"rva": 140221,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptPositionSingleGlyph",
+"ref": null
+},
+{
+"name": "ScriptRecordDigitSubstitution",
+"ordinal": 1864,
+"rva": 140316,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptRecordDigitSubstitution",
+"ref": null
+},
+{
+"name": "ScriptShape",
+"ordinal": 1865,
+"rva": 140397,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptShape",
+"ref": null
+},
+{
+"name": "ScriptShapeOpenType",
+"ordinal": 1866,
+"rva": 140453,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptShapeOpenType",
+"ref": null
+},
+{
+"name": "ScriptStringAnalyse",
+"ordinal": 1867,
+"rva": 140532,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptStringAnalyse",
+"ref": null
+},
+{
+"name": "ScriptStringCPtoX",
+"ordinal": 1868,
+"rva": 140594,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptStringCPtoX",
+"ref": null
+},
+{
+"name": "ScriptStringFree",
+"ordinal": 1869,
+"rva": 140668,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptStringFree",
+"ref": null
+},
+{
+"name": "ScriptStringGetLogicalWidths",
+"ordinal": 1870,
+"rva": 140738,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptStringGetLogicalWidths",
+"ref": null
+},
+{
+"name": "ScriptStringGetOrder",
+"ordinal": 1871,
+"rva": 140827,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptStringGetOrder",
+"ref": null
+},
+{
+"name": "ScriptStringOut",
+"ordinal": 1872,
+"rva": 140903,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptStringOut",
+"ref": null
+},
+{
+"name": "ScriptStringValidate",
+"ordinal": 1873,
+"rva": 140979,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptStringValidate",
+"ref": null
+},
+{
+"name": "ScriptStringXtoCP",
+"ordinal": 1874,
+"rva": 141042,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptStringXtoCP",
+"ref": null
+},
+{
+"name": "ScriptString_pLogAttr",
+"ordinal": 1875,
+"rva": 141121,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptString_pLogAttr",
+"ref": null
+},
+{
+"name": "ScriptString_pSize",
+"ordinal": 1876,
+"rva": 141186,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptString_pSize",
+"ref": null
+},
+{
+"name": "ScriptString_pcOutChars",
+"ordinal": 1877,
+"rva": 141268,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptString_pcOutChars",
+"ref": null
+},
+{
+"name": "ScriptSubstituteSingleGlyph",
+"ordinal": 1878,
+"rva": 141359,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptSubstituteSingleGlyph",
+"ref": null
+},
+{
+"name": "ScriptTextOut",
+"ordinal": 1879,
+"rva": 141425,
+"forwarder": "ext-ms-win-usp10-l1-1-0.ScriptTextOut",
+"ref": null
+},
+{
+"name": "ScriptXtoCP",
+"ordinal": 1880,
+"rva": 141475,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ScriptXtoCP",
+"ref": null
+},
+{
+"name": "SelectBrushLocal",
+"ordinal": 1881,
+"rva": 43904,
+"forwarder": null,
+"ref": "gdi32.dll!0xab80"
+},
+{
+"name": "SelectClipPath",
+"ordinal": 1882,
+"rva": 22512,
+"forwarder": null,
+"ref": "gdi32.dll!0x57f0"
+},
+{
+"name": "SelectClipRgn",
+"ordinal": 1883,
+"rva": 16080,
+"forwarder": null,
+"ref": "gdi32.dll!0x3ed0"
+},
+{
+"name": "SelectFontLocal",
+"ordinal": 1884,
+"rva": 43936,
+"forwarder": null,
+"ref": "gdi32.dll!0xaba0"
+},
+{
+"name": "SelectObject",
+"ordinal": 1885,
+"rva": 14080,
+"forwarder": null,
+"ref": "gdi32.dll!0x3700"
+},
+{
+"name": "SelectPalette",
+"ordinal": 1886,
+"rva": 20352,
+"forwarder": null,
+"ref": "gdi32.dll!0x4f80"
+},
+{
+"name": "SetAbortProc",
+"ordinal": 1887,
+"rva": 43968,
+"forwarder": null,
+"ref": "gdi32.dll!0xabc0"
+},
+{
+"name": "SetArcDirection",
+"ordinal": 1888,
+"rva": 44000,
+"forwarder": null,
+"ref": "gdi32.dll!0xabe0"
+},
+{
+"name": "SetBitmapAttributes",
+"ordinal": 1889,
+"rva": 44032,
+"forwarder": null,
+"ref": "gdi32.dll!0xac00"
+},
+{
+"name": "SetBitmapBits",
+"ordinal": 1890,
+"rva": 19584,
+"forwarder": null,
+"ref": "gdi32.dll!0x4c80"
+},
+{
+"name": "SetBitmapDimensionEx",
+"ordinal": 1891,
+"rva": 44064,
+"forwarder": null,
+"ref": "gdi32.dll!0xac20"
+},
+{
+"name": "SetBkColor",
+"ordinal": 1892,
+"rva": 16304,
+"forwarder": null,
+"ref": "gdi32.dll!0x3fb0"
+},
+{
+"name": "SetBkMode",
+"ordinal": 1893,
+"rva": 15264,
+"forwarder": null,
+"ref": "gdi32.dll!0x3ba0"
+},
+{
+"name": "SetBoundsRect",
+"ordinal": 1894,
+"rva": 44096,
+"forwarder": null,
+"ref": "gdi32.dll!0xac40"
+},
+{
+"name": "SetBrushAttributes",
+"ordinal": 1895,
+"rva": 44128,
+"forwarder": null,
+"ref": "gdi32.dll!0xac60"
+},
+{
+"name": "SetBrushOrgEx",
+"ordinal": 1896,
+"rva": 28464,
+"forwarder": null,
+"ref": "gdi32.dll!0x6f30"
+},
+{
+"name": "SetColorAdjustment",
+"ordinal": 1897,
+"rva": 44160,
+"forwarder": null,
+"ref": "gdi32.dll!0xac80"
+},
+{
+"name": "SetColorSpace",
+"ordinal": 1898,
+"rva": 44192,
+"forwarder": null,
+"ref": "gdi32.dll!0xaca0"
+},
+{
+"name": "SetDCBrushColor",
+"ordinal": 1899,
+"rva": 26816,
+"forwarder": null,
+"ref": "gdi32.dll!0x68c0"
+},
+{
+"name": "SetDCPenColor",
+"ordinal": 1900,
+"rva": 44224,
+"forwarder": null,
+"ref": "gdi32.dll!0xacc0"
+},
+{
+"name": "SetDIBColorTable",
+"ordinal": 1901,
+"rva": 28496,
+"forwarder": null,
+"ref": "gdi32.dll!0x6f50"
+},
+{
+"name": "SetDIBits",
+"ordinal": 1902,
+"rva": 17824,
+"forwarder": null,
+"ref": "gdi32.dll!0x45a0"
+},
+{
+"name": "SetDIBitsToDevice",
+"ordinal": 1903,
+"rva": 28528,
+"forwarder": null,
+"ref": "gdi32.dll!0x6f70"
+},
+{
+"name": "SetDeviceGammaRamp",
+"ordinal": 1904,
+"rva": 33056,
+"forwarder": null,
+"ref": "gdi32.dll!0x8120"
+},
+{
+"name": "SetEnhMetaFileBits",
+"ordinal": 1905,
+"rva": 31600,
+"forwarder": null,
+"ref": "gdi32.dll!0x7b70"
+},
+{
+"name": "SetFontEnumeration",
+"ordinal": 1906,
+"rva": 44256,
+"forwarder": null,
+"ref": "gdi32.dll!0xace0"
+},
+{
+"name": "SetGraphicsMode",
+"ordinal": 1907,
+"rva": 28560,
+"forwarder": null,
+"ref": "gdi32.dll!0x6f90"
+},
+{
+"name": "SetICMMode",
+"ordinal": 1908,
+"rva": 19680,
+"forwarder": null,
+"ref": "gdi32.dll!0x4ce0"
+},
+{
+"name": "SetICMProfileA",
+"ordinal": 1909,
+"rva": 44288,
+"forwarder": null,
+"ref": "gdi32.dll!0xad00"
+},
+{
+"name": "SetICMProfileW",
+"ordinal": 1910,
+"rva": 44320,
+"forwarder": null,
+"ref": "gdi32.dll!0xad20"
+},
+{
+"name": "SetLayout",
+"ordinal": 1911,
+"rva": 28592,
+"forwarder": null,
+"ref": "gdi32.dll!0x6fb0"
+},
+{
+"name": "SetLayoutWidth",
+"ordinal": 1912,
+"rva": 44352,
+"forwarder": null,
+"ref": "gdi32.dll!0xad40"
+},
+{
+"name": "SetMagicColors",
+"ordinal": 1913,
+"rva": 26304,
+"forwarder": null,
+"ref": "gdi32.dll!0x66c0"
+},
+{
+"name": "SetMapMode",
+"ordinal": 1914,
+"rva": 5856,
+"forwarder": null,
+"ref": "gdi32.dll!0x16e0"
+},
+{
+"name": "SetMapperFlags",
+"ordinal": 1915,
+"rva": 44384,
+"forwarder": null,
+"ref": "gdi32.dll!0xad60"
+},
+{
+"name": "SetMetaFileBitsEx",
+"ordinal": 1916,
+"rva": 62752,
+"forwarder": null,
+"ref": "gdi32.dll!0xf520"
+},
+{
+"name": "SetMetaRgn",
+"ordinal": 1917,
+"rva": 33728,
+"forwarder": null,
+"ref": "gdi32.dll!0x83c0"
+},
+{
+"name": "SetMiterLimit",
+"ordinal": 1918,
+"rva": 22384,
+"forwarder": null,
+"ref": "gdi32.dll!0x5770"
+},
+{
+"name": "SetOPMSigningKeyAndSequenceNumbers",
+"ordinal": 1919,
+"rva": 26320,
+"forwarder": null,
+"ref": "gdi32.dll!0x66d0"
+},
+{
+"name": "SetPaletteEntries",
+"ordinal": 1920,
+"rva": 62832,
+"forwarder": null,
+"ref": "gdi32.dll!0xf570"
+},
+{
+"name": "SetPixel",
+"ordinal": 1921,
+"rva": 21568,
+"forwarder": null,
+"ref": "gdi32.dll!0x5440"
+},
+{
+"name": "SetPixelFormat",
+"ordinal": 1922,
+"rva": 28624,
+"forwarder": null,
+"ref": "gdi32.dll!0x6fd0"
+},
+{
+"name": "SetPixelV",
+"ordinal": 1923,
+"rva": 44416,
+"forwarder": null,
+"ref": "gdi32.dll!0xad80"
+},
+{
+"name": "SetPolyFillMode",
+"ordinal": 1924,
+"rva": 22480,
+"forwarder": null,
+"ref": "gdi32.dll!0x57d0"
+},
+{
+"name": "SetROP2",
+"ordinal": 1925,
+"rva": 4112,
+"forwarder": null,
+"ref": "gdi32.dll!0x1010"
+},
+{
+"name": "SetRectRgn",
+"ordinal": 1926,
+"rva": 5760,
+"forwarder": null,
+"ref": "gdi32.dll!0x1680"
+},
+{
+"name": "SetRelAbs",
+"ordinal": 1927,
+"rva": 44448,
+"forwarder": null,
+"ref": "gdi32.dll!0xada0"
+},
+{
+"name": "SetStretchBltMode",
+"ordinal": 1928,
+"rva": 17168,
+"forwarder": null,
+"ref": "gdi32.dll!0x4310"
+},
+{
+"name": "SetSystemPaletteUse",
+"ordinal": 1929,
+"rva": 44480,
+"forwarder": null,
+"ref": "gdi32.dll!0xadc0"
+},
+{
+"name": "SetTextAlign",
+"ordinal": 1930,
+"rva": 15344,
+"forwarder": null,
+"ref": "gdi32.dll!0x3bf0"
+},
+{
+"name": "SetTextCharacterExtra",
+"ordinal": 1931,
+"rva": 30320,
+"forwarder": null,
+"ref": "gdi32.dll!0x7670"
+},
+{
+"name": "SetTextColor",
+"ordinal": 1932,
+"rva": 15632,
+"forwarder": null,
+"ref": "gdi32.dll!0x3d10"
+},
+{
+"name": "SetTextJustification",
+"ordinal": 1933,
+"rva": 44512,
+"forwarder": null,
+"ref": "gdi32.dll!0xade0"
+},
+{
+"name": "SetViewportExtEx",
+"ordinal": 1934,
+"rva": 62944,
+"forwarder": null,
+"ref": "gdi32.dll!0xf5e0"
+},
+{
+"name": "SetViewportOrgEx",
+"ordinal": 1935,
+"rva": 16896,
+"forwarder": null,
+"ref": "gdi32.dll!0x4200"
+},
+{
+"name": "SetVirtualResolution",
+"ordinal": 1936,
+"rva": 44544,
+"forwarder": null,
+"ref": "gdi32.dll!0xae00"
+},
+{
+"name": "SetWinMetaFileBits",
+"ordinal": 1937,
+"rva": 44576,
+"forwarder": null,
+"ref": "gdi32.dll!0xae20"
+},
+{
+"name": "SetWindowExtEx",
+"ordinal": 1938,
+"rva": 63056,
+"forwarder": null,
+"ref": "gdi32.dll!0xf650"
+},
+{
+"name": "SetWindowOrgEx",
+"ordinal": 1939,
+"rva": 17504,
+"forwarder": null,
+"ref": "gdi32.dll!0x4460"
+},
+{
+"name": "SetWorldTransform",
+"ordinal": 1940,
+"rva": 17008,
+"forwarder": null,
+"ref": "gdi32.dll!0x4270"
+},
+{
+"name": "StartDocA",
+"ordinal": 1941,
+"rva": 63168,
+"forwarder": null,
+"ref": "gdi32.dll!0xf6c0"
+},
+{
+"name": "StartDocW",
+"ordinal": 1942,
+"rva": 63248,
+"forwarder": null,
+"ref": "gdi32.dll!0xf710"
+},
+{
+"name": "StartFormPage",
+"ordinal": 1943,
+"rva": 44608,
+"forwarder": null,
+"ref": "gdi32.dll!0xae40"
+},
+{
+"name": "StartPage",
+"ordinal": 1944,
+"rva": 23200,
+"forwarder": null,
+"ref": "gdi32.dll!0x5aa0"
+},
+{
+"name": "StretchBlt",
+"ordinal": 1945,
+"rva": 19888,
+"forwarder": null,
+"ref": "gdi32.dll!0x4db0"
+},
+{
+"name": "StretchDIBits",
+"ordinal": 1946,
+"rva": 16592,
+"forwarder": null,
+"ref": "gdi32.dll!0x40d0"
+},
+{
+"name": "StrokeAndFillPath",
+"ordinal": 1947,
+"rva": 44640,
+"forwarder": null,
+"ref": "gdi32.dll!0xae60"
+},
+{
+"name": "StrokePath",
+"ordinal": 1948,
+"rva": 63328,
+"forwarder": null,
+"ref": "gdi32.dll!0xf760"
+},
+{
+"name": "SwapBuffers",
+"ordinal": 1949,
+"rva": 28656,
+"forwarder": null,
+"ref": "gdi32.dll!0x6ff0"
+},
+{
+"name": "TextOutA",
+"ordinal": 1950,
+"rva": 63392,
+"forwarder": null,
+"ref": "gdi32.dll!0xf7a0"
+},
+{
+"name": "TextOutW",
+"ordinal": 1951,
+"rva": 30352,
+"forwarder": null,
+"ref": "gdi32.dll!0x7690"
+},
+{
+"name": "TranslateCharsetInfo",
+"ordinal": 1952,
+"rva": 17248,
+"forwarder": null,
+"ref": "gdi32.dll!0x4360"
+},
+{
+"name": "UnloadNetworkFonts",
+"ordinal": 1953,
+"rva": 44672,
+"forwarder": null,
+"ref": "gdi32.dll!0xae80"
+},
+{
+"name": "UnrealizeObject",
+"ordinal": 1954,
+"rva": 63504,
+"forwarder": null,
+"ref": "gdi32.dll!0xf810"
+},
+{
+"name": "UpdateColors",
+"ordinal": 1955,
+"rva": 63568,
+"forwarder": null,
+"ref": "gdi32.dll!0xf850"
+},
+{
+"name": "UpdateICMRegKeyA",
+"ordinal": 1956,
+"rva": 44704,
+"forwarder": null,
+"ref": "gdi32.dll!0xaea0"
+},
+{
+"name": "UpdateICMRegKeyW",
+"ordinal": 1957,
+"rva": 44736,
+"forwarder": null,
+"ref": "gdi32.dll!0xaec0"
+},
+{
+"name": "UspAllocCache",
+"ordinal": 1958,
+"rva": 142704,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.UspAllocCache",
+"ref": null
+},
+{
+"name": "UspAllocTemp",
+"ordinal": 1959,
+"rva": 142770,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.UspAllocTemp",
+"ref": null
+},
+{
+"name": "UspFreeMem",
+"ordinal": 1960,
+"rva": 142833,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.UspFreeMem",
+"ref": null
+},
+{
+"name": "WidenPath",
+"ordinal": 1961,
+"rva": 44768,
+"forwarder": null,
+"ref": "gdi32.dll!0xaee0"
+},
+{
+"name": "XFORMOBJ_bApplyXform",
+"ordinal": 1962,
+"rva": 26336,
+"forwarder": null,
+"ref": "gdi32.dll!0x66e0"
+},
+{
+"name": "XFORMOBJ_iGetXform",
+"ordinal": 1963,
+"rva": 26352,
+"forwarder": null,
+"ref": "gdi32.dll!0x66f0"
+},
+{
+"name": "XLATEOBJ_cGetPalette",
+"ordinal": 1964,
+"rva": 26368,
+"forwarder": null,
+"ref": "gdi32.dll!0x6700"
+},
+{
+"name": "XLATEOBJ_hGetColorTransform",
+"ordinal": 1965,
+"rva": 26384,
+"forwarder": null,
+"ref": "gdi32.dll!0x6710"
+},
+{
+"name": "XLATEOBJ_iXlate",
+"ordinal": 1966,
+"rva": 26400,
+"forwarder": null,
+"ref": "gdi32.dll!0x6720"
+},
+{
+"name": "XLATEOBJ_piVector",
+"ordinal": 1967,
+"rva": 44800,
+"forwarder": null,
+"ref": "gdi32.dll!0xaf00"
+},
+{
+"name": "bCreateDCW",
+"ordinal": 1968,
+"rva": 5328,
+"forwarder": null,
+"ref": "gdi32.dll!0x14d0"
+},
+{
+"name": "bDeleteLDC",
+"ordinal": 1969,
+"rva": 23760,
+"forwarder": null,
+"ref": "gdi32.dll!0x5cd0"
+},
+{
+"name": "bInitSystemAndFontsDirectoriesW",
+"ordinal": 1970,
+"rva": 44832,
+"forwarder": null,
+"ref": "gdi32.dll!0xaf20"
+},
+{
+"name": "bMakePathNameW",
+"ordinal": 1971,
+"rva": 44864,
+"forwarder": null,
+"ref": "gdi32.dll!0xaf40"
+},
+{
+"name": "cGetTTFFromFOT",
+"ordinal": 1972,
+"rva": 44896,
+"forwarder": null,
+"ref": "gdi32.dll!0xaf60"
+},
+{
+"name": "fpClosePrinter",
+"ordinal": 1973,
+"rva": 153576,
+"forwarder": null,
+"ref": "gdi32.dll!0x257e8"
+},
+{
+"name": "ftsWordBreak",
+"ordinal": 1974,
+"rva": 143128,
+"forwarder": "ext-ms-win-gdi-internal-desktop-l1-1-0.ftsWordBreak",
+"ref": null
+},
+{
+"name": "gMaxGdiHandleCount",
+"ordinal": 1975,
+"rva": 153584,
+"forwarder": null,
+"ref": "gdi32.dll!0x257f0"
+},
+{
+"name": "gW32PID",
+"ordinal": 1976,
+"rva": 153608,
+"forwarder": null,
+"ref": "gdi32.dll!0x25808"
+},
+{
+"name": "g_systemCallFilterId",
+"ordinal": 1977,
+"rva": 153536,
+"forwarder": null,
+"ref": "gdi32.dll!0x257c0"
+},
+{
+"name": "gdiPlaySpoolStream",
+"ordinal": 1978,
+"rva": 44928,
+"forwarder": null,
+"ref": "gdi32.dll!0xaf80"
+},
+{
+"name": "ghICM",
+"ordinal": 1979,
+"rva": 153600,
+"forwarder": null,
+"ref": "gdi32.dll!0x25800"
+},
+{
+"name": "hGetPEBHandle",
+"ordinal": 1980,
+"rva": 6384,
+"forwarder": null,
+"ref": "gdi32.dll!0x18f0"
+},
+{
+"name": "pGdiDevCaps",
+"ordinal": 1981,
+"rva": 153568,
+"forwarder": null,
+"ref": "gdi32.dll!0x257e0"
+},
+{
+"name": "pGdiSharedHandleTable",
+"ordinal": 1982,
+"rva": 153592,
+"forwarder": null,
+"ref": "gdi32.dll!0x257f8"
+},
+{
+"name": "pGdiSharedMemory",
+"ordinal": 1983,
+"rva": 153528,
+"forwarder": null,
+"ref": "gdi32.dll!0x257b8"
+},
+{
+"name": "pldcGet",
+"ordinal": 1984,
+"rva": 22192,
+"forwarder": null,
+"ref": "gdi32.dll!0x56b0"
+},
+{
+"name": "semDxTrimNotification",
+"ordinal": 1985,
+"rva": 153632,
+"forwarder": null,
+"ref": "gdi32.dll!0x25820"
+},
+{
+"name": "vSetPldc",
+"ordinal": 1986,
+"rva": 23520,
+"forwarder": null,
+"ref": "gdi32.dll!0x5be0"
+},
+{
+"name": "CreateDCExW",
+"ordinal": 2000,
+"rva": 34560,
+"forwarder": null,
+"ref": "gdi32.dll!0x8700"
+}
+]

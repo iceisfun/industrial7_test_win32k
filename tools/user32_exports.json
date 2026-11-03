@@ -1,0 +1,8157 @@
+[
+{
+"name": null,
+"ordinal": 1502,
+"rva": 333840,
+"forwarder": null,
+"ref": "user32.dll!0x51810"
+},
+{
+"name": "GetPointerFrameArrivalTimes",
+"ordinal": 1503,
+"rva": 327808,
+"forwarder": null,
+"ref": "user32.dll!0x50080"
+},
+{
+"name": "ActivateKeyboardLayout",
+"ordinal": 1504,
+"rva": 181968,
+"forwarder": null,
+"ref": "user32.dll!0x2c6d0"
+},
+{
+"name": "AddClipboardFormatListener",
+"ordinal": 1505,
+"rva": 183984,
+"forwarder": null,
+"ref": "user32.dll!0x2ceb0"
+},
+{
+"name": "AddVisualIdentifier",
+"ordinal": 1506,
+"rva": 211440,
+"forwarder": null,
+"ref": "user32.dll!0x339f0"
+},
+{
+"name": "AdjustWindowRect",
+"ordinal": 1507,
+"rva": 548768,
+"forwarder": null,
+"ref": "user32.dll!0x85fa0"
+},
+{
+"name": "AdjustWindowRectEx",
+"ordinal": 1508,
+"rva": 91648,
+"forwarder": null,
+"ref": "user32.dll!0x16600"
+},
+{
+"name": "AdjustWindowRectExForDpi",
+"ordinal": 1509,
+"rva": 66496,
+"forwarder": null,
+"ref": "user32.dll!0x103c0"
+},
+{
+"name": "AlignRects",
+"ordinal": 1510,
+"rva": 573216,
+"forwarder": null,
+"ref": "user32.dll!0x8bf20"
+},
+{
+"name": "AllowForegroundActivation",
+"ordinal": 1511,
+"rva": 548880,
+"forwarder": null,
+"ref": "user32.dll!0x86010"
+},
+{
+"name": "AllowSetForegroundWindow",
+"ordinal": 1512,
+"rva": 177984,
+"forwarder": null,
+"ref": "user32.dll!0x2b740"
+},
+{
+"name": "AnimateWindow",
+"ordinal": 1513,
+"rva": 526720,
+"forwarder": null,
+"ref": "user32.dll!0x80980"
+},
+{
+"name": "AnyPopup",
+"ordinal": 1514,
+"rva": 530208,
+"forwarder": null,
+"ref": "user32.dll!0x81720"
+},
+{
+"name": "AppendMenuA",
+"ordinal": 1515,
+"rva": 563232,
+"forwarder": null,
+"ref": "user32.dll!0x89820"
+},
+{
+"name": "AppendMenuW",
+"ordinal": 1516,
+"rva": 129776,
+"forwarder": null,
+"ref": "user32.dll!0x1faf0"
+},
+{
+"name": "AreDpiAwarenessContextsEqual",
+"ordinal": 1517,
+"rva": 168720,
+"forwarder": null,
+"ref": "user32.dll!0x29310"
+},
+{
+"name": "ArrangeIconicWindows",
+"ordinal": 1518,
+"rva": 548912,
+"forwarder": null,
+"ref": "user32.dll!0x86030"
+},
+{
+"name": "AttachThreadInput",
+"ordinal": 1519,
+"rva": 211456,
+"forwarder": null,
+"ref": "user32.dll!0x33a00"
+},
+{
+"name": "BeginDeferWindowPos",
+"ordinal": 1520,
+"rva": 171600,
+"forwarder": null,
+"ref": "user32.dll!0x29e50"
+},
+{
+"name": "BeginPaint",
+"ordinal": 1521,
+"rva": 211488,
+"forwarder": null,
+"ref": "user32.dll!0x33a20"
+},
+{
+"name": "BlockInput",
+"ordinal": 1522,
+"rva": 211504,
+"forwarder": null,
+"ref": "user32.dll!0x33a30"
+},
+{
+"name": "BringWindowToTop",
+"ordinal": 1523,
+"rva": 201328,
+"forwarder": null,
+"ref": "user32.dll!0x31270"
+},
+{
+"name": "BroadcastSystemMessage",
+"ordinal": 1524,
+"rva": 563328,
+"forwarder": null,
+"ref": "user32.dll!0x89880"
+},
+{
+"name": "BroadcastSystemMessageA",
+"ordinal": 1525,
+"rva": 563328,
+"forwarder": null,
+"ref": "user32.dll!0x89880"
+},
+{
+"name": "BroadcastSystemMessageExA",
+"ordinal": 1526,
+"rva": 563376,
+"forwarder": null,
+"ref": "user32.dll!0x898b0"
+},
+{
+"name": "BroadcastSystemMessageExW",
+"ordinal": 1527,
+"rva": 554432,
+"forwarder": null,
+"ref": "user32.dll!0x875c0"
+},
+{
+"name": "BroadcastSystemMessageW",
+"ordinal": 1528,
+"rva": 175552,
+"forwarder": null,
+"ref": "user32.dll!0x2adc0"
+},
+{
+"name": "BuildReasonArray",
+"ordinal": 1529,
+"rva": 206688,
+"forwarder": null,
+"ref": "user32.dll!0x32760"
+},
+{
+"name": "CalcMenuBar",
+"ordinal": 1530,
+"rva": 211536,
+"forwarder": null,
+"ref": "user32.dll!0x33a50"
+},
+{
+"name": "CalculatePopupWindowPosition",
+"ordinal": 1531,
+"rva": 211552,
+"forwarder": null,
+"ref": "user32.dll!0x33a60"
+},
+{
+"name": "CallMsgFilter",
+"ordinal": 1532,
+"rva": 535136,
+"forwarder": null,
+"ref": "user32.dll!0x82a60"
+},
+{
+"name": "CallMsgFilterA",
+"ordinal": 1533,
+"rva": 535136,
+"forwarder": null,
+"ref": "user32.dll!0x82a60"
+},
+{
+"name": "CallMsgFilterW",
+"ordinal": 1534,
+"rva": 560592,
+"forwarder": null,
+"ref": "user32.dll!0x88dd0"
+},
+{
+"name": "CallNextHookEx",
+"ordinal": 1535,
+"rva": 8096,
+"forwarder": null,
+"ref": "user32.dll!0x1fa0"
+},
+{
+"name": "CallWindowProcA",
+"ordinal": 1536,
+"rva": 327440,
+"forwarder": null,
+"ref": "user32.dll!0x4ff10"
+},
+{
+"name": "CallWindowProcW",
+"ordinal": 1537,
+"rva": 58464,
+"forwarder": null,
+"ref": "user32.dll!0xe460"
+},
+{
+"name": "CancelShutdown",
+"ordinal": 1538,
+"rva": 354928,
+"forwarder": null,
+"ref": "user32.dll!0x56a70"
+},
+{
+"name": "CascadeChildWindows",
+"ordinal": 1539,
+"rva": 548944,
+"forwarder": null,
+"ref": "user32.dll!0x86050"
+},
+{
+"name": "CascadeWindows",
+"ordinal": 1540,
+"rva": 482976,
+"forwarder": null,
+"ref": "user32.dll!0x75ea0"
+},
+{
+"name": "ChangeClipboardChain",
+"ordinal": 1541,
+"rva": 540544,
+"forwarder": null,
+"ref": "user32.dll!0x83f80"
+},
+{
+"name": "ChangeDisplaySettingsA",
+"ordinal": 1542,
+"rva": 535424,
+"forwarder": null,
+"ref": "user32.dll!0x82b80"
+},
+{
+"name": "ChangeDisplaySettingsExA",
+"ordinal": 1543,
+"rva": 200464,
+"forwarder": null,
+"ref": "user32.dll!0x30f10"
+},
+{
+"name": "ChangeDisplaySettingsExW",
+"ordinal": 1544,
+"rva": 159904,
+"forwarder": null,
+"ref": "user32.dll!0x270a0"
+},
+{
+"name": "ChangeDisplaySettingsW",
+"ordinal": 1545,
+"rva": 560784,
+"forwarder": null,
+"ref": "user32.dll!0x88e90"
+},
+{
+"name": "ChangeMenuA",
+"ordinal": 1546,
+"rva": 483728,
+"forwarder": null,
+"ref": "user32.dll!0x76190"
+},
+{
+"name": "ChangeMenuW",
+"ordinal": 1547,
+"rva": 483904,
+"forwarder": null,
+"ref": "user32.dll!0x76240"
+},
+{
+"name": "ChangeWindowMessageFilter",
+"ordinal": 1548,
+"rva": 176560,
+"forwarder": null,
+"ref": "user32.dll!0x2b1b0"
+},
+{
+"name": "ChangeWindowMessageFilterEx",
+"ordinal": 1549,
+"rva": 211584,
+"forwarder": null,
+"ref": "user32.dll!0x33a80"
+},
+{
+"name": null,
+"ordinal": 1550,
+"rva": 508928,
+"forwarder": null,
+"ref": "user32.dll!0x7c400"
+},
+{
+"name": null,
+"ordinal": 1551,
+"rva": 509072,
+"forwarder": null,
+"ref": "user32.dll!0x7c490"
+},
+{
+"name": null,
+"ordinal": 1552,
+"rva": 508848,
+"forwarder": null,
+"ref": "user32.dll!0x7c3b0"
+},
+{
+"name": "DwmGetDxRgn",
+"ordinal": 1553,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": null,
+"ordinal": 1554,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": "CharLowerA",
+"ordinal": 1555,
+"rva": 183616,
+"forwarder": null,
+"ref": "user32.dll!0x2cd40"
+},
+{
+"name": "CharLowerBuffA",
+"ordinal": 1556,
+"rva": 540576,
+"forwarder": null,
+"ref": "user32.dll!0x83fa0"
+},
+{
+"name": "CharLowerBuffW",
+"ordinal": 1557,
+"rva": 540608,
+"forwarder": null,
+"ref": "user32.dll!0x83fc0"
+},
+{
+"name": "CharLowerW",
+"ordinal": 1558,
+"rva": 204192,
+"forwarder": null,
+"ref": "user32.dll!0x31da0"
+},
+{
+"name": "CharNextA",
+"ordinal": 1559,
+"rva": 176336,
+"forwarder": null,
+"ref": "user32.dll!0x2b0d0"
+},
+{
+"name": "CharNextExA",
+"ordinal": 1560,
+"rva": 540640,
+"forwarder": null,
+"ref": "user32.dll!0x83fe0"
+},
+{
+"name": "CharNextW",
+"ordinal": 1561,
+"rva": 179056,
+"forwarder": null,
+"ref": "user32.dll!0x2bb70"
+},
+{
+"name": "CharPrevA",
+"ordinal": 1562,
+"rva": 7712,
+"forwarder": null,
+"ref": "user32.dll!0x1e20"
+},
+{
+"name": "CharPrevExA",
+"ordinal": 1563,
+"rva": 540672,
+"forwarder": null,
+"ref": "user32.dll!0x84000"
+},
+{
+"name": "CharPrevW",
+"ordinal": 1564,
+"rva": 540704,
+"forwarder": null,
+"ref": "user32.dll!0x84020"
+},
+{
+"name": "CharToOemA",
+"ordinal": 1565,
+"rva": 165360,
+"forwarder": null,
+"ref": "user32.dll!0x285f0"
+},
+{
+"name": "CharToOemBuffA",
+"ordinal": 1566,
+"rva": 504000,
+"forwarder": null,
+"ref": "user32.dll!0x7b0c0"
+},
+{
+"name": "CharToOemBuffW",
+"ordinal": 1567,
+"rva": 504080,
+"forwarder": null,
+"ref": "user32.dll!0x7b110"
+},
+{
+"name": "CharToOemW",
+"ordinal": 1568,
+"rva": 504176,
+"forwarder": null,
+"ref": "user32.dll!0x7b170"
+},
+{
+"name": "CharUpperA",
+"ordinal": 1569,
+"rva": 169968,
+"forwarder": null,
+"ref": "user32.dll!0x297f0"
+},
+{
+"name": "CharUpperBuffA",
+"ordinal": 1570,
+"rva": 540736,
+"forwarder": null,
+"ref": "user32.dll!0x84040"
+},
+{
+"name": "CharUpperBuffW",
+"ordinal": 1571,
+"rva": 4960,
+"forwarder": null,
+"ref": "user32.dll!0x1360"
+},
+{
+"name": "CharUpperW",
+"ordinal": 1572,
+"rva": 158640,
+"forwarder": null,
+"ref": "user32.dll!0x26bb0"
+},
+{
+"name": "CheckBannedOneCoreTransformApi",
+"ordinal": 1573,
+"rva": 184080,
+"forwarder": null,
+"ref": "user32.dll!0x2cf10"
+},
+{
+"name": "CheckDBCSEnabledExt",
+"ordinal": 1574,
+"rva": 138544,
+"forwarder": null,
+"ref": "user32.dll!0x21d30"
+},
+{
+"name": "CheckDlgButton",
+"ordinal": 1575,
+"rva": 7008,
+"forwarder": null,
+"ref": "user32.dll!0x1b60"
+},
+{
+"name": "CheckMenuItem",
+"ordinal": 1576,
+"rva": 129056,
+"forwarder": null,
+"ref": "user32.dll!0x1f820"
+},
+{
+"name": "CheckMenuRadioItem",
+"ordinal": 1577,
+"rva": 6416,
+"forwarder": null,
+"ref": "user32.dll!0x1910"
+},
+{
+"name": "CheckProcessForClipboardAccess",
+"ordinal": 1578,
+"rva": 211600,
+"forwarder": null,
+"ref": "user32.dll!0x33a90"
+},
+{
+"name": "CheckProcessSession",
+"ordinal": 1579,
+"rva": 211616,
+"forwarder": null,
+"ref": "user32.dll!0x33aa0"
+},
+{
+"name": "CheckRadioButton",
+"ordinal": 1580,
+"rva": 4992,
+"forwarder": null,
+"ref": "user32.dll!0x1380"
+},
+{
+"name": "CheckWindowThreadDesktop",
+"ordinal": 1581,
+"rva": 211632,
+"forwarder": null,
+"ref": "user32.dll!0x33ab0"
+},
+{
+"name": "ChildWindowFromPoint",
+"ordinal": 1582,
+"rva": 548992,
+"forwarder": null,
+"ref": "user32.dll!0x86080"
+},
+{
+"name": "ChildWindowFromPointEx",
+"ordinal": 1583,
+"rva": 211648,
+"forwarder": null,
+"ref": "user32.dll!0x33ac0"
+},
+{
+"name": "CliImmSetHotKey",
+"ordinal": 1584,
+"rva": 310240,
+"forwarder": null,
+"ref": "user32.dll!0x4bbe0"
+},
+{
+"name": "ClientThreadSetup",
+"ordinal": 1585,
+"rva": 120032,
+"forwarder": null,
+"ref": "user32.dll!0x1d4e0"
+},
+{
+"name": "ClientToScreen",
+"ordinal": 1586,
+"rva": 71728,
+"forwarder": null,
+"ref": "user32.dll!0x11830"
+},
+{
+"name": "ClipCursor",
+"ordinal": 1587,
+"rva": 211680,
+"forwarder": null,
+"ref": "user32.dll!0x33ae0"
+},
+{
+"name": "CloseClipboard",
+"ordinal": 1588,
+"rva": 182480,
+"forwarder": null,
+"ref": "user32.dll!0x2c8d0"
+},
+{
+"name": "CloseDesktop",
+"ordinal": 1589,
+"rva": 211696,
+"forwarder": null,
+"ref": "user32.dll!0x33af0"
+},
+{
+"name": "CloseGestureInfoHandle",
+"ordinal": 1590,
+"rva": 323776,
+"forwarder": null,
+"ref": "user32.dll!0x4f0c0"
+},
+{
+"name": "CloseTouchInputHandle",
+"ordinal": 1591,
+"rva": 333632,
+"forwarder": null,
+"ref": "user32.dll!0x51740"
+},
+{
+"name": "CloseWindow",
+"ordinal": 1592,
+"rva": 549168,
+"forwarder": null,
+"ref": "user32.dll!0x86130"
+},
+{
+"name": "CloseWindowStation",
+"ordinal": 1593,
+"rva": 211712,
+"forwarder": null,
+"ref": "user32.dll!0x33b00"
+},
+{
+"name": "ConsoleControl",
+"ordinal": 1594,
+"rva": 160704,
+"forwarder": null,
+"ref": "user32.dll!0x273c0"
+},
+{
+"name": "ControlMagnification",
+"ordinal": 1595,
+"rva": 211808,
+"forwarder": null,
+"ref": "user32.dll!0x33b60"
+},
+{
+"name": "CopyAcceleratorTableA",
+"ordinal": 1596,
+"rva": 330496,
+"forwarder": null,
+"ref": "user32.dll!0x50b00"
+},
+{
+"name": "CopyAcceleratorTableW",
+"ordinal": 1597,
+"rva": 211824,
+"forwarder": null,
+"ref": "user32.dll!0x33b70"
+},
+{
+"name": "CopyIcon",
+"ordinal": 1598,
+"rva": 159504,
+"forwarder": null,
+"ref": "user32.dll!0x26f10"
+},
+{
+"name": "CopyImage",
+"ordinal": 1599,
+"rva": 86480,
+"forwarder": null,
+"ref": "user32.dll!0x151d0"
+},
+{
+"name": "CopyRect",
+"ordinal": 1600,
+"rva": 146240,
+"forwarder": null,
+"ref": "user32.dll!0x23b40"
+},
+{
+"name": "CountClipboardFormats",
+"ordinal": 1601,
+"rva": 178832,
+"forwarder": null,
+"ref": "user32.dll!0x2ba90"
+},
+{
+"name": "CreateAcceleratorTableA",
+"ordinal": 1602,
+"rva": 330640,
+"forwarder": null,
+"ref": "user32.dll!0x50b90"
+},
+{
+"name": "CreateAcceleratorTableW",
+"ordinal": 1603,
+"rva": 211840,
+"forwarder": null,
+"ref": "user32.dll!0x33b80"
+},
+{
+"name": "CreateCaret",
+"ordinal": 1604,
+"rva": 179392,
+"forwarder": null,
+"ref": "user32.dll!0x2bcc0"
+},
+{
+"name": "CreateCursor",
+"ordinal": 1605,
+"rva": 202832,
+"forwarder": null,
+"ref": "user32.dll!0x31850"
+},
+{
+"name": "CreateDCompositionHwndTarget",
+"ordinal": 1606,
+"rva": 211888,
+"forwarder": null,
+"ref": "user32.dll!0x33bb0"
+},
+{
+"name": "CreateDesktopA",
+"ordinal": 1607,
+"rva": 549232,
+"forwarder": null,
+"ref": "user32.dll!0x86170"
+},
+{
+"name": "CreateDesktopExA",
+"ordinal": 1608,
+"rva": 549296,
+"forwarder": null,
+"ref": "user32.dll!0x861b0"
+},
+{
+"name": "CreateDesktopExW",
+"ordinal": 1609,
+"rva": 180608,
+"forwarder": null,
+"ref": "user32.dll!0x2c180"
+},
+{
+"name": "CreateDesktopW",
+"ordinal": 1610,
+"rva": 180544,
+"forwarder": null,
+"ref": "user32.dll!0x2c140"
+},
+{
+"name": "CreateDialogIndirectParamA",
+"ordinal": 1611,
+"rva": 330784,
+"forwarder": null,
+"ref": "user32.dll!0x50c20"
+},
+{
+"name": "CreateDialogIndirectParamAorW",
+"ordinal": 1612,
+"rva": 15136,
+"forwarder": null,
+"ref": "user32.dll!0x3b20"
+},
+{
+"name": "CreateDialogIndirectParamW",
+"ordinal": 1613,
+"rva": 10544,
+"forwarder": null,
+"ref": "user32.dll!0x2930"
+},
+{
+"name": "CreateDialogParamA",
+"ordinal": 1614,
+"rva": 330832,
+"forwarder": null,
+"ref": "user32.dll!0x50c50"
+},
+{
+"name": "CreateDialogParamW",
+"ordinal": 1615,
+"rva": 13840,
+"forwarder": null,
+"ref": "user32.dll!0x3610"
+},
+{
+"name": "CreateIcon",
+"ordinal": 1616,
+"rva": 331072,
+"forwarder": null,
+"ref": "user32.dll!0x50d40"
+},
+{
+"name": "CreateIconFromResource",
+"ordinal": 1617,
+"rva": 331280,
+"forwarder": null,
+"ref": "user32.dll!0x50e10"
+},
+{
+"name": "CreateIconFromResourceEx",
+"ordinal": 1618,
+"rva": 153792,
+"forwarder": null,
+"ref": "user32.dll!0x258c0"
+},
+{
+"name": "CreateIconIndirect",
+"ordinal": 1619,
+"rva": 88352,
+"forwarder": null,
+"ref": "user32.dll!0x15920"
+},
+{
+"name": "CreateMDIWindowA",
+"ordinal": 1620,
+"rva": 483024,
+"forwarder": null,
+"ref": "user32.dll!0x75ed0"
+},
+{
+"name": "CreateMDIWindowW",
+"ordinal": 1621,
+"rva": 483152,
+"forwarder": null,
+"ref": "user32.dll!0x75f50"
+},
+{
+"name": "CreateMenu",
+"ordinal": 1622,
+"rva": 204512,
+"forwarder": null,
+"ref": "user32.dll!0x31ee0"
+},
+{
+"name": "CreatePopupMenu",
+"ordinal": 1623,
+"rva": 182416,
+"forwarder": null,
+"ref": "user32.dll!0x2c890"
+},
+{
+"name": "CreateSyntheticPointerDevice",
+"ordinal": 1624,
+"rva": 509120,
+"forwarder": null,
+"ref": "user32.dll!0x7c4c0"
+},
+{
+"name": "CreateSystemThreads",
+"ordinal": 1625,
+"rva": 554640,
+"forwarder": null,
+"ref": "user32.dll!0x87690"
+},
+{
+"name": "CreateWindowExA",
+"ordinal": 1626,
+"rva": 15376,
+"forwarder": null,
+"ref": "user32.dll!0x3c10"
+},
+{
+"name": "CreateWindowExW",
+"ordinal": 1627,
+"rva": 30496,
+"forwarder": null,
+"ref": "user32.dll!0x7720"
+},
+{
+"name": "CreateWindowInBand",
+"ordinal": 1628,
+"rva": 24512,
+"forwarder": null,
+"ref": "user32.dll!0x5fc0"
+},
+{
+"name": "CreateWindowInBandEx",
+"ordinal": 1629,
+"rva": 24672,
+"forwarder": null,
+"ref": "user32.dll!0x6060"
+},
+{
+"name": "CreateWindowIndirect",
+"ordinal": 1630,
+"rva": 530288,
+"forwarder": null,
+"ref": "user32.dll!0x81770"
+},
+{
+"name": "CreateWindowStationA",
+"ordinal": 1631,
+"rva": 549744,
+"forwarder": null,
+"ref": "user32.dll!0x86370"
+},
+{
+"name": "CreateWindowStationW",
+"ordinal": 1632,
+"rva": 121568,
+"forwarder": null,
+"ref": "user32.dll!0x1dae0"
+},
+{
+"name": "CsrBroadcastSystemMessageExW",
+"ordinal": 1633,
+"rva": 175328,
+"forwarder": null,
+"ref": "user32.dll!0x2ace0"
+},
+{
+"name": "CtxInitUser32",
+"ordinal": 1634,
+"rva": 119632,
+"forwarder": null,
+"ref": "user32.dll!0x1d350"
+},
+{
+"name": "DdeAbandonTransaction",
+"ordinal": 1635,
+"rva": 531696,
+"forwarder": null,
+"ref": "user32.dll!0x81cf0"
+},
+{
+"name": "DdeAccessData",
+"ordinal": 1636,
+"rva": 438464,
+"forwarder": null,
+"ref": "user32.dll!0x6b0c0"
+},
+{
+"name": "DdeAddData",
+"ordinal": 1637,
+"rva": 438656,
+"forwarder": null,
+"ref": "user32.dll!0x6b180"
+},
+{
+"name": "DdeClientTransaction",
+"ordinal": 1638,
+"rva": 531920,
+"forwarder": null,
+"ref": "user32.dll!0x81dd0"
+},
+{
+"name": "DdeCmpStringHandles",
+"ordinal": 1639,
+"rva": 441616,
+"forwarder": null,
+"ref": "user32.dll!0x6bd10"
+},
+{
+"name": "DdeConnect",
+"ordinal": 1640,
+"rva": 352192,
+"forwarder": null,
+"ref": "user32.dll!0x55fc0"
+},
+{
+"name": "DdeConnectList",
+"ordinal": 1641,
+"rva": 352464,
+"forwarder": null,
+"ref": "user32.dll!0x560d0"
+},
+{
+"name": "DdeCreateDataHandle",
+"ordinal": 1642,
+"rva": 439072,
+"forwarder": null,
+"ref": "user32.dll!0x6b320"
+},
+{
+"name": "DdeCreateStringHandleA",
+"ordinal": 1643,
+"rva": 441648,
+"forwarder": null,
+"ref": "user32.dll!0x6bd30"
+},
+{
+"name": "DdeCreateStringHandleW",
+"ordinal": 1644,
+"rva": 174928,
+"forwarder": null,
+"ref": "user32.dll!0x2ab50"
+},
+{
+"name": "DdeDisconnect",
+"ordinal": 1645,
+"rva": 353216,
+"forwarder": null,
+"ref": "user32.dll!0x563c0"
+},
+{
+"name": "DdeDisconnectList",
+"ordinal": 1646,
+"rva": 353392,
+"forwarder": null,
+"ref": "user32.dll!0x56470"
+},
+{
+"name": "DdeEnableCallback",
+"ordinal": 1647,
+"rva": 318000,
+"forwarder": null,
+"ref": "user32.dll!0x4da30"
+},
+{
+"name": "DdeFreeDataHandle",
+"ordinal": 1648,
+"rva": 439424,
+"forwarder": null,
+"ref": "user32.dll!0x6b480"
+},
+{
+"name": "DdeFreeStringHandle",
+"ordinal": 1649,
+"rva": 441680,
+"forwarder": null,
+"ref": "user32.dll!0x6bd50"
+},
+{
+"name": "DdeGetData",
+"ordinal": 1650,
+"rva": 439552,
+"forwarder": null,
+"ref": "user32.dll!0x6b500"
+},
+{
+"name": "DdeGetLastError",
+"ordinal": 1651,
+"rva": 360080,
+"forwarder": null,
+"ref": "user32.dll!0x57e90"
+},
+{
+"name": "DdeGetQualityOfService",
+"ordinal": 1652,
+"rva": 184128,
+"forwarder": null,
+"ref": "user32.dll!0x2cf40"
+},
+{
+"name": "DdeImpersonateClient",
+"ordinal": 1653,
+"rva": 360176,
+"forwarder": null,
+"ref": "user32.dll!0x57ef0"
+},
+{
+"name": "DdeInitializeA",
+"ordinal": 1654,
+"rva": 360336,
+"forwarder": null,
+"ref": "user32.dll!0x57f90"
+},
+{
+"name": "DdeInitializeW",
+"ordinal": 1655,
+"rva": 118768,
+"forwarder": null,
+"ref": "user32.dll!0x1cff0"
+},
+{
+"name": "DdeKeepStringHandle",
+"ordinal": 1656,
+"rva": 441904,
+"forwarder": null,
+"ref": "user32.dll!0x6be30"
+},
+{
+"name": "DdeNameService",
+"ordinal": 1657,
+"rva": 174096,
+"forwarder": null,
+"ref": "user32.dll!0x2a810"
+},
+{
+"name": "DdePostAdvise",
+"ordinal": 1658,
+"rva": 533600,
+"forwarder": null,
+"ref": "user32.dll!0x82460"
+},
+{
+"name": "DdeQueryConvInfo",
+"ordinal": 1659,
+"rva": 534320,
+"forwarder": null,
+"ref": "user32.dll!0x82730"
+},
+{
+"name": "DdeQueryNextServer",
+"ordinal": 1660,
+"rva": 353680,
+"forwarder": null,
+"ref": "user32.dll!0x56590"
+},
+{
+"name": "DdeQueryStringA",
+"ordinal": 1661,
+"rva": 442112,
+"forwarder": null,
+"ref": "user32.dll!0x6bf00"
+},
+{
+"name": "DdeQueryStringW",
+"ordinal": 1662,
+"rva": 442144,
+"forwarder": null,
+"ref": "user32.dll!0x6bf20"
+},
+{
+"name": "DdeReconnect",
+"ordinal": 1663,
+"rva": 354032,
+"forwarder": null,
+"ref": "user32.dll!0x566f0"
+},
+{
+"name": "DdeSetQualityOfService",
+"ordinal": 1664,
+"rva": 184128,
+"forwarder": null,
+"ref": "user32.dll!0x2cf40"
+},
+{
+"name": "DdeSetUserHandle",
+"ordinal": 1665,
+"rva": 534880,
+"forwarder": null,
+"ref": "user32.dll!0x82960"
+},
+{
+"name": "DdeUnaccessData",
+"ordinal": 1666,
+"rva": 439920,
+"forwarder": null,
+"ref": "user32.dll!0x6b670"
+},
+{
+"name": "DdeUninitialize",
+"ordinal": 1667,
+"rva": 360368,
+"forwarder": null,
+"ref": "user32.dll!0x57fb0"
+},
+{
+"name": "DefDlgProcA",
+"ordinal": 1668,
+"rva": 667792,
+"forwarder": "NTDLL.NtdllDialogWndProc_A",
+"ref": null
+},
+{
+"name": "DefDlgProcW",
+"ordinal": 1669,
+"rva": 667831,
+"forwarder": "NTDLL.NtdllDialogWndProc_W",
+"ref": null
+},
+{
+"name": "DefFrameProcA",
+"ordinal": 1670,
+"rva": 483280,
+"forwarder": null,
+"ref": "user32.dll!0x75fd0"
+},
+{
+"name": "DefFrameProcW",
+"ordinal": 1671,
+"rva": 195376,
+"forwarder": null,
+"ref": "user32.dll!0x2fb30"
+},
+{
+"name": "DefMDIChildProcA",
+"ordinal": 1672,
+"rva": 483328,
+"forwarder": null,
+"ref": "user32.dll!0x76000"
+},
+{
+"name": "DefMDIChildProcW",
+"ordinal": 1673,
+"rva": 188544,
+"forwarder": null,
+"ref": "user32.dll!0x2e080"
+},
+{
+"name": "DefRawInputProc",
+"ordinal": 1674,
+"rva": 554480,
+"forwarder": null,
+"ref": "user32.dll!0x875f0"
+},
+{
+"name": "DefWindowProcA",
+"ordinal": 1675,
+"rva": 667951,
+"forwarder": "NTDLL.NtdllDefWindowProc_A",
+"ref": null
+},
+{
+"name": "DefWindowProcW",
+"ordinal": 1676,
+"rva": 667993,
+"forwarder": "NTDLL.NtdllDefWindowProc_W",
+"ref": null
+},
+{
+"name": "DeferWindowPos",
+"ordinal": 1677,
+"rva": 163168,
+"forwarder": null,
+"ref": "user32.dll!0x27d60"
+},
+{
+"name": "DeferWindowPosAndBand",
+"ordinal": 1678,
+"rva": 549872,
+"forwarder": null,
+"ref": "user32.dll!0x863f0"
+},
+{
+"name": "DeleteMenu",
+"ordinal": 1679,
+"rva": 211968,
+"forwarder": null,
+"ref": "user32.dll!0x33c00"
+},
+{
+"name": "DeregisterShellHookWindow",
+"ordinal": 1680,
+"rva": 183552,
+"forwarder": null,
+"ref": "user32.dll!0x2cd00"
+},
+{
+"name": "DestroyAcceleratorTable",
+"ordinal": 1681,
+"rva": 162128,
+"forwarder": null,
+"ref": "user32.dll!0x27950"
+},
+{
+"name": "DestroyCaret",
+"ordinal": 1682,
+"rva": 182176,
+"forwarder": null,
+"ref": "user32.dll!0x2c7a0"
+},
+{
+"name": "DestroyCursor",
+"ordinal": 1683,
+"rva": 167728,
+"forwarder": null,
+"ref": "user32.dll!0x28f30"
+},
+{
+"name": "DestroyDCompositionHwndTarget",
+"ordinal": 1684,
+"rva": 212032,
+"forwarder": null,
+"ref": "user32.dll!0x33c40"
+},
+{
+"name": "DestroyIcon",
+"ordinal": 1685,
+"rva": 167728,
+"forwarder": null,
+"ref": "user32.dll!0x28f30"
+},
+{
+"name": "DestroyMenu",
+"ordinal": 1686,
+"rva": 212048,
+"forwarder": null,
+"ref": "user32.dll!0x33c50"
+},
+{
+"name": "DestroyReasons",
+"ordinal": 1687,
+"rva": 206544,
+"forwarder": null,
+"ref": "user32.dll!0x326d0"
+},
+{
+"name": "DestroySyntheticPointerDevice",
+"ordinal": 1688,
+"rva": 212064,
+"forwarder": null,
+"ref": "user32.dll!0x33c60"
+},
+{
+"name": "DestroyWindow",
+"ordinal": 1689,
+"rva": 212080,
+"forwarder": null,
+"ref": "user32.dll!0x33c70"
+},
+{
+"name": "DialogBoxIndirectParamA",
+"ordinal": 1690,
+"rva": 331328,
+"forwarder": null,
+"ref": "user32.dll!0x50e40"
+},
+{
+"name": "DialogBoxIndirectParamAorW",
+"ordinal": 1691,
+"rva": 185088,
+"forwarder": null,
+"ref": "user32.dll!0x2d300"
+},
+{
+"name": "DialogBoxIndirectParamW",
+"ordinal": 1692,
+"rva": 185040,
+"forwarder": null,
+"ref": "user32.dll!0x2d2d0"
+},
+{
+"name": "DialogBoxParamA",
+"ordinal": 1693,
+"rva": 331376,
+"forwarder": null,
+"ref": "user32.dll!0x50e70"
+},
+{
+"name": "DialogBoxParamW",
+"ordinal": 1694,
+"rva": 184896,
+"forwarder": null,
+"ref": "user32.dll!0x2d240"
+},
+{
+"name": "DisableProcessWindowsGhosting",
+"ordinal": 1695,
+"rva": 183216,
+"forwarder": null,
+"ref": "user32.dll!0x2cbb0"
+},
+{
+"name": "DispatchMessageA",
+"ordinal": 1696,
+"rva": 177728,
+"forwarder": null,
+"ref": "user32.dll!0x2b640"
+},
+{
+"name": "DispatchMessageW",
+"ordinal": 1697,
+"rva": 57408,
+"forwarder": null,
+"ref": "user32.dll!0xe040"
+},
+{
+"name": "DisplayConfigGetDeviceInfo",
+"ordinal": 1698,
+"rva": 170032,
+"forwarder": null,
+"ref": "user32.dll!0x29830"
+},
+{
+"name": "DisplayConfigSetDeviceInfo",
+"ordinal": 1699,
+"rva": 570800,
+"forwarder": null,
+"ref": "user32.dll!0x8b5b0"
+},
+{
+"name": "DisplayExitWindowsWarnings",
+"ordinal": 1700,
+"rva": 355024,
+"forwarder": null,
+"ref": "user32.dll!0x56ad0"
+},
+{
+"name": "DlgDirListA",
+"ordinal": 1701,
+"rva": 473008,
+"forwarder": null,
+"ref": "user32.dll!0x737b0"
+},
+{
+"name": "DlgDirListComboBoxA",
+"ordinal": 1702,
+"rva": 345248,
+"forwarder": null,
+"ref": "user32.dll!0x544a0"
+},
+{
+"name": "DlgDirListComboBoxW",
+"ordinal": 1703,
+"rva": 345488,
+"forwarder": null,
+"ref": "user32.dll!0x54590"
+},
+{
+"name": "DlgDirListW",
+"ordinal": 1704,
+"rva": 473264,
+"forwarder": null,
+"ref": "user32.dll!0x738b0"
+},
+{
+"name": "DlgDirSelectComboBoxExA",
+"ordinal": 1705,
+"rva": 345584,
+"forwarder": null,
+"ref": "user32.dll!0x545f0"
+},
+{
+"name": "DlgDirSelectComboBoxExW",
+"ordinal": 1706,
+"rva": 345760,
+"forwarder": null,
+"ref": "user32.dll!0x546a0"
+},
+{
+"name": "DlgDirSelectExA",
+"ordinal": 1707,
+"rva": 473360,
+"forwarder": null,
+"ref": "user32.dll!0x73910"
+},
+{
+"name": "DlgDirSelectExW",
+"ordinal": 1708,
+"rva": 473552,
+"forwarder": null,
+"ref": "user32.dll!0x739d0"
+},
+{
+"name": "DoSoundConnect",
+"ordinal": 1709,
+"rva": 212112,
+"forwarder": null,
+"ref": "user32.dll!0x33c90"
+},
+{
+"name": "DoSoundDisconnect",
+"ordinal": 1710,
+"rva": 212128,
+"forwarder": null,
+"ref": "user32.dll!0x33ca0"
+},
+{
+"name": "DragDetect",
+"ordinal": 1711,
+"rva": 212160,
+"forwarder": null,
+"ref": "user32.dll!0x33cc0"
+},
+{
+"name": "DragObject",
+"ordinal": 1712,
+"rva": 212176,
+"forwarder": null,
+"ref": "user32.dll!0x33cd0"
+},
+{
+"name": "DrawAnimatedRects",
+"ordinal": 1713,
+"rva": 212192,
+"forwarder": null,
+"ref": "user32.dll!0x33ce0"
+},
+{
+"name": "DrawCaption",
+"ordinal": 1714,
+"rva": 502368,
+"forwarder": null,
+"ref": "user32.dll!0x7aa60"
+},
+{
+"name": "DrawCaptionTempA",
+"ordinal": 1715,
+"rva": 535472,
+"forwarder": null,
+"ref": "user32.dll!0x82bb0"
+},
+{
+"name": "DrawCaptionTempW",
+"ordinal": 1716,
+"rva": 560832,
+"forwarder": null,
+"ref": "user32.dll!0x88ec0"
+},
+{
+"name": "DrawEdge",
+"ordinal": 1717,
+"rva": 143376,
+"forwarder": null,
+"ref": "user32.dll!0x23010"
+},
+{
+"name": "DrawFocusRect",
+"ordinal": 1718,
+"rva": 197376,
+"forwarder": null,
+"ref": "user32.dll!0x30300"
+},
+{
+"name": "DrawFrame",
+"ordinal": 1719,
+"rva": 576832,
+"forwarder": null,
+"ref": "user32.dll!0x8cd40"
+},
+{
+"name": "DrawFrameControl",
+"ordinal": 1720,
+"rva": 577152,
+"forwarder": null,
+"ref": "user32.dll!0x8ce80"
+},
+{
+"name": "DrawIcon",
+"ordinal": 1721,
+"rva": 549968,
+"forwarder": null,
+"ref": "user32.dll!0x86450"
+},
+{
+"name": "DrawIconEx",
+"ordinal": 1722,
+"rva": 156400,
+"forwarder": null,
+"ref": "user32.dll!0x262f0"
+},
+{
+"name": "DrawMenuBar",
+"ordinal": 1723,
+"rva": 205936,
+"forwarder": null,
+"ref": "user32.dll!0x32470"
+},
+{
+"name": "DrawMenuBarTemp",
+"ordinal": 1724,
+"rva": 484080,
+"forwarder": null,
+"ref": "user32.dll!0x762f0"
+},
+{
+"name": "DrawStateA",
+"ordinal": 1725,
+"rva": 486144,
+"forwarder": null,
+"ref": "user32.dll!0x76b00"
+},
+{
+"name": "DrawStateW",
+"ordinal": 1726,
+"rva": 164432,
+"forwarder": null,
+"ref": "user32.dll!0x28250"
+},
+{
+"name": "DrawTextA",
+"ordinal": 1727,
+"rva": 357456,
+"forwarder": null,
+"ref": "user32.dll!0x57450"
+},
+{
+"name": "DrawTextExA",
+"ordinal": 1728,
+"rva": 357584,
+"forwarder": null,
+"ref": "user32.dll!0x574d0"
+},
+{
+"name": "DrawTextExW",
+"ordinal": 1729,
+"rva": 124896,
+"forwarder": null,
+"ref": "user32.dll!0x1e7e0"
+},
+{
+"name": "DrawTextW",
+"ordinal": 1730,
+"rva": 124720,
+"forwarder": null,
+"ref": "user32.dll!0x1e730"
+},
+{
+"name": "DwmGetDxSharedSurface",
+"ordinal": 1731,
+"rva": 187184,
+"forwarder": null,
+"ref": "user32.dll!0x2db30"
+},
+{
+"name": "DwmGetRemoteSessionOcclusionEvent",
+"ordinal": 1732,
+"rva": 212208,
+"forwarder": null,
+"ref": "user32.dll!0x33cf0"
+},
+{
+"name": "DwmGetRemoteSessionOcclusionState",
+"ordinal": 1733,
+"rva": 212224,
+"forwarder": null,
+"ref": "user32.dll!0x33d00"
+},
+{
+"name": "DwmKernelShutdown",
+"ordinal": 1734,
+"rva": 212240,
+"forwarder": null,
+"ref": "user32.dll!0x33d10"
+},
+{
+"name": "DwmKernelStartup",
+"ordinal": 1735,
+"rva": 212256,
+"forwarder": null,
+"ref": "user32.dll!0x33d20"
+},
+{
+"name": "DwmLockScreenUpdates",
+"ordinal": 1736,
+"rva": 183584,
+"forwarder": null,
+"ref": "user32.dll!0x2cd20"
+},
+{
+"name": "DwmValidateWindow",
+"ordinal": 1737,
+"rva": 212272,
+"forwarder": null,
+"ref": "user32.dll!0x33d30"
+},
+{
+"name": "EditWndProc",
+"ordinal": 1738,
+"rva": 396352,
+"forwarder": null,
+"ref": "user32.dll!0x60c40"
+},
+{
+"name": "EmptyClipboard",
+"ordinal": 1739,
+"rva": 206096,
+"forwarder": null,
+"ref": "user32.dll!0x32510"
+},
+{
+"name": "EnableMenuItem",
+"ordinal": 1740,
+"rva": 129184,
+"forwarder": null,
+"ref": "user32.dll!0x1f8a0"
+},
+{
+"name": "EnableMouseInPointer",
+"ordinal": 1741,
+"rva": 212304,
+"forwarder": null,
+"ref": "user32.dll!0x33d50"
+},
+{
+"name": "EnableNonClientDpiScaling",
+"ordinal": 1742,
+"rva": 212352,
+"forwarder": null,
+"ref": "user32.dll!0x33d80"
+},
+{
+"name": "EnableOneCoreTransformMode",
+"ordinal": 1743,
+"rva": 212368,
+"forwarder": null,
+"ref": "user32.dll!0x33d90"
+},
+{
+"name": "EnableScrollBar",
+"ordinal": 1744,
+"rva": 78528,
+"forwarder": null,
+"ref": "user32.dll!0x132c0"
+},
+{
+"name": "EnableSessionForMMCSS",
+"ordinal": 1745,
+"rva": 204912,
+"forwarder": null,
+"ref": "user32.dll!0x32070"
+},
+{
+"name": "EnableWindow",
+"ordinal": 1746,
+"rva": 176768,
+"forwarder": null,
+"ref": "user32.dll!0x2b280"
+},
+{
+"name": "EndDeferWindowPos",
+"ordinal": 1747,
+"rva": 173328,
+"forwarder": null,
+"ref": "user32.dll!0x2a510"
+},
+{
+"name": "EndDeferWindowPosEx",
+"ordinal": 1748,
+"rva": 212480,
+"forwarder": null,
+"ref": "user32.dll!0x33e00"
+},
+{
+"name": "EndDialog",
+"ordinal": 1749,
+"rva": 203616,
+"forwarder": null,
+"ref": "user32.dll!0x31b60"
+},
+{
+"name": "EndMenu",
+"ordinal": 1750,
+"rva": 212496,
+"forwarder": null,
+"ref": "user32.dll!0x33e10"
+},
+{
+"name": "EndPaint",
+"ordinal": 1751,
+"rva": 212512,
+"forwarder": null,
+"ref": "user32.dll!0x33e20"
+},
+{
+"name": "EndTask",
+"ordinal": 1752,
+"rva": 355728,
+"forwarder": null,
+"ref": "user32.dll!0x56d90"
+},
+{
+"name": "EnterReaderModeHelper",
+"ordinal": 1753,
+"rva": 507696,
+"forwarder": null,
+"ref": "user32.dll!0x7bf30"
+},
+{
+"name": "EnumChildWindows",
+"ordinal": 1754,
+"rva": 60720,
+"forwarder": null,
+"ref": "user32.dll!0xed30"
+},
+{
+"name": "EnumClipboardFormats",
+"ordinal": 1755,
+"rva": 204736,
+"forwarder": null,
+"ref": "user32.dll!0x31fc0"
+},
+{
+"name": "EnumDesktopWindows",
+"ordinal": 1756,
+"rva": 137296,
+"forwarder": null,
+"ref": "user32.dll!0x21850"
+},
+{
+"name": "EnumDesktopsA",
+"ordinal": 1757,
+"rva": 13360,
+"forwarder": null,
+"ref": "user32.dll!0x3430"
+},
+{
+"name": "EnumDesktopsW",
+"ordinal": 1758,
+"rva": 20432,
+"forwarder": null,
+"ref": "user32.dll!0x4fd0"
+},
+{
+"name": "EnumDisplayDevicesA",
+"ordinal": 1759,
+"rva": 35888,
+"forwarder": null,
+"ref": "user32.dll!0x8c30"
+},
+{
+"name": "EnumDisplayDevicesW",
+"ordinal": 1760,
+"rva": 160352,
+"forwarder": null,
+"ref": "user32.dll!0x27260"
+},
+{
+"name": "EnumDisplayMonitors",
+"ordinal": 1761,
+"rva": 212528,
+"forwarder": null,
+"ref": "user32.dll!0x33e30"
+},
+{
+"name": "EnumDisplaySettingsA",
+"ordinal": 1762,
+"rva": 35328,
+"forwarder": null,
+"ref": "user32.dll!0x8a00"
+},
+{
+"name": "EnumDisplaySettingsExA",
+"ordinal": 1763,
+"rva": 35360,
+"forwarder": null,
+"ref": "user32.dll!0x8a20"
+},
+{
+"name": "EnumDisplaySettingsExW",
+"ordinal": 1764,
+"rva": 35008,
+"forwarder": null,
+"ref": "user32.dll!0x88c0"
+},
+{
+"name": "EnumDisplaySettingsW",
+"ordinal": 1765,
+"rva": 34976,
+"forwarder": null,
+"ref": "user32.dll!0x88a0"
+},
+{
+"name": "EnumPropsA",
+"ordinal": 1766,
+"rva": 321184,
+"forwarder": null,
+"ref": "user32.dll!0x4e6a0"
+},
+{
+"name": "EnumPropsExA",
+"ordinal": 1767,
+"rva": 321216,
+"forwarder": null,
+"ref": "user32.dll!0x4e6c0"
+},
+{
+"name": "EnumPropsExW",
+"ordinal": 1768,
+"rva": 158944,
+"forwarder": null,
+"ref": "user32.dll!0x26ce0"
+},
+{
+"name": "EnumPropsW",
+"ordinal": 1769,
+"rva": 321248,
+"forwarder": null,
+"ref": "user32.dll!0x4e6e0"
+},
+{
+"name": "EnumThreadWindows",
+"ordinal": 1770,
+"rva": 137344,
+"forwarder": null,
+"ref": "user32.dll!0x21880"
+},
+{
+"name": "EnumWindowStationsA",
+"ordinal": 1771,
+"rva": 13328,
+"forwarder": null,
+"ref": "user32.dll!0x3410"
+},
+{
+"name": "EnumWindowStationsW",
+"ordinal": 1772,
+"rva": 20400,
+"forwarder": null,
+"ref": "user32.dll!0x4fb0"
+},
+{
+"name": "EnumWindows",
+"ordinal": 1773,
+"rva": 137392,
+"forwarder": null,
+"ref": "user32.dll!0x218b0"
+},
+{
+"name": "EqualRect",
+"ordinal": 1774,
+"rva": 145760,
+"forwarder": null,
+"ref": "user32.dll!0x23960"
+},
+{
+"name": "EvaluateProximityToPolygon",
+"ordinal": 1775,
+"rva": 519360,
+"forwarder": null,
+"ref": "user32.dll!0x7ecc0"
+},
+{
+"name": "EvaluateProximityToRect",
+"ordinal": 1776,
+"rva": 520688,
+"forwarder": null,
+"ref": "user32.dll!0x7f1f0"
+},
+{
+"name": "ExcludeUpdateRgn",
+"ordinal": 1777,
+"rva": 212544,
+"forwarder": null,
+"ref": "user32.dll!0x33e40"
+},
+{
+"name": "ExitWindowsEx",
+"ordinal": 1778,
+"rva": 180000,
+"forwarder": null,
+"ref": "user32.dll!0x2bf20"
+},
+{
+"name": "FillRect",
+"ordinal": 1779,
+"rva": 144096,
+"forwarder": null,
+"ref": "user32.dll!0x232e0"
+},
+{
+"name": "FindWindowA",
+"ordinal": 1780,
+"rva": 503872,
+"forwarder": null,
+"ref": "user32.dll!0x7b040"
+},
+{
+"name": "FindWindowExA",
+"ordinal": 1781,
+"rva": 12368,
+"forwarder": null,
+"ref": "user32.dll!0x3050"
+},
+{
+"name": "FindWindowExW",
+"ordinal": 1782,
+"rva": 155376,
+"forwarder": null,
+"ref": "user32.dll!0x25ef0"
+},
+{
+"name": "FindWindowW",
+"ordinal": 1783,
+"rva": 144880,
+"forwarder": null,
+"ref": "user32.dll!0x235f0"
+},
+{
+"name": "FlashWindow",
+"ordinal": 1784,
+"rva": 550080,
+"forwarder": null,
+"ref": "user32.dll!0x864c0"
+},
+{
+"name": "FlashWindowEx",
+"ordinal": 1785,
+"rva": 212560,
+"forwarder": null,
+"ref": "user32.dll!0x33e50"
+},
+{
+"name": "FrameRect",
+"ordinal": 1786,
+"rva": 197328,
+"forwarder": null,
+"ref": "user32.dll!0x302d0"
+},
+{
+"name": "FreeDDElParam",
+"ordinal": 1787,
+"rva": 366656,
+"forwarder": null,
+"ref": "user32.dll!0x59840"
+},
+{
+"name": "FrostCrashedWindow",
+"ordinal": 1788,
+"rva": 212592,
+"forwarder": null,
+"ref": "user32.dll!0x33e70"
+},
+{
+"name": "GetActiveWindow",
+"ordinal": 1789,
+"rva": 176800,
+"forwarder": null,
+"ref": "user32.dll!0x2b2a0"
+},
+{
+"name": "GetAltTabInfo",
+"ordinal": 1790,
+"rva": 535760,
+"forwarder": null,
+"ref": "user32.dll!0x82cd0"
+},
+{
+"name": "GetAltTabInfoA",
+"ordinal": 1791,
+"rva": 535760,
+"forwarder": null,
+"ref": "user32.dll!0x82cd0"
+},
+{
+"name": "GetAltTabInfoW",
+"ordinal": 1792,
+"rva": 561072,
+"forwarder": null,
+"ref": "user32.dll!0x88fb0"
+},
+{
+"name": "GetAncestor",
+"ordinal": 1793,
+"rva": 212624,
+"forwarder": null,
+"ref": "user32.dll!0x33e90"
+},
+{
+"name": "GetAppCompatFlags",
+"ordinal": 1794,
+"rva": 176272,
+"forwarder": null,
+"ref": "user32.dll!0x2b090"
+},
+{
+"name": "GetAppCompatFlags2",
+"ordinal": 1795,
+"rva": 72448,
+"forwarder": null,
+"ref": "user32.dll!0x11b00"
+},
+{
+"name": "GetAsyncKeyState",
+"ordinal": 1796,
+"rva": 147152,
+"forwarder": null,
+"ref": "user32.dll!0x23ed0"
+},
+{
+"name": "GetAutoRotationState",
+"ordinal": 1797,
+"rva": 212640,
+"forwarder": null,
+"ref": "user32.dll!0x33ea0"
+},
+{
+"name": "GetAwarenessFromDpiAwarenessContext",
+"ordinal": 1798,
+"rva": 163408,
+"forwarder": null,
+"ref": "user32.dll!0x27e50"
+},
+{
+"name": "GetCIMSSM",
+"ordinal": 1799,
+"rva": 212656,
+"forwarder": null,
+"ref": "user32.dll!0x33eb0"
+},
+{
+"name": "GetCapture",
+"ordinal": 1800,
+"rva": 163088,
+"forwarder": null,
+"ref": "user32.dll!0x27d10"
+},
+{
+"name": "GetCaretBlinkTime",
+"ordinal": 1801,
+"rva": 212672,
+"forwarder": null,
+"ref": "user32.dll!0x33ec0"
+},
+{
+"name": "GetCaretPos",
+"ordinal": 1802,
+"rva": 212688,
+"forwarder": null,
+"ref": "user32.dll!0x33ed0"
+},
+{
+"name": "GetClassInfoA",
+"ordinal": 1803,
+"rva": 10912,
+"forwarder": null,
+"ref": "user32.dll!0x2aa0"
+},
+{
+"name": "GetClassInfoExA",
+"ordinal": 1804,
+"rva": 11072,
+"forwarder": null,
+"ref": "user32.dll!0x2b40"
+},
+{
+"name": "GetClassInfoExW",
+"ordinal": 1805,
+"rva": 28864,
+"forwarder": null,
+"ref": "user32.dll!0x70c0"
+},
+{
+"name": "GetClassInfoW",
+"ordinal": 1806,
+"rva": 28784,
+"forwarder": null,
+"ref": "user32.dll!0x7070"
+},
+{
+"name": "GetClassLongA",
+"ordinal": 1807,
+"rva": 563440,
+"forwarder": null,
+"ref": "user32.dll!0x898f0"
+},
+{
+"name": "GetClassLongPtrA",
+"ordinal": 1808,
+"rva": 563536,
+"forwarder": null,
+"ref": "user32.dll!0x89950"
+},
+{
+"name": "GetClassLongPtrW",
+"ordinal": 1809,
+"rva": 163600,
+"forwarder": null,
+"ref": "user32.dll!0x27f10"
+},
+{
+"name": "GetClassLongW",
+"ordinal": 1810,
+"rva": 72608,
+"forwarder": null,
+"ref": "user32.dll!0x11ba0"
+},
+{
+"name": "GetClassNameA",
+"ordinal": 1811,
+"rva": 561120,
+"forwarder": null,
+"ref": "user32.dll!0x88fe0"
+},
+{
+"name": "GetClassNameW",
+"ordinal": 1812,
+"rva": 138480,
+"forwarder": null,
+"ref": "user32.dll!0x21cf0"
+},
+{
+"name": "GetClassWord",
+"ordinal": 1813,
+"rva": 165440,
+"forwarder": null,
+"ref": "user32.dll!0x28640"
+},
+{
+"name": "GetClientRect",
+"ordinal": 1814,
+"rva": 77104,
+"forwarder": null,
+"ref": "user32.dll!0x12d30"
+},
+{
+"name": "GetClipCursor",
+"ordinal": 1815,
+"rva": 212704,
+"forwarder": null,
+"ref": "user32.dll!0x33ee0"
+},
+{
+"name": "GetClipboardAccessToken",
+"ordinal": 1816,
+"rva": 212720,
+"forwarder": null,
+"ref": "user32.dll!0x33ef0"
+},
+{
+"name": "GetClipboardData",
+"ordinal": 1817,
+"rva": 176960,
+"forwarder": null,
+"ref": "user32.dll!0x2b340"
+},
+{
+"name": "GetClipboardFormatNameA",
+"ordinal": 1818,
+"rva": 535808,
+"forwarder": null,
+"ref": "user32.dll!0x82d00"
+},
+{
+"name": "GetClipboardFormatNameW",
+"ordinal": 1819,
+"rva": 182384,
+"forwarder": null,
+"ref": "user32.dll!0x2c870"
+},
+{
+"name": "GetClipboardOwner",
+"ordinal": 1820,
+"rva": 183456,
+"forwarder": null,
+"ref": "user32.dll!0x2cca0"
+},
+{
+"name": "GetClipboardSequenceNumber",
+"ordinal": 1821,
+"rva": 182000,
+"forwarder": null,
+"ref": "user32.dll!0x2c6f0"
+},
+{
+"name": "GetClipboardViewer",
+"ordinal": 1822,
+"rva": 540768,
+"forwarder": null,
+"ref": "user32.dll!0x84060"
+},
+{
+"name": "GetComboBoxInfo",
+"ordinal": 1823,
+"rva": 212736,
+"forwarder": null,
+"ref": "user32.dll!0x33f00"
+},
+{
+"name": "GetCurrentInputMessageSource",
+"ordinal": 1824,
+"rva": 212752,
+"forwarder": null,
+"ref": "user32.dll!0x33f10"
+},
+{
+"name": "GetCursor",
+"ordinal": 1825,
+"rva": 212768,
+"forwarder": null,
+"ref": "user32.dll!0x33f20"
+},
+{
+"name": "GetCursorFrameInfo",
+"ordinal": 1826,
+"rva": 181568,
+"forwarder": null,
+"ref": "user32.dll!0x2c540"
+},
+{
+"name": "GetCursorInfo",
+"ordinal": 1827,
+"rva": 212784,
+"forwarder": null,
+"ref": "user32.dll!0x33f30"
+},
+{
+"name": "GetCursorPos",
+"ordinal": 1828,
+"rva": 163136,
+"forwarder": null,
+"ref": "user32.dll!0x27d40"
+},
+{
+"name": "GetDC",
+"ordinal": 1829,
+"rva": 156064,
+"forwarder": null,
+"ref": "user32.dll!0x261a0"
+},
+{
+"name": "GetDCEx",
+"ordinal": 1830,
+"rva": 212800,
+"forwarder": null,
+"ref": "user32.dll!0x33f40"
+},
+{
+"name": "GetDesktopID",
+"ordinal": 1831,
+"rva": 212816,
+"forwarder": null,
+"ref": "user32.dll!0x33f50"
+},
+{
+"name": "GetDesktopWindow",
+"ordinal": 1832,
+"rva": 44720,
+"forwarder": null,
+"ref": "user32.dll!0xaeb0"
+},
+{
+"name": "GetDialogBaseUnits",
+"ordinal": 1833,
+"rva": 205520,
+"forwarder": null,
+"ref": "user32.dll!0x322d0"
+},
+{
+"name": "GetDialogControlDpiChangeBehavior",
+"ordinal": 1834,
+"rva": 369520,
+"forwarder": null,
+"ref": "user32.dll!0x5a370"
+},
+{
+"name": "GetDialogDpiChangeBehavior",
+"ordinal": 1835,
+"rva": 369568,
+"forwarder": null,
+"ref": "user32.dll!0x5a3a0"
+},
+{
+"name": "GetDisplayAutoRotationPreferences",
+"ordinal": 1836,
+"rva": 212832,
+"forwarder": null,
+"ref": "user32.dll!0x33f60"
+},
+{
+"name": "GetDisplayConfigBufferSizes",
+"ordinal": 1837,
+"rva": 167424,
+"forwarder": null,
+"ref": "user32.dll!0x28e00"
+},
+{
+"name": "GetDlgCtrlID",
+"ordinal": 1838,
+"rva": 134240,
+"forwarder": null,
+"ref": "user32.dll!0x20c60"
+},
+{
+"name": "GetDlgItem",
+"ordinal": 1839,
+"rva": 65904,
+"forwarder": null,
+"ref": "user32.dll!0x10170"
+},
+{
+"name": "GetDlgItemInt",
+"ordinal": 1840,
+"rva": 369648,
+"forwarder": null,
+"ref": "user32.dll!0x5a3f0"
+},
+{
+"name": "GetDlgItemTextA",
+"ordinal": 1841,
+"rva": 563632,
+"forwarder": null,
+"ref": "user32.dll!0x899b0"
+},
+{
+"name": "GetDlgItemTextW",
+"ordinal": 1842,
+"rva": 205312,
+"forwarder": null,
+"ref": "user32.dll!0x32200"
+},
+{
+"name": "GetDoubleClickTime",
+"ordinal": 1843,
+"rva": 212864,
+"forwarder": null,
+"ref": "user32.dll!0x33f80"
+},
+{
+"name": "GetDpiAwarenessContextForProcess",
+"ordinal": 1844,
+"rva": 550192,
+"forwarder": null,
+"ref": "user32.dll!0x86530"
+},
+{
+"name": "GetDpiForMonitorInternal",
+"ordinal": 1845,
+"rva": 162080,
+"forwarder": null,
+"ref": "user32.dll!0x27920"
+},
+{
+"name": "GetDpiForSystem",
+"ordinal": 1846,
+"rva": 71248,
+"forwarder": null,
+"ref": "user32.dll!0x11650"
+},
+{
+"name": "GetDpiForWindow",
+"ordinal": 1847,
+"rva": 81728,
+"forwarder": null,
+"ref": "user32.dll!0x13f40"
+},
+{
+"name": "GetDpiFromDpiAwarenessContext",
+"ordinal": 1848,
+"rva": 550224,
+"forwarder": null,
+"ref": "user32.dll!0x86550"
+},
+{
+"name": "GetExtendedPointerDeviceProperty",
+"ordinal": 1849,
+"rva": 212880,
+"forwarder": null,
+"ref": "user32.dll!0x33f90"
+},
+{
+"name": "GetFocus",
+"ordinal": 1850,
+"rva": 145984,
+"forwarder": null,
+"ref": "user32.dll!0x23a40"
+},
+{
+"name": "GetForegroundWindow",
+"ordinal": 1851,
+"rva": 212896,
+"forwarder": null,
+"ref": "user32.dll!0x33fa0"
+},
+{
+"name": "GetGUIThreadInfo",
+"ordinal": 1852,
+"rva": 212912,
+"forwarder": null,
+"ref": "user32.dll!0x33fb0"
+},
+{
+"name": "GetGestureConfig",
+"ordinal": 1853,
+"rva": 212928,
+"forwarder": null,
+"ref": "user32.dll!0x33fc0"
+},
+{
+"name": "GetGestureExtraArgs",
+"ordinal": 1854,
+"rva": 323920,
+"forwarder": null,
+"ref": "user32.dll!0x4f150"
+},
+{
+"name": "GetGestureInfo",
+"ordinal": 1855,
+"rva": 323968,
+"forwarder": null,
+"ref": "user32.dll!0x4f180"
+},
+{
+"name": "GetGuiResources",
+"ordinal": 1856,
+"rva": 212944,
+"forwarder": null,
+"ref": "user32.dll!0x33fd0"
+},
+{
+"name": "GetIconInfo",
+"ordinal": 1857,
+"rva": 159600,
+"forwarder": null,
+"ref": "user32.dll!0x26f70"
+},
+{
+"name": "GetIconInfoExA",
+"ordinal": 1858,
+"rva": 331744,
+"forwarder": null,
+"ref": "user32.dll!0x50fe0"
+},
+{
+"name": "GetIconInfoExW",
+"ordinal": 1859,
+"rva": 171808,
+"forwarder": null,
+"ref": "user32.dll!0x29f20"
+},
+{
+"name": "GetInputDesktop",
+"ordinal": 1860,
+"rva": 550272,
+"forwarder": null,
+"ref": "user32.dll!0x86580"
+},
+{
+"name": "GetInputLocaleInfo",
+"ordinal": 1861,
+"rva": 212976,
+"forwarder": null,
+"ref": "user32.dll!0x33ff0"
+},
+{
+"name": "GetInputState",
+"ordinal": 1862,
+"rva": 530576,
+"forwarder": null,
+"ref": "user32.dll!0x81890"
+},
+{
+"name": "GetInternalWindowPos",
+"ordinal": 1863,
+"rva": 213040,
+"forwarder": null,
+"ref": "user32.dll!0x34030"
+},
+{
+"name": "GetKBCodePage",
+"ordinal": 1864,
+"rva": 550304,
+"forwarder": null,
+"ref": "user32.dll!0x865a0"
+},
+{
+"name": "GetKeyNameTextA",
+"ordinal": 1865,
+"rva": 535984,
+"forwarder": null,
+"ref": "user32.dll!0x82db0"
+},
+{
+"name": "GetKeyNameTextW",
+"ordinal": 1866,
+"rva": 180432,
+"forwarder": null,
+"ref": "user32.dll!0x2c0d0"
+},
+{
+"name": "GetKeyState",
+"ordinal": 1867,
+"rva": 123104,
+"forwarder": null,
+"ref": "user32.dll!0x1e0e0"
+},
+{
+"name": "GetKeyboardLayout",
+"ordinal": 1868,
+"rva": 159792,
+"forwarder": null,
+"ref": "user32.dll!0x27030"
+},
+{
+"name": "GetKeyboardLayoutList",
+"ordinal": 1869,
+"rva": 213056,
+"forwarder": null,
+"ref": "user32.dll!0x34040"
+},
+{
+"name": "GetKeyboardLayoutNameA",
+"ordinal": 1870,
+"rva": 536176,
+"forwarder": null,
+"ref": "user32.dll!0x82e70"
+},
+{
+"name": "GetKeyboardLayoutNameW",
+"ordinal": 1871,
+"rva": 180464,
+"forwarder": null,
+"ref": "user32.dll!0x2c0f0"
+},
+{
+"name": "GetKeyboardState",
+"ordinal": 1872,
+"rva": 213072,
+"forwarder": null,
+"ref": "user32.dll!0x34050"
+},
+{
+"name": "GetKeyboardType",
+"ordinal": 1873,
+"rva": 204352,
+"forwarder": null,
+"ref": "user32.dll!0x31e40"
+},
+{
+"name": "GetLastActivePopup",
+"ordinal": 1874,
+"rva": 85200,
+"forwarder": null,
+"ref": "user32.dll!0x14cd0"
+},
+{
+"name": "GetLastInputInfo",
+"ordinal": 1875,
+"rva": 158240,
+"forwarder": null,
+"ref": "user32.dll!0x26a20"
+},
+{
+"name": "GetLayeredWindowAttributes",
+"ordinal": 1876,
+"rva": 213088,
+"forwarder": null,
+"ref": "user32.dll!0x34060"
+},
+{
+"name": "GetListBoxInfo",
+"ordinal": 1877,
+"rva": 213104,
+"forwarder": null,
+"ref": "user32.dll!0x34070"
+},
+{
+"name": "GetMagnificationDesktopColorEffect",
+"ordinal": 1878,
+"rva": 475072,
+"forwarder": null,
+"ref": "user32.dll!0x73fc0"
+},
+{
+"name": "GetMagnificationDesktopMagnification",
+"ordinal": 1879,
+"rva": 475312,
+"forwarder": null,
+"ref": "user32.dll!0x740b0"
+},
+{
+"name": "GetMagnificationDesktopSamplingMode",
+"ordinal": 1880,
+"rva": 475472,
+"forwarder": null,
+"ref": "user32.dll!0x74150"
+},
+{
+"name": "GetMagnificationLensCtxInformation",
+"ordinal": 1881,
+"rva": 213120,
+"forwarder": null,
+"ref": "user32.dll!0x34080"
+},
+{
+"name": "GetMenu",
+"ordinal": 1882,
+"rva": 173104,
+"forwarder": null,
+"ref": "user32.dll!0x2a430"
+},
+{
+"name": "GetMenuBarInfo",
+"ordinal": 1883,
+"rva": 213136,
+"forwarder": null,
+"ref": "user32.dll!0x34090"
+},
+{
+"name": "GetMenuCheckMarkDimensions",
+"ordinal": 1884,
+"rva": 484256,
+"forwarder": null,
+"ref": "user32.dll!0x763a0"
+},
+{
+"name": "GetMenuContextHelpId",
+"ordinal": 1885,
+"rva": 484320,
+"forwarder": null,
+"ref": "user32.dll!0x763e0"
+},
+{
+"name": "GetMenuDefaultItem",
+"ordinal": 1886,
+"rva": 168160,
+"forwarder": null,
+"ref": "user32.dll!0x290e0"
+},
+{
+"name": "GetMenuInfo",
+"ordinal": 1887,
+"rva": 5840,
+"forwarder": null,
+"ref": "user32.dll!0x16d0"
+},
+{
+"name": "GetMenuItemCount",
+"ordinal": 1888,
+"rva": 156112,
+"forwarder": null,
+"ref": "user32.dll!0x261d0"
+},
+{
+"name": "GetMenuItemID",
+"ordinal": 1889,
+"rva": 173456,
+"forwarder": null,
+"ref": "user32.dll!0x2a590"
+},
+{
+"name": "GetMenuItemInfoA",
+"ordinal": 1890,
+"rva": 563712,
+"forwarder": null,
+"ref": "user32.dll!0x89a00"
+},
+{
+"name": "GetMenuItemInfoW",
+"ordinal": 1891,
+"rva": 130304,
+"forwarder": null,
+"ref": "user32.dll!0x1fd00"
+},
+{
+"name": "GetMenuItemRect",
+"ordinal": 1892,
+"rva": 213152,
+"forwarder": null,
+"ref": "user32.dll!0x340a0"
+},
+{
+"name": "GetMenuState",
+"ordinal": 1893,
+"rva": 129344,
+"forwarder": null,
+"ref": "user32.dll!0x1f940"
+},
+{
+"name": "GetMenuStringA",
+"ordinal": 1894,
+"rva": 563968,
+"forwarder": null,
+"ref": "user32.dll!0x89b00"
+},
+{
+"name": "GetMenuStringW",
+"ordinal": 1895,
+"rva": 200032,
+"forwarder": null,
+"ref": "user32.dll!0x30d60"
+},
+{
+"name": "GetMessageA",
+"ordinal": 1896,
+"rva": 165616,
+"forwarder": null,
+"ref": "user32.dll!0x286f0"
+},
+{
+"name": "GetMessageExtraInfo",
+"ordinal": 1897,
+"rva": 169200,
+"forwarder": null,
+"ref": "user32.dll!0x294f0"
+},
+{
+"name": "GetMessagePos",
+"ordinal": 1898,
+"rva": 176064,
+"forwarder": null,
+"ref": "user32.dll!0x2afc0"
+},
+{
+"name": "GetMessageTime",
+"ordinal": 1899,
+"rva": 171568,
+"forwarder": null,
+"ref": "user32.dll!0x29e30"
+},
+{
+"name": "GetMessageW",
+"ordinal": 1900,
+"rva": 138112,
+"forwarder": null,
+"ref": "user32.dll!0x21b80"
+},
+{
+"name": "GetMonitorInfoA",
+"ordinal": 1901,
+"rva": 187456,
+"forwarder": null,
+"ref": "user32.dll!0x2dc40"
+},
+{
+"name": "GetMonitorInfoW",
+"ordinal": 1902,
+"rva": 133136,
+"forwarder": null,
+"ref": "user32.dll!0x20810"
+},
+{
+"name": "GetMouseMovePointsEx",
+"ordinal": 1903,
+"rva": 213168,
+"forwarder": null,
+"ref": "user32.dll!0x340b0"
+},
+{
+"name": "GetNextDlgGroupItem",
+"ordinal": 1904,
+"rva": 371184,
+"forwarder": null,
+"ref": "user32.dll!0x5a9f0"
+},
+{
+"name": "GetNextDlgTabItem",
+"ordinal": 1905,
+"rva": 7568,
+"forwarder": null,
+"ref": "user32.dll!0x1d90"
+},
+{
+"name": "GetOpenClipboardWindow",
+"ordinal": 1906,
+"rva": 183344,
+"forwarder": null,
+"ref": "user32.dll!0x2cc30"
+},
+{
+"name": "GetParent",
+"ordinal": 1907,
+"rva": 122176,
+"forwarder": null,
+"ref": "user32.dll!0x1dd40"
+},
+{
+"name": "GetPhysicalCursorPos",
+"ordinal": 1908,
+"rva": 163136,
+"forwarder": null,
+"ref": "user32.dll!0x27d40"
+},
+{
+"name": "GetPointerCursorId",
+"ordinal": 1909,
+"rva": 213216,
+"forwarder": null,
+"ref": "user32.dll!0x340e0"
+},
+{
+"name": "GetPointerDevice",
+"ordinal": 1910,
+"rva": 213232,
+"forwarder": null,
+"ref": "user32.dll!0x340f0"
+},
+{
+"name": "GetPointerDeviceCursors",
+"ordinal": 1911,
+"rva": 213248,
+"forwarder": null,
+"ref": "user32.dll!0x34100"
+},
+{
+"name": "GetPointerDeviceInputSpace",
+"ordinal": 1912,
+"rva": 213264,
+"forwarder": null,
+"ref": "user32.dll!0x34110"
+},
+{
+"name": "GetPointerDeviceOrientation",
+"ordinal": 1913,
+"rva": 213280,
+"forwarder": null,
+"ref": "user32.dll!0x34120"
+},
+{
+"name": "GetPointerDeviceProperties",
+"ordinal": 1914,
+"rva": 213296,
+"forwarder": null,
+"ref": "user32.dll!0x34130"
+},
+{
+"name": "GetPointerDeviceRects",
+"ordinal": 1915,
+"rva": 213312,
+"forwarder": null,
+"ref": "user32.dll!0x34140"
+},
+{
+"name": "GetPointerDevices",
+"ordinal": 1916,
+"rva": 213328,
+"forwarder": null,
+"ref": "user32.dll!0x34150"
+},
+{
+"name": "GetPointerFrameInfo",
+"ordinal": 1917,
+"rva": 328192,
+"forwarder": null,
+"ref": "user32.dll!0x50200"
+},
+{
+"name": "GetPointerFrameInfoHistory",
+"ordinal": 1918,
+"rva": 328272,
+"forwarder": null,
+"ref": "user32.dll!0x50250"
+},
+{
+"name": "GetPointerFramePenInfo",
+"ordinal": 1919,
+"rva": 328336,
+"forwarder": null,
+"ref": "user32.dll!0x50290"
+},
+{
+"name": "GetPointerFramePenInfoHistory",
+"ordinal": 1920,
+"rva": 328416,
+"forwarder": null,
+"ref": "user32.dll!0x502e0"
+},
+{
+"name": "GetPointerFrameTimes",
+"ordinal": 1921,
+"rva": 213344,
+"forwarder": null,
+"ref": "user32.dll!0x34160"
+},
+{
+"name": "GetPointerFrameTouchInfo",
+"ordinal": 1922,
+"rva": 328480,
+"forwarder": null,
+"ref": "user32.dll!0x50320"
+},
+{
+"name": "GetPointerFrameTouchInfoHistory",
+"ordinal": 1923,
+"rva": 328560,
+"forwarder": null,
+"ref": "user32.dll!0x50370"
+},
+{
+"name": "GetPointerInfo",
+"ordinal": 1924,
+"rva": 328624,
+"forwarder": null,
+"ref": "user32.dll!0x503b0"
+},
+{
+"name": "GetPointerInfoHistory",
+"ordinal": 1925,
+"rva": 328720,
+"forwarder": null,
+"ref": "user32.dll!0x50410"
+},
+{
+"name": "GetPointerInputTransform",
+"ordinal": 1926,
+"rva": 213360,
+"forwarder": null,
+"ref": "user32.dll!0x34170"
+},
+{
+"name": "GetPointerPenInfo",
+"ordinal": 1927,
+"rva": 328800,
+"forwarder": null,
+"ref": "user32.dll!0x50460"
+},
+{
+"name": "GetPointerPenInfoHistory",
+"ordinal": 1928,
+"rva": 328896,
+"forwarder": null,
+"ref": "user32.dll!0x504c0"
+},
+{
+"name": "GetPointerTouchInfo",
+"ordinal": 1929,
+"rva": 328976,
+"forwarder": null,
+"ref": "user32.dll!0x50510"
+},
+{
+"name": "GetPointerTouchInfoHistory",
+"ordinal": 1930,
+"rva": 329072,
+"forwarder": null,
+"ref": "user32.dll!0x50570"
+},
+{
+"name": "GetPointerType",
+"ordinal": 1931,
+"rva": 213392,
+"forwarder": null,
+"ref": "user32.dll!0x34190"
+},
+{
+"name": "GetPriorityClipboardFormat",
+"ordinal": 1932,
+"rva": 540800,
+"forwarder": null,
+"ref": "user32.dll!0x84080"
+},
+{
+"name": "GetProcessDefaultLayout",
+"ordinal": 1933,
+"rva": 183312,
+"forwarder": null,
+"ref": "user32.dll!0x2cc10"
+},
+{
+"name": "GetProcessDpiAwarenessInternal",
+"ordinal": 1934,
+"rva": 177824,
+"forwarder": null,
+"ref": "user32.dll!0x2b6a0"
+},
+{
+"name": "GetProcessWindowStation",
+"ordinal": 1935,
+"rva": 213440,
+"forwarder": null,
+"ref": "user32.dll!0x341c0"
+},
+{
+"name": "GetProgmanWindow",
+"ordinal": 1936,
+"rva": 550336,
+"forwarder": null,
+"ref": "user32.dll!0x865c0"
+},
+{
+"name": "GetPropA",
+"ordinal": 1937,
+"rva": 186784,
+"forwarder": null,
+"ref": "user32.dll!0x2d9a0"
+},
+{
+"name": "GetPropW",
+"ordinal": 1938,
+"rva": 40720,
+"forwarder": null,
+"ref": "user32.dll!0x9f10"
+},
+{
+"name": "GetQueueStatus",
+"ordinal": 1939,
+"rva": 135200,
+"forwarder": null,
+"ref": "user32.dll!0x21020"
+},
+{
+"name": "GetRawInputBuffer",
+"ordinal": 1940,
+"rva": 435568,
+"forwarder": null,
+"ref": "user32.dll!0x6a570"
+},
+{
+"name": "GetRawInputData",
+"ordinal": 1941,
+"rva": 213472,
+"forwarder": null,
+"ref": "user32.dll!0x341e0"
+},
+{
+"name": "GetRawInputDeviceInfoA",
+"ordinal": 1942,
+"rva": 564048,
+"forwarder": null,
+"ref": "user32.dll!0x89b50"
+},
+{
+"name": "GetRawInputDeviceInfoW",
+"ordinal": 1943,
+"rva": 205488,
+"forwarder": null,
+"ref": "user32.dll!0x322b0"
+},
+{
+"name": "GetRawInputDeviceList",
+"ordinal": 1944,
+"rva": 213488,
+"forwarder": null,
+"ref": "user32.dll!0x341f0"
+},
+{
+"name": "GetRawPointerDeviceData",
+"ordinal": 1945,
+"rva": 213504,
+"forwarder": null,
+"ref": "user32.dll!0x34200"
+},
+{
+"name": "GetReasonTitleFromReasonCode",
+"ordinal": 1946,
+"rva": 206304,
+"forwarder": null,
+"ref": "user32.dll!0x325e0"
+},
+{
+"name": "GetRegisteredRawInputDevices",
+"ordinal": 1947,
+"rva": 213520,
+"forwarder": null,
+"ref": "user32.dll!0x34210"
+},
+{
+"name": "GetScrollBarInfo",
+"ordinal": 1948,
+"rva": 213552,
+"forwarder": null,
+"ref": "user32.dll!0x34230"
+},
+{
+"name": "GetScrollInfo",
+"ordinal": 1949,
+"rva": 164912,
+"forwarder": null,
+"ref": "user32.dll!0x28430"
+},
+{
+"name": "GetScrollPos",
+"ordinal": 1950,
+"rva": 201392,
+"forwarder": null,
+"ref": "user32.dll!0x312b0"
+},
+{
+"name": "GetScrollRange",
+"ordinal": 1951,
+"rva": 530640,
+"forwarder": null,
+"ref": "user32.dll!0x818d0"
+},
+{
+"name": "GetSendMessageReceiver",
+"ordinal": 1952,
+"rva": 550432,
+"forwarder": null,
+"ref": "user32.dll!0x86620"
+},
+{
+"name": "GetShellChangeNotifyWindow",
+"ordinal": 1953,
+"rva": 179936,
+"forwarder": null,
+"ref": "user32.dll!0x2bee0"
+},
+{
+"name": "GetShellWindow",
+"ordinal": 1954,
+"rva": 164256,
+"forwarder": null,
+"ref": "user32.dll!0x281a0"
+},
+{
+"name": "GetSubMenu",
+"ordinal": 1955,
+"rva": 172288,
+"forwarder": null,
+"ref": "user32.dll!0x2a100"
+},
+{
+"name": "GetSysColor",
+"ordinal": 1956,
+"rva": 155312,
+"forwarder": null,
+"ref": "user32.dll!0x25eb0"
+},
+{
+"name": "GetSysColorBrush",
+"ordinal": 1957,
+"rva": 163936,
+"forwarder": null,
+"ref": "user32.dll!0x28060"
+},
+{
+"name": "GetSystemDpiForProcess",
+"ordinal": 1958,
+"rva": 213568,
+"forwarder": null,
+"ref": "user32.dll!0x34240"
+},
+{
+"name": "GetSystemMenu",
+"ordinal": 1959,
+"rva": 213584,
+"forwarder": null,
+"ref": "user32.dll!0x34250"
+},
+{
+"name": "GetSystemMetrics",
+"ordinal": 1960,
+"rva": 134848,
+"forwarder": null,
+"ref": "user32.dll!0x20ec0"
+},
+{
+"name": "GetSystemMetricsForDpi",
+"ordinal": 1961,
+"rva": 68544,
+"forwarder": null,
+"ref": "user32.dll!0x10bc0"
+},
+{
+"name": "GetTabbedTextExtentA",
+"ordinal": 1962,
+"rva": 358048,
+"forwarder": null,
+"ref": "user32.dll!0x576a0"
+},
+{
+"name": "GetTabbedTextExtentW",
+"ordinal": 1963,
+"rva": 358304,
+"forwarder": null,
+"ref": "user32.dll!0x577a0"
+},
+{
+"name": "GetTaskmanWindow",
+"ordinal": 1964,
+"rva": 183376,
+"forwarder": null,
+"ref": "user32.dll!0x2cc50"
+},
+{
+"name": "GetThreadDesktop",
+"ordinal": 1965,
+"rva": 213600,
+"forwarder": null,
+"ref": "user32.dll!0x34260"
+},
+{
+"name": "GetThreadDpiAwarenessContext",
+"ordinal": 1966,
+"rva": 146688,
+"forwarder": null,
+"ref": "user32.dll!0x23d00"
+},
+{
+"name": "GetThreadDpiHostingBehavior",
+"ordinal": 1967,
+"rva": 550464,
+"forwarder": null,
+"ref": "user32.dll!0x86640"
+},
+{
+"name": "GetTitleBarInfo",
+"ordinal": 1968,
+"rva": 213616,
+"forwarder": null,
+"ref": "user32.dll!0x34270"
+},
+{
+"name": "GetTopLevelWindow",
+"ordinal": 1969,
+"rva": 213632,
+"forwarder": null,
+"ref": "user32.dll!0x34280"
+},
+{
+"name": "GetTopWindow",
+"ordinal": 1970,
+"rva": 184640,
+"forwarder": null,
+"ref": "user32.dll!0x2d140"
+},
+{
+"name": "GetTouchInputInfo",
+"ordinal": 1971,
+"rva": 333776,
+"forwarder": null,
+"ref": "user32.dll!0x517d0"
+},
+{
+"name": "GetUnpredictedMessagePos",
+"ordinal": 1972,
+"rva": 550544,
+"forwarder": null,
+"ref": "user32.dll!0x86690"
+},
+{
+"name": "GetUpdateRect",
+"ordinal": 1973,
+"rva": 176864,
+"forwarder": null,
+"ref": "user32.dll!0x2b2e0"
+},
+{
+"name": "GetUpdateRgn",
+"ordinal": 1974,
+"rva": 550576,
+"forwarder": null,
+"ref": "user32.dll!0x866b0"
+},
+{
+"name": "GetUpdatedClipboardFormats",
+"ordinal": 1975,
+"rva": 540832,
+"forwarder": null,
+"ref": "user32.dll!0x840a0"
+},
+{
+"name": "GetUserObjectInformationA",
+"ordinal": 1976,
+"rva": 181344,
+"forwarder": null,
+"ref": "user32.dll!0x2c460"
+},
+{
+"name": "GetUserObjectInformationW",
+"ordinal": 1977,
+"rva": 213680,
+"forwarder": null,
+"ref": "user32.dll!0x342b0"
+},
+{
+"name": "GetUserObjectSecurity",
+"ordinal": 1978,
+"rva": 550736,
+"forwarder": null,
+"ref": "user32.dll!0x86750"
+},
+{
+"name": "GetWinStationInfo",
+"ordinal": 1979,
+"rva": 550832,
+"forwarder": null,
+"ref": "user32.dll!0x867b0"
+},
+{
+"name": "GetWindow",
+"ordinal": 1980,
+"rva": 40352,
+"forwarder": null,
+"ref": "user32.dll!0x9da0"
+},
+{
+"name": "GetWindowBand",
+"ordinal": 1981,
+"rva": 213696,
+"forwarder": null,
+"ref": "user32.dll!0x342c0"
+},
+{
+"name": "GetWindowCompositionAttribute",
+"ordinal": 1982,
+"rva": 213712,
+"forwarder": null,
+"ref": "user32.dll!0x342d0"
+},
+{
+"name": "GetWindowCompositionInfo",
+"ordinal": 1983,
+"rva": 213728,
+"forwarder": null,
+"ref": "user32.dll!0x342e0"
+},
+{
+"name": "GetWindowContextHelpId",
+"ordinal": 1984,
+"rva": 550864,
+"forwarder": null,
+"ref": "user32.dll!0x867d0"
+},
+{
+"name": "GetWindowDC",
+"ordinal": 1985,
+"rva": 213744,
+"forwarder": null,
+"ref": "user32.dll!0x342f0"
+},
+{
+"name": "GetWindowDisplayAffinity",
+"ordinal": 1986,
+"rva": 213760,
+"forwarder": null,
+"ref": "user32.dll!0x34300"
+},
+{
+"name": "GetWindowDpiAwarenessContext",
+"ordinal": 1987,
+"rva": 78880,
+"forwarder": null,
+"ref": "user32.dll!0x13420"
+},
+{
+"name": "GetWindowDpiHostingBehavior",
+"ordinal": 1988,
+"rva": 550896,
+"forwarder": null,
+"ref": "user32.dll!0x867f0"
+},
+{
+"name": "GetWindowFeedbackSetting",
+"ordinal": 1989,
+"rva": 213776,
+"forwarder": null,
+"ref": "user32.dll!0x34310"
+},
+{
+"name": "GetWindowInfo",
+"ordinal": 1990,
+"rva": 67008,
+"forwarder": null,
+"ref": "user32.dll!0x105c0"
+},
+{
+"name": "GetWindowLongA",
+"ordinal": 1991,
+"rva": 81824,
+"forwarder": null,
+"ref": "user32.dll!0x13fa0"
+},
+{
+"name": "GetWindowLongPtrA",
+"ordinal": 1992,
+"rva": 69088,
+"forwarder": null,
+"ref": "user32.dll!0x10de0"
+},
+{
+"name": "GetWindowLongPtrW",
+"ordinal": 1993,
+"rva": 63536,
+"forwarder": null,
+"ref": "user32.dll!0xf830"
+},
+{
+"name": "GetWindowLongW",
+"ordinal": 1994,
+"rva": 64368,
+"forwarder": null,
+"ref": "user32.dll!0xfb70"
+},
+{
+"name": "GetWindowMinimizeRect",
+"ordinal": 1995,
+"rva": 213808,
+"forwarder": null,
+"ref": "user32.dll!0x34330"
+},
+{
+"name": "GetWindowModuleFileName",
+"ordinal": 1996,
+"rva": 564368,
+"forwarder": null,
+"ref": "user32.dll!0x89c90"
+},
+{
+"name": "GetWindowModuleFileNameA",
+"ordinal": 1997,
+"rva": 564368,
+"forwarder": null,
+"ref": "user32.dll!0x89c90"
+},
+{
+"name": "GetWindowModuleFileNameW",
+"ordinal": 1998,
+"rva": 554512,
+"forwarder": null,
+"ref": "user32.dll!0x87610"
+},
+{
+"name": "GetWindowPlacement",
+"ordinal": 1999,
+"rva": 213824,
+"forwarder": null,
+"ref": "user32.dll!0x34340"
+},
+{
+"name": "GetWindowProcessHandle",
+"ordinal": 2000,
+"rva": 213840,
+"forwarder": null,
+"ref": "user32.dll!0x34350"
+},
+{
+"name": null,
+"ordinal": 2001,
+"rva": 476176,
+"forwarder": null,
+"ref": "user32.dll!0x74410"
+},
+{
+"name": null,
+"ordinal": 2002,
+"rva": 475568,
+"forwarder": null,
+"ref": "user32.dll!0x741b0"
+},
+{
+"name": "GetWindowRect",
+"ordinal": 2003,
+"rva": 83680,
+"forwarder": null,
+"ref": "user32.dll!0x146e0"
+},
+{
+"name": "GetWindowRgn",
+"ordinal": 2004,
+"rva": 172704,
+"forwarder": null,
+"ref": "user32.dll!0x2a2a0"
+},
+{
+"name": null,
+"ordinal": 2005,
+"rva": 215648,
+"forwarder": null,
+"ref": "user32.dll!0x34a60"
+},
+{
+"name": "GetWindowRgnBox",
+"ordinal": 2006,
+"rva": 37056,
+"forwarder": null,
+"ref": "user32.dll!0x90c0"
+},
+{
+"name": "GetWindowRgnEx",
+"ordinal": 2007,
+"rva": 213856,
+"forwarder": null,
+"ref": "user32.dll!0x34360"
+},
+{
+"name": "GetWindowTextA",
+"ordinal": 2008,
+"rva": 38032,
+"forwarder": null,
+"ref": "user32.dll!0x9490"
+},
+{
+"name": "GetWindowTextLengthA",
+"ordinal": 2009,
+"rva": 564448,
+"forwarder": null,
+"ref": "user32.dll!0x89ce0"
+},
+{
+"name": null,
+"ordinal": 2010,
+"rva": 216608,
+"forwarder": null,
+"ref": "user32.dll!0x34e20"
+},
+{
+"name": "GetWindowTextLengthW",
+"ordinal": 2011,
+"rva": 41472,
+"forwarder": null,
+"ref": "user32.dll!0xa200"
+},
+{
+"name": "GetWindowTextW",
+"ordinal": 2012,
+"rva": 49904,
+"forwarder": null,
+"ref": "user32.dll!0xc2f0"
+},
+{
+"name": "GetWindowThreadProcessId",
+"ordinal": 2013,
+"rva": 13568,
+"forwarder": null,
+"ref": "user32.dll!0x3500"
+},
+{
+"name": "GetWindowWord",
+"ordinal": 2014,
+"rva": 530848,
+"forwarder": null,
+"ref": "user32.dll!0x819a0"
+},
+{
+"name": "GhostWindowFromHungWindow",
+"ordinal": 2015,
+"rva": 213872,
+"forwarder": null,
+"ref": "user32.dll!0x34370"
+},
+{
+"name": "GrayStringA",
+"ordinal": 2016,
+"rva": 551008,
+"forwarder": null,
+"ref": "user32.dll!0x86860"
+},
+{
+"name": "GrayStringW",
+"ordinal": 2017,
+"rva": 551104,
+"forwarder": null,
+"ref": "user32.dll!0x868c0"
+},
+{
+"name": "HideCaret",
+"ordinal": 2018,
+"rva": 167536,
+"forwarder": null,
+"ref": "user32.dll!0x28e70"
+},
+{
+"name": "HiliteMenuItem",
+"ordinal": 2019,
+"rva": 213920,
+"forwarder": null,
+"ref": "user32.dll!0x343a0"
+},
+{
+"name": "HungWindowFromGhostWindow",
+"ordinal": 2020,
+"rva": 213936,
+"forwarder": null,
+"ref": "user32.dll!0x343b0"
+},
+{
+"name": "IMPGetIMEA",
+"ordinal": 2021,
+"rva": 538048,
+"forwarder": null,
+"ref": "user32.dll!0x835c0"
+},
+{
+"name": "IMPGetIMEW",
+"ordinal": 2022,
+"rva": 538080,
+"forwarder": null,
+"ref": "user32.dll!0x835e0"
+},
+{
+"name": "IMPQueryIMEA",
+"ordinal": 2023,
+"rva": 538112,
+"forwarder": null,
+"ref": "user32.dll!0x83600"
+},
+{
+"name": "IMPQueryIMEW",
+"ordinal": 2024,
+"rva": 538144,
+"forwarder": null,
+"ref": "user32.dll!0x83620"
+},
+{
+"name": "IMPSetIMEA",
+"ordinal": 2025,
+"rva": 538176,
+"forwarder": null,
+"ref": "user32.dll!0x83640"
+},
+{
+"name": "IMPSetIMEW",
+"ordinal": 2026,
+"rva": 538208,
+"forwarder": null,
+"ref": "user32.dll!0x83660"
+},
+{
+"name": "ImpersonateDdeClientWindow",
+"ordinal": 2027,
+"rva": 213952,
+"forwarder": null,
+"ref": "user32.dll!0x343c0"
+},
+{
+"name": "InSendMessage",
+"ordinal": 2028,
+"rva": 164352,
+"forwarder": null,
+"ref": "user32.dll!0x28200"
+},
+{
+"name": "InSendMessageEx",
+"ordinal": 2029,
+"rva": 146288,
+"forwarder": null,
+"ref": "user32.dll!0x23b70"
+},
+{
+"name": "InflateRect",
+"ordinal": 2030,
+"rva": 20192,
+"forwarder": null,
+"ref": "user32.dll!0x4ee0"
+},
+{
+"name": "InheritWindowMonitor",
+"ordinal": 2031,
+"rva": 213968,
+"forwarder": null,
+"ref": "user32.dll!0x343d0"
+},
+{
+"name": "InitDManipHook",
+"ordinal": 2032,
+"rva": 140064,
+"forwarder": null,
+"ref": "user32.dll!0x22320"
+},
+{
+"name": "InitializeGenericHidInjection",
+"ordinal": 2033,
+"rva": 213984,
+"forwarder": null,
+"ref": "user32.dll!0x343e0"
+},
+{
+"name": "InitializeInputDeviceInjection",
+"ordinal": 2034,
+"rva": 214000,
+"forwarder": null,
+"ref": "user32.dll!0x343f0"
+},
+{
+"name": "InitializeLpkHooks",
+"ordinal": 2035,
+"rva": 160576,
+"forwarder": null,
+"ref": "user32.dll!0x27340"
+},
+{
+"name": "InitializePointerDeviceInjection",
+"ordinal": 2036,
+"rva": 214016,
+"forwarder": null,
+"ref": "user32.dll!0x34400"
+},
+{
+"name": "InitializePointerDeviceInjectionEx",
+"ordinal": 2037,
+"rva": 214032,
+"forwarder": null,
+"ref": "user32.dll!0x34410"
+},
+{
+"name": "InitializeTouchInjection",
+"ordinal": 2038,
+"rva": 214048,
+"forwarder": null,
+"ref": "user32.dll!0x34420"
+},
+{
+"name": "InjectDeviceInput",
+"ordinal": 2039,
+"rva": 214064,
+"forwarder": null,
+"ref": "user32.dll!0x34430"
+},
+{
+"name": "InjectGenericHidInput",
+"ordinal": 2040,
+"rva": 214080,
+"forwarder": null,
+"ref": "user32.dll!0x34440"
+},
+{
+"name": "InjectKeyboardInput",
+"ordinal": 2041,
+"rva": 214096,
+"forwarder": null,
+"ref": "user32.dll!0x34450"
+},
+{
+"name": "InjectMouseInput",
+"ordinal": 2042,
+"rva": 214112,
+"forwarder": null,
+"ref": "user32.dll!0x34460"
+},
+{
+"name": "InjectPointerInput",
+"ordinal": 2043,
+"rva": 214128,
+"forwarder": null,
+"ref": "user32.dll!0x34470"
+},
+{
+"name": "InjectSyntheticPointerInput",
+"ordinal": 2044,
+"rva": 214128,
+"forwarder": null,
+"ref": "user32.dll!0x34470"
+},
+{
+"name": "InjectTouchInput",
+"ordinal": 2045,
+"rva": 214144,
+"forwarder": null,
+"ref": "user32.dll!0x34480"
+},
+{
+"name": "InputSpaceRegionFromPoint",
+"ordinal": 2046,
+"rva": 214160,
+"forwarder": null,
+"ref": "user32.dll!0x34490"
+},
+{
+"name": "InsertMenuA",
+"ordinal": 2047,
+"rva": 564528,
+"forwarder": null,
+"ref": "user32.dll!0x89d30"
+},
+{
+"name": "InsertMenuItemA",
+"ordinal": 2048,
+"rva": 564656,
+"forwarder": null,
+"ref": "user32.dll!0x89db0"
+},
+{
+"name": "InsertMenuItemW",
+"ordinal": 2049,
+"rva": 129872,
+"forwarder": null,
+"ref": "user32.dll!0x1fb50"
+},
+{
+"name": "InsertMenuW",
+"ordinal": 2050,
+"rva": 129648,
+"forwarder": null,
+"ref": "user32.dll!0x1fa70"
+},
+{
+"name": "InternalGetWindowIcon",
+"ordinal": 2051,
+"rva": 502752,
+"forwarder": null,
+"ref": "user32.dll!0x7abe0"
+},
+{
+"name": "InternalGetWindowText",
+"ordinal": 2052,
+"rva": 163520,
+"forwarder": null,
+"ref": "user32.dll!0x27ec0"
+},
+{
+"name": "IntersectRect",
+"ordinal": 2053,
+"rva": 80768,
+"forwarder": null,
+"ref": "user32.dll!0x13b80"
+},
+{
+"name": "InvalidateRect",
+"ordinal": 2054,
+"rva": 214192,
+"forwarder": null,
+"ref": "user32.dll!0x344b0"
+},
+{
+"name": "InvalidateRgn",
+"ordinal": 2055,
+"rva": 214208,
+"forwarder": null,
+"ref": "user32.dll!0x344c0"
+},
+{
+"name": "InvertRect",
+"ordinal": 2056,
+"rva": 155904,
+"forwarder": null,
+"ref": "user32.dll!0x26100"
+},
+{
+"name": "IsCharAlphaA",
+"ordinal": 2057,
+"rva": 540864,
+"forwarder": null,
+"ref": "user32.dll!0x840c0"
+},
+{
+"name": "IsCharAlphaNumericA",
+"ordinal": 2058,
+"rva": 540896,
+"forwarder": null,
+"ref": "user32.dll!0x840e0"
+},
+{
+"name": "IsCharAlphaNumericW",
+"ordinal": 2059,
+"rva": 206064,
+"forwarder": null,
+"ref": "user32.dll!0x324f0"
+},
+{
+"name": "IsCharAlphaW",
+"ordinal": 2060,
+"rva": 540928,
+"forwarder": null,
+"ref": "user32.dll!0x84100"
+},
+{
+"name": "IsCharLowerA",
+"ordinal": 2061,
+"rva": 540960,
+"forwarder": null,
+"ref": "user32.dll!0x84120"
+},
+{
+"name": "IsCharLowerW",
+"ordinal": 2062,
+"rva": 540992,
+"forwarder": null,
+"ref": "user32.dll!0x84140"
+},
+{
+"name": "IsCharUpperA",
+"ordinal": 2063,
+"rva": 541024,
+"forwarder": null,
+"ref": "user32.dll!0x84160"
+},
+{
+"name": "IsCharUpperW",
+"ordinal": 2064,
+"rva": 541056,
+"forwarder": null,
+"ref": "user32.dll!0x84180"
+},
+{
+"name": "IsChild",
+"ordinal": 2065,
+"rva": 81904,
+"forwarder": null,
+"ref": "user32.dll!0x13ff0"
+},
+{
+"name": "IsClipboardFormatAvailable",
+"ordinal": 2066,
+"rva": 144848,
+"forwarder": null,
+"ref": "user32.dll!0x235d0"
+},
+{
+"name": "IsDialogMessage",
+"ordinal": 2067,
+"rva": 370272,
+"forwarder": null,
+"ref": "user32.dll!0x5a660"
+},
+{
+"name": "IsDialogMessageA",
+"ordinal": 2068,
+"rva": 370272,
+"forwarder": null,
+"ref": "user32.dll!0x5a660"
+},
+{
+"name": "IsDialogMessageW",
+"ordinal": 2069,
+"rva": 48592,
+"forwarder": null,
+"ref": "user32.dll!0xbdd0"
+},
+{
+"name": "IsDlgButtonChecked",
+"ordinal": 2070,
+"rva": 370032,
+"forwarder": null,
+"ref": "user32.dll!0x5a570"
+},
+{
+"name": "IsGUIThread",
+"ordinal": 2071,
+"rva": 163824,
+"forwarder": null,
+"ref": "user32.dll!0x27ff0"
+},
+{
+"name": "IsHungAppWindow",
+"ordinal": 2072,
+"rva": 171520,
+"forwarder": null,
+"ref": "user32.dll!0x29e00"
+},
+{
+"name": "IsIconic",
+"ordinal": 2073,
+"rva": 49648,
+"forwarder": null,
+"ref": "user32.dll!0xc1f0"
+},
+{
+"name": "IsImmersiveProcess",
+"ordinal": 2074,
+"rva": 169328,
+"forwarder": null,
+"ref": "user32.dll!0x29570"
+},
+{
+"name": "IsInDesktopWindowBand",
+"ordinal": 2075,
+"rva": 176592,
+"forwarder": null,
+"ref": "user32.dll!0x2b1d0"
+},
+{
+"name": "IsMenu",
+"ordinal": 2076,
+"rva": 161904,
+"forwarder": null,
+"ref": "user32.dll!0x27870"
+},
+{
+"name": "IsMouseInPointerEnabled",
+"ordinal": 2077,
+"rva": 214240,
+"forwarder": null,
+"ref": "user32.dll!0x344e0"
+},
+{
+"name": "IsOneCoreTransformMode",
+"ordinal": 2078,
+"rva": 214288,
+"forwarder": null,
+"ref": "user32.dll!0x34510"
+},
+{
+"name": "IsProcessDPIAware",
+"ordinal": 2079,
+"rva": 137984,
+"forwarder": null,
+"ref": "user32.dll!0x21b00"
+},
+{
+"name": "IsQueueAttached",
+"ordinal": 2080,
+"rva": 551200,
+"forwarder": null,
+"ref": "user32.dll!0x86920"
+},
+{
+"name": "IsRectEmpty",
+"ordinal": 2081,
+"rva": 144528,
+"forwarder": null,
+"ref": "user32.dll!0x23490"
+},
+{
+"name": "IsSETEnabled",
+"ordinal": 2082,
+"rva": 508320,
+"forwarder": null,
+"ref": "user32.dll!0x7c1a0"
+},
+{
+"name": "IsServerSideWindow",
+"ordinal": 2083,
+"rva": 72560,
+"forwarder": null,
+"ref": "user32.dll!0x11b70"
+},
+{
+"name": "IsThreadDesktopComposited",
+"ordinal": 2084,
+"rva": 68912,
+"forwarder": null,
+"ref": "user32.dll!0x10d30"
+},
+{
+"name": "IsThreadTSFEventAware",
+"ordinal": 2085,
+"rva": 5232,
+"forwarder": null,
+"ref": "user32.dll!0x1470"
+},
+{
+"name": "IsTopLevelWindow",
+"ordinal": 2086,
+"rva": 214320,
+"forwarder": null,
+"ref": "user32.dll!0x34530"
+},
+{
+"name": "IsTouchWindow",
+"ordinal": 2087,
+"rva": 214336,
+"forwarder": null,
+"ref": "user32.dll!0x34540"
+},
+{
+"name": "IsValidDpiAwarenessContext",
+"ordinal": 2088,
+"rva": 551232,
+"forwarder": null,
+"ref": "user32.dll!0x86940"
+},
+{
+"name": "IsWinEventHookInstalled",
+"ordinal": 2089,
+"rva": 19024,
+"forwarder": null,
+"ref": "user32.dll!0x4a50"
+},
+{
+"name": "IsWindow",
+"ordinal": 2090,
+"rva": 41216,
+"forwarder": null,
+"ref": "user32.dll!0xa100"
+},
+{
+"name": "IsWindowArranged",
+"ordinal": 2091,
+"rva": 49536,
+"forwarder": null,
+"ref": "user32.dll!0xc180"
+},
+{
+"name": "IsWindowEnabled",
+"ordinal": 2092,
+"rva": 72368,
+"forwarder": null,
+"ref": "user32.dll!0x11ab0"
+},
+{
+"name": "IsWindowInDestroy",
+"ordinal": 2093,
+"rva": 144576,
+"forwarder": null,
+"ref": "user32.dll!0x234c0"
+},
+{
+"name": "IsWindowRedirectedForPrint",
+"ordinal": 2094,
+"rva": 78768,
+"forwarder": null,
+"ref": "user32.dll!0x133b0"
+},
+{
+"name": "IsWindowUnicode",
+"ordinal": 2095,
+"rva": 71648,
+"forwarder": null,
+"ref": "user32.dll!0x117e0"
+},
+{
+"name": "IsWindowVisible",
+"ordinal": 2096,
+"rva": 123280,
+"forwarder": null,
+"ref": "user32.dll!0x1e190"
+},
+{
+"name": "IsWow64Message",
+"ordinal": 2097,
+"rva": 327488,
+"forwarder": null,
+"ref": "user32.dll!0x4ff40"
+},
+{
+"name": "IsZoomed",
+"ordinal": 2098,
+"rva": 145808,
+"forwarder": null,
+"ref": "user32.dll!0x23990"
+},
+{
+"name": "KillTimer",
+"ordinal": 2099,
+"rva": 214384,
+"forwarder": null,
+"ref": "user32.dll!0x34570"
+},
+{
+"name": "LoadAcceleratorsA",
+"ordinal": 2100,
+"rva": 332080,
+"forwarder": null,
+"ref": "user32.dll!0x51130"
+},
+{
+"name": "LoadAcceleratorsW",
+"ordinal": 2101,
+"rva": 162288,
+"forwarder": null,
+"ref": "user32.dll!0x279f0"
+},
+{
+"name": "LoadBitmapA",
+"ordinal": 2102,
+"rva": 204128,
+"forwarder": null,
+"ref": "user32.dll!0x31d60"
+},
+{
+"name": "LoadBitmapW",
+"ordinal": 2103,
+"rva": 179136,
+"forwarder": null,
+"ref": "user32.dll!0x2bbc0"
+},
+{
+"name": "LoadCursorA",
+"ordinal": 2104,
+"rva": 171456,
+"forwarder": null,
+"ref": "user32.dll!0x29dc0"
+},
+{
+"name": "LoadCursorFromFileA",
+"ordinal": 2105,
+"rva": 310464,
+"forwarder": null,
+"ref": "user32.dll!0x4bcc0"
+},
+{
+"name": "LoadCursorFromFileW",
+"ordinal": 2106,
+"rva": 310576,
+"forwarder": null,
+"ref": "user32.dll!0x4bd30"
+},
+{
+"name": "LoadCursorW",
+"ordinal": 2107,
+"rva": 83504,
+"forwarder": null,
+"ref": "user32.dll!0x14630"
+},
+{
+"name": "LoadIconA",
+"ordinal": 2108,
+"rva": 182848,
+"forwarder": null,
+"ref": "user32.dll!0x2ca40"
+},
+{
+"name": "LoadIconW",
+"ordinal": 2109,
+"rva": 93920,
+"forwarder": null,
+"ref": "user32.dll!0x16ee0"
+},
+{
+"name": "LoadImageA",
+"ordinal": 2110,
+"rva": 195712,
+"forwarder": null,
+"ref": "user32.dll!0x2fc80"
+},
+{
+"name": "LoadImageW",
+"ordinal": 2111,
+"rva": 93040,
+"forwarder": null,
+"ref": "user32.dll!0x16b70"
+},
+{
+"name": "LoadKeyboardLayoutA",
+"ordinal": 2112,
+"rva": 551264,
+"forwarder": null,
+"ref": "user32.dll!0x86960"
+},
+{
+"name": "LoadKeyboardLayoutEx",
+"ordinal": 2113,
+"rva": 551408,
+"forwarder": null,
+"ref": "user32.dll!0x869f0"
+},
+{
+"name": "LoadKeyboardLayoutW",
+"ordinal": 2114,
+"rva": 118800,
+"forwarder": null,
+"ref": "user32.dll!0x1d010"
+},
+{
+"name": "LoadLocalFonts",
+"ordinal": 2115,
+"rva": 183856,
+"forwarder": null,
+"ref": "user32.dll!0x2ce30"
+},
+{
+"name": "LoadMenuA",
+"ordinal": 2116,
+"rva": 325568,
+"forwarder": null,
+"ref": "user32.dll!0x4f7c0"
+},
+{
+"name": "LoadMenuIndirectA",
+"ordinal": 2117,
+"rva": 138992,
+"forwarder": null,
+"ref": "user32.dll!0x21ef0"
+},
+{
+"name": "LoadMenuIndirectW",
+"ordinal": 2118,
+"rva": 138992,
+"forwarder": null,
+"ref": "user32.dll!0x21ef0"
+},
+{
+"name": "LoadMenuW",
+"ordinal": 2119,
+"rva": 138800,
+"forwarder": null,
+"ref": "user32.dll!0x21e30"
+},
+{
+"name": "LoadRemoteFonts",
+"ordinal": 2120,
+"rva": 183728,
+"forwarder": null,
+"ref": "user32.dll!0x2cdb0"
+},
+{
+"name": "LoadStringA",
+"ordinal": 2121,
+"rva": 332144,
+"forwarder": null,
+"ref": "user32.dll!0x51170"
+},
+{
+"name": "LoadStringW",
+"ordinal": 2122,
+"rva": 163888,
+"forwarder": null,
+"ref": "user32.dll!0x28030"
+},
+{
+"name": "LockSetForegroundWindow",
+"ordinal": 2123,
+"rva": 551456,
+"forwarder": null,
+"ref": "user32.dll!0x86a20"
+},
+{
+"name": "LockWindowStation",
+"ordinal": 2124,
+"rva": 214416,
+"forwarder": null,
+"ref": "user32.dll!0x34590"
+},
+{
+"name": "LockWindowUpdate",
+"ordinal": 2125,
+"rva": 214432,
+"forwarder": null,
+"ref": "user32.dll!0x345a0"
+},
+{
+"name": "LockWorkStation",
+"ordinal": 2126,
+"rva": 214448,
+"forwarder": null,
+"ref": "user32.dll!0x345b0"
+},
+{
+"name": "LogicalToPhysicalPoint",
+"ordinal": 2127,
+"rva": 214480,
+"forwarder": null,
+"ref": "user32.dll!0x345d0"
+},
+{
+"name": "LogicalToPhysicalPointForPerMonitorDPI",
+"ordinal": 2128,
+"rva": 214496,
+"forwarder": null,
+"ref": "user32.dll!0x345e0"
+},
+{
+"name": "LookupIconIdFromDirectory",
+"ordinal": 2129,
+"rva": 332288,
+"forwarder": null,
+"ref": "user32.dll!0x51200"
+},
+{
+"name": "LookupIconIdFromDirectoryEx",
+"ordinal": 2130,
+"rva": 154032,
+"forwarder": null,
+"ref": "user32.dll!0x259b0"
+},
+{
+"name": "MBToWCSEx",
+"ordinal": 2131,
+"rva": 147664,
+"forwarder": null,
+"ref": "user32.dll!0x240d0"
+},
+{
+"name": "MBToWCSExt",
+"ordinal": 2132,
+"rva": 147616,
+"forwarder": null,
+"ref": "user32.dll!0x240a0"
+},
+{
+"name": "MB_GetString",
+"ordinal": 2133,
+"rva": 495776,
+"forwarder": null,
+"ref": "user32.dll!0x790a0"
+},
+{
+"name": "MITGetCursorUpdateHandle",
+"ordinal": 2134,
+"rva": 184016,
+"forwarder": null,
+"ref": "user32.dll!0x2ced0"
+},
+{
+"name": "MITSetForegroundRoutingInfo",
+"ordinal": 2135,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": "MITSetInputDelegationMode",
+"ordinal": 2136,
+"rva": 177920,
+"forwarder": null,
+"ref": "user32.dll!0x2b700"
+},
+{
+"name": "MITSetLastInputRecipient",
+"ordinal": 2137,
+"rva": 509184,
+"forwarder": null,
+"ref": "user32.dll!0x7c500"
+},
+{
+"name": "MITSynthesizeTouchInput",
+"ordinal": 2138,
+"rva": 509216,
+"forwarder": null,
+"ref": "user32.dll!0x7c520"
+},
+{
+"name": "MakeThreadTSFEventAware",
+"ordinal": 2139,
+"rva": 176160,
+"forwarder": null,
+"ref": "user32.dll!0x2b020"
+},
+{
+"name": "MapDialogRect",
+"ordinal": 2140,
+"rva": 202416,
+"forwarder": null,
+"ref": "user32.dll!0x316b0"
+},
+{
+"name": "MapPointsByVisualIdentifier",
+"ordinal": 2141,
+"rva": 214512,
+"forwarder": null,
+"ref": "user32.dll!0x345f0"
+},
+{
+"name": "MapVirtualKeyA",
+"ordinal": 2142,
+"rva": 536288,
+"forwarder": null,
+"ref": "user32.dll!0x82ee0"
+},
+{
+"name": "MapVirtualKeyExA",
+"ordinal": 2143,
+"rva": 536400,
+"forwarder": null,
+"ref": "user32.dll!0x82f50"
+},
+{
+"name": "MapVirtualKeyExW",
+"ordinal": 2144,
+"rva": 176128,
+"forwarder": null,
+"ref": "user32.dll!0x2b000"
+},
+{
+"name": "MapVirtualKeyW",
+"ordinal": 2145,
+"rva": 163568,
+"forwarder": null,
+"ref": "user32.dll!0x27ef0"
+},
+{
+"name": "MapVisualRelativePoints",
+"ordinal": 2146,
+"rva": 214528,
+"forwarder": null,
+"ref": "user32.dll!0x34600"
+},
+{
+"name": "MapWindowPoints",
+"ordinal": 2147,
+"rva": 47712,
+"forwarder": null,
+"ref": "user32.dll!0xba60"
+},
+{
+"name": "MenuItemFromPoint",
+"ordinal": 2148,
+"rva": 214544,
+"forwarder": null,
+"ref": "user32.dll!0x34610"
+},
+{
+"name": "MenuWindowProcA",
+"ordinal": 2149,
+"rva": 327520,
+"forwarder": null,
+"ref": "user32.dll!0x4ff60"
+},
+{
+"name": "MenuWindowProcW",
+"ordinal": 2150,
+"rva": 327648,
+"forwarder": null,
+"ref": "user32.dll!0x4ffe0"
+},
+{
+"name": "MessageBeep",
+"ordinal": 2151,
+"rva": 551488,
+"forwarder": null,
+"ref": "user32.dll!0x86a40"
+},
+{
+"name": "MessageBoxA",
+"ordinal": 2152,
+"rva": 495824,
+"forwarder": null,
+"ref": "user32.dll!0x790d0"
+},
+{
+"name": "MessageBoxExA",
+"ordinal": 2153,
+"rva": 495920,
+"forwarder": null,
+"ref": "user32.dll!0x79130"
+},
+{
+"name": "MessageBoxExW",
+"ordinal": 2154,
+"rva": 495968,
+"forwarder": null,
+"ref": "user32.dll!0x79160"
+},
+{
+"name": "MessageBoxIndirectA",
+"ordinal": 2155,
+"rva": 496016,
+"forwarder": null,
+"ref": "user32.dll!0x79190"
+},
+{
+"name": "MessageBoxIndirectW",
+"ordinal": 2156,
+"rva": 496448,
+"forwarder": null,
+"ref": "user32.dll!0x79340"
+},
+{
+"name": "MessageBoxTimeoutA",
+"ordinal": 2157,
+"rva": 496640,
+"forwarder": null,
+"ref": "user32.dll!0x79400"
+},
+{
+"name": "MessageBoxTimeoutW",
+"ordinal": 2158,
+"rva": 497008,
+"forwarder": null,
+"ref": "user32.dll!0x79570"
+},
+{
+"name": "MessageBoxW",
+"ordinal": 2159,
+"rva": 497488,
+"forwarder": null,
+"ref": "user32.dll!0x79750"
+},
+{
+"name": "ModifyMenuA",
+"ordinal": 2160,
+"rva": 564768,
+"forwarder": null,
+"ref": "user32.dll!0x89e20"
+},
+{
+"name": "ModifyMenuW",
+"ordinal": 2161,
+"rva": 204000,
+"forwarder": null,
+"ref": "user32.dll!0x31ce0"
+},
+{
+"name": "MonitorFromPoint",
+"ordinal": 2162,
+"rva": 169264,
+"forwarder": null,
+"ref": "user32.dll!0x29530"
+},
+{
+"name": "MonitorFromRect",
+"ordinal": 2163,
+"rva": 79696,
+"forwarder": null,
+"ref": "user32.dll!0x13750"
+},
+{
+"name": "MonitorFromWindow",
+"ordinal": 2164,
+"rva": 135504,
+"forwarder": null,
+"ref": "user32.dll!0x21150"
+},
+{
+"name": "MoveWindow",
+"ordinal": 2165,
+"rva": 214560,
+"forwarder": null,
+"ref": "user32.dll!0x34620"
+},
+{
+"name": "MsgWaitForMultipleObjects",
+"ordinal": 2166,
+"rva": 132912,
+"forwarder": null,
+"ref": "user32.dll!0x20730"
+},
+{
+"name": "MsgWaitForMultipleObjectsEx",
+"ordinal": 2167,
+"rva": 132960,
+"forwarder": null,
+"ref": "user32.dll!0x20760"
+},
+{
+"name": "NotifyOverlayWindow",
+"ordinal": 2168,
+"rva": 551520,
+"forwarder": null,
+"ref": "user32.dll!0x86a60"
+},
+{
+"name": "NotifyWinEvent",
+"ordinal": 2169,
+"rva": 19104,
+"forwarder": null,
+"ref": "user32.dll!0x4aa0"
+},
+{
+"name": "OemKeyScan",
+"ordinal": 2170,
+"rva": 504288,
+"forwarder": null,
+"ref": "user32.dll!0x7b1e0"
+},
+{
+"name": "OemToCharA",
+"ordinal": 2171,
+"rva": 504432,
+"forwarder": null,
+"ref": "user32.dll!0x7b270"
+},
+{
+"name": "OemToCharBuffA",
+"ordinal": 2172,
+"rva": 504512,
+"forwarder": null,
+"ref": "user32.dll!0x7b2c0"
+},
+{
+"name": "OemToCharBuffW",
+"ordinal": 2173,
+"rva": 504592,
+"forwarder": null,
+"ref": "user32.dll!0x7b310"
+},
+{
+"name": "OemToCharW",
+"ordinal": 2174,
+"rva": 504672,
+"forwarder": null,
+"ref": "user32.dll!0x7b360"
+},
+{
+"name": "OffsetRect",
+"ordinal": 2175,
+"rva": 44672,
+"forwarder": null,
+"ref": "user32.dll!0xae80"
+},
+{
+"name": "OpenClipboard",
+"ordinal": 2176,
+"rva": 178304,
+"forwarder": null,
+"ref": "user32.dll!0x2b880"
+},
+{
+"name": "OpenDesktopA",
+"ordinal": 2177,
+"rva": 111872,
+"forwarder": null,
+"ref": "user32.dll!0x1b500"
+},
+{
+"name": "OpenDesktopW",
+"ordinal": 2178,
+"rva": 108080,
+"forwarder": null,
+"ref": "user32.dll!0x1a630"
+},
+{
+"name": "OpenIcon",
+"ordinal": 2179,
+"rva": 551552,
+"forwarder": null,
+"ref": "user32.dll!0x86a80"
+},
+{
+"name": "OpenInputDesktop",
+"ordinal": 2180,
+"rva": 214592,
+"forwarder": null,
+"ref": "user32.dll!0x34640"
+},
+{
+"name": "OpenThreadDesktop",
+"ordinal": 2181,
+"rva": 214608,
+"forwarder": null,
+"ref": "user32.dll!0x34650"
+},
+{
+"name": "OpenWindowStationA",
+"ordinal": 2182,
+"rva": 116016,
+"forwarder": null,
+"ref": "user32.dll!0x1c530"
+},
+{
+"name": "OpenWindowStationW",
+"ordinal": 2183,
+"rva": 111760,
+"forwarder": null,
+"ref": "user32.dll!0x1b490"
+},
+{
+"name": "PackDDElParam",
+"ordinal": 2184,
+"rva": 366784,
+"forwarder": null,
+"ref": "user32.dll!0x598c0"
+},
+{
+"name": "PackTouchHitTestingProximityEvaluation",
+"ordinal": 2185,
+"rva": 521008,
+"forwarder": null,
+"ref": "user32.dll!0x7f330"
+},
+{
+"name": "PaintDesktop",
+"ordinal": 2186,
+"rva": 502784,
+"forwarder": null,
+"ref": "user32.dll!0x7ac00"
+},
+{
+"name": "PaintMenuBar",
+"ordinal": 2187,
+"rva": 214624,
+"forwarder": null,
+"ref": "user32.dll!0x34660"
+},
+{
+"name": "PaintMonitor",
+"ordinal": 2188,
+"rva": 214640,
+"forwarder": null,
+"ref": "user32.dll!0x34670"
+},
+{
+"name": "PeekMessageA",
+"ordinal": 2189,
+"rva": 39296,
+"forwarder": null,
+"ref": "user32.dll!0x9980"
+},
+{
+"name": "PeekMessageW",
+"ordinal": 2190,
+"rva": 41952,
+"forwarder": null,
+"ref": "user32.dll!0xa3e0"
+},
+{
+"name": "PhysicalToLogicalPoint",
+"ordinal": 2191,
+"rva": 214672,
+"forwarder": null,
+"ref": "user32.dll!0x34690"
+},
+{
+"name": "PhysicalToLogicalPointForPerMonitorDPI",
+"ordinal": 2192,
+"rva": 214688,
+"forwarder": null,
+"ref": "user32.dll!0x346a0"
+},
+{
+"name": "PostMessageA",
+"ordinal": 2193,
+"rva": 170112,
+"forwarder": null,
+"ref": "user32.dll!0x29880"
+},
+{
+"name": "PostMessageW",
+"ordinal": 2194,
+"rva": 135344,
+"forwarder": null,
+"ref": "user32.dll!0x210b0"
+},
+{
+"name": "PostQuitMessage",
+"ordinal": 2195,
+"rva": 178640,
+"forwarder": null,
+"ref": "user32.dll!0x2b9d0"
+},
+{
+"name": "PostThreadMessageA",
+"ordinal": 2196,
+"rva": 205168,
+"forwarder": null,
+"ref": "user32.dll!0x32170"
+},
+{
+"name": "PostThreadMessageW",
+"ordinal": 2197,
+"rva": 163456,
+"forwarder": null,
+"ref": "user32.dll!0x27e80"
+},
+{
+"name": "PrintWindow",
+"ordinal": 2198,
+"rva": 214704,
+"forwarder": null,
+"ref": "user32.dll!0x346b0"
+},
+{
+"name": "PrivateExtractIconExA",
+"ordinal": 2199,
+"rva": 434432,
+"forwarder": null,
+"ref": "user32.dll!0x6a100"
+},
+{
+"name": "PrivateExtractIconExW",
+"ordinal": 2200,
+"rva": 434576,
+"forwarder": null,
+"ref": "user32.dll!0x6a190"
+},
+{
+"name": "PrivateExtractIconsA",
+"ordinal": 2201,
+"rva": 434992,
+"forwarder": null,
+"ref": "user32.dll!0x6a330"
+},
+{
+"name": "PrivateExtractIconsW",
+"ordinal": 2202,
+"rva": 113216,
+"forwarder": null,
+"ref": "user32.dll!0x1ba40"
+},
+{
+"name": "PrivateRegisterICSProc",
+"ordinal": 2203,
+"rva": 332320,
+"forwarder": null,
+"ref": "user32.dll!0x51220"
+},
+{
+"name": "PtInRect",
+"ordinal": 2204,
+"rva": 79648,
+"forwarder": null,
+"ref": "user32.dll!0x13720"
+},
+{
+"name": "QueryBSDRWindow",
+"ordinal": 2205,
+"rva": 214768,
+"forwarder": null,
+"ref": "user32.dll!0x346f0"
+},
+{
+"name": "QueryDisplayConfig",
+"ordinal": 2206,
+"rva": 157232,
+"forwarder": null,
+"ref": "user32.dll!0x26630"
+},
+{
+"name": "QuerySendMessage",
+"ordinal": 2207,
+"rva": 214784,
+"forwarder": null,
+"ref": "user32.dll!0x34700"
+},
+{
+"name": "RIMAddInputObserver",
+"ordinal": 2208,
+"rva": 214800,
+"forwarder": null,
+"ref": "user32.dll!0x34710"
+},
+{
+"name": "RIMAreSiblingDevices",
+"ordinal": 2209,
+"rva": 214816,
+"forwarder": null,
+"ref": "user32.dll!0x34720"
+},
+{
+"name": "RIMDeviceIoControl",
+"ordinal": 2210,
+"rva": 214832,
+"forwarder": null,
+"ref": "user32.dll!0x34730"
+},
+{
+"name": "RIMEnableMonitorMappingForDevice",
+"ordinal": 2211,
+"rva": 214848,
+"forwarder": null,
+"ref": "user32.dll!0x34740"
+},
+{
+"name": "RIMFreeInputBuffer",
+"ordinal": 2212,
+"rva": 214864,
+"forwarder": null,
+"ref": "user32.dll!0x34750"
+},
+{
+"name": "RIMGetDevicePreparsedData",
+"ordinal": 2213,
+"rva": 214880,
+"forwarder": null,
+"ref": "user32.dll!0x34760"
+},
+{
+"name": "RIMGetDevicePreparsedDataLockfree",
+"ordinal": 2214,
+"rva": 214896,
+"forwarder": null,
+"ref": "user32.dll!0x34770"
+},
+{
+"name": "RIMGetDeviceProperties",
+"ordinal": 2215,
+"rva": 214912,
+"forwarder": null,
+"ref": "user32.dll!0x34780"
+},
+{
+"name": "RIMGetDevicePropertiesLockfree",
+"ordinal": 2216,
+"rva": 214928,
+"forwarder": null,
+"ref": "user32.dll!0x34790"
+},
+{
+"name": "RIMGetPhysicalDeviceRect",
+"ordinal": 2217,
+"rva": 214944,
+"forwarder": null,
+"ref": "user32.dll!0x347a0"
+},
+{
+"name": "RIMGetSourceProcessId",
+"ordinal": 2218,
+"rva": 214960,
+"forwarder": null,
+"ref": "user32.dll!0x347b0"
+},
+{
+"name": "RIMObserveNextInput",
+"ordinal": 2219,
+"rva": 214976,
+"forwarder": null,
+"ref": "user32.dll!0x347c0"
+},
+{
+"name": "RIMOnPnpNotification",
+"ordinal": 2220,
+"rva": 214992,
+"forwarder": null,
+"ref": "user32.dll!0x347d0"
+},
+{
+"name": "RIMOnTimerNotification",
+"ordinal": 2221,
+"rva": 215008,
+"forwarder": null,
+"ref": "user32.dll!0x347e0"
+},
+{
+"name": "RIMQueryDevicePath",
+"ordinal": 2222,
+"rva": 215024,
+"forwarder": null,
+"ref": "user32.dll!0x347f0"
+},
+{
+"name": "RIMReadInput",
+"ordinal": 2223,
+"rva": 215040,
+"forwarder": null,
+"ref": "user32.dll!0x34800"
+},
+{
+"name": "RIMRegisterForInput",
+"ordinal": 2224,
+"rva": 215056,
+"forwarder": null,
+"ref": "user32.dll!0x34810"
+},
+{
+"name": "RIMRemoveInputObserver",
+"ordinal": 2225,
+"rva": 215072,
+"forwarder": null,
+"ref": "user32.dll!0x34820"
+},
+{
+"name": "RIMSetExtendedDeviceProperty",
+"ordinal": 2226,
+"rva": 215088,
+"forwarder": null,
+"ref": "user32.dll!0x34830"
+},
+{
+"name": "RIMSetTestModeStatus",
+"ordinal": 2227,
+"rva": 215104,
+"forwarder": null,
+"ref": "user32.dll!0x34840"
+},
+{
+"name": "RIMUnregisterForInput",
+"ordinal": 2228,
+"rva": 215120,
+"forwarder": null,
+"ref": "user32.dll!0x34850"
+},
+{
+"name": "RIMUpdateInputObserverRegistration",
+"ordinal": 2229,
+"rva": 215136,
+"forwarder": null,
+"ref": "user32.dll!0x34860"
+},
+{
+"name": "RealChildWindowFromPoint",
+"ordinal": 2230,
+"rva": 215152,
+"forwarder": null,
+"ref": "user32.dll!0x34870"
+},
+{
+"name": "RealGetWindowClass",
+"ordinal": 2231,
+"rva": 536640,
+"forwarder": null,
+"ref": "user32.dll!0x83040"
+},
+{
+"name": "RealGetWindowClassA",
+"ordinal": 2232,
+"rva": 536640,
+"forwarder": null,
+"ref": "user32.dll!0x83040"
+},
+{
+"name": "RealGetWindowClassW",
+"ordinal": 2233,
+"rva": 146944,
+"forwarder": null,
+"ref": "user32.dll!0x23e00"
+},
+{
+"name": "ReasonCodeNeedsBugID",
+"ordinal": 2234,
+"rva": 508816,
+"forwarder": null,
+"ref": "user32.dll!0x7c390"
+},
+{
+"name": "ReasonCodeNeedsComment",
+"ordinal": 2235,
+"rva": 508832,
+"forwarder": null,
+"ref": "user32.dll!0x7c3a0"
+},
+{
+"name": "RecordShutdownReason",
+"ordinal": 2236,
+"rva": 207920,
+"forwarder": null,
+"ref": "user32.dll!0x32c30"
+},
+{
+"name": "RedrawWindow",
+"ordinal": 2237,
+"rva": 215168,
+"forwarder": null,
+"ref": "user32.dll!0x34880"
+},
+{
+"name": "RegisterBSDRWindow",
+"ordinal": 2238,
+"rva": 215184,
+"forwarder": null,
+"ref": "user32.dll!0x34890"
+},
+{
+"name": "RegisterClassA",
+"ordinal": 2239,
+"rva": 10960,
+"forwarder": null,
+"ref": "user32.dll!0x2ad0"
+},
+{
+"name": "RegisterClassExA",
+"ordinal": 2240,
+"rva": 564896,
+"forwarder": null,
+"ref": "user32.dll!0x89ea0"
+},
+{
+"name": "RegisterClassExW",
+"ordinal": 2241,
+"rva": 29376,
+"forwarder": null,
+"ref": "user32.dll!0x72c0"
+},
+{
+"name": "RegisterClassW",
+"ordinal": 2242,
+"rva": 29424,
+"forwarder": null,
+"ref": "user32.dll!0x72f0"
+},
+{
+"name": "RegisterClipboardFormatA",
+"ordinal": 2243,
+"rva": 12608,
+"forwarder": null,
+"ref": "user32.dll!0x3140"
+},
+{
+"name": "RegisterClipboardFormatW",
+"ordinal": 2244,
+"rva": 158560,
+"forwarder": null,
+"ref": "user32.dll!0x26b60"
+},
+{
+"name": "RegisterDManipHook",
+"ordinal": 2245,
+"rva": 215200,
+"forwarder": null,
+"ref": "user32.dll!0x348a0"
+},
+{
+"name": "RegisterDeviceNotificationA",
+"ordinal": 2246,
+"rva": 178864,
+"forwarder": null,
+"ref": "user32.dll!0x2bab0"
+},
+{
+"name": "RegisterDeviceNotificationW",
+"ordinal": 2247,
+"rva": 178864,
+"forwarder": null,
+"ref": "user32.dll!0x2bab0"
+},
+{
+"name": "RegisterErrorReportingDialog",
+"ordinal": 2248,
+"rva": 215216,
+"forwarder": null,
+"ref": "user32.dll!0x348b0"
+},
+{
+"name": "RegisterFrostWindow",
+"ordinal": 2249,
+"rva": 551696,
+"forwarder": null,
+"ref": "user32.dll!0x86b10"
+},
+{
+"name": "RegisterGhostWindow",
+"ordinal": 2250,
+"rva": 551728,
+"forwarder": null,
+"ref": "user32.dll!0x86b30"
+},
+{
+"name": "RegisterHotKey",
+"ordinal": 2251,
+"rva": 215232,
+"forwarder": null,
+"ref": "user32.dll!0x348c0"
+},
+{
+"name": "RegisterLogonProcess",
+"ordinal": 2252,
+"rva": 183008,
+"forwarder": null,
+"ref": "user32.dll!0x2cae0"
+},
+{
+"name": "RegisterMessagePumpHook",
+"ordinal": 2253,
+"rva": 179472,
+"forwarder": null,
+"ref": "user32.dll!0x2bd10"
+},
+{
+"name": "RegisterPointerDeviceNotifications",
+"ordinal": 2254,
+"rva": 215248,
+"forwarder": null,
+"ref": "user32.dll!0x348d0"
+},
+{
+"name": "RegisterPointerInputTarget",
+"ordinal": 2255,
+"rva": 329184,
+"forwarder": null,
+"ref": "user32.dll!0x505e0"
+},
+{
+"name": "RegisterPointerInputTargetEx",
+"ordinal": 2256,
+"rva": 327808,
+"forwarder": null,
+"ref": "user32.dll!0x50080"
+},
+{
+"name": "RegisterPowerSettingNotification",
+"ordinal": 2257,
+"rva": 172496,
+"forwarder": null,
+"ref": "user32.dll!0x2a1d0"
+},
+{
+"name": "RegisterRawInputDevices",
+"ordinal": 2258,
+"rva": 215264,
+"forwarder": null,
+"ref": "user32.dll!0x348e0"
+},
+{
+"name": "RegisterServicesProcess",
+"ordinal": 2259,
+"rva": 215280,
+"forwarder": null,
+"ref": "user32.dll!0x348f0"
+},
+{
+"name": "RegisterSessionPort",
+"ordinal": 2260,
+"rva": 215296,
+"forwarder": null,
+"ref": "user32.dll!0x34900"
+},
+{
+"name": "RegisterShellHookWindow",
+"ordinal": 2261,
+"rva": 183184,
+"forwarder": null,
+"ref": "user32.dll!0x2cb90"
+},
+{
+"name": "RegisterSuspendResumeNotification",
+"ordinal": 2262,
+"rva": 503376,
+"forwarder": null,
+"ref": "user32.dll!0x7ae50"
+},
+{
+"name": "RegisterSystemThread",
+"ordinal": 2263,
+"rva": 205888,
+"forwarder": null,
+"ref": "user32.dll!0x32440"
+},
+{
+"name": "RegisterTasklist",
+"ordinal": 2264,
+"rva": 215328,
+"forwarder": null,
+"ref": "user32.dll!0x34920"
+},
+{
+"name": "RegisterTouchHitTestingWindow",
+"ordinal": 2265,
+"rva": 215344,
+"forwarder": null,
+"ref": "user32.dll!0x34930"
+},
+{
+"name": "RegisterTouchWindow",
+"ordinal": 2266,
+"rva": 503488,
+"forwarder": null,
+"ref": "user32.dll!0x7aec0"
+},
+{
+"name": "RegisterUserApiHook",
+"ordinal": 2267,
+"rva": 181680,
+"forwarder": null,
+"ref": "user32.dll!0x2c5b0"
+},
+{
+"name": "RegisterWindowMessageA",
+"ordinal": 2268,
+"rva": 12608,
+"forwarder": null,
+"ref": "user32.dll!0x3140"
+},
+{
+"name": "RegisterWindowMessageW",
+"ordinal": 2269,
+"rva": 158560,
+"forwarder": null,
+"ref": "user32.dll!0x26b60"
+},
+{
+"name": "ReleaseCapture",
+"ordinal": 2270,
+"rva": 181456,
+"forwarder": null,
+"ref": "user32.dll!0x2c4d0"
+},
+{
+"name": "ReleaseDC",
+"ordinal": 2271,
+"rva": 146352,
+"forwarder": null,
+"ref": "user32.dll!0x23bb0"
+},
+{
+"name": "ReleaseDwmHitTestWaiters",
+"ordinal": 2272,
+"rva": 215376,
+"forwarder": null,
+"ref": "user32.dll!0x34950"
+},
+{
+"name": "RemoveClipboardFormatListener",
+"ordinal": 2273,
+"rva": 183952,
+"forwarder": null,
+"ref": "user32.dll!0x2ce90"
+},
+{
+"name": "RemoveInjectionDevice",
+"ordinal": 2274,
+"rva": 212064,
+"forwarder": null,
+"ref": "user32.dll!0x33c60"
+},
+{
+"name": "RemoveMenu",
+"ordinal": 2275,
+"rva": 215392,
+"forwarder": null,
+"ref": "user32.dll!0x34960"
+},
+{
+"name": "RemovePropA",
+"ordinal": 2276,
+"rva": 536848,
+"forwarder": null,
+"ref": "user32.dll!0x83110"
+},
+{
+"name": "RemovePropW",
+"ordinal": 2277,
+"rva": 155616,
+"forwarder": null,
+"ref": "user32.dll!0x25fe0"
+},
+{
+"name": "RemoveThreadTSFEventAwareness",
+"ordinal": 2278,
+"rva": 523200,
+"forwarder": null,
+"ref": "user32.dll!0x7fbc0"
+},
+{
+"name": "RemoveVisualIdentifier",
+"ordinal": 2279,
+"rva": 215408,
+"forwarder": null,
+"ref": "user32.dll!0x34970"
+},
+{
+"name": "ReplyMessage",
+"ordinal": 2280,
+"rva": 170000,
+"forwarder": null,
+"ref": "user32.dll!0x29810"
+},
+{
+"name": "ResolveDesktopForWOW",
+"ordinal": 2281,
+"rva": 215440,
+"forwarder": null,
+"ref": "user32.dll!0x34990"
+},
+{
+"name": "ReuseDDElParam",
+"ordinal": 2282,
+"rva": 366912,
+"forwarder": null,
+"ref": "user32.dll!0x59940"
+},
+{
+"name": "ScreenToClient",
+"ordinal": 2283,
+"rva": 73056,
+"forwarder": null,
+"ref": "user32.dll!0x11d60"
+},
+{
+"name": "ScrollChildren",
+"ordinal": 2284,
+"rva": 483360,
+"forwarder": null,
+"ref": "user32.dll!0x76020"
+},
+{
+"name": "ScrollDC",
+"ordinal": 2285,
+"rva": 158880,
+"forwarder": null,
+"ref": "user32.dll!0x26ca0"
+},
+{
+"name": "ScrollWindow",
+"ordinal": 2286,
+"rva": 551824,
+"forwarder": null,
+"ref": "user32.dll!0x86b90"
+},
+{
+"name": "ScrollWindowEx",
+"ordinal": 2287,
+"rva": 158192,
+"forwarder": null,
+"ref": "user32.dll!0x269f0"
+},
+{
+"name": "SendDlgItemMessageA",
+"ordinal": 2288,
+"rva": 564976,
+"forwarder": null,
+"ref": "user32.dll!0x89ef0"
+},
+{
+"name": "SendDlgItemMessageW",
+"ordinal": 2289,
+"rva": 5152,
+"forwarder": null,
+"ref": "user32.dll!0x1420"
+},
+{
+"name": "SendIMEMessageExA",
+"ordinal": 2290,
+"rva": 538240,
+"forwarder": null,
+"ref": "user32.dll!0x83680"
+},
+{
+"name": "SendIMEMessageExW",
+"ordinal": 2291,
+"rva": 538272,
+"forwarder": null,
+"ref": "user32.dll!0x836a0"
+},
+{
+"name": "SendInput",
+"ordinal": 2292,
+"rva": 215488,
+"forwarder": null,
+"ref": "user32.dll!0x349c0"
+},
+{
+"name": "SendMessageA",
+"ordinal": 2293,
+"rva": 38704,
+"forwarder": null,
+"ref": "user32.dll!0x9730"
+},
+{
+"name": "SendMessageCallbackA",
+"ordinal": 2294,
+"rva": 537008,
+"forwarder": null,
+"ref": "user32.dll!0x831b0"
+},
+{
+"name": "SendMessageCallbackW",
+"ordinal": 2295,
+"rva": 163264,
+"forwarder": null,
+"ref": "user32.dll!0x27dc0"
+},
+{
+"name": "SendMessageTimeoutA",
+"ordinal": 2296,
+"rva": 200960,
+"forwarder": null,
+"ref": "user32.dll!0x31100"
+},
+{
+"name": "SendMessageTimeoutW",
+"ordinal": 2297,
+"rva": 133872,
+"forwarder": null,
+"ref": "user32.dll!0x20af0"
+},
+{
+"name": "SendMessageW",
+"ordinal": 2298,
+"rva": 54704,
+"forwarder": null,
+"ref": "user32.dll!0xd5b0"
+},
+{
+"name": "SendNotifyMessageA",
+"ordinal": 2299,
+"rva": 199568,
+"forwarder": null,
+"ref": "user32.dll!0x30b90"
+},
+{
+"name": "SendNotifyMessageW",
+"ordinal": 2300,
+"rva": 168848,
+"forwarder": null,
+"ref": "user32.dll!0x29390"
+},
+{
+"name": "SetActiveWindow",
+"ordinal": 2301,
+"rva": 215552,
+"forwarder": null,
+"ref": "user32.dll!0x34a00"
+},
+{
+"name": "SetCapture",
+"ordinal": 2302,
+"rva": 215632,
+"forwarder": null,
+"ref": "user32.dll!0x34a50"
+},
+{
+"name": "SetCaretBlinkTime",
+"ordinal": 2303,
+"rva": 176096,
+"forwarder": null,
+"ref": "user32.dll!0x2afe0"
+},
+{
+"name": "SetCaretPos",
+"ordinal": 2304,
+"rva": 177952,
+"forwarder": null,
+"ref": "user32.dll!0x2b720"
+},
+{
+"name": "SetClassLongA",
+"ordinal": 2305,
+"rva": 537152,
+"forwarder": null,
+"ref": "user32.dll!0x83240"
+},
+{
+"name": "SetClassLongPtrA",
+"ordinal": 2306,
+"rva": 537184,
+"forwarder": null,
+"ref": "user32.dll!0x83260"
+},
+{
+"name": "SetClassLongPtrW",
+"ordinal": 2307,
+"rva": 182704,
+"forwarder": null,
+"ref": "user32.dll!0x2c9b0"
+},
+{
+"name": "SetClassLongW",
+"ordinal": 2308,
+"rva": 205856,
+"forwarder": null,
+"ref": "user32.dll!0x32420"
+},
+{
+"name": "SetClassWord",
+"ordinal": 2309,
+"rva": 215664,
+"forwarder": null,
+"ref": "user32.dll!0x34a70"
+},
+{
+"name": "SetClipboardData",
+"ordinal": 2310,
+"rva": 196496,
+"forwarder": null,
+"ref": "user32.dll!0x2ff90"
+},
+{
+"name": "SetClipboardViewer",
+"ordinal": 2311,
+"rva": 205968,
+"forwarder": null,
+"ref": "user32.dll!0x32490"
+},
+{
+"name": "SetCoalescableTimer",
+"ordinal": 2312,
+"rva": 215680,
+"forwarder": null,
+"ref": "user32.dll!0x34a80"
+},
+{
+"name": "SetCursor",
+"ordinal": 2313,
+"rva": 176528,
+"forwarder": null,
+"ref": "user32.dll!0x2b190"
+},
+{
+"name": "SetCursorContents",
+"ordinal": 2314,
+"rva": 215728,
+"forwarder": null,
+"ref": "user32.dll!0x34ab0"
+},
+{
+"name": "SetCursorPos",
+"ordinal": 2315,
+"rva": 215760,
+"forwarder": null,
+"ref": "user32.dll!0x34ad0"
+},
+{
+"name": "SetDebugErrorLevel",
+"ordinal": 2316,
+"rva": 184080,
+"forwarder": null,
+"ref": "user32.dll!0x2cf10"
+},
+{
+"name": "SetDeskWallpaper",
+"ordinal": 2317,
+"rva": 551920,
+"forwarder": null,
+"ref": "user32.dll!0x86bf0"
+},
+{
+"name": "SetDesktopColorTransform",
+"ordinal": 2318,
+"rva": 215776,
+"forwarder": null,
+"ref": "user32.dll!0x34ae0"
+},
+{
+"name": "SetDialogControlDpiChangeBehavior",
+"ordinal": 2319,
+"rva": 215808,
+"forwarder": null,
+"ref": "user32.dll!0x34b00"
+},
+{
+"name": "SetDialogDpiChangeBehavior",
+"ordinal": 2320,
+"rva": 370096,
+"forwarder": null,
+"ref": "user32.dll!0x5a5b0"
+},
+{
+"name": "SetDisplayAutoRotationPreferences",
+"ordinal": 2321,
+"rva": 215824,
+"forwarder": null,
+"ref": "user32.dll!0x34b10"
+},
+{
+"name": "SetDisplayConfig",
+"ordinal": 2322,
+"rva": 570912,
+"forwarder": null,
+"ref": "user32.dll!0x8b620"
+},
+{
+"name": "SetDlgItemInt",
+"ordinal": 2323,
+"rva": 5472,
+"forwarder": null,
+"ref": "user32.dll!0x1560"
+},
+{
+"name": "SetDlgItemTextA",
+"ordinal": 2324,
+"rva": 565056,
+"forwarder": null,
+"ref": "user32.dll!0x89f40"
+},
+{
+"name": "SetDlgItemTextW",
+"ordinal": 2325,
+"rva": 554592,
+"forwarder": null,
+"ref": "user32.dll!0x87660"
+},
+{
+"name": "SetDoubleClickTime",
+"ordinal": 2326,
+"rva": 551952,
+"forwarder": null,
+"ref": "user32.dll!0x86c10"
+},
+{
+"name": "SetFeatureReportResponse",
+"ordinal": 2327,
+"rva": 215872,
+"forwarder": null,
+"ref": "user32.dll!0x34b40"
+},
+{
+"name": "SetFocus",
+"ordinal": 2328,
+"rva": 215888,
+"forwarder": null,
+"ref": "user32.dll!0x34b50"
+},
+{
+"name": "SetForegroundWindow",
+"ordinal": 2329,
+"rva": 179440,
+"forwarder": null,
+"ref": "user32.dll!0x2bcf0"
+},
+{
+"name": "SetFullscreenMagnifierOffsetsDWMUpdated",
+"ordinal": 2330,
+"rva": 215920,
+"forwarder": null,
+"ref": "user32.dll!0x34b70"
+},
+{
+"name": "SetGestureConfig",
+"ordinal": 2331,
+"rva": 215936,
+"forwarder": null,
+"ref": "user32.dll!0x34b80"
+},
+{
+"name": "SetInternalWindowPos",
+"ordinal": 2332,
+"rva": 216000,
+"forwarder": null,
+"ref": "user32.dll!0x34bc0"
+},
+{
+"name": "SetKeyboardState",
+"ordinal": 2333,
+"rva": 216016,
+"forwarder": null,
+"ref": "user32.dll!0x34bd0"
+},
+{
+"name": "SetLastErrorEx",
+"ordinal": 2334,
+"rva": 504768,
+"forwarder": null,
+"ref": "user32.dll!0x7b3c0"
+},
+{
+"name": "SetLayeredWindowAttributes",
+"ordinal": 2335,
+"rva": 216032,
+"forwarder": null,
+"ref": "user32.dll!0x34be0"
+},
+{
+"name": "SetMagnificationDesktopColorEffect",
+"ordinal": 2336,
+"rva": 475744,
+"forwarder": null,
+"ref": "user32.dll!0x74260"
+},
+{
+"name": "SetMagnificationDesktopMagnification",
+"ordinal": 2337,
+"rva": 475968,
+"forwarder": null,
+"ref": "user32.dll!0x74340"
+},
+{
+"name": "SetMagnificationDesktopMagnifierOffsetsDWMUpdated",
+"ordinal": 2338,
+"rva": 216048,
+"forwarder": null,
+"ref": "user32.dll!0x34bf0"
+},
+{
+"name": "SetMagnificationDesktopSamplingMode",
+"ordinal": 2339,
+"rva": 476096,
+"forwarder": null,
+"ref": "user32.dll!0x743c0"
+},
+{
+"name": "SetMagnificationLensCtxInformation",
+"ordinal": 2340,
+"rva": 216064,
+"forwarder": null,
+"ref": "user32.dll!0x34c00"
+},
+{
+"name": "SetMenu",
+"ordinal": 2341,
+"rva": 182240,
+"forwarder": null,
+"ref": "user32.dll!0x2c7e0"
+},
+{
+"name": "SetMenuContextHelpId",
+"ordinal": 2342,
+"rva": 216080,
+"forwarder": null,
+"ref": "user32.dll!0x34c10"
+},
+{
+"name": "SetMenuDefaultItem",
+"ordinal": 2343,
+"rva": 216096,
+"forwarder": null,
+"ref": "user32.dll!0x34c20"
+},
+{
+"name": "SetMenuInfo",
+"ordinal": 2344,
+"rva": 6000,
+"forwarder": null,
+"ref": "user32.dll!0x1770"
+},
+{
+"name": "SetMenuItemBitmaps",
+"ordinal": 2345,
+"rva": 7072,
+"forwarder": null,
+"ref": "user32.dll!0x1ba0"
+},
+{
+"name": "SetMenuItemInfoA",
+"ordinal": 2346,
+"rva": 565104,
+"forwarder": null,
+"ref": "user32.dll!0x89f70"
+},
+{
+"name": "SetMenuItemInfoW",
+"ordinal": 2347,
+"rva": 129536,
+"forwarder": null,
+"ref": "user32.dll!0x1fa00"
+},
+{
+"name": "SetMessageExtraInfo",
+"ordinal": 2348,
+"rva": 327776,
+"forwarder": null,
+"ref": "user32.dll!0x50060"
+},
+{
+"name": "SetMessageQueue",
+"ordinal": 2349,
+"rva": 184128,
+"forwarder": null,
+"ref": "user32.dll!0x2cf40"
+},
+{
+"name": "SetMirrorRendering",
+"ordinal": 2350,
+"rva": 216112,
+"forwarder": null,
+"ref": "user32.dll!0x34c30"
+},
+{
+"name": "SetParent",
+"ordinal": 2351,
+"rva": 181104,
+"forwarder": null,
+"ref": "user32.dll!0x2c370"
+},
+{
+"name": "SetPhysicalCursorPos",
+"ordinal": 2352,
+"rva": 215760,
+"forwarder": null,
+"ref": "user32.dll!0x34ad0"
+},
+{
+"name": "SetPointerDeviceInputSpace",
+"ordinal": 2353,
+"rva": 216128,
+"forwarder": null,
+"ref": "user32.dll!0x34c40"
+},
+{
+"name": "SetProcessDPIAware",
+"ordinal": 2354,
+"rva": 111840,
+"forwarder": null,
+"ref": "user32.dll!0x1b4e0"
+},
+{
+"name": "SetProcessDefaultLayout",
+"ordinal": 2355,
+"rva": 551984,
+"forwarder": null,
+"ref": "user32.dll!0x86c30"
+},
+{
+"name": "SetProcessDpiAwarenessContext",
+"ordinal": 2356,
+"rva": 107776,
+"forwarder": null,
+"ref": "user32.dll!0x1a500"
+},
+{
+"name": "SetProcessDpiAwarenessInternal",
+"ordinal": 2357,
+"rva": 107696,
+"forwarder": null,
+"ref": "user32.dll!0x1a4b0"
+},
+{
+"name": "SetProcessRestrictionExemption",
+"ordinal": 2358,
+"rva": 216192,
+"forwarder": null,
+"ref": "user32.dll!0x34c80"
+},
+{
+"name": "SetProcessWindowStation",
+"ordinal": 2359,
+"rva": 216208,
+"forwarder": null,
+"ref": "user32.dll!0x34c90"
+},
+{
+"name": "SetProgmanWindow",
+"ordinal": 2360,
+"rva": 552016,
+"forwarder": null,
+"ref": "user32.dll!0x86c50"
+},
+{
+"name": "SetPropA",
+"ordinal": 2361,
+"rva": 537504,
+"forwarder": null,
+"ref": "user32.dll!0x833a0"
+},
+{
+"name": "SetPropW",
+"ordinal": 2362,
+"rva": 147392,
+"forwarder": null,
+"ref": "user32.dll!0x23fc0"
+},
+{
+"name": "SetRect",
+"ordinal": 2363,
+"rva": 145936,
+"forwarder": null,
+"ref": "user32.dll!0x23a10"
+},
+{
+"name": "SetRectEmpty",
+"ordinal": 2364,
+"rva": 145904,
+"forwarder": null,
+"ref": "user32.dll!0x239f0"
+},
+{
+"name": "SetScrollInfo",
+"ordinal": 2365,
+"rva": 76496,
+"forwarder": null,
+"ref": "user32.dll!0x12ad0"
+},
+{
+"name": "SetScrollPos",
+"ordinal": 2366,
+"rva": 205696,
+"forwarder": null,
+"ref": "user32.dll!0x32380"
+},
+{
+"name": "SetScrollRange",
+"ordinal": 2367,
+"rva": 200304,
+"forwarder": null,
+"ref": "user32.dll!0x30e70"
+},
+{
+"name": "SetShellChangeNotifyWindow",
+"ordinal": 2368,
+"rva": 183920,
+"forwarder": null,
+"ref": "user32.dll!0x2ce70"
+},
+{
+"name": "SetShellWindow",
+"ordinal": 2369,
+"rva": 552048,
+"forwarder": null,
+"ref": "user32.dll!0x86c70"
+},
+{
+"name": "SetShellWindowEx",
+"ordinal": 2370,
+"rva": 216240,
+"forwarder": null,
+"ref": "user32.dll!0x34cb0"
+},
+{
+"name": "SetSysColors",
+"ordinal": 2371,
+"rva": 183648,
+"forwarder": null,
+"ref": "user32.dll!0x2cd60"
+},
+{
+"name": "SetSysColorsTemp",
+"ordinal": 2372,
+"rva": 504800,
+"forwarder": null,
+"ref": "user32.dll!0x7b3e0"
+},
+{
+"name": "SetSystemCursor",
+"ordinal": 2373,
+"rva": 503520,
+"forwarder": null,
+"ref": "user32.dll!0x7aee0"
+},
+{
+"name": "SetSystemMenu",
+"ordinal": 2374,
+"rva": 216256,
+"forwarder": null,
+"ref": "user32.dll!0x34cc0"
+},
+{
+"name": "SetTaskmanWindow",
+"ordinal": 2375,
+"rva": 183824,
+"forwarder": null,
+"ref": "user32.dll!0x2ce10"
+},
+{
+"name": "SetThreadDesktop",
+"ordinal": 2376,
+"rva": 180512,
+"forwarder": null,
+"ref": "user32.dll!0x2c120"
+},
+{
+"name": "SetThreadDpiAwarenessContext",
+"ordinal": 2377,
+"rva": 93312,
+"forwarder": null,
+"ref": "user32.dll!0x16c80"
+},
+{
+"name": "SetThreadDpiHostingBehavior",
+"ordinal": 2378,
+"rva": 552112,
+"forwarder": null,
+"ref": "user32.dll!0x86cb0"
+},
+{
+"name": "SetThreadInputBlocked",
+"ordinal": 2379,
+"rva": 216288,
+"forwarder": null,
+"ref": "user32.dll!0x34ce0"
+},
+{
+"name": "SetTimer",
+"ordinal": 2380,
+"rva": 146448,
+"forwarder": null,
+"ref": "user32.dll!0x23c10"
+},
+{
+"name": "SetUserObjectInformationA",
+"ordinal": 2381,
+"rva": 552352,
+"forwarder": null,
+"ref": "user32.dll!0x86da0"
+},
+{
+"name": "SetUserObjectInformationW",
+"ordinal": 2382,
+"rva": 552480,
+"forwarder": null,
+"ref": "user32.dll!0x86e20"
+},
+{
+"name": "SetUserObjectSecurity",
+"ordinal": 2383,
+"rva": 182272,
+"forwarder": null,
+"ref": "user32.dll!0x2c800"
+},
+{
+"name": "SetWinEventHook",
+"ordinal": 2384,
+"rva": 168960,
+"forwarder": null,
+"ref": "user32.dll!0x29400"
+},
+{
+"name": "SetWindowBand",
+"ordinal": 2385,
+"rva": 216320,
+"forwarder": null,
+"ref": "user32.dll!0x34d00"
+},
+{
+"name": "SetWindowCompositionAttribute",
+"ordinal": 2386,
+"rva": 167392,
+"forwarder": null,
+"ref": "user32.dll!0x28de0"
+},
+{
+"name": "SetWindowCompositionTransition",
+"ordinal": 2387,
+"rva": 216336,
+"forwarder": null,
+"ref": "user32.dll!0x34d10"
+},
+{
+"name": "SetWindowContextHelpId",
+"ordinal": 2388,
+"rva": 552496,
+"forwarder": null,
+"ref": "user32.dll!0x86e30"
+},
+{
+"name": "SetWindowDisplayAffinity",
+"ordinal": 2389,
+"rva": 216352,
+"forwarder": null,
+"ref": "user32.dll!0x34d20"
+},
+{
+"name": "SetWindowFeedbackSetting",
+"ordinal": 2390,
+"rva": 216368,
+"forwarder": null,
+"ref": "user32.dll!0x34d30"
+},
+{
+"name": "SetWindowLongA",
+"ordinal": 2391,
+"rva": 182352,
+"forwarder": null,
+"ref": "user32.dll!0x2c850"
+},
+{
+"name": "SetWindowLongPtrA",
+"ordinal": 2392,
+"rva": 182448,
+"forwarder": null,
+"ref": "user32.dll!0x2c8b0"
+},
+{
+"name": "SetWindowLongPtrW",
+"ordinal": 2393,
+"rva": 47040,
+"forwarder": null,
+"ref": "user32.dll!0xb7c0"
+},
+{
+"name": "SetWindowLongW",
+"ordinal": 2394,
+"rva": 69392,
+"forwarder": null,
+"ref": "user32.dll!0x10f10"
+},
+{
+"name": "SetWindowPlacement",
+"ordinal": 2395,
+"rva": 216400,
+"forwarder": null,
+"ref": "user32.dll!0x34d50"
+},
+{
+"name": "SetWindowPos",
+"ordinal": 2396,
+"rva": 216416,
+"forwarder": null,
+"ref": "user32.dll!0x34d60"
+},
+{
+"name": "SetWindowRgn",
+"ordinal": 2397,
+"rva": 83552,
+"forwarder": null,
+"ref": "user32.dll!0x14660"
+},
+{
+"name": "SetWindowRgnEx",
+"ordinal": 2398,
+"rva": 503616,
+"forwarder": null,
+"ref": "user32.dll!0x7af40"
+},
+{
+"name": "SetWindowStationUser",
+"ordinal": 2399,
+"rva": 182032,
+"forwarder": null,
+"ref": "user32.dll!0x2c710"
+},
+{
+"name": "SetWindowTextA",
+"ordinal": 2400,
+"rva": 565216,
+"forwarder": null,
+"ref": "user32.dll!0x89fe0"
+},
+{
+"name": "SetWindowTextW",
+"ordinal": 2401,
+"rva": 83024,
+"forwarder": null,
+"ref": "user32.dll!0x14450"
+},
+{
+"name": "SetWindowWord",
+"ordinal": 2402,
+"rva": 216448,
+"forwarder": null,
+"ref": "user32.dll!0x34d80"
+},
+{
+"name": "SetWindowsHookA",
+"ordinal": 2403,
+"rva": 324832,
+"forwarder": null,
+"ref": "user32.dll!0x4f4e0"
+},
+{
+"name": "SetWindowsHookExA",
+"ordinal": 2404,
+"rva": 324864,
+"forwarder": null,
+"ref": "user32.dll!0x4f500"
+},
+{
+"name": "SetWindowsHookExAW",
+"ordinal": 2405,
+"rva": 219344,
+"forwarder": null,
+"ref": "user32.dll!0x358d0"
+},
+{
+"name": "SetWindowsHookExW",
+"ordinal": 2406,
+"rva": 176832,
+"forwarder": null,
+"ref": "user32.dll!0x2b2c0"
+},
+{
+"name": "SetWindowsHookW",
+"ordinal": 2407,
+"rva": 324896,
+"forwarder": null,
+"ref": "user32.dll!0x4f520"
+},
+{
+"name": "ShowCaret",
+"ordinal": 2408,
+"rva": 167568,
+"forwarder": null,
+"ref": "user32.dll!0x28e90"
+},
+{
+"name": "ShowCursor",
+"ordinal": 2409,
+"rva": 216464,
+"forwarder": null,
+"ref": "user32.dll!0x34d90"
+},
+{
+"name": "ShowOwnedPopups",
+"ordinal": 2410,
+"rva": 206032,
+"forwarder": null,
+"ref": "user32.dll!0x324d0"
+},
+{
+"name": "ShowScrollBar",
+"ordinal": 2411,
+"rva": 216480,
+"forwarder": null,
+"ref": "user32.dll!0x34da0"
+},
+{
+"name": "ShowStartGlass",
+"ordinal": 2412,
+"rva": 552528,
+"forwarder": null,
+"ref": "user32.dll!0x86e50"
+},
+{
+"name": "ShowSystemCursor",
+"ordinal": 2413,
+"rva": 216496,
+"forwarder": null,
+"ref": "user32.dll!0x34db0"
+},
+{
+"name": "ShowWindow",
+"ordinal": 2414,
+"rva": 216512,
+"forwarder": null,
+"ref": "user32.dll!0x34dc0"
+},
+{
+"name": "ShowWindowAsync",
+"ordinal": 2415,
+"rva": 216528,
+"forwarder": null,
+"ref": "user32.dll!0x34dd0"
+},
+{
+"name": "ShutdownBlockReasonCreate",
+"ordinal": 2416,
+"rva": 173984,
+"forwarder": null,
+"ref": "user32.dll!0x2a7a0"
+},
+{
+"name": "ShutdownBlockReasonDestroy",
+"ordinal": 2417,
+"rva": 216544,
+"forwarder": null,
+"ref": "user32.dll!0x34de0"
+},
+{
+"name": "ShutdownBlockReasonQuery",
+"ordinal": 2418,
+"rva": 216560,
+"forwarder": null,
+"ref": "user32.dll!0x34df0"
+},
+{
+"name": "SignalRedirectionStartComplete",
+"ordinal": 2419,
+"rva": 216576,
+"forwarder": null,
+"ref": "user32.dll!0x34e00"
+},
+{
+"name": "SkipPointerFrameMessages",
+"ordinal": 2420,
+"rva": 216592,
+"forwarder": null,
+"ref": "user32.dll!0x34e10"
+},
+{
+"name": "SoftModalMessageBox",
+"ordinal": 2421,
+"rva": 497584,
+"forwarder": null,
+"ref": "user32.dll!0x797b0"
+},
+{
+"name": "SoundSentry",
+"ordinal": 2422,
+"rva": 216624,
+"forwarder": null,
+"ref": "user32.dll!0x34e30"
+},
+{
+"name": "SubtractRect",
+"ordinal": 2423,
+"rva": 172048,
+"forwarder": null,
+"ref": "user32.dll!0x2a010"
+},
+{
+"name": "SwapMouseButton",
+"ordinal": 2424,
+"rva": 552560,
+"forwarder": null,
+"ref": "user32.dll!0x86e70"
+},
+{
+"name": "SwitchDesktop",
+"ordinal": 2425,
+"rva": 183280,
+"forwarder": null,
+"ref": "user32.dll!0x2cbf0"
+},
+{
+"name": "SwitchDesktopWithFade",
+"ordinal": 2426,
+"rva": 183888,
+"forwarder": null,
+"ref": "user32.dll!0x2ce50"
+},
+{
+"name": "SwitchToThisWindow",
+"ordinal": 2427,
+"rva": 7216,
+"forwarder": null,
+"ref": "user32.dll!0x1c30"
+},
+{
+"name": "SystemParametersInfoA",
+"ordinal": 2428,
+"rva": 166592,
+"forwarder": null,
+"ref": "user32.dll!0x28ac0"
+},
+{
+"name": "SystemParametersInfoForDpi",
+"ordinal": 2429,
+"rva": 166144,
+"forwarder": null,
+"ref": "user32.dll!0x28900"
+},
+{
+"name": "SystemParametersInfoW",
+"ordinal": 2430,
+"rva": 144208,
+"forwarder": null,
+"ref": "user32.dll!0x23350"
+},
+{
+"name": "TabbedTextOutA",
+"ordinal": 2431,
+"rva": 358448,
+"forwarder": null,
+"ref": "user32.dll!0x57830"
+},
+{
+"name": "TabbedTextOutW",
+"ordinal": 2432,
+"rva": 358752,
+"forwarder": null,
+"ref": "user32.dll!0x57960"
+},
+{
+"name": "TileChildWindows",
+"ordinal": 2433,
+"rva": 552592,
+"forwarder": null,
+"ref": "user32.dll!0x86e90"
+},
+{
+"name": "TileWindows",
+"ordinal": 2434,
+"rva": 483408,
+"forwarder": null,
+"ref": "user32.dll!0x76050"
+},
+{
+"name": "ToAscii",
+"ordinal": 2435,
+"rva": 552640,
+"forwarder": null,
+"ref": "user32.dll!0x86ec0"
+},
+{
+"name": "ToAsciiEx",
+"ordinal": 2436,
+"rva": 552768,
+"forwarder": null,
+"ref": "user32.dll!0x86f40"
+},
+{
+"name": "ToUnicode",
+"ordinal": 2437,
+"rva": 503696,
+"forwarder": null,
+"ref": "user32.dll!0x7af90"
+},
+{
+"name": "ToUnicodeEx",
+"ordinal": 2438,
+"rva": 166000,
+"forwarder": null,
+"ref": "user32.dll!0x28870"
+},
+{
+"name": "TrackMouseEvent",
+"ordinal": 2439,
+"rva": 216640,
+"forwarder": null,
+"ref": "user32.dll!0x34e40"
+},
+{
+"name": "TrackPopupMenu",
+"ordinal": 2440,
+"rva": 484352,
+"forwarder": null,
+"ref": "user32.dll!0x76400"
+},
+{
+"name": "TrackPopupMenuEx",
+"ordinal": 2441,
+"rva": 216656,
+"forwarder": null,
+"ref": "user32.dll!0x34e50"
+},
+{
+"name": "TranslateAccelerator",
+"ordinal": 2442,
+"rva": 553152,
+"forwarder": null,
+"ref": "user32.dll!0x870c0"
+},
+{
+"name": "TranslateAcceleratorA",
+"ordinal": 2443,
+"rva": 553152,
+"forwarder": null,
+"ref": "user32.dll!0x870c0"
+},
+{
+"name": "TranslateAcceleratorW",
+"ordinal": 2444,
+"rva": 154768,
+"forwarder": null,
+"ref": "user32.dll!0x25c90"
+},
+{
+"name": "TranslateMDISysAccel",
+"ordinal": 2445,
+"rva": 483456,
+"forwarder": null,
+"ref": "user32.dll!0x76080"
+},
+{
+"name": "TranslateMessage",
+"ordinal": 2446,
+"rva": 37888,
+"forwarder": null,
+"ref": "user32.dll!0x9400"
+},
+{
+"name": "TranslateMessageEx",
+"ordinal": 2447,
+"rva": 158096,
+"forwarder": null,
+"ref": "user32.dll!0x26990"
+},
+{
+"name": "UnhookWinEvent",
+"ordinal": 2448,
+"rva": 216688,
+"forwarder": null,
+"ref": "user32.dll!0x34e70"
+},
+{
+"name": "UnhookWindowsHook",
+"ordinal": 2449,
+"rva": 553296,
+"forwarder": null,
+"ref": "user32.dll!0x87150"
+},
+{
+"name": "UnhookWindowsHookEx",
+"ordinal": 2450,
+"rva": 176672,
+"forwarder": null,
+"ref": "user32.dll!0x2b220"
+},
+{
+"name": "UnionRect",
+"ordinal": 2451,
+"rva": 146496,
+"forwarder": null,
+"ref": "user32.dll!0x23c40"
+},
+{
+"name": "UnloadKeyboardLayout",
+"ordinal": 2452,
+"rva": 553328,
+"forwarder": null,
+"ref": "user32.dll!0x87170"
+},
+{
+"name": "UnlockWindowStation",
+"ordinal": 2453,
+"rva": 216704,
+"forwarder": null,
+"ref": "user32.dll!0x34e80"
+},
+{
+"name": "UnpackDDElParam",
+"ordinal": 2454,
+"rva": 367104,
+"forwarder": null,
+"ref": "user32.dll!0x59a00"
+},
+{
+"name": "UnregisterClassA",
+"ordinal": 2455,
+"rva": 21888,
+"forwarder": null,
+"ref": "user32.dll!0x5580"
+},
+{
+"name": "UnregisterClassW",
+"ordinal": 2456,
+"rva": 32464,
+"forwarder": null,
+"ref": "user32.dll!0x7ed0"
+},
+{
+"name": "UnregisterDeviceNotification",
+"ordinal": 2457,
+"rva": 179856,
+"forwarder": null,
+"ref": "user32.dll!0x2be90"
+},
+{
+"name": "UnregisterHotKey",
+"ordinal": 2458,
+"rva": 216720,
+"forwarder": null,
+"ref": "user32.dll!0x34e90"
+},
+{
+"name": "UnregisterMessagePumpHook",
+"ordinal": 2459,
+"rva": 204944,
+"forwarder": null,
+"ref": "user32.dll!0x32090"
+},
+{
+"name": "UnregisterPointerInputTarget",
+"ordinal": 2460,
+"rva": 329248,
+"forwarder": null,
+"ref": "user32.dll!0x50620"
+},
+{
+"name": "UnregisterPointerInputTargetEx",
+"ordinal": 2461,
+"rva": 327808,
+"forwarder": null,
+"ref": "user32.dll!0x50080"
+},
+{
+"name": "UnregisterPowerSettingNotification",
+"ordinal": 2462,
+"rva": 178256,
+"forwarder": null,
+"ref": "user32.dll!0x2b850"
+},
+{
+"name": "UnregisterSessionPort",
+"ordinal": 2463,
+"rva": 216736,
+"forwarder": null,
+"ref": "user32.dll!0x34ea0"
+},
+{
+"name": "UnregisterSuspendResumeNotification",
+"ordinal": 2464,
+"rva": 503776,
+"forwarder": null,
+"ref": "user32.dll!0x7afe0"
+},
+{
+"name": "UnregisterTouchWindow",
+"ordinal": 2465,
+"rva": 503840,
+"forwarder": null,
+"ref": "user32.dll!0x7b020"
+},
+{
+"name": "UnregisterUserApiHook",
+"ordinal": 2466,
+"rva": 216752,
+"forwarder": null,
+"ref": "user32.dll!0x34eb0"
+},
+{
+"name": "UpdateDefaultDesktopThumbnail",
+"ordinal": 2467,
+"rva": 216768,
+"forwarder": null,
+"ref": "user32.dll!0x34ec0"
+},
+{
+"name": "UpdateLayeredWindow",
+"ordinal": 2468,
+"rva": 201504,
+"forwarder": null,
+"ref": "user32.dll!0x31320"
+},
+{
+"name": "UpdateLayeredWindowIndirect",
+"ordinal": 2469,
+"rva": 187744,
+"forwarder": null,
+"ref": "user32.dll!0x2dd60"
+},
+{
+"name": "UpdatePerUserSystemParameters",
+"ordinal": 2470,
+"rva": 116976,
+"forwarder": null,
+"ref": "user32.dll!0x1c8f0"
+},
+{
+"name": "UpdateWindow",
+"ordinal": 2471,
+"rva": 78432,
+"forwarder": null,
+"ref": "user32.dll!0x13260"
+},
+{
+"name": "UpdateWindowInputSinkHints",
+"ordinal": 2472,
+"rva": 216784,
+"forwarder": null,
+"ref": "user32.dll!0x34ed0"
+},
+{
+"name": "User32InitializeImmEntryTable",
+"ordinal": 2473,
+"rva": 103952,
+"forwarder": null,
+"ref": "user32.dll!0x19610"
+},
+{
+"name": "UserClientDllInitialize",
+"ordinal": 2474,
+"rva": 98144,
+"forwarder": null,
+"ref": "user32.dll!0x17f60"
+},
+{
+"name": "UserHandleGrantAccess",
+"ordinal": 2475,
+"rva": 216816,
+"forwarder": null,
+"ref": "user32.dll!0x34ef0"
+},
+{
+"name": "UserLpkPSMTextOut",
+"ordinal": 2476,
+"rva": 358832,
+"forwarder": null,
+"ref": "user32.dll!0x579b0"
+},
+{
+"name": "UserLpkTabbedTextOut",
+"ordinal": 2477,
+"rva": 359408,
+"forwarder": null,
+"ref": "user32.dll!0x57bf0"
+},
+{
+"name": "UserRealizePalette",
+"ordinal": 2478,
+"rva": 196464,
+"forwarder": null,
+"ref": "user32.dll!0x2ff70"
+},
+{
+"name": "UserRegisterWowHandlers",
+"ordinal": 2479,
+"rva": 553392,
+"forwarder": null,
+"ref": "user32.dll!0x871b0"
+},
+{
+"name": "VRipOutput",
+"ordinal": 2480,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": "VTagOutput",
+"ordinal": 2481,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": "ValidateRect",
+"ordinal": 2482,
+"rva": 216832,
+"forwarder": null,
+"ref": "user32.dll!0x34f00"
+},
+{
+"name": "ValidateRgn",
+"ordinal": 2483,
+"rva": 7680,
+"forwarder": null,
+"ref": "user32.dll!0x1e00"
+},
+{
+"name": "VkKeyScanA",
+"ordinal": 2484,
+"rva": 537728,
+"forwarder": null,
+"ref": "user32.dll!0x83480"
+},
+{
+"name": "VkKeyScanExA",
+"ordinal": 2485,
+"rva": 537840,
+"forwarder": null,
+"ref": "user32.dll!0x834f0"
+},
+{
+"name": "VkKeyScanExW",
+"ordinal": 2486,
+"rva": 5728,
+"forwarder": null,
+"ref": "user32.dll!0x1660"
+},
+{
+"name": "VkKeyScanW",
+"ordinal": 2487,
+"rva": 178800,
+"forwarder": null,
+"ref": "user32.dll!0x2ba70"
+},
+{
+"name": "WCSToMBEx",
+"ordinal": 2488,
+"rva": 36304,
+"forwarder": null,
+"ref": "user32.dll!0x8dd0"
+},
+{
+"name": "WINNLSEnableIME",
+"ordinal": 2489,
+"rva": 538304,
+"forwarder": null,
+"ref": "user32.dll!0x836c0"
+},
+{
+"name": "WINNLSGetEnableStatus",
+"ordinal": 2490,
+"rva": 538336,
+"forwarder": null,
+"ref": "user32.dll!0x836e0"
+},
+{
+"name": "WINNLSGetIMEHotkey",
+"ordinal": 2491,
+"rva": 184096,
+"forwarder": null,
+"ref": "user32.dll!0x2cf20"
+},
+{
+"name": "WaitForInputIdle",
+"ordinal": 2492,
+"rva": 182608,
+"forwarder": null,
+"ref": "user32.dll!0x2c950"
+},
+{
+"name": "WaitForRedirectionStartComplete",
+"ordinal": 2493,
+"rva": 216864,
+"forwarder": null,
+"ref": "user32.dll!0x34f20"
+},
+{
+"name": "WaitMessage",
+"ordinal": 2494,
+"rva": 216880,
+"forwarder": null,
+"ref": "user32.dll!0x34f30"
+},
+{
+"name": "WinHelpA",
+"ordinal": 2495,
+"rva": 201792,
+"forwarder": null,
+"ref": "user32.dll!0x31440"
+},
+{
+"name": "WinHelpW",
+"ordinal": 2496,
+"rva": 201616,
+"forwarder": null,
+"ref": "user32.dll!0x31390"
+},
+{
+"name": "WindowFromDC",
+"ordinal": 2497,
+"rva": 216896,
+"forwarder": null,
+"ref": "user32.dll!0x34f40"
+},
+{
+"name": "WindowFromPhysicalPoint",
+"ordinal": 2498,
+"rva": 216912,
+"forwarder": null,
+"ref": "user32.dll!0x34f50"
+},
+{
+"name": "WindowFromPoint",
+"ordinal": 2499,
+"rva": 216928,
+"forwarder": null,
+"ref": "user32.dll!0x34f60"
+},
+{
+"name": "_UserTestTokenForInteractive",
+"ordinal": 2500,
+"rva": 522976,
+"forwarder": null,
+"ref": "user32.dll!0x7fae0"
+},
+{
+"name": "gSharedInfo",
+"ordinal": 2501,
+"rva": 725040,
+"forwarder": null,
+"ref": "user32.dll!0xb1030"
+},
+{
+"name": "gapfnScSendMessage",
+"ordinal": 2502,
+"rva": 588128,
+"forwarder": null,
+"ref": "user32.dll!0x8f960"
+},
+{
+"name": "DelegateInput",
+"ordinal": 2503,
+"rva": 211952,
+"forwarder": null,
+"ref": "user32.dll!0x33bf0"
+},
+{
+"name": "UndelegateInput",
+"ordinal": 2504,
+"rva": 216672,
+"forwarder": null,
+"ref": "user32.dll!0x34e60"
+},
+{
+"name": "HandleDelegatedInput",
+"ordinal": 2505,
+"rva": 213888,
+"forwarder": null,
+"ref": "user32.dll!0x34380"
+},
+{
+"name": null,
+"ordinal": 2506,
+"rva": 324160,
+"forwarder": null,
+"ref": "user32.dll!0x4f240"
+},
+{
+"name": null,
+"ordinal": 2507,
+"rva": 215568,
+"forwarder": null,
+"ref": "user32.dll!0x34a10"
+},
+{
+"name": null,
+"ordinal": 2508,
+"rva": 214736,
+"forwarder": null,
+"ref": "user32.dll!0x346d0"
+},
+{
+"name": null,
+"ordinal": 2509,
+"rva": 211408,
+"forwarder": null,
+"ref": "user32.dll!0x339d0"
+},
+{
+"name": null,
+"ordinal": 2510,
+"rva": 173936,
+"forwarder": null,
+"ref": "user32.dll!0x2a770"
+},
+{
+"name": null,
+"ordinal": 2511,
+"rva": 215856,
+"forwarder": null,
+"ref": "user32.dll!0x34b30"
+},
+{
+"name": null,
+"ordinal": 2512,
+"rva": 212848,
+"forwarder": null,
+"ref": "user32.dll!0x33f70"
+},
+{
+"name": null,
+"ordinal": 2513,
+"rva": 215536,
+"forwarder": null,
+"ref": "user32.dll!0x349f0"
+},
+{
+"name": null,
+"ordinal": 2514,
+"rva": 329152,
+"forwarder": null,
+"ref": "user32.dll!0x505c0"
+},
+{
+"name": null,
+"ordinal": 2515,
+"rva": 329216,
+"forwarder": null,
+"ref": "user32.dll!0x50600"
+},
+{
+"name": null,
+"ordinal": 2516,
+"rva": 211936,
+"forwarder": null,
+"ref": "user32.dll!0x33be0"
+},
+{
+"name": null,
+"ordinal": 2517,
+"rva": 213648,
+"forwarder": null,
+"ref": "user32.dll!0x34290"
+},
+{
+"name": null,
+"ordinal": 2518,
+"rva": 110784,
+"forwarder": null,
+"ref": "user32.dll!0x1b0c0"
+},
+{
+"name": null,
+"ordinal": 2519,
+"rva": 212336,
+"forwarder": null,
+"ref": "user32.dll!0x33d70"
+},
+{
+"name": null,
+"ordinal": 2520,
+"rva": 214256,
+"forwarder": null,
+"ref": "user32.dll!0x344f0"
+},
+{
+"name": "GetProcessUIContextInformation",
+"ordinal": 2521,
+"rva": 213424,
+"forwarder": null,
+"ref": "user32.dll!0x341b0"
+},
+{
+"name": null,
+"ordinal": 2522,
+"rva": 215600,
+"forwarder": null,
+"ref": "user32.dll!0x34a30"
+},
+{
+"name": null,
+"ordinal": 2523,
+"rva": 4832,
+"forwarder": null,
+"ref": "user32.dll!0x12e0"
+},
+{
+"name": null,
+"ordinal": 2524,
+"rva": 321328,
+"forwarder": null,
+"ref": "user32.dll!0x4e730"
+},
+{
+"name": null,
+"ordinal": 2525,
+"rva": 137184,
+"forwarder": null,
+"ref": "user32.dll!0x217e0"
+},
+{
+"name": null,
+"ordinal": 2526,
+"rva": 321280,
+"forwarder": null,
+"ref": "user32.dll!0x4e700"
+},
+{
+"name": null,
+"ordinal": 2527,
+"rva": 137248,
+"forwarder": null,
+"ref": "user32.dll!0x21820"
+},
+{
+"name": "IsThreadMessageQueueAttached",
+"ordinal": 2528,
+"rva": 155968,
+"forwarder": null,
+"ref": "user32.dll!0x26140"
+},
+{
+"name": null,
+"ordinal": 2529,
+"rva": 212096,
+"forwarder": null,
+"ref": "user32.dll!0x33c80"
+},
+{
+"name": null,
+"ordinal": 2530,
+"rva": 216848,
+"forwarder": null,
+"ref": "user32.dll!0x34f10"
+},
+{
+"name": null,
+"ordinal": 2531,
+"rva": 215616,
+"forwarder": null,
+"ref": "user32.dll!0x34a40"
+},
+{
+"name": null,
+"ordinal": 2532,
+"rva": 215840,
+"forwarder": null,
+"ref": "user32.dll!0x34b20"
+},
+{
+"name": null,
+"ordinal": 2533,
+"rva": 211568,
+"forwarder": null,
+"ref": "user32.dll!0x33a70"
+},
+{
+"name": null,
+"ordinal": 2534,
+"rva": 13392,
+"forwarder": null,
+"ref": "user32.dll!0x3450"
+},
+{
+"name": null,
+"ordinal": 2535,
+"rva": 530464,
+"forwarder": null,
+"ref": "user32.dll!0x81820"
+},
+{
+"name": null,
+"ordinal": 2536,
+"rva": 37456,
+"forwarder": null,
+"ref": "user32.dll!0x9250"
+},
+{
+"name": null,
+"ordinal": 2537,
+"rva": 215472,
+"forwarder": null,
+"ref": "user32.dll!0x349b0"
+},
+{
+"name": null,
+"ordinal": 2538,
+"rva": 214400,
+"forwarder": null,
+"ref": "user32.dll!0x34580"
+},
+{
+"name": null,
+"ordinal": 2539,
+"rva": 213904,
+"forwarder": null,
+"ref": "user32.dll!0x34390"
+},
+{
+"name": null,
+"ordinal": 2540,
+"rva": 530944,
+"forwarder": null,
+"ref": "user32.dll!0x81a00"
+},
+{
+"name": null,
+"ordinal": 2541,
+"rva": 213456,
+"forwarder": null,
+"ref": "user32.dll!0x341d0"
+},
+{
+"name": null,
+"ordinal": 2542,
+"rva": 215312,
+"forwarder": null,
+"ref": "user32.dll!0x34910"
+},
+{
+"name": "keybd_event",
+"ordinal": 2543,
+"rva": 503904,
+"forwarder": null,
+"ref": "user32.dll!0x7b060"
+},
+{
+"name": null,
+"ordinal": 2544,
+"rva": 212416,
+"forwarder": null,
+"ref": "user32.dll!0x33dc0"
+},
+{
+"name": null,
+"ordinal": 2545,
+"rva": 213200,
+"forwarder": null,
+"ref": "user32.dll!0x340d0"
+},
+{
+"name": null,
+"ordinal": 2546,
+"rva": 215360,
+"forwarder": null,
+"ref": "user32.dll!0x34940"
+},
+{
+"name": "mouse_event",
+"ordinal": 2547,
+"rva": 179760,
+"forwarder": null,
+"ref": "user32.dll!0x2be30"
+},
+{
+"name": null,
+"ordinal": 2548,
+"rva": 213408,
+"forwarder": null,
+"ref": "user32.dll!0x341a0"
+},
+{
+"name": null,
+"ordinal": 2549,
+"rva": 216144,
+"forwarder": null,
+"ref": "user32.dll!0x34c50"
+},
+{
+"name": null,
+"ordinal": 2550,
+"rva": 211728,
+"forwarder": null,
+"ref": "user32.dll!0x33b10"
+},
+{
+"name": "ReportInertia",
+"ordinal": 2551,
+"rva": 7776,
+"forwarder": null,
+"ref": "user32.dll!0x1e60"
+},
+{
+"name": null,
+"ordinal": 2552,
+"rva": 551760,
+"forwarder": null,
+"ref": "user32.dll!0x86b50"
+},
+{
+"name": null,
+"ordinal": 2553,
+"rva": 553024,
+"forwarder": null,
+"ref": "user32.dll!0x87040"
+},
+{
+"name": null,
+"ordinal": 2554,
+"rva": 551616,
+"forwarder": null,
+"ref": "user32.dll!0x86ac0"
+},
+{
+"name": null,
+"ordinal": 2555,
+"rva": 579504,
+"forwarder": null,
+"ref": "user32.dll!0x8d7b0"
+},
+{
+"name": null,
+"ordinal": 2556,
+"rva": 215520,
+"forwarder": null,
+"ref": "user32.dll!0x349e0"
+},
+{
+"name": null,
+"ordinal": 2557,
+"rva": 176368,
+"forwarder": null,
+"ref": "user32.dll!0x2b0f0"
+},
+{
+"name": null,
+"ordinal": 2558,
+"rva": 171648,
+"forwarder": null,
+"ref": "user32.dll!0x29e80"
+},
+{
+"name": null,
+"ordinal": 2559,
+"rva": 213184,
+"forwarder": null,
+"ref": "user32.dll!0x340c0"
+},
+{
+"name": null,
+"ordinal": 2560,
+"rva": 327856,
+"forwarder": null,
+"ref": "user32.dll!0x500b0"
+},
+{
+"name": null,
+"ordinal": 2561,
+"rva": 183488,
+"forwarder": null,
+"ref": "user32.dll!0x2ccc0"
+},
+{
+"name": "wsprintfA",
+"ordinal": 2562,
+"rva": 160816,
+"forwarder": null,
+"ref": "user32.dll!0x27430"
+},
+{
+"name": null,
+"ordinal": 2563,
+"rva": 211664,
+"forwarder": null,
+"ref": "user32.dll!0x33ad0"
+},
+{
+"name": null,
+"ordinal": 2564,
+"rva": 183520,
+"forwarder": null,
+"ref": "user32.dll!0x2cce0"
+},
+{
+"name": null,
+"ordinal": 2565,
+"rva": 181136,
+"forwarder": null,
+"ref": "user32.dll!0x2c390"
+},
+{
+"name": null,
+"ordinal": 2566,
+"rva": 216304,
+"forwarder": null,
+"ref": "user32.dll!0x34cf0"
+},
+{
+"name": null,
+"ordinal": 2567,
+"rva": 183792,
+"forwarder": null,
+"ref": "user32.dll!0x2cdf0"
+},
+{
+"name": null,
+"ordinal": 2568,
+"rva": 182320,
+"forwarder": null,
+"ref": "user32.dll!0x2c830"
+},
+{
+"name": null,
+"ordinal": 2569,
+"rva": 160784,
+"forwarder": null,
+"ref": "user32.dll!0x27410"
+},
+{
+"name": null,
+"ordinal": 2570,
+"rva": 552256,
+"forwarder": null,
+"ref": "user32.dll!0x86d40"
+},
+{
+"name": "SetCoreWindow",
+"ordinal": 2571,
+"rva": 215696,
+"forwarder": null,
+"ref": "user32.dll!0x34a90"
+},
+{
+"name": null,
+"ordinal": 2572,
+"rva": 138256,
+"forwarder": null,
+"ref": "user32.dll!0x21c10"
+},
+{
+"name": null,
+"ordinal": 2573,
+"rva": 83120,
+"forwarder": null,
+"ref": "user32.dll!0x144b0"
+},
+{
+"name": null,
+"ordinal": 2574,
+"rva": 68992,
+"forwarder": null,
+"ref": "user32.dll!0x10d80"
+},
+{
+"name": null,
+"ordinal": 2575,
+"rva": 550160,
+"forwarder": null,
+"ref": "user32.dll!0x86510"
+},
+{
+"name": null,
+"ordinal": 2576,
+"rva": 215712,
+"forwarder": null,
+"ref": "user32.dll!0x34aa0"
+},
+{
+"name": null,
+"ordinal": 2577,
+"rva": 183248,
+"forwarder": null,
+"ref": "user32.dll!0x2cbd0"
+},
+{
+"name": null,
+"ordinal": 2578,
+"rva": 214576,
+"forwarder": null,
+"ref": "user32.dll!0x34630"
+},
+{
+"name": null,
+"ordinal": 2579,
+"rva": 216432,
+"forwarder": null,
+"ref": "user32.dll!0x34d70"
+},
+{
+"name": "wsprintfW",
+"ordinal": 2580,
+"rva": 170512,
+"forwarder": null,
+"ref": "user32.dll!0x29a10"
+},
+{
+"name": null,
+"ordinal": 2581,
+"rva": 180960,
+"forwarder": null,
+"ref": "user32.dll!0x2c2e0"
+},
+{
+"name": null,
+"ordinal": 2582,
+"rva": 159872,
+"forwarder": null,
+"ref": "user32.dll!0x27080"
+},
+{
+"name": "wvsprintfA",
+"ordinal": 2583,
+"rva": 160864,
+"forwarder": null,
+"ref": "user32.dll!0x27460"
+},
+{
+"name": null,
+"ordinal": 2584,
+"rva": 550016,
+"forwarder": null,
+"ref": "user32.dll!0x86480"
+},
+{
+"name": null,
+"ordinal": 2585,
+"rva": 216800,
+"forwarder": null,
+"ref": "user32.dll!0x34ee0"
+},
+{
+"name": null,
+"ordinal": 2586,
+"rva": 215952,
+"forwarder": null,
+"ref": "user32.dll!0x34b90"
+},
+{
+"name": null,
+"ordinal": 2587,
+"rva": 140032,
+"forwarder": null,
+"ref": "user32.dll!0x22300"
+},
+{
+"name": null,
+"ordinal": 2588,
+"rva": 211424,
+"forwarder": null,
+"ref": "user32.dll!0x339e0"
+},
+{
+"name": null,
+"ordinal": 2589,
+"rva": 213008,
+"forwarder": null,
+"ref": "user32.dll!0x34010"
+},
+{
+"name": null,
+"ordinal": 2590,
+"rva": 212992,
+"forwarder": null,
+"ref": "user32.dll!0x34000"
+},
+{
+"name": null,
+"ordinal": 2591,
+"rva": 215504,
+"forwarder": null,
+"ref": "user32.dll!0x349d0"
+},
+{
+"name": null,
+"ordinal": 2592,
+"rva": 215968,
+"forwarder": null,
+"ref": "user32.dll!0x34ba0"
+},
+{
+"name": null,
+"ordinal": 2593,
+"rva": 214176,
+"forwarder": null,
+"ref": "user32.dll!0x344a0"
+},
+{
+"name": null,
+"ordinal": 2594,
+"rva": 215984,
+"forwarder": null,
+"ref": "user32.dll!0x34bb0"
+},
+{
+"name": null,
+"ordinal": 2595,
+"rva": 216160,
+"forwarder": null,
+"ref": "user32.dll!0x34c60"
+},
+{
+"name": "wvsprintfW",
+"ordinal": 2596,
+"rva": 170560,
+"forwarder": null,
+"ref": "user32.dll!0x29a40"
+},
+{
+"name": null,
+"ordinal": 2597,
+"rva": 172464,
+"forwarder": null,
+"ref": "user32.dll!0x2a1b0"
+},
+{
+"name": null,
+"ordinal": 2598,
+"rva": 331616,
+"forwarder": null,
+"ref": "user32.dll!0x50f60"
+},
+{
+"name": null,
+"ordinal": 2599,
+"rva": 157872,
+"forwarder": null,
+"ref": "user32.dll!0x268b0"
+},
+{
+"name": null,
+"ordinal": 2600,
+"rva": 7744,
+"forwarder": null,
+"ref": "user32.dll!0x1e40"
+},
+{
+"name": null,
+"ordinal": 2606,
+"rva": 212400,
+"forwarder": null,
+"ref": "user32.dll!0x33db0"
+},
+{
+"name": null,
+"ordinal": 2608,
+"rva": 214720,
+"forwarder": null,
+"ref": "user32.dll!0x346c0"
+},
+{
+"name": null,
+"ordinal": 2609,
+"rva": 213024,
+"forwarder": null,
+"ref": "user32.dll!0x34020"
+},
+{
+"name": null,
+"ordinal": 2610,
+"rva": 211744,
+"forwarder": null,
+"ref": "user32.dll!0x33b20"
+},
+{
+"name": null,
+"ordinal": 2611,
+"rva": 212464,
+"forwarder": null,
+"ref": "user32.dll!0x33df0"
+},
+{
+"name": null,
+"ordinal": 2612,
+"rva": 178768,
+"forwarder": null,
+"ref": "user32.dll!0x2ba50"
+},
+{
+"name": null,
+"ordinal": 2613,
+"rva": 146816,
+"forwarder": null,
+"ref": "user32.dll!0x23d80"
+},
+{
+"name": null,
+"ordinal": 2614,
+"rva": 213536,
+"forwarder": null,
+"ref": "user32.dll!0x34220"
+},
+{
+"name": null,
+"ordinal": 2615,
+"rva": 212384,
+"forwarder": null,
+"ref": "user32.dll!0x33da0"
+},
+{
+"name": null,
+"ordinal": 2616,
+"rva": 211472,
+"forwarder": null,
+"ref": "user32.dll!0x33a10"
+},
+{
+"name": null,
+"ordinal": 2617,
+"rva": 214304,
+"forwarder": null,
+"ref": "user32.dll!0x34520"
+},
+{
+"name": null,
+"ordinal": 2618,
+"rva": 571472,
+"forwarder": null,
+"ref": "user32.dll!0x8b850"
+},
+{
+"name": null,
+"ordinal": 2619,
+"rva": 181904,
+"forwarder": null,
+"ref": "user32.dll!0x2c690"
+},
+{
+"name": null,
+"ordinal": 2620,
+"rva": 570848,
+"forwarder": null,
+"ref": "user32.dll!0x8b5e0"
+},
+{
+"name": null,
+"ordinal": 2621,
+"rva": 211792,
+"forwarder": null,
+"ref": "user32.dll!0x33b50"
+},
+{
+"name": null,
+"ordinal": 2622,
+"rva": 216272,
+"forwarder": null,
+"ref": "user32.dll!0x34cd0"
+},
+{
+"name": null,
+"ordinal": 2626,
+"rva": 215424,
+"forwarder": null,
+"ref": "user32.dll!0x34980"
+},
+{
+"name": null,
+"ordinal": 2627,
+"rva": 215584,
+"forwarder": null,
+"ref": "user32.dll!0x34a20"
+},
+{
+"name": null,
+"ordinal": 2628,
+"rva": 211904,
+"forwarder": null,
+"ref": "user32.dll!0x33bc0"
+},
+{
+"name": null,
+"ordinal": 2629,
+"rva": 211984,
+"forwarder": null,
+"ref": "user32.dll!0x33c10"
+},
+{
+"name": null,
+"ordinal": 2630,
+"rva": 213792,
+"forwarder": null,
+"ref": "user32.dll!0x34320"
+},
+{
+"name": null,
+"ordinal": 2631,
+"rva": 212448,
+"forwarder": null,
+"ref": "user32.dll!0x33de0"
+},
+{
+"name": null,
+"ordinal": 2632,
+"rva": 216384,
+"forwarder": null,
+"ref": "user32.dll!0x34d40"
+},
+{
+"name": null,
+"ordinal": 2633,
+"rva": 211872,
+"forwarder": null,
+"ref": "user32.dll!0x33ba0"
+},
+{
+"name": null,
+"ordinal": 2634,
+"rva": 552080,
+"forwarder": null,
+"ref": "user32.dll!0x86c90"
+},
+{
+"name": null,
+"ordinal": 2635,
+"rva": 66336,
+"forwarder": null,
+"ref": "user32.dll!0x10320"
+},
+{
+"name": null,
+"ordinal": 2636,
+"rva": 169648,
+"forwarder": null,
+"ref": "user32.dll!0x296b0"
+},
+{
+"name": null,
+"ordinal": 2637,
+"rva": 216224,
+"forwarder": null,
+"ref": "user32.dll!0x34ca0"
+},
+{
+"name": null,
+"ordinal": 2638,
+"rva": 211776,
+"forwarder": null,
+"ref": "user32.dll!0x33b40"
+},
+{
+"name": null,
+"ordinal": 2639,
+"rva": 215744,
+"forwarder": null,
+"ref": "user32.dll!0x34ac0"
+},
+{
+"name": null,
+"ordinal": 2640,
+"rva": 544448,
+"forwarder": null,
+"ref": "user32.dll!0x84ec0"
+},
+{
+"name": null,
+"ordinal": 2641,
+"rva": 544864,
+"forwarder": null,
+"ref": "user32.dll!0x85060"
+},
+{
+"name": null,
+"ordinal": 2642,
+"rva": 212576,
+"forwarder": null,
+"ref": "user32.dll!0x33e60"
+},
+{
+"name": null,
+"ordinal": 2643,
+"rva": 215456,
+"forwarder": null,
+"ref": "user32.dll!0x349a0"
+},
+{
+"name": null,
+"ordinal": 2644,
+"rva": 211920,
+"forwarder": null,
+"ref": "user32.dll!0x33bd0"
+},
+{
+"name": null,
+"ordinal": 2645,
+"rva": 545216,
+"forwarder": null,
+"ref": "user32.dll!0x851c0"
+},
+{
+"name": null,
+"ordinal": 2646,
+"rva": 214752,
+"forwarder": null,
+"ref": "user32.dll!0x346e0"
+},
+{
+"name": null,
+"ordinal": 2647,
+"rva": 211760,
+"forwarder": null,
+"ref": "user32.dll!0x33b30"
+},
+{
+"name": null,
+"ordinal": 2648,
+"rva": 212016,
+"forwarder": null,
+"ref": "user32.dll!0x33c30"
+},
+{
+"name": null,
+"ordinal": 2649,
+"rva": 215904,
+"forwarder": null,
+"ref": "user32.dll!0x34b60"
+},
+{
+"name": null,
+"ordinal": 2650,
+"rva": 212960,
+"forwarder": null,
+"ref": "user32.dll!0x33fe0"
+},
+{
+"name": null,
+"ordinal": 2651,
+"rva": 212144,
+"forwarder": null,
+"ref": "user32.dll!0x33cb0"
+},
+{
+"name": null,
+"ordinal": 2652,
+"rva": 213664,
+"forwarder": null,
+"ref": "user32.dll!0x342a0"
+},
+{
+"name": null,
+"ordinal": 2653,
+"rva": 213376,
+"forwarder": null,
+"ref": "user32.dll!0x34180"
+},
+{
+"name": null,
+"ordinal": 2654,
+"rva": 211856,
+"forwarder": null,
+"ref": "user32.dll!0x33b90"
+},
+{
+"name": null,
+"ordinal": 2655,
+"rva": 212000,
+"forwarder": null,
+"ref": "user32.dll!0x33c20"
+},
+{
+"name": null,
+"ordinal": 2656,
+"rva": 212320,
+"forwarder": null,
+"ref": "user32.dll!0x33d60"
+},
+{
+"name": null,
+"ordinal": 2657,
+"rva": 216176,
+"forwarder": null,
+"ref": "user32.dll!0x34c70"
+},
+{
+"name": null,
+"ordinal": 2658,
+"rva": 215792,
+"forwarder": null,
+"ref": "user32.dll!0x34af0"
+},
+{
+"name": null,
+"ordinal": 2659,
+"rva": 184080,
+"forwarder": null,
+"ref": "user32.dll!0x2cf10"
+},
+{
+"name": null,
+"ordinal": 2700,
+"rva": 204544,
+"forwarder": null,
+"ref": "user32.dll!0x31f00"
+},
+{
+"name": null,
+"ordinal": 2702,
+"rva": 484224,
+"forwarder": null,
+"ref": "user32.dll!0x76380"
+},
+{
+"name": null,
+"ordinal": 2703,
+"rva": 214272,
+"forwarder": null,
+"ref": "user32.dll!0x34500"
+},
+{
+"name": null,
+"ordinal": 2704,
+"rva": 212288,
+"forwarder": null,
+"ref": "user32.dll!0x33d40"
+},
+{
+"name": null,
+"ordinal": 2705,
+"rva": 214224,
+"forwarder": null,
+"ref": "user32.dll!0x344d0"
+},
+{
+"name": null,
+"ordinal": 2706,
+"rva": 214352,
+"forwarder": null,
+"ref": "user32.dll!0x34550"
+},
+{
+"name": null,
+"ordinal": 2707,
+"rva": 144656,
+"forwarder": null,
+"ref": "user32.dll!0x23510"
+},
+{
+"name": null,
+"ordinal": 2708,
+"rva": 211520,
+"forwarder": null,
+"ref": "user32.dll!0x33a40"
+},
+{
+"name": null,
+"ordinal": 2709,
+"rva": 212432,
+"forwarder": null,
+"ref": "user32.dll!0x33dd0"
+},
+{
+"name": null,
+"ordinal": 2710,
+"rva": 214368,
+"forwarder": null,
+"ref": "user32.dll!0x34560"
+},
+{
+"name": null,
+"ordinal": 2711,
+"rva": 212608,
+"forwarder": null,
+"ref": "user32.dll!0x33e80"
+},
+{
+"name": null,
+"ordinal": 2712,
+"rva": 122544,
+"forwarder": null,
+"ref": "user32.dll!0x1deb0"
+},
+{
+"name": null,
+"ordinal": 2713,
+"rva": 182208,
+"forwarder": null,
+"ref": "user32.dll!0x2c7c0"
+},
+{
+"name": null,
+"ordinal": 2714,
+"rva": 204464,
+"forwarder": null,
+"ref": "user32.dll!0x31eb0"
+},
+{
+"name": null,
+"ordinal": 2715,
+"rva": 214464,
+"forwarder": null,
+"ref": "user32.dll!0x345c0"
+},
+{
+"name": null,
+"ordinal": 2716,
+"rva": 214656,
+"forwarder": null,
+"ref": "user32.dll!0x34680"
+}
+]

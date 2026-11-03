@@ -1,0 +1,9221 @@
+[
+{
+"name": "NtBindCompositionSurface",
+"ordinal": 1,
+"rva": 12912,
+"forwarder": null,
+"ref": "win32u.dll!0x3270"
+},
+{
+"name": "NtCloseCompositionInputSink",
+"ordinal": 2,
+"rva": 12944,
+"forwarder": null,
+"ref": "win32u.dll!0x3290"
+},
+{
+"name": "NtCompositionInputThread",
+"ordinal": 3,
+"rva": 12976,
+"forwarder": null,
+"ref": "win32u.dll!0x32b0"
+},
+{
+"name": "NtCompositionSetDropTarget",
+"ordinal": 4,
+"rva": 13008,
+"forwarder": null,
+"ref": "win32u.dll!0x32d0"
+},
+{
+"name": "NtCompositorNotifyExitWindows",
+"ordinal": 5,
+"rva": 13040,
+"forwarder": null,
+"ref": "win32u.dll!0x32f0"
+},
+{
+"name": "NtCompositorNotifyForegroundChanged",
+"ordinal": 6,
+"rva": 13072,
+"forwarder": null,
+"ref": "win32u.dll!0x3310"
+},
+{
+"name": "NtCompositorUpdateLastInputTime",
+"ordinal": 7,
+"rva": 13104,
+"forwarder": null,
+"ref": "win32u.dll!0x3330"
+},
+{
+"name": "NtConfigureInputSpace",
+"ordinal": 8,
+"rva": 13136,
+"forwarder": null,
+"ref": "win32u.dll!0x3350"
+},
+{
+"name": "NtCreateCompositionInputSink",
+"ordinal": 9,
+"rva": 13168,
+"forwarder": null,
+"ref": "win32u.dll!0x3370"
+},
+{
+"name": "NtCreateCompositionSurfaceHandle",
+"ordinal": 10,
+"rva": 13200,
+"forwarder": null,
+"ref": "win32u.dll!0x3390"
+},
+{
+"name": "NtCreateImplicitCompositionInputSink",
+"ordinal": 11,
+"rva": 13232,
+"forwarder": null,
+"ref": "win32u.dll!0x33b0"
+},
+{
+"name": "NtDCompositionAddCrossDeviceVisualChild",
+"ordinal": 12,
+"rva": 13264,
+"forwarder": null,
+"ref": "win32u.dll!0x33d0"
+},
+{
+"name": "NtDCompositionBeginFrame",
+"ordinal": 13,
+"rva": 13296,
+"forwarder": null,
+"ref": "win32u.dll!0x33f0"
+},
+{
+"name": "NtDCompositionCommitChannel",
+"ordinal": 14,
+"rva": 13328,
+"forwarder": null,
+"ref": "win32u.dll!0x3410"
+},
+{
+"name": "NtDCompositionCommitSynchronizationObject",
+"ordinal": 15,
+"rva": 13360,
+"forwarder": null,
+"ref": "win32u.dll!0x3430"
+},
+{
+"name": "NtDCompositionConfirmFrame",
+"ordinal": 16,
+"rva": 13392,
+"forwarder": null,
+"ref": "win32u.dll!0x3450"
+},
+{
+"name": "NtDCompositionConnectPipe",
+"ordinal": 17,
+"rva": 13424,
+"forwarder": null,
+"ref": "win32u.dll!0x3470"
+},
+{
+"name": "NtDCompositionCreateAndBindSharedSection",
+"ordinal": 18,
+"rva": 13456,
+"forwarder": null,
+"ref": "win32u.dll!0x3490"
+},
+{
+"name": "NtDCompositionCreateChannel",
+"ordinal": 19,
+"rva": 13488,
+"forwarder": null,
+"ref": "win32u.dll!0x34b0"
+},
+{
+"name": "NtDCompositionCreateConnection",
+"ordinal": 20,
+"rva": 13520,
+"forwarder": null,
+"ref": "win32u.dll!0x34d0"
+},
+{
+"name": "NtDCompositionCreateDwmChannel",
+"ordinal": 21,
+"rva": 13552,
+"forwarder": null,
+"ref": "win32u.dll!0x34f0"
+},
+{
+"name": "NtDCompositionCreateSharedResourceHandle",
+"ordinal": 22,
+"rva": 13584,
+"forwarder": null,
+"ref": "win32u.dll!0x3510"
+},
+{
+"name": "NtDCompositionCreateSynchronizationObject",
+"ordinal": 23,
+"rva": 13616,
+"forwarder": null,
+"ref": "win32u.dll!0x3530"
+},
+{
+"name": "NtDCompositionDestroyChannel",
+"ordinal": 24,
+"rva": 13648,
+"forwarder": null,
+"ref": "win32u.dll!0x3550"
+},
+{
+"name": "NtDCompositionDestroyConnection",
+"ordinal": 25,
+"rva": 13680,
+"forwarder": null,
+"ref": "win32u.dll!0x3570"
+},
+{
+"name": "NtDCompositionDiscardFrame",
+"ordinal": 26,
+"rva": 13712,
+"forwarder": null,
+"ref": "win32u.dll!0x3590"
+},
+{
+"name": "NtDCompositionDuplicateHandleToProcess",
+"ordinal": 27,
+"rva": 13744,
+"forwarder": null,
+"ref": "win32u.dll!0x35b0"
+},
+{
+"name": "NtDCompositionDuplicateSwapchainHandleToDwm",
+"ordinal": 28,
+"rva": 13776,
+"forwarder": null,
+"ref": "win32u.dll!0x35d0"
+},
+{
+"name": "NtDCompositionEnableMMCSS",
+"ordinal": 29,
+"rva": 13808,
+"forwarder": null,
+"ref": "win32u.dll!0x35f0"
+},
+{
+"name": "NtDCompositionGetBatchId",
+"ordinal": 30,
+"rva": 13840,
+"forwarder": null,
+"ref": "win32u.dll!0x3610"
+},
+{
+"name": "NtDCompositionGetChannels",
+"ordinal": 31,
+"rva": 13872,
+"forwarder": null,
+"ref": "win32u.dll!0x3630"
+},
+{
+"name": "NtDCompositionGetConnectionBatch",
+"ordinal": 32,
+"rva": 13904,
+"forwarder": null,
+"ref": "win32u.dll!0x3650"
+},
+{
+"name": "NtDCompositionGetDeletedResources",
+"ordinal": 33,
+"rva": 13936,
+"forwarder": null,
+"ref": "win32u.dll!0x3670"
+},
+{
+"name": "NtDCompositionGetFrameLegacyTokens",
+"ordinal": 34,
+"rva": 13968,
+"forwarder": null,
+"ref": "win32u.dll!0x3690"
+},
+{
+"name": "NtDCompositionGetFrameStatistics",
+"ordinal": 35,
+"rva": 14000,
+"forwarder": null,
+"ref": "win32u.dll!0x36b0"
+},
+{
+"name": "NtDCompositionGetFrameSurfaceUpdates",
+"ordinal": 36,
+"rva": 14032,
+"forwarder": null,
+"ref": "win32u.dll!0x36d0"
+},
+{
+"name": "NtDCompositionGetMaterialProperty",
+"ordinal": 37,
+"rva": 14064,
+"forwarder": null,
+"ref": "win32u.dll!0x36f0"
+},
+{
+"name": "NtDCompositionProcessChannelBatchBuffer",
+"ordinal": 38,
+"rva": 14096,
+"forwarder": null,
+"ref": "win32u.dll!0x3710"
+},
+{
+"name": "NtDCompositionReferenceSharedResourceOnDwmChannel",
+"ordinal": 39,
+"rva": 14128,
+"forwarder": null,
+"ref": "win32u.dll!0x3730"
+},
+{
+"name": "NtDCompositionRegisterThumbnailVisual",
+"ordinal": 40,
+"rva": 14160,
+"forwarder": null,
+"ref": "win32u.dll!0x3750"
+},
+{
+"name": "NtDCompositionRegisterVirtualDesktopVisual",
+"ordinal": 41,
+"rva": 14192,
+"forwarder": null,
+"ref": "win32u.dll!0x3770"
+},
+{
+"name": "NtDCompositionReleaseAllResources",
+"ordinal": 42,
+"rva": 14224,
+"forwarder": null,
+"ref": "win32u.dll!0x3790"
+},
+{
+"name": "NtDCompositionRemoveCrossDeviceVisualChild",
+"ordinal": 43,
+"rva": 14256,
+"forwarder": null,
+"ref": "win32u.dll!0x37b0"
+},
+{
+"name": "NtDCompositionRetireFrame",
+"ordinal": 44,
+"rva": 14288,
+"forwarder": null,
+"ref": "win32u.dll!0x37d0"
+},
+{
+"name": "NtDCompositionSetChannelCommitCompletionEvent",
+"ordinal": 45,
+"rva": 14320,
+"forwarder": null,
+"ref": "win32u.dll!0x37f0"
+},
+{
+"name": "NtDCompositionSetChannelConnectionId",
+"ordinal": 46,
+"rva": 14352,
+"forwarder": null,
+"ref": "win32u.dll!0x3810"
+},
+{
+"name": "NtDCompositionSetChildRootVisual",
+"ordinal": 47,
+"rva": 14384,
+"forwarder": null,
+"ref": "win32u.dll!0x3830"
+},
+{
+"name": "NtDCompositionSetDebugCounter",
+"ordinal": 48,
+"rva": 14416,
+"forwarder": null,
+"ref": "win32u.dll!0x3850"
+},
+{
+"name": "NtDCompositionSetMaterialProperty",
+"ordinal": 49,
+"rva": 14448,
+"forwarder": null,
+"ref": "win32u.dll!0x3870"
+},
+{
+"name": "NtDCompositionSubmitDWMBatch",
+"ordinal": 50,
+"rva": 14480,
+"forwarder": null,
+"ref": "win32u.dll!0x3890"
+},
+{
+"name": "NtDCompositionSuspendAnimations",
+"ordinal": 51,
+"rva": 14512,
+"forwarder": null,
+"ref": "win32u.dll!0x38b0"
+},
+{
+"name": "NtDCompositionSynchronize",
+"ordinal": 52,
+"rva": 14544,
+"forwarder": null,
+"ref": "win32u.dll!0x38d0"
+},
+{
+"name": "NtDCompositionTelemetryAnimationScenarioBegin",
+"ordinal": 53,
+"rva": 14576,
+"forwarder": null,
+"ref": "win32u.dll!0x38f0"
+},
+{
+"name": "NtDCompositionTelemetryAnimationScenarioReference",
+"ordinal": 54,
+"rva": 14608,
+"forwarder": null,
+"ref": "win32u.dll!0x3910"
+},
+{
+"name": "NtDCompositionTelemetryAnimationScenarioUnreference",
+"ordinal": 55,
+"rva": 14640,
+"forwarder": null,
+"ref": "win32u.dll!0x3930"
+},
+{
+"name": "NtDCompositionTelemetrySetApplicationId",
+"ordinal": 56,
+"rva": 14672,
+"forwarder": null,
+"ref": "win32u.dll!0x3950"
+},
+{
+"name": "NtDCompositionTelemetryTouchInteractionBegin",
+"ordinal": 57,
+"rva": 14704,
+"forwarder": null,
+"ref": "win32u.dll!0x3970"
+},
+{
+"name": "NtDCompositionTelemetryTouchInteractionEnd",
+"ordinal": 58,
+"rva": 14736,
+"forwarder": null,
+"ref": "win32u.dll!0x3990"
+},
+{
+"name": "NtDCompositionTelemetryTouchInteractionUpdate",
+"ordinal": 59,
+"rva": 14768,
+"forwarder": null,
+"ref": "win32u.dll!0x39b0"
+},
+{
+"name": "NtDCompositionUpdatePointerCapture",
+"ordinal": 60,
+"rva": 14800,
+"forwarder": null,
+"ref": "win32u.dll!0x39d0"
+},
+{
+"name": "NtDCompositionWaitForChannel",
+"ordinal": 61,
+"rva": 14832,
+"forwarder": null,
+"ref": "win32u.dll!0x39f0"
+},
+{
+"name": "NtDesktopCaptureBits",
+"ordinal": 62,
+"rva": 14864,
+"forwarder": null,
+"ref": "win32u.dll!0x3a10"
+},
+{
+"name": "NtDuplicateCompositionInputSink",
+"ordinal": 63,
+"rva": 14896,
+"forwarder": null,
+"ref": "win32u.dll!0x3a30"
+},
+{
+"name": "NtDxgkCreateTrackedWorkload",
+"ordinal": 64,
+"rva": 14928,
+"forwarder": null,
+"ref": "win32u.dll!0x3a50"
+},
+{
+"name": "NtDxgkDestroyTrackedWorkload",
+"ordinal": 65,
+"rva": 14960,
+"forwarder": null,
+"ref": "win32u.dll!0x3a70"
+},
+{
+"name": "NtDxgkDispMgrOperation",
+"ordinal": 66,
+"rva": 14992,
+"forwarder": null,
+"ref": "win32u.dll!0x3a90"
+},
+{
+"name": "NtDxgkDisplayPortOperation",
+"ordinal": 67,
+"rva": 15024,
+"forwarder": null,
+"ref": "win32u.dll!0x3ab0"
+},
+{
+"name": "NtDxgkDuplicateHandle",
+"ordinal": 68,
+"rva": 15056,
+"forwarder": null,
+"ref": "win32u.dll!0x3ad0"
+},
+{
+"name": "NtDxgkEnumAdapters3",
+"ordinal": 69,
+"rva": 15088,
+"forwarder": null,
+"ref": "win32u.dll!0x3af0"
+},
+{
+"name": "NtDxgkGetAvailableTrackedWorkloadIndex",
+"ordinal": 70,
+"rva": 15120,
+"forwarder": null,
+"ref": "win32u.dll!0x3b10"
+},
+{
+"name": "NtDxgkGetProcessList",
+"ordinal": 71,
+"rva": 15152,
+"forwarder": null,
+"ref": "win32u.dll!0x3b30"
+},
+{
+"name": "NtDxgkGetTrackedWorkloadStatistics",
+"ordinal": 72,
+"rva": 15184,
+"forwarder": null,
+"ref": "win32u.dll!0x3b50"
+},
+{
+"name": "NtDxgkOutputDuplPresentToHwQueue",
+"ordinal": 73,
+"rva": 15216,
+"forwarder": null,
+"ref": "win32u.dll!0x3b70"
+},
+{
+"name": "NtDxgkPinResources",
+"ordinal": 74,
+"rva": 15248,
+"forwarder": null,
+"ref": "win32u.dll!0x3b90"
+},
+{
+"name": "NtDxgkRegisterVailProcess",
+"ordinal": 75,
+"rva": 15280,
+"forwarder": null,
+"ref": "win32u.dll!0x3bb0"
+},
+{
+"name": "NtDxgkResetTrackedWorkloadStatistics",
+"ordinal": 76,
+"rva": 15312,
+"forwarder": null,
+"ref": "win32u.dll!0x3bd0"
+},
+{
+"name": "NtDxgkSubmitPresentBltToHwQueue",
+"ordinal": 77,
+"rva": 15344,
+"forwarder": null,
+"ref": "win32u.dll!0x3bf0"
+},
+{
+"name": "NtDxgkSubmitPresentToHwQueue",
+"ordinal": 78,
+"rva": 15376,
+"forwarder": null,
+"ref": "win32u.dll!0x3c10"
+},
+{
+"name": "NtDxgkUnpinResources",
+"ordinal": 79,
+"rva": 15408,
+"forwarder": null,
+"ref": "win32u.dll!0x3c30"
+},
+{
+"name": "NtDxgkUpdateTrackedWorkload",
+"ordinal": 80,
+"rva": 15440,
+"forwarder": null,
+"ref": "win32u.dll!0x3c50"
+},
+{
+"name": "NtDxgkVailConnect",
+"ordinal": 81,
+"rva": 15472,
+"forwarder": null,
+"ref": "win32u.dll!0x3c70"
+},
+{
+"name": "NtDxgkVailDisconnect",
+"ordinal": 82,
+"rva": 15504,
+"forwarder": null,
+"ref": "win32u.dll!0x3c90"
+},
+{
+"name": "NtDxgkVailPromoteCompositionSurface",
+"ordinal": 83,
+"rva": 15536,
+"forwarder": null,
+"ref": "win32u.dll!0x3cb0"
+},
+{
+"name": "NtEnableOneCoreTransformMode",
+"ordinal": 84,
+"rva": 15568,
+"forwarder": null,
+"ref": "win32u.dll!0x3cd0"
+},
+{
+"name": "NtFlipObjectAddContent",
+"ordinal": 85,
+"rva": 15600,
+"forwarder": null,
+"ref": "win32u.dll!0x3cf0"
+},
+{
+"name": "NtFlipObjectAddPoolBuffer",
+"ordinal": 86,
+"rva": 15632,
+"forwarder": null,
+"ref": "win32u.dll!0x3d10"
+},
+{
+"name": "NtFlipObjectConsumerAcquirePresent",
+"ordinal": 87,
+"rva": 15664,
+"forwarder": null,
+"ref": "win32u.dll!0x3d30"
+},
+{
+"name": "NtFlipObjectConsumerAdjustUsageReference",
+"ordinal": 88,
+"rva": 15696,
+"forwarder": null,
+"ref": "win32u.dll!0x3d50"
+},
+{
+"name": "NtFlipObjectConsumerBeginProcessPresent",
+"ordinal": 89,
+"rva": 15728,
+"forwarder": null,
+"ref": "win32u.dll!0x3d70"
+},
+{
+"name": "NtFlipObjectConsumerEndProcessPresent",
+"ordinal": 90,
+"rva": 15760,
+"forwarder": null,
+"ref": "win32u.dll!0x3d90"
+},
+{
+"name": "NtFlipObjectConsumerPostMessage",
+"ordinal": 91,
+"rva": 15792,
+"forwarder": null,
+"ref": "win32u.dll!0x3db0"
+},
+{
+"name": "NtFlipObjectConsumerQueryBufferInfo",
+"ordinal": 92,
+"rva": 15824,
+"forwarder": null,
+"ref": "win32u.dll!0x3dd0"
+},
+{
+"name": "NtFlipObjectCreate",
+"ordinal": 93,
+"rva": 15856,
+"forwarder": null,
+"ref": "win32u.dll!0x3df0"
+},
+{
+"name": "NtFlipObjectDisconnectEndpoint",
+"ordinal": 94,
+"rva": 15888,
+"forwarder": null,
+"ref": "win32u.dll!0x3e10"
+},
+{
+"name": "NtFlipObjectEnablePresentStatisticsType",
+"ordinal": 95,
+"rva": 15920,
+"forwarder": null,
+"ref": "win32u.dll!0x3e30"
+},
+{
+"name": "NtFlipObjectOpen",
+"ordinal": 96,
+"rva": 15952,
+"forwarder": null,
+"ref": "win32u.dll!0x3e50"
+},
+{
+"name": "NtFlipObjectPresentCancel",
+"ordinal": 97,
+"rva": 15984,
+"forwarder": null,
+"ref": "win32u.dll!0x3e70"
+},
+{
+"name": "NtFlipObjectQueryBufferAvailableEvent",
+"ordinal": 98,
+"rva": 16016,
+"forwarder": null,
+"ref": "win32u.dll!0x3e90"
+},
+{
+"name": "NtFlipObjectQueryEndpointConnected",
+"ordinal": 99,
+"rva": 16048,
+"forwarder": null,
+"ref": "win32u.dll!0x3eb0"
+},
+{
+"name": "NtFlipObjectQueryNextMessageToProducer",
+"ordinal": 100,
+"rva": 16080,
+"forwarder": null,
+"ref": "win32u.dll!0x3ed0"
+},
+{
+"name": "NtFlipObjectReadNextMessageToProducer",
+"ordinal": 101,
+"rva": 16112,
+"forwarder": null,
+"ref": "win32u.dll!0x3ef0"
+},
+{
+"name": "NtFlipObjectRemoveContent",
+"ordinal": 102,
+"rva": 16144,
+"forwarder": null,
+"ref": "win32u.dll!0x3f10"
+},
+{
+"name": "NtFlipObjectRemovePoolBuffer",
+"ordinal": 103,
+"rva": 16176,
+"forwarder": null,
+"ref": "win32u.dll!0x3f30"
+},
+{
+"name": "NtFlipObjectSetContent",
+"ordinal": 104,
+"rva": 16208,
+"forwarder": null,
+"ref": "win32u.dll!0x3f50"
+},
+{
+"name": "NtFlipObjectSetMaximumBackchannelQueueDepth",
+"ordinal": 105,
+"rva": 16240,
+"forwarder": null,
+"ref": "win32u.dll!0x3f70"
+},
+{
+"name": "NtGdiAbortDoc",
+"ordinal": 106,
+"rva": 16272,
+"forwarder": null,
+"ref": "win32u.dll!0x3f90"
+},
+{
+"name": "NtGdiAbortPath",
+"ordinal": 107,
+"rva": 16304,
+"forwarder": null,
+"ref": "win32u.dll!0x3fb0"
+},
+{
+"name": "NtGdiAddEmbFontToDC",
+"ordinal": 108,
+"rva": 16336,
+"forwarder": null,
+"ref": "win32u.dll!0x3fd0"
+},
+{
+"name": "NtGdiAddFontMemResourceEx",
+"ordinal": 109,
+"rva": 12432,
+"forwarder": null,
+"ref": "win32u.dll!0x3090"
+},
+{
+"name": "NtGdiAddFontResourceW",
+"ordinal": 110,
+"rva": 16368,
+"forwarder": null,
+"ref": "win32u.dll!0x3ff0"
+},
+{
+"name": "NtGdiAddInitialFonts",
+"ordinal": 111,
+"rva": 16400,
+"forwarder": null,
+"ref": "win32u.dll!0x4010"
+},
+{
+"name": "NtGdiAddRemoteFontToDC",
+"ordinal": 112,
+"rva": 16432,
+"forwarder": null,
+"ref": "win32u.dll!0x4030"
+},
+{
+"name": "NtGdiAddRemoteMMInstanceToDC",
+"ordinal": 113,
+"rva": 16464,
+"forwarder": null,
+"ref": "win32u.dll!0x4050"
+},
+{
+"name": "NtGdiAlphaBlend",
+"ordinal": 114,
+"rva": 8048,
+"forwarder": null,
+"ref": "win32u.dll!0x1f70"
+},
+{
+"name": "NtGdiAngleArc",
+"ordinal": 115,
+"rva": 16496,
+"forwarder": null,
+"ref": "win32u.dll!0x4070"
+},
+{
+"name": "NtGdiAnyLinkedFonts",
+"ordinal": 116,
+"rva": 16528,
+"forwarder": null,
+"ref": "win32u.dll!0x4090"
+},
+{
+"name": "NtGdiArcInternal",
+"ordinal": 117,
+"rva": 16560,
+"forwarder": null,
+"ref": "win32u.dll!0x40b0"
+},
+{
+"name": "NtGdiBRUSHOBJ_DeleteRbrush",
+"ordinal": 118,
+"rva": 16592,
+"forwarder": null,
+"ref": "win32u.dll!0x40d0"
+},
+{
+"name": "NtGdiBRUSHOBJ_hGetColorTransform",
+"ordinal": 119,
+"rva": 16624,
+"forwarder": null,
+"ref": "win32u.dll!0x40f0"
+},
+{
+"name": "NtGdiBRUSHOBJ_pvAllocRbrush",
+"ordinal": 120,
+"rva": 16656,
+"forwarder": null,
+"ref": "win32u.dll!0x4110"
+},
+{
+"name": "NtGdiBRUSHOBJ_pvGetRbrush",
+"ordinal": 121,
+"rva": 16688,
+"forwarder": null,
+"ref": "win32u.dll!0x4130"
+},
+{
+"name": "NtGdiBRUSHOBJ_ulGetBrushColor",
+"ordinal": 122,
+"rva": 16720,
+"forwarder": null,
+"ref": "win32u.dll!0x4150"
+},
+{
+"name": "NtGdiBeginGdiRendering",
+"ordinal": 123,
+"rva": 16752,
+"forwarder": null,
+"ref": "win32u.dll!0x4170"
+},
+{
+"name": "NtGdiBeginPath",
+"ordinal": 124,
+"rva": 12208,
+"forwarder": null,
+"ref": "win32u.dll!0x2fb0"
+},
+{
+"name": "NtGdiBitBlt",
+"ordinal": 125,
+"rva": 4400,
+"forwarder": null,
+"ref": "win32u.dll!0x1130"
+},
+{
+"name": "NtGdiCLIPOBJ_bEnum",
+"ordinal": 126,
+"rva": 16784,
+"forwarder": null,
+"ref": "win32u.dll!0x4190"
+},
+{
+"name": "NtGdiCLIPOBJ_cEnumStart",
+"ordinal": 127,
+"rva": 16816,
+"forwarder": null,
+"ref": "win32u.dll!0x41b0"
+},
+{
+"name": "NtGdiCLIPOBJ_ppoGetPath",
+"ordinal": 128,
+"rva": 16848,
+"forwarder": null,
+"ref": "win32u.dll!0x41d0"
+},
+{
+"name": "NtGdiCancelDC",
+"ordinal": 129,
+"rva": 16880,
+"forwarder": null,
+"ref": "win32u.dll!0x41f0"
+},
+{
+"name": "NtGdiChangeGhostFont",
+"ordinal": 130,
+"rva": 16912,
+"forwarder": null,
+"ref": "win32u.dll!0x4210"
+},
+{
+"name": "NtGdiCheckBitmapBits",
+"ordinal": 131,
+"rva": 16944,
+"forwarder": null,
+"ref": "win32u.dll!0x4230"
+},
+{
+"name": "NtGdiClearBitmapAttributes",
+"ordinal": 132,
+"rva": 16976,
+"forwarder": null,
+"ref": "win32u.dll!0x4250"
+},
+{
+"name": "NtGdiClearBrushAttributes",
+"ordinal": 133,
+"rva": 17008,
+"forwarder": null,
+"ref": "win32u.dll!0x4270"
+},
+{
+"name": "NtGdiCloseFigure",
+"ordinal": 134,
+"rva": 11920,
+"forwarder": null,
+"ref": "win32u.dll!0x2e90"
+},
+{
+"name": "NtGdiColorCorrectPalette",
+"ordinal": 135,
+"rva": 17040,
+"forwarder": null,
+"ref": "win32u.dll!0x4290"
+},
+{
+"name": "NtGdiCombineRgn",
+"ordinal": 136,
+"rva": 5808,
+"forwarder": null,
+"ref": "win32u.dll!0x16b0"
+},
+{
+"name": "NtGdiCombineTransform",
+"ordinal": 137,
+"rva": 11408,
+"forwarder": null,
+"ref": "win32u.dll!0x2c90"
+},
+{
+"name": "NtGdiComputeXformCoefficients",
+"ordinal": 138,
+"rva": 8496,
+"forwarder": null,
+"ref": "win32u.dll!0x2130"
+},
+{
+"name": "NtGdiConfigureOPMProtectedOutput",
+"ordinal": 139,
+"rva": 17072,
+"forwarder": null,
+"ref": "win32u.dll!0x42b0"
+},
+{
+"name": "NtGdiConvertMetafileRect",
+"ordinal": 140,
+"rva": 17104,
+"forwarder": null,
+"ref": "win32u.dll!0x42d0"
+},
+{
+"name": "NtGdiCreateBitmap",
+"ordinal": 141,
+"rva": 7568,
+"forwarder": null,
+"ref": "win32u.dll!0x1d90"
+},
+{
+"name": "NtGdiCreateBitmapFromDxSurface",
+"ordinal": 142,
+"rva": 17136,
+"forwarder": null,
+"ref": "win32u.dll!0x42f0"
+},
+{
+"name": "NtGdiCreateBitmapFromDxSurface2",
+"ordinal": 143,
+"rva": 17168,
+"forwarder": null,
+"ref": "win32u.dll!0x4310"
+},
+{
+"name": "NtGdiCreateClientObj",
+"ordinal": 144,
+"rva": 9840,
+"forwarder": null,
+"ref": "win32u.dll!0x2670"
+},
+{
+"name": "NtGdiCreateColorSpace",
+"ordinal": 145,
+"rva": 12816,
+"forwarder": null,
+"ref": "win32u.dll!0x3210"
+},
+{
+"name": "NtGdiCreateColorTransform",
+"ordinal": 146,
+"rva": 17200,
+"forwarder": null,
+"ref": "win32u.dll!0x4330"
+},
+{
+"name": "NtGdiCreateCompatibleBitmap",
+"ordinal": 147,
+"rva": 6544,
+"forwarder": null,
+"ref": "win32u.dll!0x1990"
+},
+{
+"name": "NtGdiCreateCompatibleDC",
+"ordinal": 148,
+"rva": 6832,
+"forwarder": null,
+"ref": "win32u.dll!0x1ab0"
+},
+{
+"name": "NtGdiCreateDIBBrush",
+"ordinal": 149,
+"rva": 7792,
+"forwarder": null,
+"ref": "win32u.dll!0x1e70"
+},
+{
+"name": "NtGdiCreateDIBSection",
+"ordinal": 150,
+"rva": 8976,
+"forwarder": null,
+"ref": "win32u.dll!0x2310"
+},
+{
+"name": "NtGdiCreateDIBitmapInternal",
+"ordinal": 151,
+"rva": 9136,
+"forwarder": null,
+"ref": "win32u.dll!0x23b0"
+},
+{
+"name": "NtGdiCreateEllipticRgn",
+"ordinal": 152,
+"rva": 17232,
+"forwarder": null,
+"ref": "win32u.dll!0x4350"
+},
+{
+"name": "NtGdiCreateHalftonePalette",
+"ordinal": 153,
+"rva": 11312,
+"forwarder": null,
+"ref": "win32u.dll!0x2c30"
+},
+{
+"name": "NtGdiCreateHatchBrushInternal",
+"ordinal": 154,
+"rva": 17264,
+"forwarder": null,
+"ref": "win32u.dll!0x4370"
+},
+{
+"name": "NtGdiCreateMetafileDC",
+"ordinal": 155,
+"rva": 17296,
+"forwarder": null,
+"ref": "win32u.dll!0x4390"
+},
+{
+"name": "NtGdiCreateOPMProtectedOutput",
+"ordinal": 156,
+"rva": 17328,
+"forwarder": null,
+"ref": "win32u.dll!0x43b0"
+},
+{
+"name": "NtGdiCreateOPMProtectedOutputs",
+"ordinal": 157,
+"rva": 17360,
+"forwarder": null,
+"ref": "win32u.dll!0x43d0"
+},
+{
+"name": "NtGdiCreatePaletteInternal",
+"ordinal": 158,
+"rva": 9392,
+"forwarder": null,
+"ref": "win32u.dll!0x24b0"
+},
+{
+"name": "NtGdiCreatePatternBrushInternal",
+"ordinal": 159,
+"rva": 9552,
+"forwarder": null,
+"ref": "win32u.dll!0x2550"
+},
+{
+"name": "NtGdiCreatePen",
+"ordinal": 160,
+"rva": 6896,
+"forwarder": null,
+"ref": "win32u.dll!0x1af0"
+},
+{
+"name": "NtGdiCreateRectRgn",
+"ordinal": 161,
+"rva": 8272,
+"forwarder": null,
+"ref": "win32u.dll!0x2050"
+},
+{
+"name": "NtGdiCreateRoundRectRgn",
+"ordinal": 162,
+"rva": 17392,
+"forwarder": null,
+"ref": "win32u.dll!0x43f0"
+},
+{
+"name": "NtGdiCreateServerMetaFile",
+"ordinal": 163,
+"rva": 17424,
+"forwarder": null,
+"ref": "win32u.dll!0x4410"
+},
+{
+"name": "NtGdiCreateSessionMappedDIBSection",
+"ordinal": 164,
+"rva": 17456,
+"forwarder": null,
+"ref": "win32u.dll!0x4430"
+},
+{
+"name": "NtGdiCreateSolidBrush",
+"ordinal": 165,
+"rva": 9776,
+"forwarder": null,
+"ref": "win32u.dll!0x2630"
+},
+{
+"name": "NtGdiDDCCIGetCapabilitiesString",
+"ordinal": 166,
+"rva": 17488,
+"forwarder": null,
+"ref": "win32u.dll!0x4450"
+},
+{
+"name": "NtGdiDDCCIGetCapabilitiesStringLength",
+"ordinal": 167,
+"rva": 17520,
+"forwarder": null,
+"ref": "win32u.dll!0x4470"
+},
+{
+"name": "NtGdiDDCCIGetTimingReport",
+"ordinal": 168,
+"rva": 17552,
+"forwarder": null,
+"ref": "win32u.dll!0x4490"
+},
+{
+"name": "NtGdiDDCCIGetVCPFeature",
+"ordinal": 169,
+"rva": 17584,
+"forwarder": null,
+"ref": "win32u.dll!0x44b0"
+},
+{
+"name": "NtGdiDDCCISaveCurrentSettings",
+"ordinal": 170,
+"rva": 17616,
+"forwarder": null,
+"ref": "win32u.dll!0x44d0"
+},
+{
+"name": "NtGdiDDCCISetVCPFeature",
+"ordinal": 171,
+"rva": 17648,
+"forwarder": null,
+"ref": "win32u.dll!0x44f0"
+},
+{
+"name": "NtGdiDdCreateFullscreenSprite",
+"ordinal": 172,
+"rva": 17680,
+"forwarder": null,
+"ref": "win32u.dll!0x4510"
+},
+{
+"name": "NtGdiDdDDIAbandonSwapChain",
+"ordinal": 173,
+"rva": 17712,
+"forwarder": null,
+"ref": "win32u.dll!0x4530"
+},
+{
+"name": "NtGdiDdDDIAcquireKeyedMutex",
+"ordinal": 174,
+"rva": 17744,
+"forwarder": null,
+"ref": "win32u.dll!0x4550"
+},
+{
+"name": "NtGdiDdDDIAcquireKeyedMutex2",
+"ordinal": 175,
+"rva": 17776,
+"forwarder": null,
+"ref": "win32u.dll!0x4570"
+},
+{
+"name": "NtGdiDdDDIAcquireSwapChain",
+"ordinal": 176,
+"rva": 17808,
+"forwarder": null,
+"ref": "win32u.dll!0x4590"
+},
+{
+"name": "NtGdiDdDDIAddSurfaceToSwapChain",
+"ordinal": 177,
+"rva": 17840,
+"forwarder": null,
+"ref": "win32u.dll!0x45b0"
+},
+{
+"name": "NtGdiDdDDIAdjustFullscreenGamma",
+"ordinal": 178,
+"rva": 17872,
+"forwarder": null,
+"ref": "win32u.dll!0x45d0"
+},
+{
+"name": "NtGdiDdDDICacheHybridQueryValue",
+"ordinal": 179,
+"rva": 17904,
+"forwarder": null,
+"ref": "win32u.dll!0x45f0"
+},
+{
+"name": "NtGdiDdDDIChangeVideoMemoryReservation",
+"ordinal": 180,
+"rva": 17936,
+"forwarder": null,
+"ref": "win32u.dll!0x4610"
+},
+{
+"name": "NtGdiDdDDICheckExclusiveOwnership",
+"ordinal": 181,
+"rva": 17968,
+"forwarder": null,
+"ref": "win32u.dll!0x4630"
+},
+{
+"name": "NtGdiDdDDICheckMonitorPowerState",
+"ordinal": 182,
+"rva": 18000,
+"forwarder": null,
+"ref": "win32u.dll!0x4650"
+},
+{
+"name": "NtGdiDdDDICheckMultiPlaneOverlaySupport",
+"ordinal": 183,
+"rva": 18032,
+"forwarder": null,
+"ref": "win32u.dll!0x4670"
+},
+{
+"name": "NtGdiDdDDICheckMultiPlaneOverlaySupport2",
+"ordinal": 184,
+"rva": 18064,
+"forwarder": null,
+"ref": "win32u.dll!0x4690"
+},
+{
+"name": "NtGdiDdDDICheckMultiPlaneOverlaySupport3",
+"ordinal": 185,
+"rva": 18096,
+"forwarder": null,
+"ref": "win32u.dll!0x46b0"
+},
+{
+"name": "NtGdiDdDDICheckOcclusion",
+"ordinal": 186,
+"rva": 18128,
+"forwarder": null,
+"ref": "win32u.dll!0x46d0"
+},
+{
+"name": "NtGdiDdDDICheckSharedResourceAccess",
+"ordinal": 187,
+"rva": 18160,
+"forwarder": null,
+"ref": "win32u.dll!0x46f0"
+},
+{
+"name": "NtGdiDdDDICheckVidPnExclusiveOwnership",
+"ordinal": 188,
+"rva": 18192,
+"forwarder": null,
+"ref": "win32u.dll!0x4710"
+},
+{
+"name": "NtGdiDdDDICloseAdapter",
+"ordinal": 189,
+"rva": 18224,
+"forwarder": null,
+"ref": "win32u.dll!0x4730"
+},
+{
+"name": "NtGdiDdDDIConfigureSharedResource",
+"ordinal": 190,
+"rva": 18256,
+"forwarder": null,
+"ref": "win32u.dll!0x4750"
+},
+{
+"name": "NtGdiDdDDICreateAllocation",
+"ordinal": 191,
+"rva": 18288,
+"forwarder": null,
+"ref": "win32u.dll!0x4770"
+},
+{
+"name": "NtGdiDdDDICreateBundleObject",
+"ordinal": 192,
+"rva": 18320,
+"forwarder": null,
+"ref": "win32u.dll!0x4790"
+},
+{
+"name": "NtGdiDdDDICreateContext",
+"ordinal": 193,
+"rva": 18352,
+"forwarder": null,
+"ref": "win32u.dll!0x47b0"
+},
+{
+"name": "NtGdiDdDDICreateContextVirtual",
+"ordinal": 194,
+"rva": 18384,
+"forwarder": null,
+"ref": "win32u.dll!0x47d0"
+},
+{
+"name": "NtGdiDdDDICreateDCFromMemory",
+"ordinal": 195,
+"rva": 18416,
+"forwarder": null,
+"ref": "win32u.dll!0x47f0"
+},
+{
+"name": "NtGdiDdDDICreateDevice",
+"ordinal": 196,
+"rva": 18448,
+"forwarder": null,
+"ref": "win32u.dll!0x4810"
+},
+{
+"name": "NtGdiDdDDICreateHwContext",
+"ordinal": 197,
+"rva": 18480,
+"forwarder": null,
+"ref": "win32u.dll!0x4830"
+},
+{
+"name": "NtGdiDdDDICreateHwQueue",
+"ordinal": 198,
+"rva": 18512,
+"forwarder": null,
+"ref": "win32u.dll!0x4850"
+},
+{
+"name": "NtGdiDdDDICreateKeyedMutex",
+"ordinal": 199,
+"rva": 18544,
+"forwarder": null,
+"ref": "win32u.dll!0x4870"
+},
+{
+"name": "NtGdiDdDDICreateKeyedMutex2",
+"ordinal": 200,
+"rva": 18576,
+"forwarder": null,
+"ref": "win32u.dll!0x4890"
+},
+{
+"name": "NtGdiDdDDICreateOutputDupl",
+"ordinal": 201,
+"rva": 18608,
+"forwarder": null,
+"ref": "win32u.dll!0x48b0"
+},
+{
+"name": "NtGdiDdDDICreateOverlay",
+"ordinal": 202,
+"rva": 18640,
+"forwarder": null,
+"ref": "win32u.dll!0x48d0"
+},
+{
+"name": "NtGdiDdDDICreatePagingQueue",
+"ordinal": 203,
+"rva": 18672,
+"forwarder": null,
+"ref": "win32u.dll!0x48f0"
+},
+{
+"name": "NtGdiDdDDICreateProtectedSession",
+"ordinal": 204,
+"rva": 18704,
+"forwarder": null,
+"ref": "win32u.dll!0x4910"
+},
+{
+"name": "NtGdiDdDDICreateSwapChain",
+"ordinal": 205,
+"rva": 18736,
+"forwarder": null,
+"ref": "win32u.dll!0x4930"
+},
+{
+"name": "NtGdiDdDDICreateSynchronizationObject",
+"ordinal": 206,
+"rva": 18768,
+"forwarder": null,
+"ref": "win32u.dll!0x4950"
+},
+{
+"name": "NtGdiDdDDIDDisplayEnum",
+"ordinal": 207,
+"rva": 18800,
+"forwarder": null,
+"ref": "win32u.dll!0x4970"
+},
+{
+"name": "NtGdiDdDDIDestroyAllocation",
+"ordinal": 208,
+"rva": 18832,
+"forwarder": null,
+"ref": "win32u.dll!0x4990"
+},
+{
+"name": "NtGdiDdDDIDestroyAllocation2",
+"ordinal": 209,
+"rva": 18864,
+"forwarder": null,
+"ref": "win32u.dll!0x49b0"
+},
+{
+"name": "NtGdiDdDDIDestroyContext",
+"ordinal": 210,
+"rva": 18896,
+"forwarder": null,
+"ref": "win32u.dll!0x49d0"
+},
+{
+"name": "NtGdiDdDDIDestroyDCFromMemory",
+"ordinal": 211,
+"rva": 18928,
+"forwarder": null,
+"ref": "win32u.dll!0x49f0"
+},
+{
+"name": "NtGdiDdDDIDestroyDevice",
+"ordinal": 212,
+"rva": 18960,
+"forwarder": null,
+"ref": "win32u.dll!0x4a10"
+},
+{
+"name": "NtGdiDdDDIDestroyHwContext",
+"ordinal": 213,
+"rva": 18992,
+"forwarder": null,
+"ref": "win32u.dll!0x4a30"
+},
+{
+"name": "NtGdiDdDDIDestroyHwQueue",
+"ordinal": 214,
+"rva": 19024,
+"forwarder": null,
+"ref": "win32u.dll!0x4a50"
+},
+{
+"name": "NtGdiDdDDIDestroyKeyedMutex",
+"ordinal": 215,
+"rva": 19056,
+"forwarder": null,
+"ref": "win32u.dll!0x4a70"
+},
+{
+"name": "NtGdiDdDDIDestroyOutputDupl",
+"ordinal": 216,
+"rva": 19088,
+"forwarder": null,
+"ref": "win32u.dll!0x4a90"
+},
+{
+"name": "NtGdiDdDDIDestroyOverlay",
+"ordinal": 217,
+"rva": 19120,
+"forwarder": null,
+"ref": "win32u.dll!0x4ab0"
+},
+{
+"name": "NtGdiDdDDIDestroyPagingQueue",
+"ordinal": 218,
+"rva": 19152,
+"forwarder": null,
+"ref": "win32u.dll!0x4ad0"
+},
+{
+"name": "NtGdiDdDDIDestroyProtectedSession",
+"ordinal": 219,
+"rva": 19184,
+"forwarder": null,
+"ref": "win32u.dll!0x4af0"
+},
+{
+"name": "NtGdiDdDDIDestroySynchronizationObject",
+"ordinal": 220,
+"rva": 19216,
+"forwarder": null,
+"ref": "win32u.dll!0x4b10"
+},
+{
+"name": "NtGdiDdDDIDispMgrCreate",
+"ordinal": 221,
+"rva": 19248,
+"forwarder": null,
+"ref": "win32u.dll!0x4b30"
+},
+{
+"name": "NtGdiDdDDIDispMgrSourceOperation",
+"ordinal": 222,
+"rva": 19280,
+"forwarder": null,
+"ref": "win32u.dll!0x4b50"
+},
+{
+"name": "NtGdiDdDDIDispMgrTargetOperation",
+"ordinal": 223,
+"rva": 19312,
+"forwarder": null,
+"ref": "win32u.dll!0x4b70"
+},
+{
+"name": "NtGdiDdDDIEnumAdapters",
+"ordinal": 224,
+"rva": 19344,
+"forwarder": null,
+"ref": "win32u.dll!0x4b90"
+},
+{
+"name": "NtGdiDdDDIEnumAdapters2",
+"ordinal": 225,
+"rva": 19376,
+"forwarder": null,
+"ref": "win32u.dll!0x4bb0"
+},
+{
+"name": "NtGdiDdDDIEscape",
+"ordinal": 226,
+"rva": 19408,
+"forwarder": null,
+"ref": "win32u.dll!0x4bd0"
+},
+{
+"name": "NtGdiDdDDIEvict",
+"ordinal": 227,
+"rva": 19440,
+"forwarder": null,
+"ref": "win32u.dll!0x4bf0"
+},
+{
+"name": "NtGdiDdDDIExtractBundleObject",
+"ordinal": 228,
+"rva": 19472,
+"forwarder": null,
+"ref": "win32u.dll!0x4c10"
+},
+{
+"name": "NtGdiDdDDIFlipOverlay",
+"ordinal": 229,
+"rva": 19504,
+"forwarder": null,
+"ref": "win32u.dll!0x4c30"
+},
+{
+"name": "NtGdiDdDDIFlushHeapTransitions",
+"ordinal": 230,
+"rva": 19536,
+"forwarder": null,
+"ref": "win32u.dll!0x4c50"
+},
+{
+"name": "NtGdiDdDDIFreeGpuVirtualAddress",
+"ordinal": 231,
+"rva": 19568,
+"forwarder": null,
+"ref": "win32u.dll!0x4c70"
+},
+{
+"name": "NtGdiDdDDIGetAllocationPriority",
+"ordinal": 232,
+"rva": 19600,
+"forwarder": null,
+"ref": "win32u.dll!0x4c90"
+},
+{
+"name": "NtGdiDdDDIGetCachedHybridQueryValue",
+"ordinal": 233,
+"rva": 19632,
+"forwarder": null,
+"ref": "win32u.dll!0x4cb0"
+},
+{
+"name": "NtGdiDdDDIGetContextInProcessSchedulingPriority",
+"ordinal": 234,
+"rva": 19664,
+"forwarder": null,
+"ref": "win32u.dll!0x4cd0"
+},
+{
+"name": "NtGdiDdDDIGetContextSchedulingPriority",
+"ordinal": 235,
+"rva": 19696,
+"forwarder": null,
+"ref": "win32u.dll!0x4cf0"
+},
+{
+"name": "NtGdiDdDDIGetDWMVerticalBlankEvent",
+"ordinal": 236,
+"rva": 19728,
+"forwarder": null,
+"ref": "win32u.dll!0x4d10"
+},
+{
+"name": "NtGdiDdDDIGetDeviceState",
+"ordinal": 237,
+"rva": 19760,
+"forwarder": null,
+"ref": "win32u.dll!0x4d30"
+},
+{
+"name": "NtGdiDdDDIGetDisplayModeList",
+"ordinal": 238,
+"rva": 19792,
+"forwarder": null,
+"ref": "win32u.dll!0x4d50"
+},
+{
+"name": "NtGdiDdDDIGetMemoryBudgetTarget",
+"ordinal": 239,
+"rva": 19824,
+"forwarder": null,
+"ref": "win32u.dll!0x4d70"
+},
+{
+"name": "NtGdiDdDDIGetMultiPlaneOverlayCaps",
+"ordinal": 240,
+"rva": 19856,
+"forwarder": null,
+"ref": "win32u.dll!0x4d90"
+},
+{
+"name": "NtGdiDdDDIGetMultisampleMethodList",
+"ordinal": 241,
+"rva": 19888,
+"forwarder": null,
+"ref": "win32u.dll!0x4db0"
+},
+{
+"name": "NtGdiDdDDIGetOverlayState",
+"ordinal": 242,
+"rva": 19920,
+"forwarder": null,
+"ref": "win32u.dll!0x4dd0"
+},
+{
+"name": "NtGdiDdDDIGetPostCompositionCaps",
+"ordinal": 243,
+"rva": 19952,
+"forwarder": null,
+"ref": "win32u.dll!0x4df0"
+},
+{
+"name": "NtGdiDdDDIGetPresentHistory",
+"ordinal": 244,
+"rva": 19984,
+"forwarder": null,
+"ref": "win32u.dll!0x4e10"
+},
+{
+"name": "NtGdiDdDDIGetPresentQueueEvent",
+"ordinal": 245,
+"rva": 20016,
+"forwarder": null,
+"ref": "win32u.dll!0x4e30"
+},
+{
+"name": "NtGdiDdDDIGetProcessDeviceRemovalSupport",
+"ordinal": 246,
+"rva": 20048,
+"forwarder": null,
+"ref": "win32u.dll!0x4e50"
+},
+{
+"name": "NtGdiDdDDIGetProcessSchedulingPriorityBand",
+"ordinal": 247,
+"rva": 20080,
+"forwarder": null,
+"ref": "win32u.dll!0x4e70"
+},
+{
+"name": "NtGdiDdDDIGetProcessSchedulingPriorityClass",
+"ordinal": 248,
+"rva": 20112,
+"forwarder": null,
+"ref": "win32u.dll!0x4e90"
+},
+{
+"name": "NtGdiDdDDIGetResourcePresentPrivateDriverData",
+"ordinal": 249,
+"rva": 20144,
+"forwarder": null,
+"ref": "win32u.dll!0x4eb0"
+},
+{
+"name": "NtGdiDdDDIGetRuntimeData",
+"ordinal": 250,
+"rva": 20176,
+"forwarder": null,
+"ref": "win32u.dll!0x4ed0"
+},
+{
+"name": "NtGdiDdDDIGetScanLine",
+"ordinal": 251,
+"rva": 20208,
+"forwarder": null,
+"ref": "win32u.dll!0x4ef0"
+},
+{
+"name": "NtGdiDdDDIGetSetSwapChainMetadata",
+"ordinal": 252,
+"rva": 20240,
+"forwarder": null,
+"ref": "win32u.dll!0x4f10"
+},
+{
+"name": "NtGdiDdDDIGetSharedPrimaryHandle",
+"ordinal": 253,
+"rva": 20272,
+"forwarder": null,
+"ref": "win32u.dll!0x4f30"
+},
+{
+"name": "NtGdiDdDDIGetSharedResourceAdapterLuid",
+"ordinal": 254,
+"rva": 20304,
+"forwarder": null,
+"ref": "win32u.dll!0x4f50"
+},
+{
+"name": "NtGdiDdDDIGetSharedResourceAdapterLuidFlipManager",
+"ordinal": 255,
+"rva": 20336,
+"forwarder": null,
+"ref": "win32u.dll!0x4f70"
+},
+{
+"name": "NtGdiDdDDIGetYieldPercentage",
+"ordinal": 256,
+"rva": 20368,
+"forwarder": null,
+"ref": "win32u.dll!0x4f90"
+},
+{
+"name": "NtGdiDdDDIInvalidateActiveVidPn",
+"ordinal": 257,
+"rva": 20400,
+"forwarder": null,
+"ref": "win32u.dll!0x4fb0"
+},
+{
+"name": "NtGdiDdDDIInvalidateCache",
+"ordinal": 258,
+"rva": 20432,
+"forwarder": null,
+"ref": "win32u.dll!0x4fd0"
+},
+{
+"name": "NtGdiDdDDILock",
+"ordinal": 259,
+"rva": 20464,
+"forwarder": null,
+"ref": "win32u.dll!0x4ff0"
+},
+{
+"name": "NtGdiDdDDILock2",
+"ordinal": 260,
+"rva": 20496,
+"forwarder": null,
+"ref": "win32u.dll!0x5010"
+},
+{
+"name": "NtGdiDdDDIMakeResident",
+"ordinal": 261,
+"rva": 20528,
+"forwarder": null,
+"ref": "win32u.dll!0x5030"
+},
+{
+"name": "NtGdiDdDDIMapGpuVirtualAddress",
+"ordinal": 262,
+"rva": 20560,
+"forwarder": null,
+"ref": "win32u.dll!0x5050"
+},
+{
+"name": "NtGdiDdDDIMarkDeviceAsError",
+"ordinal": 263,
+"rva": 20592,
+"forwarder": null,
+"ref": "win32u.dll!0x5070"
+},
+{
+"name": "NtGdiDdDDINetDispGetNextChunkInfo",
+"ordinal": 264,
+"rva": 20624,
+"forwarder": null,
+"ref": "win32u.dll!0x5090"
+},
+{
+"name": "NtGdiDdDDINetDispQueryMiracastDisplayDeviceStatus",
+"ordinal": 265,
+"rva": 20656,
+"forwarder": null,
+"ref": "win32u.dll!0x50b0"
+},
+{
+"name": "NtGdiDdDDINetDispQueryMiracastDisplayDeviceSupport",
+"ordinal": 266,
+"rva": 20688,
+"forwarder": null,
+"ref": "win32u.dll!0x50d0"
+},
+{
+"name": "NtGdiDdDDINetDispStartMiracastDisplayDevice",
+"ordinal": 267,
+"rva": 20720,
+"forwarder": null,
+"ref": "win32u.dll!0x50f0"
+},
+{
+"name": "NtGdiDdDDINetDispStopMiracastDisplayDevice",
+"ordinal": 268,
+"rva": 20752,
+"forwarder": null,
+"ref": "win32u.dll!0x5110"
+},
+{
+"name": "NtGdiDdDDIOfferAllocations",
+"ordinal": 269,
+"rva": 20784,
+"forwarder": null,
+"ref": "win32u.dll!0x5130"
+},
+{
+"name": "NtGdiDdDDIOpenAdapterFromDeviceName",
+"ordinal": 270,
+"rva": 20816,
+"forwarder": null,
+"ref": "win32u.dll!0x5150"
+},
+{
+"name": "NtGdiDdDDIOpenAdapterFromHdc",
+"ordinal": 271,
+"rva": 20848,
+"forwarder": null,
+"ref": "win32u.dll!0x5170"
+},
+{
+"name": "NtGdiDdDDIOpenAdapterFromLuid",
+"ordinal": 272,
+"rva": 20880,
+"forwarder": null,
+"ref": "win32u.dll!0x5190"
+},
+{
+"name": "NtGdiDdDDIOpenBundleObjectNtHandleFromName",
+"ordinal": 273,
+"rva": 20912,
+"forwarder": null,
+"ref": "win32u.dll!0x51b0"
+},
+{
+"name": "NtGdiDdDDIOpenKeyedMutex",
+"ordinal": 274,
+"rva": 20944,
+"forwarder": null,
+"ref": "win32u.dll!0x51d0"
+},
+{
+"name": "NtGdiDdDDIOpenKeyedMutex2",
+"ordinal": 275,
+"rva": 20976,
+"forwarder": null,
+"ref": "win32u.dll!0x51f0"
+},
+{
+"name": "NtGdiDdDDIOpenKeyedMutexFromNtHandle",
+"ordinal": 276,
+"rva": 21008,
+"forwarder": null,
+"ref": "win32u.dll!0x5210"
+},
+{
+"name": "NtGdiDdDDIOpenNtHandleFromName",
+"ordinal": 277,
+"rva": 21040,
+"forwarder": null,
+"ref": "win32u.dll!0x5230"
+},
+{
+"name": "NtGdiDdDDIOpenProtectedSessionFromNtHandle",
+"ordinal": 278,
+"rva": 21072,
+"forwarder": null,
+"ref": "win32u.dll!0x5250"
+},
+{
+"name": "NtGdiDdDDIOpenResource",
+"ordinal": 279,
+"rva": 21104,
+"forwarder": null,
+"ref": "win32u.dll!0x5270"
+},
+{
+"name": "NtGdiDdDDIOpenResourceFromNtHandle",
+"ordinal": 280,
+"rva": 21136,
+"forwarder": null,
+"ref": "win32u.dll!0x5290"
+},
+{
+"name": "NtGdiDdDDIOpenSwapChain",
+"ordinal": 281,
+"rva": 21168,
+"forwarder": null,
+"ref": "win32u.dll!0x52b0"
+},
+{
+"name": "NtGdiDdDDIOpenSyncObjectFromNtHandle",
+"ordinal": 282,
+"rva": 21200,
+"forwarder": null,
+"ref": "win32u.dll!0x52d0"
+},
+{
+"name": "NtGdiDdDDIOpenSyncObjectFromNtHandle2",
+"ordinal": 283,
+"rva": 21232,
+"forwarder": null,
+"ref": "win32u.dll!0x52f0"
+},
+{
+"name": "NtGdiDdDDIOpenSyncObjectNtHandleFromName",
+"ordinal": 284,
+"rva": 21264,
+"forwarder": null,
+"ref": "win32u.dll!0x5310"
+},
+{
+"name": "NtGdiDdDDIOpenSynchronizationObject",
+"ordinal": 285,
+"rva": 21296,
+"forwarder": null,
+"ref": "win32u.dll!0x5330"
+},
+{
+"name": "NtGdiDdDDIOutputDuplGetFrameInfo",
+"ordinal": 286,
+"rva": 21328,
+"forwarder": null,
+"ref": "win32u.dll!0x5350"
+},
+{
+"name": "NtGdiDdDDIOutputDuplGetMetaData",
+"ordinal": 287,
+"rva": 21360,
+"forwarder": null,
+"ref": "win32u.dll!0x5370"
+},
+{
+"name": "NtGdiDdDDIOutputDuplGetPointerShapeData",
+"ordinal": 288,
+"rva": 21392,
+"forwarder": null,
+"ref": "win32u.dll!0x5390"
+},
+{
+"name": "NtGdiDdDDIOutputDuplPresent",
+"ordinal": 289,
+"rva": 21424,
+"forwarder": null,
+"ref": "win32u.dll!0x53b0"
+},
+{
+"name": "NtGdiDdDDIOutputDuplReleaseFrame",
+"ordinal": 290,
+"rva": 21456,
+"forwarder": null,
+"ref": "win32u.dll!0x53d0"
+},
+{
+"name": "NtGdiDdDDIPollDisplayChildren",
+"ordinal": 291,
+"rva": 21488,
+"forwarder": null,
+"ref": "win32u.dll!0x53f0"
+},
+{
+"name": "NtGdiDdDDIPresent",
+"ordinal": 292,
+"rva": 21520,
+"forwarder": null,
+"ref": "win32u.dll!0x5410"
+},
+{
+"name": "NtGdiDdDDIPresentMultiPlaneOverlay",
+"ordinal": 293,
+"rva": 21552,
+"forwarder": null,
+"ref": "win32u.dll!0x5430"
+},
+{
+"name": "NtGdiDdDDIPresentMultiPlaneOverlay2",
+"ordinal": 294,
+"rva": 21584,
+"forwarder": null,
+"ref": "win32u.dll!0x5450"
+},
+{
+"name": "NtGdiDdDDIPresentMultiPlaneOverlay3",
+"ordinal": 295,
+"rva": 21616,
+"forwarder": null,
+"ref": "win32u.dll!0x5470"
+},
+{
+"name": "NtGdiDdDDIPresentRedirected",
+"ordinal": 296,
+"rva": 21648,
+"forwarder": null,
+"ref": "win32u.dll!0x5490"
+},
+{
+"name": "NtGdiDdDDIQueryAdapterInfo",
+"ordinal": 297,
+"rva": 21680,
+"forwarder": null,
+"ref": "win32u.dll!0x54b0"
+},
+{
+"name": "NtGdiDdDDIQueryAllocationResidency",
+"ordinal": 298,
+"rva": 21712,
+"forwarder": null,
+"ref": "win32u.dll!0x54d0"
+},
+{
+"name": "NtGdiDdDDIQueryClockCalibration",
+"ordinal": 299,
+"rva": 21744,
+"forwarder": null,
+"ref": "win32u.dll!0x54f0"
+},
+{
+"name": "NtGdiDdDDIQueryFSEBlock",
+"ordinal": 300,
+"rva": 21776,
+"forwarder": null,
+"ref": "win32u.dll!0x5510"
+},
+{
+"name": "NtGdiDdDDIQueryProcessOfferInfo",
+"ordinal": 301,
+"rva": 21808,
+"forwarder": null,
+"ref": "win32u.dll!0x5530"
+},
+{
+"name": "NtGdiDdDDIQueryProtectedSessionInfoFromNtHandle",
+"ordinal": 302,
+"rva": 21840,
+"forwarder": null,
+"ref": "win32u.dll!0x5550"
+},
+{
+"name": "NtGdiDdDDIQueryProtectedSessionStatus",
+"ordinal": 303,
+"rva": 21872,
+"forwarder": null,
+"ref": "win32u.dll!0x5570"
+},
+{
+"name": "NtGdiDdDDIQueryRemoteVidPnSourceFromGdiDisplayName",
+"ordinal": 304,
+"rva": 21904,
+"forwarder": null,
+"ref": "win32u.dll!0x5590"
+},
+{
+"name": "NtGdiDdDDIQueryResourceInfo",
+"ordinal": 305,
+"rva": 21936,
+"forwarder": null,
+"ref": "win32u.dll!0x55b0"
+},
+{
+"name": "NtGdiDdDDIQueryResourceInfoFromNtHandle",
+"ordinal": 306,
+"rva": 21968,
+"forwarder": null,
+"ref": "win32u.dll!0x55d0"
+},
+{
+"name": "NtGdiDdDDIQueryStatistics",
+"ordinal": 307,
+"rva": 22000,
+"forwarder": null,
+"ref": "win32u.dll!0x55f0"
+},
+{
+"name": "NtGdiDdDDIQueryVidPnExclusiveOwnership",
+"ordinal": 308,
+"rva": 22032,
+"forwarder": null,
+"ref": "win32u.dll!0x5610"
+},
+{
+"name": "NtGdiDdDDIQueryVideoMemoryInfo",
+"ordinal": 309,
+"rva": 22064,
+"forwarder": null,
+"ref": "win32u.dll!0x5630"
+},
+{
+"name": "NtGdiDdDDIReclaimAllocations",
+"ordinal": 310,
+"rva": 22096,
+"forwarder": null,
+"ref": "win32u.dll!0x5650"
+},
+{
+"name": "NtGdiDdDDIReclaimAllocations2",
+"ordinal": 311,
+"rva": 22128,
+"forwarder": null,
+"ref": "win32u.dll!0x5670"
+},
+{
+"name": "NtGdiDdDDIReleaseKeyedMutex",
+"ordinal": 312,
+"rva": 22160,
+"forwarder": null,
+"ref": "win32u.dll!0x5690"
+},
+{
+"name": "NtGdiDdDDIReleaseKeyedMutex2",
+"ordinal": 313,
+"rva": 22192,
+"forwarder": null,
+"ref": "win32u.dll!0x56b0"
+},
+{
+"name": "NtGdiDdDDIReleaseProcessVidPnSourceOwners",
+"ordinal": 314,
+"rva": 22224,
+"forwarder": null,
+"ref": "win32u.dll!0x56d0"
+},
+{
+"name": "NtGdiDdDDIReleaseSwapChain",
+"ordinal": 315,
+"rva": 22256,
+"forwarder": null,
+"ref": "win32u.dll!0x56f0"
+},
+{
+"name": "NtGdiDdDDIRemoveSurfaceFromSwapChain",
+"ordinal": 316,
+"rva": 22288,
+"forwarder": null,
+"ref": "win32u.dll!0x5710"
+},
+{
+"name": "NtGdiDdDDIRender",
+"ordinal": 317,
+"rva": 22320,
+"forwarder": null,
+"ref": "win32u.dll!0x5730"
+},
+{
+"name": "NtGdiDdDDIReserveGpuVirtualAddress",
+"ordinal": 318,
+"rva": 22352,
+"forwarder": null,
+"ref": "win32u.dll!0x5750"
+},
+{
+"name": "NtGdiDdDDISetAllocationPriority",
+"ordinal": 319,
+"rva": 22384,
+"forwarder": null,
+"ref": "win32u.dll!0x5770"
+},
+{
+"name": "NtGdiDdDDISetContextInProcessSchedulingPriority",
+"ordinal": 320,
+"rva": 22416,
+"forwarder": null,
+"ref": "win32u.dll!0x5790"
+},
+{
+"name": "NtGdiDdDDISetContextSchedulingPriority",
+"ordinal": 321,
+"rva": 22448,
+"forwarder": null,
+"ref": "win32u.dll!0x57b0"
+},
+{
+"name": "NtGdiDdDDISetDisplayMode",
+"ordinal": 322,
+"rva": 22480,
+"forwarder": null,
+"ref": "win32u.dll!0x57d0"
+},
+{
+"name": "NtGdiDdDDISetDodIndirectSwapchain",
+"ordinal": 323,
+"rva": 22512,
+"forwarder": null,
+"ref": "win32u.dll!0x57f0"
+},
+{
+"name": "NtGdiDdDDISetFSEBlock",
+"ordinal": 324,
+"rva": 22544,
+"forwarder": null,
+"ref": "win32u.dll!0x5810"
+},
+{
+"name": "NtGdiDdDDISetGammaRamp",
+"ordinal": 325,
+"rva": 22576,
+"forwarder": null,
+"ref": "win32u.dll!0x5830"
+},
+{
+"name": "NtGdiDdDDISetHwProtectionTeardownRecovery",
+"ordinal": 326,
+"rva": 22608,
+"forwarder": null,
+"ref": "win32u.dll!0x5850"
+},
+{
+"name": "NtGdiDdDDISetMemoryBudgetTarget",
+"ordinal": 327,
+"rva": 22640,
+"forwarder": null,
+"ref": "win32u.dll!0x5870"
+},
+{
+"name": "NtGdiDdDDISetMonitorColorSpaceTransform",
+"ordinal": 328,
+"rva": 22672,
+"forwarder": null,
+"ref": "win32u.dll!0x5890"
+},
+{
+"name": "NtGdiDdDDISetProcessDeviceRemovalSupport",
+"ordinal": 329,
+"rva": 22704,
+"forwarder": null,
+"ref": "win32u.dll!0x58b0"
+},
+{
+"name": "NtGdiDdDDISetProcessSchedulingPriorityBand",
+"ordinal": 330,
+"rva": 22736,
+"forwarder": null,
+"ref": "win32u.dll!0x58d0"
+},
+{
+"name": "NtGdiDdDDISetProcessSchedulingPriorityClass",
+"ordinal": 331,
+"rva": 22768,
+"forwarder": null,
+"ref": "win32u.dll!0x58f0"
+},
+{
+"name": "NtGdiDdDDISetQueuedLimit",
+"ordinal": 332,
+"rva": 22800,
+"forwarder": null,
+"ref": "win32u.dll!0x5910"
+},
+{
+"name": "NtGdiDdDDISetStablePowerState",
+"ordinal": 333,
+"rva": 22832,
+"forwarder": null,
+"ref": "win32u.dll!0x5930"
+},
+{
+"name": "NtGdiDdDDISetStereoEnabled",
+"ordinal": 334,
+"rva": 22864,
+"forwarder": null,
+"ref": "win32u.dll!0x5950"
+},
+{
+"name": "NtGdiDdDDISetSyncRefreshCountWaitTarget",
+"ordinal": 335,
+"rva": 22896,
+"forwarder": null,
+"ref": "win32u.dll!0x5970"
+},
+{
+"name": "NtGdiDdDDISetVidPnSourceHwProtection",
+"ordinal": 336,
+"rva": 22928,
+"forwarder": null,
+"ref": "win32u.dll!0x5990"
+},
+{
+"name": "NtGdiDdDDISetVidPnSourceOwner",
+"ordinal": 337,
+"rva": 22960,
+"forwarder": null,
+"ref": "win32u.dll!0x59b0"
+},
+{
+"name": "NtGdiDdDDISetYieldPercentage",
+"ordinal": 338,
+"rva": 22992,
+"forwarder": null,
+"ref": "win32u.dll!0x59d0"
+},
+{
+"name": "NtGdiDdDDIShareObjects",
+"ordinal": 339,
+"rva": 23024,
+"forwarder": null,
+"ref": "win32u.dll!0x59f0"
+},
+{
+"name": "NtGdiDdDDISharedPrimaryLockNotification",
+"ordinal": 340,
+"rva": 23056,
+"forwarder": null,
+"ref": "win32u.dll!0x5a10"
+},
+{
+"name": "NtGdiDdDDISharedPrimaryUnLockNotification",
+"ordinal": 341,
+"rva": 23088,
+"forwarder": null,
+"ref": "win32u.dll!0x5a30"
+},
+{
+"name": "NtGdiDdDDISignalSynchronizationObject",
+"ordinal": 342,
+"rva": 23120,
+"forwarder": null,
+"ref": "win32u.dll!0x5a50"
+},
+{
+"name": "NtGdiDdDDISignalSynchronizationObjectFromCpu",
+"ordinal": 343,
+"rva": 23152,
+"forwarder": null,
+"ref": "win32u.dll!0x5a70"
+},
+{
+"name": "NtGdiDdDDISignalSynchronizationObjectFromGpu",
+"ordinal": 344,
+"rva": 23184,
+"forwarder": null,
+"ref": "win32u.dll!0x5a90"
+},
+{
+"name": "NtGdiDdDDISignalSynchronizationObjectFromGpu2",
+"ordinal": 345,
+"rva": 23216,
+"forwarder": null,
+"ref": "win32u.dll!0x5ab0"
+},
+{
+"name": "NtGdiDdDDISubmitCommand",
+"ordinal": 346,
+"rva": 23248,
+"forwarder": null,
+"ref": "win32u.dll!0x5ad0"
+},
+{
+"name": "NtGdiDdDDISubmitCommandToHwQueue",
+"ordinal": 347,
+"rva": 23280,
+"forwarder": null,
+"ref": "win32u.dll!0x5af0"
+},
+{
+"name": "NtGdiDdDDISubmitSignalSyncObjectsToHwQueue",
+"ordinal": 348,
+"rva": 23312,
+"forwarder": null,
+"ref": "win32u.dll!0x5b10"
+},
+{
+"name": "NtGdiDdDDISubmitWaitForSyncObjectsToHwQueue",
+"ordinal": 349,
+"rva": 23344,
+"forwarder": null,
+"ref": "win32u.dll!0x5b30"
+},
+{
+"name": "NtGdiDdDDITrimProcessCommitment",
+"ordinal": 350,
+"rva": 23376,
+"forwarder": null,
+"ref": "win32u.dll!0x5b50"
+},
+{
+"name": "NtGdiDdDDIUnOrderedPresentSwapChain",
+"ordinal": 351,
+"rva": 23408,
+"forwarder": null,
+"ref": "win32u.dll!0x5b70"
+},
+{
+"name": "NtGdiDdDDIUnlock",
+"ordinal": 352,
+"rva": 23440,
+"forwarder": null,
+"ref": "win32u.dll!0x5b90"
+},
+{
+"name": "NtGdiDdDDIUnlock2",
+"ordinal": 353,
+"rva": 23472,
+"forwarder": null,
+"ref": "win32u.dll!0x5bb0"
+},
+{
+"name": "NtGdiDdDDIUpdateAllocationProperty",
+"ordinal": 354,
+"rva": 23504,
+"forwarder": null,
+"ref": "win32u.dll!0x5bd0"
+},
+{
+"name": "NtGdiDdDDIUpdateGpuVirtualAddress",
+"ordinal": 355,
+"rva": 23536,
+"forwarder": null,
+"ref": "win32u.dll!0x5bf0"
+},
+{
+"name": "NtGdiDdDDIUpdateOverlay",
+"ordinal": 356,
+"rva": 23568,
+"forwarder": null,
+"ref": "win32u.dll!0x5c10"
+},
+{
+"name": "NtGdiDdDDIWaitForIdle",
+"ordinal": 357,
+"rva": 23600,
+"forwarder": null,
+"ref": "win32u.dll!0x5c30"
+},
+{
+"name": "NtGdiDdDDIWaitForSynchronizationObject",
+"ordinal": 358,
+"rva": 23632,
+"forwarder": null,
+"ref": "win32u.dll!0x5c50"
+},
+{
+"name": "NtGdiDdDDIWaitForSynchronizationObjectFromCpu",
+"ordinal": 359,
+"rva": 23664,
+"forwarder": null,
+"ref": "win32u.dll!0x5c70"
+},
+{
+"name": "NtGdiDdDDIWaitForSynchronizationObjectFromGpu",
+"ordinal": 360,
+"rva": 23696,
+"forwarder": null,
+"ref": "win32u.dll!0x5c90"
+},
+{
+"name": "NtGdiDdDDIWaitForVerticalBlankEvent",
+"ordinal": 361,
+"rva": 23728,
+"forwarder": null,
+"ref": "win32u.dll!0x5cb0"
+},
+{
+"name": "NtGdiDdDDIWaitForVerticalBlankEvent2",
+"ordinal": 362,
+"rva": 23760,
+"forwarder": null,
+"ref": "win32u.dll!0x5cd0"
+},
+{
+"name": "NtGdiDdDestroyFullscreenSprite",
+"ordinal": 363,
+"rva": 23792,
+"forwarder": null,
+"ref": "win32u.dll!0x5cf0"
+},
+{
+"name": "NtGdiDdNotifyFullscreenSpriteUpdate",
+"ordinal": 364,
+"rva": 23824,
+"forwarder": null,
+"ref": "win32u.dll!0x5d10"
+},
+{
+"name": "NtGdiDdQueryVisRgnUniqueness",
+"ordinal": 365,
+"rva": 23856,
+"forwarder": null,
+"ref": "win32u.dll!0x5d30"
+},
+{
+"name": "NtGdiDeleteClientObj",
+"ordinal": 366,
+"rva": 8368,
+"forwarder": null,
+"ref": "win32u.dll!0x20b0"
+},
+{
+"name": "NtGdiDeleteColorSpace",
+"ordinal": 367,
+"rva": 12848,
+"forwarder": null,
+"ref": "win32u.dll!0x3230"
+},
+{
+"name": "NtGdiDeleteColorTransform",
+"ordinal": 368,
+"rva": 23888,
+"forwarder": null,
+"ref": "win32u.dll!0x5d50"
+},
+{
+"name": "NtGdiDeleteObjectApp",
+"ordinal": 369,
+"rva": 5264,
+"forwarder": null,
+"ref": "win32u.dll!0x1490"
+},
+{
+"name": "NtGdiDescribePixelFormat",
+"ordinal": 370,
+"rva": 23920,
+"forwarder": null,
+"ref": "win32u.dll!0x5d70"
+},
+{
+"name": "NtGdiDestroyOPMProtectedOutput",
+"ordinal": 371,
+"rva": 23952,
+"forwarder": null,
+"ref": "win32u.dll!0x5d90"
+},
+{
+"name": "NtGdiDestroyPhysicalMonitor",
+"ordinal": 372,
+"rva": 23984,
+"forwarder": null,
+"ref": "win32u.dll!0x5db0"
+},
+{
+"name": "NtGdiDoBanding",
+"ordinal": 373,
+"rva": 24016,
+"forwarder": null,
+"ref": "win32u.dll!0x5dd0"
+},
+{
+"name": "NtGdiDoPalette",
+"ordinal": 374,
+"rva": 6416,
+"forwarder": null,
+"ref": "win32u.dll!0x1910"
+},
+{
+"name": "NtGdiDrawEscape",
+"ordinal": 375,
+"rva": 24048,
+"forwarder": null,
+"ref": "win32u.dll!0x5df0"
+},
+{
+"name": "NtGdiDrawStream",
+"ordinal": 376,
+"rva": 7248,
+"forwarder": null,
+"ref": "win32u.dll!0x1c50"
+},
+{
+"name": "NtGdiDwmCreatedBitmapRemotingOutput",
+"ordinal": 377,
+"rva": 24080,
+"forwarder": null,
+"ref": "win32u.dll!0x5e10"
+},
+{
+"name": "NtGdiEllipse",
+"ordinal": 378,
+"rva": 24112,
+"forwarder": null,
+"ref": "win32u.dll!0x5e30"
+},
+{
+"name": "NtGdiEnableEudc",
+"ordinal": 379,
+"rva": 24144,
+"forwarder": null,
+"ref": "win32u.dll!0x5e50"
+},
+{
+"name": "NtGdiEndDoc",
+"ordinal": 380,
+"rva": 24176,
+"forwarder": null,
+"ref": "win32u.dll!0x5e70"
+},
+{
+"name": "NtGdiEndGdiRendering",
+"ordinal": 381,
+"rva": 24208,
+"forwarder": null,
+"ref": "win32u.dll!0x5e90"
+},
+{
+"name": "NtGdiEndPage",
+"ordinal": 382,
+"rva": 24240,
+"forwarder": null,
+"ref": "win32u.dll!0x5eb0"
+},
+{
+"name": "NtGdiEndPath",
+"ordinal": 383,
+"rva": 12240,
+"forwarder": null,
+"ref": "win32u.dll!0x2fd0"
+},
+{
+"name": "NtGdiEngAlphaBlend",
+"ordinal": 384,
+"rva": 24272,
+"forwarder": null,
+"ref": "win32u.dll!0x5ed0"
+},
+{
+"name": "NtGdiEngAssociateSurface",
+"ordinal": 385,
+"rva": 24304,
+"forwarder": null,
+"ref": "win32u.dll!0x5ef0"
+},
+{
+"name": "NtGdiEngBitBlt",
+"ordinal": 386,
+"rva": 24336,
+"forwarder": null,
+"ref": "win32u.dll!0x5f10"
+},
+{
+"name": "NtGdiEngCheckAbort",
+"ordinal": 387,
+"rva": 24368,
+"forwarder": null,
+"ref": "win32u.dll!0x5f30"
+},
+{
+"name": "NtGdiEngComputeGlyphSet",
+"ordinal": 388,
+"rva": 24400,
+"forwarder": null,
+"ref": "win32u.dll!0x5f50"
+},
+{
+"name": "NtGdiEngCopyBits",
+"ordinal": 389,
+"rva": 24432,
+"forwarder": null,
+"ref": "win32u.dll!0x5f70"
+},
+{
+"name": "NtGdiEngCreateBitmap",
+"ordinal": 390,
+"rva": 24464,
+"forwarder": null,
+"ref": "win32u.dll!0x5f90"
+},
+{
+"name": "NtGdiEngCreateClip",
+"ordinal": 391,
+"rva": 24496,
+"forwarder": null,
+"ref": "win32u.dll!0x5fb0"
+},
+{
+"name": "NtGdiEngCreateDeviceBitmap",
+"ordinal": 392,
+"rva": 24528,
+"forwarder": null,
+"ref": "win32u.dll!0x5fd0"
+},
+{
+"name": "NtGdiEngCreateDeviceSurface",
+"ordinal": 393,
+"rva": 24560,
+"forwarder": null,
+"ref": "win32u.dll!0x5ff0"
+},
+{
+"name": "NtGdiEngCreatePalette",
+"ordinal": 394,
+"rva": 24592,
+"forwarder": null,
+"ref": "win32u.dll!0x6010"
+},
+{
+"name": "NtGdiEngDeleteClip",
+"ordinal": 395,
+"rva": 24624,
+"forwarder": null,
+"ref": "win32u.dll!0x6030"
+},
+{
+"name": "NtGdiEngDeletePalette",
+"ordinal": 396,
+"rva": 24656,
+"forwarder": null,
+"ref": "win32u.dll!0x6050"
+},
+{
+"name": "NtGdiEngDeletePath",
+"ordinal": 397,
+"rva": 24688,
+"forwarder": null,
+"ref": "win32u.dll!0x6070"
+},
+{
+"name": "NtGdiEngDeleteSurface",
+"ordinal": 398,
+"rva": 24720,
+"forwarder": null,
+"ref": "win32u.dll!0x6090"
+},
+{
+"name": "NtGdiEngEraseSurface",
+"ordinal": 399,
+"rva": 24752,
+"forwarder": null,
+"ref": "win32u.dll!0x60b0"
+},
+{
+"name": "NtGdiEngFillPath",
+"ordinal": 400,
+"rva": 24784,
+"forwarder": null,
+"ref": "win32u.dll!0x60d0"
+},
+{
+"name": "NtGdiEngGradientFill",
+"ordinal": 401,
+"rva": 24816,
+"forwarder": null,
+"ref": "win32u.dll!0x60f0"
+},
+{
+"name": "NtGdiEngLineTo",
+"ordinal": 402,
+"rva": 24848,
+"forwarder": null,
+"ref": "win32u.dll!0x6110"
+},
+{
+"name": "NtGdiEngLockSurface",
+"ordinal": 403,
+"rva": 24880,
+"forwarder": null,
+"ref": "win32u.dll!0x6130"
+},
+{
+"name": "NtGdiEngMarkBandingSurface",
+"ordinal": 404,
+"rva": 24912,
+"forwarder": null,
+"ref": "win32u.dll!0x6150"
+},
+{
+"name": "NtGdiEngPaint",
+"ordinal": 405,
+"rva": 24944,
+"forwarder": null,
+"ref": "win32u.dll!0x6170"
+},
+{
+"name": "NtGdiEngPlgBlt",
+"ordinal": 406,
+"rva": 24976,
+"forwarder": null,
+"ref": "win32u.dll!0x6190"
+},
+{
+"name": "NtGdiEngStretchBlt",
+"ordinal": 407,
+"rva": 25008,
+"forwarder": null,
+"ref": "win32u.dll!0x61b0"
+},
+{
+"name": "NtGdiEngStretchBltROP",
+"ordinal": 408,
+"rva": 25040,
+"forwarder": null,
+"ref": "win32u.dll!0x61d0"
+},
+{
+"name": "NtGdiEngStrokeAndFillPath",
+"ordinal": 409,
+"rva": 25072,
+"forwarder": null,
+"ref": "win32u.dll!0x61f0"
+},
+{
+"name": "NtGdiEngStrokePath",
+"ordinal": 410,
+"rva": 25104,
+"forwarder": null,
+"ref": "win32u.dll!0x6210"
+},
+{
+"name": "NtGdiEngTextOut",
+"ordinal": 411,
+"rva": 25136,
+"forwarder": null,
+"ref": "win32u.dll!0x6230"
+},
+{
+"name": "NtGdiEngTransparentBlt",
+"ordinal": 412,
+"rva": 25168,
+"forwarder": null,
+"ref": "win32u.dll!0x6250"
+},
+{
+"name": "NtGdiEngUnlockSurface",
+"ordinal": 413,
+"rva": 25200,
+"forwarder": null,
+"ref": "win32u.dll!0x6270"
+},
+{
+"name": "NtGdiEnsureDpiDepDefaultGuiFontForPlateau",
+"ordinal": 414,
+"rva": 25232,
+"forwarder": null,
+"ref": "win32u.dll!0x6290"
+},
+{
+"name": "NtGdiEnumFonts",
+"ordinal": 415,
+"rva": 25264,
+"forwarder": null,
+"ref": "win32u.dll!0x62b0"
+},
+{
+"name": "NtGdiEnumObjects",
+"ordinal": 416,
+"rva": 25296,
+"forwarder": null,
+"ref": "win32u.dll!0x62d0"
+},
+{
+"name": "NtGdiEqualRgn",
+"ordinal": 417,
+"rva": 12464,
+"forwarder": null,
+"ref": "win32u.dll!0x30b0"
+},
+{
+"name": "NtGdiEudcLoadUnloadLink",
+"ordinal": 418,
+"rva": 25328,
+"forwarder": null,
+"ref": "win32u.dll!0x62f0"
+},
+{
+"name": "NtGdiExcludeClipRect",
+"ordinal": 419,
+"rva": 8944,
+"forwarder": null,
+"ref": "win32u.dll!0x22f0"
+},
+{
+"name": "NtGdiExtCreatePen",
+"ordinal": 420,
+"rva": 9360,
+"forwarder": null,
+"ref": "win32u.dll!0x2490"
+},
+{
+"name": "NtGdiExtCreateRegion",
+"ordinal": 421,
+"rva": 8464,
+"forwarder": null,
+"ref": "win32u.dll!0x2110"
+},
+{
+"name": "NtGdiExtEscape",
+"ordinal": 422,
+"rva": 12624,
+"forwarder": null,
+"ref": "win32u.dll!0x3150"
+},
+{
+"name": "NtGdiExtFloodFill",
+"ordinal": 423,
+"rva": 25360,
+"forwarder": null,
+"ref": "win32u.dll!0x6310"
+},
+{
+"name": "NtGdiExtGetObjectW",
+"ordinal": 424,
+"rva": 6768,
+"forwarder": null,
+"ref": "win32u.dll!0x1a70"
+},
+{
+"name": "NtGdiExtSelectClipRgn",
+"ordinal": 425,
+"rva": 5616,
+"forwarder": null,
+"ref": "win32u.dll!0x15f0"
+},
+{
+"name": "NtGdiExtTextOutW",
+"ordinal": 426,
+"rva": 5936,
+"forwarder": null,
+"ref": "win32u.dll!0x1730"
+},
+{
+"name": "NtGdiFONTOBJ_cGetAllGlyphHandles",
+"ordinal": 427,
+"rva": 25392,
+"forwarder": null,
+"ref": "win32u.dll!0x6330"
+},
+{
+"name": "NtGdiFONTOBJ_cGetGlyphs",
+"ordinal": 428,
+"rva": 25424,
+"forwarder": null,
+"ref": "win32u.dll!0x6350"
+},
+{
+"name": "NtGdiFONTOBJ_pQueryGlyphAttrs",
+"ordinal": 429,
+"rva": 25456,
+"forwarder": null,
+"ref": "win32u.dll!0x6370"
+},
+{
+"name": "NtGdiFONTOBJ_pfdg",
+"ordinal": 430,
+"rva": 25488,
+"forwarder": null,
+"ref": "win32u.dll!0x6390"
+},
+{
+"name": "NtGdiFONTOBJ_pifi",
+"ordinal": 431,
+"rva": 25520,
+"forwarder": null,
+"ref": "win32u.dll!0x63b0"
+},
+{
+"name": "NtGdiFONTOBJ_pvTrueTypeFontFile",
+"ordinal": 432,
+"rva": 25552,
+"forwarder": null,
+"ref": "win32u.dll!0x63d0"
+},
+{
+"name": "NtGdiFONTOBJ_pxoGetXform",
+"ordinal": 433,
+"rva": 25584,
+"forwarder": null,
+"ref": "win32u.dll!0x63f0"
+},
+{
+"name": "NtGdiFONTOBJ_vGetInfo",
+"ordinal": 434,
+"rva": 25616,
+"forwarder": null,
+"ref": "win32u.dll!0x6410"
+},
+{
+"name": "NtGdiFillPath",
+"ordinal": 435,
+"rva": 12272,
+"forwarder": null,
+"ref": "win32u.dll!0x2ff0"
+},
+{
+"name": "NtGdiFillRgn",
+"ordinal": 436,
+"rva": 10512,
+"forwarder": null,
+"ref": "win32u.dll!0x2910"
+},
+{
+"name": "NtGdiFlattenPath",
+"ordinal": 437,
+"rva": 25648,
+"forwarder": null,
+"ref": "win32u.dll!0x6430"
+},
+{
+"name": "NtGdiFlush",
+"ordinal": 438,
+"rva": 4720,
+"forwarder": null,
+"ref": "win32u.dll!0x1270"
+},
+{
+"name": "NtGdiFontIsLinked",
+"ordinal": 439,
+"rva": 25680,
+"forwarder": null,
+"ref": "win32u.dll!0x6450"
+},
+{
+"name": "NtGdiForceUFIMapping",
+"ordinal": 440,
+"rva": 25712,
+"forwarder": null,
+"ref": "win32u.dll!0x6470"
+},
+{
+"name": "NtGdiFrameRgn",
+"ordinal": 441,
+"rva": 25744,
+"forwarder": null,
+"ref": "win32u.dll!0x6490"
+},
+{
+"name": "NtGdiFullscreenControl",
+"ordinal": 442,
+"rva": 25776,
+"forwarder": null,
+"ref": "win32u.dll!0x64b0"
+},
+{
+"name": "NtGdiGetAndSetDCDword",
+"ordinal": 443,
+"rva": 7408,
+"forwarder": null,
+"ref": "win32u.dll!0x1cf0"
+},
+{
+"name": "NtGdiGetAppClipBox",
+"ordinal": 444,
+"rva": 6288,
+"forwarder": null,
+"ref": "win32u.dll!0x1890"
+},
+{
+"name": "NtGdiGetAppliedDeviceGammaRamp",
+"ordinal": 445,
+"rva": 25808,
+"forwarder": null,
+"ref": "win32u.dll!0x64d0"
+},
+{
+"name": "NtGdiGetBitmapBits",
+"ordinal": 446,
+"rva": 10832,
+"forwarder": null,
+"ref": "win32u.dll!0x2a50"
+},
+{
+"name": "NtGdiGetBitmapDimension",
+"ordinal": 447,
+"rva": 11792,
+"forwarder": null,
+"ref": "win32u.dll!0x2e10"
+},
+{
+"name": "NtGdiGetBitmapDpiScaleValue",
+"ordinal": 448,
+"rva": 25840,
+"forwarder": null,
+"ref": "win32u.dll!0x64f0"
+},
+{
+"name": "NtGdiGetBoundsRect",
+"ordinal": 449,
+"rva": 25872,
+"forwarder": null,
+"ref": "win32u.dll!0x6510"
+},
+{
+"name": "NtGdiGetCOPPCompatibleOPMInformation",
+"ordinal": 450,
+"rva": 25904,
+"forwarder": null,
+"ref": "win32u.dll!0x6530"
+},
+{
+"name": "NtGdiGetCertificate",
+"ordinal": 451,
+"rva": 25936,
+"forwarder": null,
+"ref": "win32u.dll!0x6550"
+},
+{
+"name": "NtGdiGetCertificateByHandle",
+"ordinal": 452,
+"rva": 25968,
+"forwarder": null,
+"ref": "win32u.dll!0x6570"
+},
+{
+"name": "NtGdiGetCertificateSize",
+"ordinal": 453,
+"rva": 26000,
+"forwarder": null,
+"ref": "win32u.dll!0x6590"
+},
+{
+"name": "NtGdiGetCertificateSizeByHandle",
+"ordinal": 454,
+"rva": 26032,
+"forwarder": null,
+"ref": "win32u.dll!0x65b0"
+},
+{
+"name": "NtGdiGetCharABCWidthsW",
+"ordinal": 455,
+"rva": 26064,
+"forwarder": null,
+"ref": "win32u.dll!0x65d0"
+},
+{
+"name": "NtGdiGetCharSet",
+"ordinal": 456,
+"rva": 4432,
+"forwarder": null,
+"ref": "win32u.dll!0x1150"
+},
+{
+"name": "NtGdiGetCharWidthInfo",
+"ordinal": 457,
+"rva": 10288,
+"forwarder": null,
+"ref": "win32u.dll!0x2830"
+},
+{
+"name": "NtGdiGetCharWidthW",
+"ordinal": 458,
+"rva": 10128,
+"forwarder": null,
+"ref": "win32u.dll!0x2790"
+},
+{
+"name": "NtGdiGetCharacterPlacementW",
+"ordinal": 459,
+"rva": 26096,
+"forwarder": null,
+"ref": "win32u.dll!0x65f0"
+},
+{
+"name": "NtGdiGetColorAdjustment",
+"ordinal": 460,
+"rva": 26128,
+"forwarder": null,
+"ref": "win32u.dll!0x6610"
+},
+{
+"name": "NtGdiGetColorSpaceforBitmap",
+"ordinal": 461,
+"rva": 26160,
+"forwarder": null,
+"ref": "win32u.dll!0x6630"
+},
+{
+"name": "NtGdiGetCurrentDpiInfo",
+"ordinal": 462,
+"rva": 26192,
+"forwarder": null,
+"ref": "win32u.dll!0x6650"
+},
+{
+"name": "NtGdiGetDCDpiScaleValue",
+"ordinal": 463,
+"rva": 26224,
+"forwarder": null,
+"ref": "win32u.dll!0x6670"
+},
+{
+"name": "NtGdiGetDCDword",
+"ordinal": 464,
+"rva": 6160,
+"forwarder": null,
+"ref": "win32u.dll!0x1810"
+},
+{
+"name": "NtGdiGetDCObject",
+"ordinal": 465,
+"rva": 5840,
+"forwarder": null,
+"ref": "win32u.dll!0x16d0"
+},
+{
+"name": "NtGdiGetDCPoint",
+"ordinal": 466,
+"rva": 7760,
+"forwarder": null,
+"ref": "win32u.dll!0x1e50"
+},
+{
+"name": "NtGdiGetDCforBitmap",
+"ordinal": 467,
+"rva": 9008,
+"forwarder": null,
+"ref": "win32u.dll!0x2330"
+},
+{
+"name": "NtGdiGetDIBitsInternal",
+"ordinal": 468,
+"rva": 8304,
+"forwarder": null,
+"ref": "win32u.dll!0x2070"
+},
+{
+"name": "NtGdiGetDeviceCaps",
+"ordinal": 469,
+"rva": 26256,
+"forwarder": null,
+"ref": "win32u.dll!0x6690"
+},
+{
+"name": "NtGdiGetDeviceCapsAll",
+"ordinal": 470,
+"rva": 26288,
+"forwarder": null,
+"ref": "win32u.dll!0x66b0"
+},
+{
+"name": "NtGdiGetDeviceGammaRamp",
+"ordinal": 471,
+"rva": 26320,
+"forwarder": null,
+"ref": "win32u.dll!0x66d0"
+},
+{
+"name": "NtGdiGetDeviceWidth",
+"ordinal": 472,
+"rva": 26352,
+"forwarder": null,
+"ref": "win32u.dll!0x66f0"
+},
+{
+"name": "NtGdiGetDhpdev",
+"ordinal": 473,
+"rva": 26384,
+"forwarder": null,
+"ref": "win32u.dll!0x6710"
+},
+{
+"name": "NtGdiGetETM",
+"ordinal": 474,
+"rva": 26416,
+"forwarder": null,
+"ref": "win32u.dll!0x6730"
+},
+{
+"name": "NtGdiGetEmbUFI",
+"ordinal": 475,
+"rva": 26448,
+"forwarder": null,
+"ref": "win32u.dll!0x6750"
+},
+{
+"name": "NtGdiGetEmbedFonts",
+"ordinal": 476,
+"rva": 26480,
+"forwarder": null,
+"ref": "win32u.dll!0x6770"
+},
+{
+"name": "NtGdiGetEntry",
+"ordinal": 477,
+"rva": 26512,
+"forwarder": null,
+"ref": "win32u.dll!0x6790"
+},
+{
+"name": "NtGdiGetEudcTimeStampEx",
+"ordinal": 478,
+"rva": 26544,
+"forwarder": null,
+"ref": "win32u.dll!0x67b0"
+},
+{
+"name": "NtGdiGetFontData",
+"ordinal": 479,
+"rva": 10608,
+"forwarder": null,
+"ref": "win32u.dll!0x2970"
+},
+{
+"name": "NtGdiGetFontFileData",
+"ordinal": 480,
+"rva": 26576,
+"forwarder": null,
+"ref": "win32u.dll!0x67d0"
+},
+{
+"name": "NtGdiGetFontFileInfo",
+"ordinal": 481,
+"rva": 26608,
+"forwarder": null,
+"ref": "win32u.dll!0x67f0"
+},
+{
+"name": "NtGdiGetFontResourceInfoInternalW",
+"ordinal": 482,
+"rva": 26640,
+"forwarder": null,
+"ref": "win32u.dll!0x6810"
+},
+{
+"name": "NtGdiGetFontUnicodeRanges",
+"ordinal": 483,
+"rva": 26672,
+"forwarder": null,
+"ref": "win32u.dll!0x6830"
+},
+{
+"name": "NtGdiGetGammaRampCapability",
+"ordinal": 484,
+"rva": 26704,
+"forwarder": null,
+"ref": "win32u.dll!0x6850"
+},
+{
+"name": "NtGdiGetGlyphIndicesW",
+"ordinal": 485,
+"rva": 26736,
+"forwarder": null,
+"ref": "win32u.dll!0x6870"
+},
+{
+"name": "NtGdiGetGlyphIndicesWInternal",
+"ordinal": 486,
+"rva": 26768,
+"forwarder": null,
+"ref": "win32u.dll!0x6890"
+},
+{
+"name": "NtGdiGetGlyphOutline",
+"ordinal": 487,
+"rva": 26800,
+"forwarder": null,
+"ref": "win32u.dll!0x68b0"
+},
+{
+"name": "NtGdiGetKerningPairs",
+"ordinal": 488,
+"rva": 26832,
+"forwarder": null,
+"ref": "win32u.dll!0x68d0"
+},
+{
+"name": "NtGdiGetLinkedUFIs",
+"ordinal": 489,
+"rva": 26864,
+"forwarder": null,
+"ref": "win32u.dll!0x68f0"
+},
+{
+"name": "NtGdiGetMiterLimit",
+"ordinal": 490,
+"rva": 26896,
+"forwarder": null,
+"ref": "win32u.dll!0x6910"
+},
+{
+"name": "NtGdiGetMonitorID",
+"ordinal": 491,
+"rva": 26928,
+"forwarder": null,
+"ref": "win32u.dll!0x6930"
+},
+{
+"name": "NtGdiGetNearestColor",
+"ordinal": 492,
+"rva": 7696,
+"forwarder": null,
+"ref": "win32u.dll!0x1e10"
+},
+{
+"name": "NtGdiGetNearestPaletteIndex",
+"ordinal": 493,
+"rva": 10096,
+"forwarder": null,
+"ref": "win32u.dll!0x2770"
+},
+{
+"name": "NtGdiGetNumberOfPhysicalMonitors",
+"ordinal": 494,
+"rva": 26960,
+"forwarder": null,
+"ref": "win32u.dll!0x6950"
+},
+{
+"name": "NtGdiGetOPMInformation",
+"ordinal": 495,
+"rva": 26992,
+"forwarder": null,
+"ref": "win32u.dll!0x6970"
+},
+{
+"name": "NtGdiGetOPMRandomNumber",
+"ordinal": 496,
+"rva": 27024,
+"forwarder": null,
+"ref": "win32u.dll!0x6990"
+},
+{
+"name": "NtGdiGetObjectBitmapHandle",
+"ordinal": 497,
+"rva": 27056,
+"forwarder": null,
+"ref": "win32u.dll!0x69b0"
+},
+{
+"name": "NtGdiGetOutlineTextMetricsInternalW",
+"ordinal": 498,
+"rva": 9616,
+"forwarder": null,
+"ref": "win32u.dll!0x2590"
+},
+{
+"name": "NtGdiGetPath",
+"ordinal": 499,
+"rva": 27088,
+"forwarder": null,
+"ref": "win32u.dll!0x69d0"
+},
+{
+"name": "NtGdiGetPerBandInfo",
+"ordinal": 500,
+"rva": 27120,
+"forwarder": null,
+"ref": "win32u.dll!0x69f0"
+},
+{
+"name": "NtGdiGetPhysicalMonitorDescription",
+"ordinal": 501,
+"rva": 27152,
+"forwarder": null,
+"ref": "win32u.dll!0x6a10"
+},
+{
+"name": "NtGdiGetPhysicalMonitors",
+"ordinal": 502,
+"rva": 27184,
+"forwarder": null,
+"ref": "win32u.dll!0x6a30"
+},
+{
+"name": "NtGdiGetPixel",
+"ordinal": 503,
+"rva": 10000,
+"forwarder": null,
+"ref": "win32u.dll!0x2710"
+},
+{
+"name": "NtGdiGetProcessSessionFonts",
+"ordinal": 504,
+"rva": 27216,
+"forwarder": null,
+"ref": "win32u.dll!0x6a50"
+},
+{
+"name": "NtGdiGetPublicFontTableChangeCookie",
+"ordinal": 505,
+"rva": 27248,
+"forwarder": null,
+"ref": "win32u.dll!0x6a70"
+},
+{
+"name": "NtGdiGetRandomRgn",
+"ordinal": 506,
+"rva": 5520,
+"forwarder": null,
+"ref": "win32u.dll!0x1590"
+},
+{
+"name": "NtGdiGetRasterizerCaps",
+"ordinal": 507,
+"rva": 11120,
+"forwarder": null,
+"ref": "win32u.dll!0x2b70"
+},
+{
+"name": "NtGdiGetRealizationInfo",
+"ordinal": 508,
+"rva": 27280,
+"forwarder": null,
+"ref": "win32u.dll!0x6a90"
+},
+{
+"name": "NtGdiGetRegionData",
+"ordinal": 509,
+"rva": 6192,
+"forwarder": null,
+"ref": "win32u.dll!0x1830"
+},
+{
+"name": "NtGdiGetRgnBox",
+"ordinal": 510,
+"rva": 7376,
+"forwarder": null,
+"ref": "win32u.dll!0x1cd0"
+},
+{
+"name": "NtGdiGetServerMetaFileBits",
+"ordinal": 511,
+"rva": 27312,
+"forwarder": null,
+"ref": "win32u.dll!0x6ab0"
+},
+{
+"name": "NtGdiGetSpoolMessage",
+"ordinal": 512,
+"rva": 27344,
+"forwarder": null,
+"ref": "win32u.dll!0x6ad0"
+},
+{
+"name": "NtGdiGetStats",
+"ordinal": 513,
+"rva": 27376,
+"forwarder": null,
+"ref": "win32u.dll!0x6af0"
+},
+{
+"name": "NtGdiGetStringBitmapW",
+"ordinal": 514,
+"rva": 27408,
+"forwarder": null,
+"ref": "win32u.dll!0x6b10"
+},
+{
+"name": "NtGdiGetSuggestedOPMProtectedOutputArraySize",
+"ordinal": 515,
+"rva": 27440,
+"forwarder": null,
+"ref": "win32u.dll!0x6b30"
+},
+{
+"name": "NtGdiGetSystemPaletteUse",
+"ordinal": 516,
+"rva": 12496,
+"forwarder": null,
+"ref": "win32u.dll!0x30d0"
+},
+{
+"name": "NtGdiGetTextCharsetInfo",
+"ordinal": 517,
+"rva": 6608,
+"forwarder": null,
+"ref": "win32u.dll!0x19d0"
+},
+{
+"name": "NtGdiGetTextExtent",
+"ordinal": 518,
+"rva": 8784,
+"forwarder": null,
+"ref": "win32u.dll!0x2250"
+},
+{
+"name": "NtGdiGetTextExtentExW",
+"ordinal": 519,
+"rva": 27472,
+"forwarder": null,
+"ref": "win32u.dll!0x6b50"
+},
+{
+"name": "NtGdiGetTextFaceW",
+"ordinal": 520,
+"rva": 8144,
+"forwarder": null,
+"ref": "win32u.dll!0x1fd0"
+},
+{
+"name": "NtGdiGetTextMetricsW",
+"ordinal": 521,
+"rva": 7824,
+"forwarder": null,
+"ref": "win32u.dll!0x1e90"
+},
+{
+"name": "NtGdiGetTransform",
+"ordinal": 522,
+"rva": 10768,
+"forwarder": null,
+"ref": "win32u.dll!0x2a10"
+},
+{
+"name": "NtGdiGetUFI",
+"ordinal": 523,
+"rva": 27504,
+"forwarder": null,
+"ref": "win32u.dll!0x6b70"
+},
+{
+"name": "NtGdiGetUFIPathname",
+"ordinal": 524,
+"rva": 27536,
+"forwarder": null,
+"ref": "win32u.dll!0x6b90"
+},
+{
+"name": "NtGdiGetWidthTable",
+"ordinal": 525,
+"rva": 7472,
+"forwarder": null,
+"ref": "win32u.dll!0x1d30"
+},
+{
+"name": "NtGdiGradientFill",
+"ordinal": 526,
+"rva": 27568,
+"forwarder": null,
+"ref": "win32u.dll!0x6bb0"
+},
+{
+"name": "NtGdiHLSurfGetInformation",
+"ordinal": 527,
+"rva": 27600,
+"forwarder": null,
+"ref": "win32u.dll!0x6bd0"
+},
+{
+"name": "NtGdiHLSurfSetInformation",
+"ordinal": 528,
+"rva": 27632,
+"forwarder": null,
+"ref": "win32u.dll!0x6bf0"
+},
+{
+"name": "NtGdiHT_Get8BPPFormatPalette",
+"ordinal": 529,
+"rva": 27664,
+"forwarder": null,
+"ref": "win32u.dll!0x6c10"
+},
+{
+"name": "NtGdiHT_Get8BPPMaskPalette",
+"ordinal": 530,
+"rva": 27696,
+"forwarder": null,
+"ref": "win32u.dll!0x6c30"
+},
+{
+"name": "NtGdiHfontCreate",
+"ordinal": 531,
+"rva": 7088,
+"forwarder": null,
+"ref": "win32u.dll!0x1bb0"
+},
+{
+"name": "NtGdiIcmBrushInfo",
+"ordinal": 532,
+"rva": 27728,
+"forwarder": null,
+"ref": "win32u.dll!0x6c50"
+},
+{
+"name": "NtGdiInit",
+"ordinal": 533,
+"rva": 27760,
+"forwarder": null,
+"ref": "win32u.dll!0x6c70"
+},
+{
+"name": "NtGdiInitSpool",
+"ordinal": 534,
+"rva": 27792,
+"forwarder": null,
+"ref": "win32u.dll!0x6c90"
+},
+{
+"name": "NtGdiIntersectClipRect",
+"ordinal": 535,
+"rva": 5168,
+"forwarder": null,
+"ref": "win32u.dll!0x1430"
+},
+{
+"name": "NtGdiInvertRgn",
+"ordinal": 536,
+"rva": 7344,
+"forwarder": null,
+"ref": "win32u.dll!0x1cb0"
+},
+{
+"name": "NtGdiLineTo",
+"ordinal": 537,
+"rva": 6224,
+"forwarder": null,
+"ref": "win32u.dll!0x1850"
+},
+{
+"name": "NtGdiMakeFontDir",
+"ordinal": 538,
+"rva": 27824,
+"forwarder": null,
+"ref": "win32u.dll!0x6cb0"
+},
+{
+"name": "NtGdiMakeInfoDC",
+"ordinal": 539,
+"rva": 27856,
+"forwarder": null,
+"ref": "win32u.dll!0x6cd0"
+},
+{
+"name": "NtGdiMakeObjectUnXferable",
+"ordinal": 540,
+"rva": 27888,
+"forwarder": null,
+"ref": "win32u.dll!0x6cf0"
+},
+{
+"name": "NtGdiMakeObjectXferable",
+"ordinal": 541,
+"rva": 27920,
+"forwarder": null,
+"ref": "win32u.dll!0x6d10"
+},
+{
+"name": "NtGdiMaskBlt",
+"ordinal": 542,
+"rva": 7440,
+"forwarder": null,
+"ref": "win32u.dll!0x1d10"
+},
+{
+"name": "NtGdiMirrorWindowOrg",
+"ordinal": 543,
+"rva": 27952,
+"forwarder": null,
+"ref": "win32u.dll!0x6d30"
+},
+{
+"name": "NtGdiModifyWorldTransform",
+"ordinal": 544,
+"rva": 10576,
+"forwarder": null,
+"ref": "win32u.dll!0x2950"
+},
+{
+"name": "NtGdiMonoBitmap",
+"ordinal": 545,
+"rva": 27984,
+"forwarder": null,
+"ref": "win32u.dll!0x6d50"
+},
+{
+"name": "NtGdiMoveTo",
+"ordinal": 546,
+"rva": 28016,
+"forwarder": null,
+"ref": "win32u.dll!0x6d70"
+},
+{
+"name": "NtGdiOffsetClipRgn",
+"ordinal": 547,
+"rva": 28048,
+"forwarder": null,
+"ref": "win32u.dll!0x6d90"
+},
+{
+"name": "NtGdiOffsetRgn",
+"ordinal": 548,
+"rva": 8080,
+"forwarder": null,
+"ref": "win32u.dll!0x1f90"
+},
+{
+"name": "NtGdiOpenDCW",
+"ordinal": 549,
+"rva": 10704,
+"forwarder": null,
+"ref": "win32u.dll!0x29d0"
+},
+{
+"name": "NtGdiPATHOBJ_bEnum",
+"ordinal": 550,
+"rva": 28080,
+"forwarder": null,
+"ref": "win32u.dll!0x6db0"
+},
+{
+"name": "NtGdiPATHOBJ_bEnumClipLines",
+"ordinal": 551,
+"rva": 28112,
+"forwarder": null,
+"ref": "win32u.dll!0x6dd0"
+},
+{
+"name": "NtGdiPATHOBJ_vEnumStart",
+"ordinal": 552,
+"rva": 28144,
+"forwarder": null,
+"ref": "win32u.dll!0x6df0"
+},
+{
+"name": "NtGdiPATHOBJ_vEnumStartClipLines",
+"ordinal": 553,
+"rva": 28176,
+"forwarder": null,
+"ref": "win32u.dll!0x6e10"
+},
+{
+"name": "NtGdiPATHOBJ_vGetBounds",
+"ordinal": 554,
+"rva": 28208,
+"forwarder": null,
+"ref": "win32u.dll!0x6e30"
+},
+{
+"name": "NtGdiPatBlt",
+"ordinal": 555,
+"rva": 6992,
+"forwarder": null,
+"ref": "win32u.dll!0x1b50"
+},
+{
+"name": "NtGdiPathToRegion",
+"ordinal": 556,
+"rva": 28240,
+"forwarder": null,
+"ref": "win32u.dll!0x6e50"
+},
+{
+"name": "NtGdiPlgBlt",
+"ordinal": 557,
+"rva": 28272,
+"forwarder": null,
+"ref": "win32u.dll!0x6e70"
+},
+{
+"name": "NtGdiPolyDraw",
+"ordinal": 558,
+"rva": 28304,
+"forwarder": null,
+"ref": "win32u.dll!0x6e90"
+},
+{
+"name": "NtGdiPolyPatBlt",
+"ordinal": 559,
+"rva": 7632,
+"forwarder": null,
+"ref": "win32u.dll!0x1dd0"
+},
+{
+"name": "NtGdiPolyPolyDraw",
+"ordinal": 560,
+"rva": 6448,
+"forwarder": null,
+"ref": "win32u.dll!0x1930"
+},
+{
+"name": "NtGdiPolyTextOutW",
+"ordinal": 561,
+"rva": 28336,
+"forwarder": null,
+"ref": "win32u.dll!0x6eb0"
+},
+{
+"name": "NtGdiPtInRegion",
+"ordinal": 562,
+"rva": 28368,
+"forwarder": null,
+"ref": "win32u.dll!0x6ed0"
+},
+{
+"name": "NtGdiPtVisible",
+"ordinal": 563,
+"rva": 28400,
+"forwarder": null,
+"ref": "win32u.dll!0x6ef0"
+},
+{
+"name": "NtGdiQueryFontAssocInfo",
+"ordinal": 564,
+"rva": 11568,
+"forwarder": null,
+"ref": "win32u.dll!0x2d30"
+},
+{
+"name": "NtGdiQueryFonts",
+"ordinal": 565,
+"rva": 28432,
+"forwarder": null,
+"ref": "win32u.dll!0x6f10"
+},
+{
+"name": "NtGdiRectInRegion",
+"ordinal": 566,
+"rva": 9936,
+"forwarder": null,
+"ref": "win32u.dll!0x26d0"
+},
+{
+"name": "NtGdiRectVisible",
+"ordinal": 567,
+"rva": 5776,
+"forwarder": null,
+"ref": "win32u.dll!0x1690"
+},
+{
+"name": "NtGdiRectangle",
+"ordinal": 568,
+"rva": 8656,
+"forwarder": null,
+"ref": "win32u.dll!0x21d0"
+},
+{
+"name": "NtGdiRemoveFontMemResourceEx",
+"ordinal": 569,
+"rva": 12528,
+"forwarder": null,
+"ref": "win32u.dll!0x30f0"
+},
+{
+"name": "NtGdiRemoveFontResourceW",
+"ordinal": 570,
+"rva": 28464,
+"forwarder": null,
+"ref": "win32u.dll!0x6f30"
+},
+{
+"name": "NtGdiRemoveMergeFont",
+"ordinal": 571,
+"rva": 28496,
+"forwarder": null,
+"ref": "win32u.dll!0x6f50"
+},
+{
+"name": "NtGdiResetDC",
+"ordinal": 572,
+"rva": 28528,
+"forwarder": null,
+"ref": "win32u.dll!0x6f70"
+},
+{
+"name": "NtGdiResizePalette",
+"ordinal": 573,
+"rva": 28560,
+"forwarder": null,
+"ref": "win32u.dll!0x6f90"
+},
+{
+"name": "NtGdiRestoreDC",
+"ordinal": 574,
+"rva": 6000,
+"forwarder": null,
+"ref": "win32u.dll!0x1770"
+},
+{
+"name": "NtGdiRoundRect",
+"ordinal": 575,
+"rva": 28592,
+"forwarder": null,
+"ref": "win32u.dll!0x6fb0"
+},
+{
+"name": "NtGdiSTROBJ_bEnum",
+"ordinal": 576,
+"rva": 28624,
+"forwarder": null,
+"ref": "win32u.dll!0x6fd0"
+},
+{
+"name": "NtGdiSTROBJ_bEnumPositionsOnly",
+"ordinal": 577,
+"rva": 28656,
+"forwarder": null,
+"ref": "win32u.dll!0x6ff0"
+},
+{
+"name": "NtGdiSTROBJ_bGetAdvanceWidths",
+"ordinal": 578,
+"rva": 28688,
+"forwarder": null,
+"ref": "win32u.dll!0x7010"
+},
+{
+"name": "NtGdiSTROBJ_dwGetCodePage",
+"ordinal": 579,
+"rva": 28720,
+"forwarder": null,
+"ref": "win32u.dll!0x7030"
+},
+{
+"name": "NtGdiSTROBJ_vEnumStart",
+"ordinal": 580,
+"rva": 28752,
+"forwarder": null,
+"ref": "win32u.dll!0x7050"
+},
+{
+"name": "NtGdiSaveDC",
+"ordinal": 581,
+"rva": 6032,
+"forwarder": null,
+"ref": "win32u.dll!0x1790"
+},
+{
+"name": "NtGdiScaleRgn",
+"ordinal": 582,
+"rva": 28784,
+"forwarder": null,
+"ref": "win32u.dll!0x7070"
+},
+{
+"name": "NtGdiScaleValues",
+"ordinal": 583,
+"rva": 28816,
+"forwarder": null,
+"ref": "win32u.dll!0x7090"
+},
+{
+"name": "NtGdiScaleViewportExtEx",
+"ordinal": 584,
+"rva": 28848,
+"forwarder": null,
+"ref": "win32u.dll!0x70b0"
+},
+{
+"name": "NtGdiScaleWindowExtEx",
+"ordinal": 585,
+"rva": 28880,
+"forwarder": null,
+"ref": "win32u.dll!0x70d0"
+},
+{
+"name": "NtGdiSelectBitmap",
+"ordinal": 586,
+"rva": 4496,
+"forwarder": null,
+"ref": "win32u.dll!0x1190"
+},
+{
+"name": "NtGdiSelectBrush",
+"ordinal": 587,
+"rva": 28912,
+"forwarder": null,
+"ref": "win32u.dll!0x70f0"
+},
+{
+"name": "NtGdiSelectClipPath",
+"ordinal": 588,
+"rva": 28944,
+"forwarder": null,
+"ref": "win32u.dll!0x7110"
+},
+{
+"name": "NtGdiSelectFont",
+"ordinal": 589,
+"rva": 5968,
+"forwarder": null,
+"ref": "win32u.dll!0x1750"
+},
+{
+"name": "NtGdiSelectPen",
+"ordinal": 590,
+"rva": 28976,
+"forwarder": null,
+"ref": "win32u.dll!0x7130"
+},
+{
+"name": "NtGdiSetBitmapAttributes",
+"ordinal": 591,
+"rva": 29008,
+"forwarder": null,
+"ref": "win32u.dll!0x7150"
+},
+{
+"name": "NtGdiSetBitmapBits",
+"ordinal": 592,
+"rva": 9648,
+"forwarder": null,
+"ref": "win32u.dll!0x25b0"
+},
+{
+"name": "NtGdiSetBitmapDimension",
+"ordinal": 593,
+"rva": 12656,
+"forwarder": null,
+"ref": "win32u.dll!0x3170"
+},
+{
+"name": "NtGdiSetBoundsRect",
+"ordinal": 594,
+"rva": 11760,
+"forwarder": null,
+"ref": "win32u.dll!0x2df0"
+},
+{
+"name": "NtGdiSetBrushAttributes",
+"ordinal": 595,
+"rva": 29040,
+"forwarder": null,
+"ref": "win32u.dll!0x7170"
+},
+{
+"name": "NtGdiSetBrushOrg",
+"ordinal": 596,
+"rva": 9424,
+"forwarder": null,
+"ref": "win32u.dll!0x24d0"
+},
+{
+"name": "NtGdiSetColorAdjustment",
+"ordinal": 597,
+"rva": 29072,
+"forwarder": null,
+"ref": "win32u.dll!0x7190"
+},
+{
+"name": "NtGdiSetColorSpace",
+"ordinal": 598,
+"rva": 29104,
+"forwarder": null,
+"ref": "win32u.dll!0x71b0"
+},
+{
+"name": "NtGdiSetDIBitsToDeviceInternal",
+"ordinal": 599,
+"rva": 5456,
+"forwarder": null,
+"ref": "win32u.dll!0x1550"
+},
+{
+"name": "NtGdiSetDeviceGammaRamp",
+"ordinal": 600,
+"rva": 29136,
+"forwarder": null,
+"ref": "win32u.dll!0x71d0"
+},
+{
+"name": "NtGdiSetFontEnumeration",
+"ordinal": 601,
+"rva": 12688,
+"forwarder": null,
+"ref": "win32u.dll!0x3190"
+},
+{
+"name": "NtGdiSetFontXform",
+"ordinal": 602,
+"rva": 29168,
+"forwarder": null,
+"ref": "win32u.dll!0x71f0"
+},
+{
+"name": "NtGdiSetIcmMode",
+"ordinal": 603,
+"rva": 29232,
+"forwarder": null,
+"ref": "win32u.dll!0x7230"
+},
+{
+"name": "NtGdiSetLayout",
+"ordinal": 604,
+"rva": 8848,
+"forwarder": null,
+"ref": "win32u.dll!0x2290"
+},
+{
+"name": "NtGdiSetLinkedUFIs",
+"ordinal": 605,
+"rva": 29264,
+"forwarder": null,
+"ref": "win32u.dll!0x7250"
+},
+{
+"name": "NtGdiSetMagicColors",
+"ordinal": 606,
+"rva": 29296,
+"forwarder": null,
+"ref": "win32u.dll!0x7270"
+},
+{
+"name": "NtGdiSetMetaRgn",
+"ordinal": 607,
+"rva": 11024,
+"forwarder": null,
+"ref": "win32u.dll!0x2b10"
+},
+{
+"name": "NtGdiSetMiterLimit",
+"ordinal": 608,
+"rva": 11056,
+"forwarder": null,
+"ref": "win32u.dll!0x2b30"
+},
+{
+"name": "NtGdiSetOPMSigningKeyAndSequenceNumbers",
+"ordinal": 609,
+"rva": 29328,
+"forwarder": null,
+"ref": "win32u.dll!0x7290"
+},
+{
+"name": "NtGdiSetPUMPDOBJ",
+"ordinal": 610,
+"rva": 29360,
+"forwarder": null,
+"ref": "win32u.dll!0x72b0"
+},
+{
+"name": "NtGdiSetPixel",
+"ordinal": 611,
+"rva": 9488,
+"forwarder": null,
+"ref": "win32u.dll!0x2510"
+},
+{
+"name": "NtGdiSetPixelFormat",
+"ordinal": 612,
+"rva": 29392,
+"forwarder": null,
+"ref": "win32u.dll!0x72d0"
+},
+{
+"name": "NtGdiSetPrivateDeviceGammaRamp",
+"ordinal": 613,
+"rva": 29424,
+"forwarder": null,
+"ref": "win32u.dll!0x72f0"
+},
+{
+"name": "NtGdiSetRectRgn",
+"ordinal": 614,
+"rva": 29456,
+"forwarder": null,
+"ref": "win32u.dll!0x7310"
+},
+{
+"name": "NtGdiSetSizeDevice",
+"ordinal": 615,
+"rva": 29488,
+"forwarder": null,
+"ref": "win32u.dll!0x7330"
+},
+{
+"name": "NtGdiSetSystemPaletteUse",
+"ordinal": 616,
+"rva": 29520,
+"forwarder": null,
+"ref": "win32u.dll!0x7350"
+},
+{
+"name": "NtGdiSetTextJustification",
+"ordinal": 617,
+"rva": 29552,
+"forwarder": null,
+"ref": "win32u.dll!0x7370"
+},
+{
+"name": "NtGdiSetUMPDSandboxState",
+"ordinal": 618,
+"rva": 29584,
+"forwarder": null,
+"ref": "win32u.dll!0x7390"
+},
+{
+"name": "NtGdiSetVirtualResolution",
+"ordinal": 619,
+"rva": 11088,
+"forwarder": null,
+"ref": "win32u.dll!0x2b50"
+},
+{
+"name": "NtGdiStartDoc",
+"ordinal": 620,
+"rva": 29616,
+"forwarder": null,
+"ref": "win32u.dll!0x73b0"
+},
+{
+"name": "NtGdiStartPage",
+"ordinal": 621,
+"rva": 29648,
+"forwarder": null,
+"ref": "win32u.dll!0x73d0"
+},
+{
+"name": "NtGdiStretchBlt",
+"ordinal": 622,
+"rva": 5712,
+"forwarder": null,
+"ref": "win32u.dll!0x1650"
+},
+{
+"name": "NtGdiStretchDIBitsInternal",
+"ordinal": 623,
+"rva": 8176,
+"forwarder": null,
+"ref": "win32u.dll!0x1ff0"
+},
+{
+"name": "NtGdiStrokeAndFillPath",
+"ordinal": 624,
+"rva": 29680,
+"forwarder": null,
+"ref": "win32u.dll!0x73f0"
+},
+{
+"name": "NtGdiStrokePath",
+"ordinal": 625,
+"rva": 29712,
+"forwarder": null,
+"ref": "win32u.dll!0x7410"
+},
+{
+"name": "NtGdiSwapBuffers",
+"ordinal": 626,
+"rva": 29744,
+"forwarder": null,
+"ref": "win32u.dll!0x7430"
+},
+{
+"name": "NtGdiTransformPoints",
+"ordinal": 627,
+"rva": 7728,
+"forwarder": null,
+"ref": "win32u.dll!0x1e30"
+},
+{
+"name": "NtGdiTransparentBlt",
+"ordinal": 628,
+"rva": 29776,
+"forwarder": null,
+"ref": "win32u.dll!0x7450"
+},
+{
+"name": "NtGdiUMPDEngFreeUserMem",
+"ordinal": 629,
+"rva": 29808,
+"forwarder": null,
+"ref": "win32u.dll!0x7470"
+},
+{
+"name": "NtGdiUnloadPrinterDriver",
+"ordinal": 630,
+"rva": 29840,
+"forwarder": null,
+"ref": "win32u.dll!0x7490"
+},
+{
+"name": "NtGdiUnmapMemFont",
+"ordinal": 631,
+"rva": 29872,
+"forwarder": null,
+"ref": "win32u.dll!0x74b0"
+},
+{
+"name": "NtGdiUnrealizeObject",
+"ordinal": 632,
+"rva": 8592,
+"forwarder": null,
+"ref": "win32u.dll!0x2190"
+},
+{
+"name": "NtGdiUpdateColors",
+"ordinal": 633,
+"rva": 29904,
+"forwarder": null,
+"ref": "win32u.dll!0x74d0"
+},
+{
+"name": "NtGdiUpdateTransform",
+"ordinal": 634,
+"rva": 29936,
+"forwarder": null,
+"ref": "win32u.dll!0x74f0"
+},
+{
+"name": "NtGdiWidenPath",
+"ordinal": 635,
+"rva": 29968,
+"forwarder": null,
+"ref": "win32u.dll!0x7510"
+},
+{
+"name": "NtGdiXFORMOBJ_bApplyXform",
+"ordinal": 636,
+"rva": 30000,
+"forwarder": null,
+"ref": "win32u.dll!0x7530"
+},
+{
+"name": "NtGdiXFORMOBJ_iGetXform",
+"ordinal": 637,
+"rva": 30032,
+"forwarder": null,
+"ref": "win32u.dll!0x7550"
+},
+{
+"name": "NtGdiXLATEOBJ_cGetPalette",
+"ordinal": 638,
+"rva": 30064,
+"forwarder": null,
+"ref": "win32u.dll!0x7570"
+},
+{
+"name": "NtGdiXLATEOBJ_hGetColorTransform",
+"ordinal": 639,
+"rva": 30096,
+"forwarder": null,
+"ref": "win32u.dll!0x7590"
+},
+{
+"name": "NtGdiXLATEOBJ_iXlate",
+"ordinal": 640,
+"rva": 30128,
+"forwarder": null,
+"ref": "win32u.dll!0x75b0"
+},
+{
+"name": "NtHWCursorUpdatePointer",
+"ordinal": 641,
+"rva": 30160,
+"forwarder": null,
+"ref": "win32u.dll!0x75d0"
+},
+{
+"name": "NtInputSpaceRegionFromPoint",
+"ordinal": 642,
+"rva": 30192,
+"forwarder": null,
+"ref": "win32u.dll!0x75f0"
+},
+{
+"name": "NtIsOneCoreTransformMode",
+"ordinal": 643,
+"rva": 30224,
+"forwarder": null,
+"ref": "win32u.dll!0x7610"
+},
+{
+"name": "NtMITAccessibilityTimerNotification",
+"ordinal": 644,
+"rva": 30256,
+"forwarder": null,
+"ref": "win32u.dll!0x7630"
+},
+{
+"name": "NtMITActivateInputProcessing",
+"ordinal": 645,
+"rva": 30288,
+"forwarder": null,
+"ref": "win32u.dll!0x7650"
+},
+{
+"name": "NtMITCoreMsgKOpenConnectionTo",
+"ordinal": 646,
+"rva": 30320,
+"forwarder": null,
+"ref": "win32u.dll!0x7670"
+},
+{
+"name": "NtMITDeactivateInputProcessing",
+"ordinal": 647,
+"rva": 30352,
+"forwarder": null,
+"ref": "win32u.dll!0x7690"
+},
+{
+"name": "NtMITDisableMouseIntercept",
+"ordinal": 648,
+"rva": 30384,
+"forwarder": null,
+"ref": "win32u.dll!0x76b0"
+},
+{
+"name": "NtMITDispatchCompletion",
+"ordinal": 649,
+"rva": 30416,
+"forwarder": null,
+"ref": "win32u.dll!0x76d0"
+},
+{
+"name": "NtMITEnableMouseIntercept",
+"ordinal": 650,
+"rva": 30448,
+"forwarder": null,
+"ref": "win32u.dll!0x76f0"
+},
+{
+"name": "NtMITGetCursorUpdateHandle",
+"ordinal": 651,
+"rva": 30480,
+"forwarder": null,
+"ref": "win32u.dll!0x7710"
+},
+{
+"name": "NtMITInitMinuserThread",
+"ordinal": 652,
+"rva": 30512,
+"forwarder": null,
+"ref": "win32u.dll!0x7730"
+},
+{
+"name": "NtMITMinuserSetInputTransformOffset",
+"ordinal": 653,
+"rva": 30544,
+"forwarder": null,
+"ref": "win32u.dll!0x7750"
+},
+{
+"name": "NtMITMinuserWindowCreated",
+"ordinal": 654,
+"rva": 30576,
+"forwarder": null,
+"ref": "win32u.dll!0x7770"
+},
+{
+"name": "NtMITMinuserWindowDestroyed",
+"ordinal": 655,
+"rva": 30608,
+"forwarder": null,
+"ref": "win32u.dll!0x7790"
+},
+{
+"name": "NtMITPostMouseInputMessage",
+"ordinal": 656,
+"rva": 30640,
+"forwarder": null,
+"ref": "win32u.dll!0x77b0"
+},
+{
+"name": "NtMITPostThreadEventMessage",
+"ordinal": 657,
+"rva": 30672,
+"forwarder": null,
+"ref": "win32u.dll!0x77d0"
+},
+{
+"name": "NtMITPostWindowEventMessage",
+"ordinal": 658,
+"rva": 30704,
+"forwarder": null,
+"ref": "win32u.dll!0x77f0"
+},
+{
+"name": "NtMITPrepareReceiveInputMessage",
+"ordinal": 659,
+"rva": 30736,
+"forwarder": null,
+"ref": "win32u.dll!0x7810"
+},
+{
+"name": "NtMITPrepareSendInputMessage",
+"ordinal": 660,
+"rva": 30768,
+"forwarder": null,
+"ref": "win32u.dll!0x7830"
+},
+{
+"name": "NtMITProcessDelegateCapturedPointers",
+"ordinal": 661,
+"rva": 30800,
+"forwarder": null,
+"ref": "win32u.dll!0x7850"
+},
+{
+"name": "NtMITSetForegroundRoutingInfo",
+"ordinal": 662,
+"rva": 30832,
+"forwarder": null,
+"ref": "win32u.dll!0x7870"
+},
+{
+"name": "NtMITSetInputCallbacks",
+"ordinal": 663,
+"rva": 30864,
+"forwarder": null,
+"ref": "win32u.dll!0x7890"
+},
+{
+"name": "NtMITSetInputDelegationMode",
+"ordinal": 664,
+"rva": 30896,
+"forwarder": null,
+"ref": "win32u.dll!0x78b0"
+},
+{
+"name": "NtMITSetInputObservationState",
+"ordinal": 665,
+"rva": 30928,
+"forwarder": null,
+"ref": "win32u.dll!0x78d0"
+},
+{
+"name": "NtMITSetKeyboardInputRoutingPolicy",
+"ordinal": 666,
+"rva": 30960,
+"forwarder": null,
+"ref": "win32u.dll!0x78f0"
+},
+{
+"name": "NtMITSetKeyboardOverriderState",
+"ordinal": 667,
+"rva": 30992,
+"forwarder": null,
+"ref": "win32u.dll!0x7910"
+},
+{
+"name": "NtMITSetLastInputRecipient",
+"ordinal": 668,
+"rva": 31024,
+"forwarder": null,
+"ref": "win32u.dll!0x7930"
+},
+{
+"name": "NtMITSynthesizeKeyboardInput",
+"ordinal": 669,
+"rva": 31056,
+"forwarder": null,
+"ref": "win32u.dll!0x7950"
+},
+{
+"name": "NtMITSynthesizeMouseInput",
+"ordinal": 670,
+"rva": 31088,
+"forwarder": null,
+"ref": "win32u.dll!0x7970"
+},
+{
+"name": "NtMITSynthesizeTouchInput",
+"ordinal": 671,
+"rva": 31120,
+"forwarder": null,
+"ref": "win32u.dll!0x7990"
+},
+{
+"name": "NtMITUninitMinuserThread",
+"ordinal": 672,
+"rva": 31152,
+"forwarder": null,
+"ref": "win32u.dll!0x79b0"
+},
+{
+"name": "NtMITUpdateInputGlobals",
+"ordinal": 673,
+"rva": 31184,
+"forwarder": null,
+"ref": "win32u.dll!0x79d0"
+},
+{
+"name": "NtMapVisualRelativePoints",
+"ordinal": 674,
+"rva": 31216,
+"forwarder": null,
+"ref": "win32u.dll!0x79f0"
+},
+{
+"name": "NtMinGetInputTransform",
+"ordinal": 675,
+"rva": 31248,
+"forwarder": null,
+"ref": "win32u.dll!0x7a10"
+},
+{
+"name": "NtMinInteropCoreMessagingWithInput",
+"ordinal": 676,
+"rva": 31280,
+"forwarder": null,
+"ref": "win32u.dll!0x7a30"
+},
+{
+"name": "NtMinQPeekForInput",
+"ordinal": 677,
+"rva": 31312,
+"forwarder": null,
+"ref": "win32u.dll!0x7a50"
+},
+{
+"name": "NtMinQSuspendInputProcessing",
+"ordinal": 678,
+"rva": 31344,
+"forwarder": null,
+"ref": "win32u.dll!0x7a70"
+},
+{
+"name": "NtMinQUpdateWakeMask",
+"ordinal": 679,
+"rva": 31376,
+"forwarder": null,
+"ref": "win32u.dll!0x7a90"
+},
+{
+"name": "NtModerncoreBeginLayoutUpdate",
+"ordinal": 680,
+"rva": 31408,
+"forwarder": null,
+"ref": "win32u.dll!0x7ab0"
+},
+{
+"name": "NtModerncoreCreateDCompositionHwndTarget",
+"ordinal": 681,
+"rva": 31440,
+"forwarder": null,
+"ref": "win32u.dll!0x7ad0"
+},
+{
+"name": "NtModerncoreCreateGDIHwndTarget",
+"ordinal": 682,
+"rva": 31472,
+"forwarder": null,
+"ref": "win32u.dll!0x7af0"
+},
+{
+"name": "NtModerncoreDestroyDCompositionHwndTarget",
+"ordinal": 683,
+"rva": 31504,
+"forwarder": null,
+"ref": "win32u.dll!0x7b10"
+},
+{
+"name": "NtModerncoreDestroyGDIHwndTarget",
+"ordinal": 684,
+"rva": 31536,
+"forwarder": null,
+"ref": "win32u.dll!0x7b30"
+},
+{
+"name": "NtModerncoreEnableResizeLayoutSynchronization",
+"ordinal": 685,
+"rva": 31568,
+"forwarder": null,
+"ref": "win32u.dll!0x7b50"
+},
+{
+"name": "NtModerncoreGetNavigationWindowVisual",
+"ordinal": 686,
+"rva": 31600,
+"forwarder": null,
+"ref": "win32u.dll!0x7b70"
+},
+{
+"name": "NtModerncoreGetResizeDCompositionSynchronizationObject",
+"ordinal": 687,
+"rva": 31632,
+"forwarder": null,
+"ref": "win32u.dll!0x7b90"
+},
+{
+"name": "NtModerncoreGetWindowContentVisual",
+"ordinal": 688,
+"rva": 31664,
+"forwarder": null,
+"ref": "win32u.dll!0x7bb0"
+},
+{
+"name": "NtModerncoreIdleTimerThread",
+"ordinal": 689,
+"rva": 31696,
+"forwarder": null,
+"ref": "win32u.dll!0x7bd0"
+},
+{
+"name": "NtModerncoreIsResizeLayoutSynchronizationEnabled",
+"ordinal": 690,
+"rva": 31728,
+"forwarder": null,
+"ref": "win32u.dll!0x7bf0"
+},
+{
+"name": "NtModerncoreProcessConnect",
+"ordinal": 691,
+"rva": 31760,
+"forwarder": null,
+"ref": "win32u.dll!0x7c10"
+},
+{
+"name": "NtModerncoreRegisterEnhancedNavigationWindowHandle",
+"ordinal": 692,
+"rva": 31792,
+"forwarder": null,
+"ref": "win32u.dll!0x7c30"
+},
+{
+"name": "NtModerncoreRegisterNavigationWindowHandle",
+"ordinal": 693,
+"rva": 31824,
+"forwarder": null,
+"ref": "win32u.dll!0x7c50"
+},
+{
+"name": "NtModerncoreSetNavigationServiceSid",
+"ordinal": 694,
+"rva": 31856,
+"forwarder": null,
+"ref": "win32u.dll!0x7c70"
+},
+{
+"name": "NtModerncoreUnregisterNavigationWindowHandle",
+"ordinal": 695,
+"rva": 31888,
+"forwarder": null,
+"ref": "win32u.dll!0x7c90"
+},
+{
+"name": "NtNotifyPresentToCompositionSurface",
+"ordinal": 696,
+"rva": 31920,
+"forwarder": null,
+"ref": "win32u.dll!0x7cb0"
+},
+{
+"name": "NtOpenCompositionSurfaceDirtyRegion",
+"ordinal": 697,
+"rva": 31952,
+"forwarder": null,
+"ref": "win32u.dll!0x7cd0"
+},
+{
+"name": "NtOpenCompositionSurfaceSectionInfo",
+"ordinal": 698,
+"rva": 31984,
+"forwarder": null,
+"ref": "win32u.dll!0x7cf0"
+},
+{
+"name": "NtOpenCompositionSurfaceSwapChainHandleInfo",
+"ordinal": 699,
+"rva": 32016,
+"forwarder": null,
+"ref": "win32u.dll!0x7d10"
+},
+{
+"name": "NtQueryCompositionInputIsImplicit",
+"ordinal": 700,
+"rva": 32048,
+"forwarder": null,
+"ref": "win32u.dll!0x7d30"
+},
+{
+"name": "NtQueryCompositionInputQueueAndTransform",
+"ordinal": 701,
+"rva": 32080,
+"forwarder": null,
+"ref": "win32u.dll!0x7d50"
+},
+{
+"name": "NtQueryCompositionInputSink",
+"ordinal": 702,
+"rva": 32112,
+"forwarder": null,
+"ref": "win32u.dll!0x7d70"
+},
+{
+"name": "NtQueryCompositionInputSinkLuid",
+"ordinal": 703,
+"rva": 32144,
+"forwarder": null,
+"ref": "win32u.dll!0x7d90"
+},
+{
+"name": "NtQueryCompositionInputSinkViewId",
+"ordinal": 704,
+"rva": 32176,
+"forwarder": null,
+"ref": "win32u.dll!0x7db0"
+},
+{
+"name": "NtQueryCompositionSurfaceBinding",
+"ordinal": 705,
+"rva": 32208,
+"forwarder": null,
+"ref": "win32u.dll!0x7dd0"
+},
+{
+"name": "NtQueryCompositionSurfaceHDRMetaData",
+"ordinal": 706,
+"rva": 32240,
+"forwarder": null,
+"ref": "win32u.dll!0x7df0"
+},
+{
+"name": "NtQueryCompositionSurfaceRenderingRealization",
+"ordinal": 707,
+"rva": 32272,
+"forwarder": null,
+"ref": "win32u.dll!0x7e10"
+},
+{
+"name": "NtQueryCompositionSurfaceStatistics",
+"ordinal": 708,
+"rva": 32304,
+"forwarder": null,
+"ref": "win32u.dll!0x7e30"
+},
+{
+"name": "NtRIMAddInputObserver",
+"ordinal": 709,
+"rva": 32336,
+"forwarder": null,
+"ref": "win32u.dll!0x7e50"
+},
+{
+"name": "NtRIMAreSiblingDevices",
+"ordinal": 710,
+"rva": 32368,
+"forwarder": null,
+"ref": "win32u.dll!0x7e70"
+},
+{
+"name": "NtRIMDeviceIoControl",
+"ordinal": 711,
+"rva": 32400,
+"forwarder": null,
+"ref": "win32u.dll!0x7e90"
+},
+{
+"name": "NtRIMEnableMonitorMappingForDevice",
+"ordinal": 712,
+"rva": 32432,
+"forwarder": null,
+"ref": "win32u.dll!0x7eb0"
+},
+{
+"name": "NtRIMFreeInputBuffer",
+"ordinal": 713,
+"rva": 32464,
+"forwarder": null,
+"ref": "win32u.dll!0x7ed0"
+},
+{
+"name": "NtRIMGetDevicePreparsedData",
+"ordinal": 714,
+"rva": 32496,
+"forwarder": null,
+"ref": "win32u.dll!0x7ef0"
+},
+{
+"name": "NtRIMGetDevicePreparsedDataLockfree",
+"ordinal": 715,
+"rva": 32528,
+"forwarder": null,
+"ref": "win32u.dll!0x7f10"
+},
+{
+"name": "NtRIMGetDeviceProperties",
+"ordinal": 716,
+"rva": 32560,
+"forwarder": null,
+"ref": "win32u.dll!0x7f30"
+},
+{
+"name": "NtRIMGetDevicePropertiesLockfree",
+"ordinal": 717,
+"rva": 32592,
+"forwarder": null,
+"ref": "win32u.dll!0x7f50"
+},
+{
+"name": "NtRIMGetPhysicalDeviceRect",
+"ordinal": 718,
+"rva": 32624,
+"forwarder": null,
+"ref": "win32u.dll!0x7f70"
+},
+{
+"name": "NtRIMGetSourceProcessId",
+"ordinal": 719,
+"rva": 32656,
+"forwarder": null,
+"ref": "win32u.dll!0x7f90"
+},
+{
+"name": "NtRIMObserveNextInput",
+"ordinal": 720,
+"rva": 32688,
+"forwarder": null,
+"ref": "win32u.dll!0x7fb0"
+},
+{
+"name": "NtRIMOnPnpNotification",
+"ordinal": 721,
+"rva": 32720,
+"forwarder": null,
+"ref": "win32u.dll!0x7fd0"
+},
+{
+"name": "NtRIMOnTimerNotification",
+"ordinal": 722,
+"rva": 32752,
+"forwarder": null,
+"ref": "win32u.dll!0x7ff0"
+},
+{
+"name": "NtRIMQueryDevicePath",
+"ordinal": 723,
+"rva": 32784,
+"forwarder": null,
+"ref": "win32u.dll!0x8010"
+},
+{
+"name": "NtRIMReadInput",
+"ordinal": 724,
+"rva": 32816,
+"forwarder": null,
+"ref": "win32u.dll!0x8030"
+},
+{
+"name": "NtRIMRegisterForInput",
+"ordinal": 725,
+"rva": 32848,
+"forwarder": null,
+"ref": "win32u.dll!0x8050"
+},
+{
+"name": "NtRIMRemoveInputObserver",
+"ordinal": 726,
+"rva": 32880,
+"forwarder": null,
+"ref": "win32u.dll!0x8070"
+},
+{
+"name": "NtRIMSetExtendedDeviceProperty",
+"ordinal": 727,
+"rva": 32912,
+"forwarder": null,
+"ref": "win32u.dll!0x8090"
+},
+{
+"name": "NtRIMSetTestModeStatus",
+"ordinal": 728,
+"rva": 32944,
+"forwarder": null,
+"ref": "win32u.dll!0x80b0"
+},
+{
+"name": "NtRIMUnregisterForInput",
+"ordinal": 729,
+"rva": 32976,
+"forwarder": null,
+"ref": "win32u.dll!0x80d0"
+},
+{
+"name": "NtRIMUpdateInputObserverRegistration",
+"ordinal": 730,
+"rva": 33008,
+"forwarder": null,
+"ref": "win32u.dll!0x80f0"
+},
+{
+"name": "NtSetCompositionSurfaceAnalogExclusive",
+"ordinal": 731,
+"rva": 33040,
+"forwarder": null,
+"ref": "win32u.dll!0x8110"
+},
+{
+"name": "NtSetCompositionSurfaceBufferUsage",
+"ordinal": 732,
+"rva": 33072,
+"forwarder": null,
+"ref": "win32u.dll!0x8130"
+},
+{
+"name": "NtSetCompositionSurfaceDirectFlipState",
+"ordinal": 733,
+"rva": 33104,
+"forwarder": null,
+"ref": "win32u.dll!0x8150"
+},
+{
+"name": "NtSetCompositionSurfaceIndependentFlipInfo",
+"ordinal": 734,
+"rva": 33136,
+"forwarder": null,
+"ref": "win32u.dll!0x8170"
+},
+{
+"name": "NtSetCompositionSurfaceStatistics",
+"ordinal": 735,
+"rva": 33168,
+"forwarder": null,
+"ref": "win32u.dll!0x8190"
+},
+{
+"name": "NtSetCursorInputSpace",
+"ordinal": 736,
+"rva": 33200,
+"forwarder": null,
+"ref": "win32u.dll!0x81b0"
+},
+{
+"name": "NtSetPointerDeviceInputSpace",
+"ordinal": 737,
+"rva": 33232,
+"forwarder": null,
+"ref": "win32u.dll!0x81d0"
+},
+{
+"name": "NtSetShellCursorState",
+"ordinal": 738,
+"rva": 33264,
+"forwarder": null,
+"ref": "win32u.dll!0x81f0"
+},
+{
+"name": "NtTokenManagerConfirmOutstandingAnalogToken",
+"ordinal": 739,
+"rva": 33296,
+"forwarder": null,
+"ref": "win32u.dll!0x8210"
+},
+{
+"name": "NtTokenManagerCreateCompositionTokenHandle",
+"ordinal": 740,
+"rva": 33328,
+"forwarder": null,
+"ref": "win32u.dll!0x8230"
+},
+{
+"name": "NtTokenManagerCreateFlipObjectReturnTokenHandle",
+"ordinal": 741,
+"rva": 33360,
+"forwarder": null,
+"ref": "win32u.dll!0x8250"
+},
+{
+"name": "NtTokenManagerCreateFlipObjectTokenHandle",
+"ordinal": 742,
+"rva": 33392,
+"forwarder": null,
+"ref": "win32u.dll!0x8270"
+},
+{
+"name": "NtTokenManagerGetAnalogExclusiveSurfaceUpdates",
+"ordinal": 743,
+"rva": 33424,
+"forwarder": null,
+"ref": "win32u.dll!0x8290"
+},
+{
+"name": "NtTokenManagerGetAnalogExclusiveTokenEvent",
+"ordinal": 744,
+"rva": 33456,
+"forwarder": null,
+"ref": "win32u.dll!0x82b0"
+},
+{
+"name": "NtTokenManagerOpenSectionAndEvents",
+"ordinal": 745,
+"rva": 33488,
+"forwarder": null,
+"ref": "win32u.dll!0x82d0"
+},
+{
+"name": "NtTokenManagerThread",
+"ordinal": 746,
+"rva": 33520,
+"forwarder": null,
+"ref": "win32u.dll!0x82f0"
+},
+{
+"name": "NtUnBindCompositionSurface",
+"ordinal": 747,
+"rva": 33552,
+"forwarder": null,
+"ref": "win32u.dll!0x8310"
+},
+{
+"name": "NtUpdateInputSinkTransforms",
+"ordinal": 748,
+"rva": 33584,
+"forwarder": null,
+"ref": "win32u.dll!0x8330"
+},
+{
+"name": "NtUserAcquireIAMKey",
+"ordinal": 749,
+"rva": 33616,
+"forwarder": null,
+"ref": "win32u.dll!0x8350"
+},
+{
+"name": "NtUserAcquireInteractiveControlBackgroundAccess",
+"ordinal": 750,
+"rva": 33648,
+"forwarder": null,
+"ref": "win32u.dll!0x8370"
+},
+{
+"name": "NtUserActivateKeyboardLayout",
+"ordinal": 751,
+"rva": 12880,
+"forwarder": null,
+"ref": "win32u.dll!0x3250"
+},
+{
+"name": "NtUserAddClipboardFormatListener",
+"ordinal": 752,
+"rva": 33680,
+"forwarder": null,
+"ref": "win32u.dll!0x8390"
+},
+{
+"name": "NtUserAddVisualIdentifier",
+"ordinal": 753,
+"rva": 33712,
+"forwarder": null,
+"ref": "win32u.dll!0x83b0"
+},
+{
+"name": "NtUserAlterWindowStyle",
+"ordinal": 754,
+"rva": 10480,
+"forwarder": null,
+"ref": "win32u.dll!0x28f0"
+},
+{
+"name": "NtUserAssociateInputContext",
+"ordinal": 755,
+"rva": 33744,
+"forwarder": null,
+"ref": "win32u.dll!0x83d0"
+},
+{
+"name": "NtUserAttachThreadInput",
+"ordinal": 756,
+"rva": 11280,
+"forwarder": null,
+"ref": "win32u.dll!0x2c10"
+},
+{
+"name": "NtUserAutoPromoteMouseInPointer",
+"ordinal": 757,
+"rva": 33776,
+"forwarder": null,
+"ref": "win32u.dll!0x83f0"
+},
+{
+"name": "NtUserAutoRotateScreen",
+"ordinal": 758,
+"rva": 33808,
+"forwarder": null,
+"ref": "win32u.dll!0x8410"
+},
+{
+"name": "NtUserBeginLayoutUpdate",
+"ordinal": 759,
+"rva": 33840,
+"forwarder": null,
+"ref": "win32u.dll!0x8430"
+},
+{
+"name": "NtUserBeginPaint",
+"ordinal": 760,
+"rva": 4880,
+"forwarder": null,
+"ref": "win32u.dll!0x1310"
+},
+{
+"name": "NtUserBitBltSysBmp",
+"ordinal": 761,
+"rva": 10256,
+"forwarder": null,
+"ref": "win32u.dll!0x2810"
+},
+{
+"name": "NtUserBlockInput",
+"ordinal": 762,
+"rva": 33872,
+"forwarder": null,
+"ref": "win32u.dll!0x8450"
+},
+{
+"name": "NtUserBroadcastThemeChangeEvent",
+"ordinal": 763,
+"rva": 33904,
+"forwarder": null,
+"ref": "win32u.dll!0x8470"
+},
+{
+"name": "NtUserBuildHimcList",
+"ordinal": 764,
+"rva": 33936,
+"forwarder": null,
+"ref": "win32u.dll!0x8490"
+},
+{
+"name": "NtUserBuildHwndList",
+"ordinal": 765,
+"rva": 5040,
+"forwarder": null,
+"ref": "win32u.dll!0x13b0"
+},
+{
+"name": "NtUserBuildNameList",
+"ordinal": 766,
+"rva": 9456,
+"forwarder": null,
+"ref": "win32u.dll!0x24f0"
+},
+{
+"name": "NtUserBuildPropList",
+"ordinal": 767,
+"rva": 33968,
+"forwarder": null,
+"ref": "win32u.dll!0x84b0"
+},
+{
+"name": "NtUserCalcMenuBar",
+"ordinal": 768,
+"rva": 8880,
+"forwarder": null,
+"ref": "win32u.dll!0x22b0"
+},
+{
+"name": "NtUserCalculatePopupWindowPosition",
+"ordinal": 769,
+"rva": 34000,
+"forwarder": null,
+"ref": "win32u.dll!0x84d0"
+},
+{
+"name": "NtUserCallHwnd",
+"ordinal": 770,
+"rva": 12304,
+"forwarder": null,
+"ref": "win32u.dll!0x3010"
+},
+{
+"name": "NtUserCallHwndLock",
+"ordinal": 771,
+"rva": 5200,
+"forwarder": null,
+"ref": "win32u.dll!0x1450"
+},
+{
+"name": "NtUserCallHwndLockSafe",
+"ordinal": 772,
+"rva": 34032,
+"forwarder": null,
+"ref": "win32u.dll!0x84f0"
+},
+{
+"name": "NtUserCallHwndOpt",
+"ordinal": 773,
+"rva": 34064,
+"forwarder": null,
+"ref": "win32u.dll!0x8510"
+},
+{
+"name": "NtUserCallHwndParam",
+"ordinal": 774,
+"rva": 9104,
+"forwarder": null,
+"ref": "win32u.dll!0x2390"
+},
+{
+"name": "NtUserCallHwndParamLock",
+"ordinal": 775,
+"rva": 5392,
+"forwarder": null,
+"ref": "win32u.dll!0x1510"
+},
+{
+"name": "NtUserCallHwndParamLockSafe",
+"ordinal": 776,
+"rva": 34096,
+"forwarder": null,
+"ref": "win32u.dll!0x8530"
+},
+{
+"name": "NtUserCallHwndSafe",
+"ordinal": 777,
+"rva": 34128,
+"forwarder": null,
+"ref": "win32u.dll!0x8550"
+},
+{
+"name": "NtUserCallMsgFilter",
+"ordinal": 778,
+"rva": 4816,
+"forwarder": null,
+"ref": "win32u.dll!0x12d0"
+},
+{
+"name": "NtUserCallNextHookEx",
+"ordinal": 779,
+"rva": 5104,
+"forwarder": null,
+"ref": "win32u.dll!0x13f0"
+},
+{
+"name": "NtUserCallNoParam",
+"ordinal": 780,
+"rva": 4304,
+"forwarder": null,
+"ref": "win32u.dll!0x10d0"
+},
+{
+"name": "NtUserCallOneParam",
+"ordinal": 781,
+"rva": 4208,
+"forwarder": null,
+"ref": "win32u.dll!0x1070"
+},
+{
+"name": "NtUserCallTwoParam",
+"ordinal": 782,
+"rva": 5488,
+"forwarder": null,
+"ref": "win32u.dll!0x1570"
+},
+{
+"name": "NtUserCanBrokerForceForeground",
+"ordinal": 783,
+"rva": 34160,
+"forwarder": null,
+"ref": "win32u.dll!0x8570"
+},
+{
+"name": "NtUserChangeClipboardChain",
+"ordinal": 784,
+"rva": 12720,
+"forwarder": null,
+"ref": "win32u.dll!0x31b0"
+},
+{
+"name": "NtUserChangeDisplaySettings",
+"ordinal": 785,
+"rva": 34192,
+"forwarder": null,
+"ref": "win32u.dll!0x8590"
+},
+{
+"name": "NtUserChangeWindowMessageFilterEx",
+"ordinal": 786,
+"rva": 34224,
+"forwarder": null,
+"ref": "win32u.dll!0x85b0"
+},
+{
+"name": "NtUserCheckAccessForIntegrityLevel",
+"ordinal": 787,
+"rva": 34256,
+"forwarder": null,
+"ref": "win32u.dll!0x85d0"
+},
+{
+"name": "NtUserCheckMenuItem",
+"ordinal": 788,
+"rva": 12016,
+"forwarder": null,
+"ref": "win32u.dll!0x2ef0"
+},
+{
+"name": "NtUserCheckProcessForClipboardAccess",
+"ordinal": 789,
+"rva": 34288,
+"forwarder": null,
+"ref": "win32u.dll!0x85f0"
+},
+{
+"name": "NtUserCheckProcessSession",
+"ordinal": 790,
+"rva": 34320,
+"forwarder": null,
+"ref": "win32u.dll!0x8610"
+},
+{
+"name": "NtUserCheckWindowThreadDesktop",
+"ordinal": 791,
+"rva": 34352,
+"forwarder": null,
+"ref": "win32u.dll!0x8630"
+},
+{
+"name": "NtUserChildWindowFromPointEx",
+"ordinal": 792,
+"rva": 34384,
+"forwarder": null,
+"ref": "win32u.dll!0x8650"
+},
+{
+"name": "NtUserClearForeground",
+"ordinal": 793,
+"rva": 34416,
+"forwarder": null,
+"ref": "win32u.dll!0x8670"
+},
+{
+"name": "NtUserClipCursor",
+"ordinal": 794,
+"rva": 34448,
+"forwarder": null,
+"ref": "win32u.dll!0x8690"
+},
+{
+"name": "NtUserCloseClipboard",
+"ordinal": 795,
+"rva": 10352,
+"forwarder": null,
+"ref": "win32u.dll!0x2870"
+},
+{
+"name": "NtUserCloseDesktop",
+"ordinal": 796,
+"rva": 9232,
+"forwarder": null,
+"ref": "win32u.dll!0x2410"
+},
+{
+"name": "NtUserCloseWindowStation",
+"ordinal": 797,
+"rva": 9680,
+"forwarder": null,
+"ref": "win32u.dll!0x25d0"
+},
+{
+"name": "NtUserCompositionInputSinkLuidFromPoint",
+"ordinal": 798,
+"rva": 34480,
+"forwarder": null,
+"ref": "win32u.dll!0x86b0"
+},
+{
+"name": "NtUserCompositionInputSinkViewInstanceIdFromPoint",
+"ordinal": 799,
+"rva": 34512,
+"forwarder": null,
+"ref": "win32u.dll!0x86d0"
+},
+{
+"name": "NtUserConfigureActivationObject",
+"ordinal": 800,
+"rva": 34544,
+"forwarder": null,
+"ref": "win32u.dll!0x86f0"
+},
+{
+"name": "NtUserConfirmResizeCommit",
+"ordinal": 801,
+"rva": 34576,
+"forwarder": null,
+"ref": "win32u.dll!0x8710"
+},
+{
+"name": "NtUserConsoleControl",
+"ordinal": 802,
+"rva": 10864,
+"forwarder": null,
+"ref": "win32u.dll!0x2a70"
+},
+{
+"name": "NtUserConvertMemHandle",
+"ordinal": 803,
+"rva": 11824,
+"forwarder": null,
+"ref": "win32u.dll!0x2e30"
+},
+{
+"name": "NtUserCopyAcceleratorTable",
+"ordinal": 804,
+"rva": 5552,
+"forwarder": null,
+"ref": "win32u.dll!0x15b0"
+},
+{
+"name": "NtUserCountClipboardFormats",
+"ordinal": 805,
+"rva": 12400,
+"forwarder": null,
+"ref": "win32u.dll!0x3070"
+},
+{
+"name": "NtUserCreateAcceleratorTable",
+"ordinal": 806,
+"rva": 11440,
+"forwarder": null,
+"ref": "win32u.dll!0x2cb0"
+},
+{
+"name": "NtUserCreateActivationGroup",
+"ordinal": 807,
+"rva": 34608,
+"forwarder": null,
+"ref": "win32u.dll!0x8730"
+},
+{
+"name": "NtUserCreateActivationObject",
+"ordinal": 808,
+"rva": 34640,
+"forwarder": null,
+"ref": "win32u.dll!0x8750"
+},
+{
+"name": "NtUserCreateCaret",
+"ordinal": 809,
+"rva": 5744,
+"forwarder": null,
+"ref": "win32u.dll!0x1670"
+},
+{
+"name": "NtUserCreateDCompositionHwndTarget",
+"ordinal": 810,
+"rva": 34672,
+"forwarder": null,
+"ref": "win32u.dll!0x8770"
+},
+{
+"name": "NtUserCreateDesktopEx",
+"ordinal": 811,
+"rva": 34704,
+"forwarder": null,
+"ref": "win32u.dll!0x8790"
+},
+{
+"name": "NtUserCreateEmptyCursorObject",
+"ordinal": 812,
+"rva": 34736,
+"forwarder": null,
+"ref": "win32u.dll!0x87b0"
+},
+{
+"name": "NtUserCreateInputContext",
+"ordinal": 813,
+"rva": 34768,
+"forwarder": null,
+"ref": "win32u.dll!0x87d0"
+},
+{
+"name": "NtUserCreateLocalMemHandle",
+"ordinal": 814,
+"rva": 11248,
+"forwarder": null,
+"ref": "win32u.dll!0x2bf0"
+},
+{
+"name": "NtUserCreatePalmRejectionDelayZone",
+"ordinal": 815,
+"rva": 34800,
+"forwarder": null,
+"ref": "win32u.dll!0x87f0"
+},
+{
+"name": "NtUserCreateWindowEx",
+"ordinal": 816,
+"rva": 7856,
+"forwarder": null,
+"ref": "win32u.dll!0x1eb0"
+},
+{
+"name": "NtUserCreateWindowGroup",
+"ordinal": 817,
+"rva": 34832,
+"forwarder": null,
+"ref": "win32u.dll!0x8810"
+},
+{
+"name": "NtUserCreateWindowStation",
+"ordinal": 818,
+"rva": 34864,
+"forwarder": null,
+"ref": "win32u.dll!0x8830"
+},
+{
+"name": "NtUserCtxDisplayIOCtl",
+"ordinal": 819,
+"rva": 34896,
+"forwarder": null,
+"ref": "win32u.dll!0x8850"
+},
+{
+"name": "NtUserDdeInitialize",
+"ordinal": 820,
+"rva": 12336,
+"forwarder": null,
+"ref": "win32u.dll!0x3030"
+},
+{
+"name": "NtUserDefSetText",
+"ordinal": 821,
+"rva": 8112,
+"forwarder": null,
+"ref": "win32u.dll!0x1fb0"
+},
+{
+"name": "NtUserDeferWindowDpiChanges",
+"ordinal": 822,
+"rva": 34928,
+"forwarder": null,
+"ref": "win32u.dll!0x8870"
+},
+{
+"name": "NtUserDeferWindowPosAndBand",
+"ordinal": 823,
+"rva": 34960,
+"forwarder": null,
+"ref": "win32u.dll!0x8890"
+},
+{
+"name": "NtUserDelegateCapturePointers",
+"ordinal": 824,
+"rva": 34992,
+"forwarder": null,
+"ref": "win32u.dll!0x88b0"
+},
+{
+"name": "NtUserDelegateInput",
+"ordinal": 825,
+"rva": 35024,
+"forwarder": null,
+"ref": "win32u.dll!0x88d0"
+},
+{
+"name": "NtUserDeleteMenu",
+"ordinal": 826,
+"rva": 9904,
+"forwarder": null,
+"ref": "win32u.dll!0x26b0"
+},
+{
+"name": "NtUserDeleteWindowGroup",
+"ordinal": 827,
+"rva": 35056,
+"forwarder": null,
+"ref": "win32u.dll!0x88f0"
+},
+{
+"name": "NtUserDestroyAcceleratorTable",
+"ordinal": 828,
+"rva": 11856,
+"forwarder": null,
+"ref": "win32u.dll!0x2e50"
+},
+{
+"name": "NtUserDestroyActivationGroup",
+"ordinal": 829,
+"rva": 35088,
+"forwarder": null,
+"ref": "win32u.dll!0x8910"
+},
+{
+"name": "NtUserDestroyActivationObject",
+"ordinal": 830,
+"rva": 35120,
+"forwarder": null,
+"ref": "win32u.dll!0x8930"
+},
+{
+"name": "NtUserDestroyCursor",
+"ordinal": 831,
+"rva": 9040,
+"forwarder": null,
+"ref": "win32u.dll!0x2350"
+},
+{
+"name": "NtUserDestroyDCompositionHwndTarget",
+"ordinal": 832,
+"rva": 35152,
+"forwarder": null,
+"ref": "win32u.dll!0x8950"
+},
+{
+"name": "NtUserDestroyInputContext",
+"ordinal": 833,
+"rva": 35184,
+"forwarder": null,
+"ref": "win32u.dll!0x8970"
+},
+{
+"name": "NtUserDestroyMenu",
+"ordinal": 834,
+"rva": 10800,
+"forwarder": null,
+"ref": "win32u.dll!0x2a30"
+},
+{
+"name": "NtUserDestroyPalmRejectionDelayZone",
+"ordinal": 835,
+"rva": 35216,
+"forwarder": null,
+"ref": "win32u.dll!0x8990"
+},
+{
+"name": "NtUserDestroyWindow",
+"ordinal": 836,
+"rva": 9072,
+"forwarder": null,
+"ref": "win32u.dll!0x2370"
+},
+{
+"name": "NtUserDisableImmersiveOwner",
+"ordinal": 837,
+"rva": 35248,
+"forwarder": null,
+"ref": "win32u.dll!0x89b0"
+},
+{
+"name": "NtUserDisableProcessWindowFiltering",
+"ordinal": 838,
+"rva": 35280,
+"forwarder": null,
+"ref": "win32u.dll!0x89d0"
+},
+{
+"name": "NtUserDisableThreadIme",
+"ordinal": 839,
+"rva": 35312,
+"forwarder": null,
+"ref": "win32u.dll!0x89f0"
+},
+{
+"name": "NtUserDiscardPointerFrameMessages",
+"ordinal": 840,
+"rva": 35344,
+"forwarder": null,
+"ref": "win32u.dll!0x8a10"
+},
+{
+"name": "NtUserDispatchMessage",
+"ordinal": 841,
+"rva": 5872,
+"forwarder": null,
+"ref": "win32u.dll!0x16f0"
+},
+{
+"name": "NtUserDisplayConfigGetDeviceInfo",
+"ordinal": 842,
+"rva": 35376,
+"forwarder": null,
+"ref": "win32u.dll!0x8a30"
+},
+{
+"name": "NtUserDisplayConfigSetDeviceInfo",
+"ordinal": 843,
+"rva": 35408,
+"forwarder": null,
+"ref": "win32u.dll!0x8a50"
+},
+{
+"name": "NtUserDoSoundConnect",
+"ordinal": 844,
+"rva": 35472,
+"forwarder": null,
+"ref": "win32u.dll!0x8a90"
+},
+{
+"name": "NtUserDoSoundDisconnect",
+"ordinal": 845,
+"rva": 35504,
+"forwarder": null,
+"ref": "win32u.dll!0x8ab0"
+},
+{
+"name": "NtUserDownlevelTouchpad",
+"ordinal": 846,
+"rva": 35536,
+"forwarder": null,
+"ref": "win32u.dll!0x8ad0"
+},
+{
+"name": "NtUserDragDetect",
+"ordinal": 847,
+"rva": 35568,
+"forwarder": null,
+"ref": "win32u.dll!0x8af0"
+},
+{
+"name": "NtUserDragObject",
+"ordinal": 848,
+"rva": 35600,
+"forwarder": null,
+"ref": "win32u.dll!0x8b10"
+},
+{
+"name": "NtUserDrawAnimatedRects",
+"ordinal": 849,
+"rva": 35632,
+"forwarder": null,
+"ref": "win32u.dll!0x8b30"
+},
+{
+"name": "NtUserDrawCaption",
+"ordinal": 850,
+"rva": 35664,
+"forwarder": null,
+"ref": "win32u.dll!0x8b50"
+},
+{
+"name": "NtUserDrawCaptionTemp",
+"ordinal": 851,
+"rva": 35696,
+"forwarder": null,
+"ref": "win32u.dll!0x8b70"
+},
+{
+"name": "NtUserDrawIconEx",
+"ordinal": 852,
+"rva": 7184,
+"forwarder": null,
+"ref": "win32u.dll!0x1c10"
+},
+{
+"name": "NtUserDrawMenuBarTemp",
+"ordinal": 853,
+"rva": 35728,
+"forwarder": null,
+"ref": "win32u.dll!0x8b90"
+},
+{
+"name": "NtUserDwmGetRemoteSessionOcclusionEvent",
+"ordinal": 854,
+"rva": 35760,
+"forwarder": null,
+"ref": "win32u.dll!0x8bb0"
+},
+{
+"name": "NtUserDwmGetRemoteSessionOcclusionState",
+"ordinal": 855,
+"rva": 35792,
+"forwarder": null,
+"ref": "win32u.dll!0x8bd0"
+},
+{
+"name": "NtUserDwmKernelShutdown",
+"ordinal": 856,
+"rva": 35824,
+"forwarder": null,
+"ref": "win32u.dll!0x8bf0"
+},
+{
+"name": "NtUserDwmKernelStartup",
+"ordinal": 857,
+"rva": 35856,
+"forwarder": null,
+"ref": "win32u.dll!0x8c10"
+},
+{
+"name": "NtUserDwmValidateWindow",
+"ordinal": 858,
+"rva": 35888,
+"forwarder": null,
+"ref": "win32u.dll!0x8c30"
+},
+{
+"name": "NtUserEmptyClipboard",
+"ordinal": 859,
+"rva": 11664,
+"forwarder": null,
+"ref": "win32u.dll!0x2d90"
+},
+{
+"name": "NtUserEnableChildWindowDpiMessage",
+"ordinal": 860,
+"rva": 35920,
+"forwarder": null,
+"ref": "win32u.dll!0x8c50"
+},
+{
+"name": "NtUserEnableIAMAccess",
+"ordinal": 861,
+"rva": 35952,
+"forwarder": null,
+"ref": "win32u.dll!0x8c70"
+},
+{
+"name": "NtUserEnableMenuItem",
+"ordinal": 862,
+"rva": 10448,
+"forwarder": null,
+"ref": "win32u.dll!0x28d0"
+},
+{
+"name": "NtUserEnableMouseInPointer",
+"ordinal": 863,
+"rva": 35984,
+"forwarder": null,
+"ref": "win32u.dll!0x8c90"
+},
+{
+"name": "NtUserEnableMouseInPointerForWindow",
+"ordinal": 864,
+"rva": 36016,
+"forwarder": null,
+"ref": "win32u.dll!0x8cb0"
+},
+{
+"name": "NtUserEnableMouseInputForCursorSuppression",
+"ordinal": 865,
+"rva": 36048,
+"forwarder": null,
+"ref": "win32u.dll!0x8cd0"
+},
+{
+"name": "NtUserEnableNonClientDpiScaling",
+"ordinal": 866,
+"rva": 36080,
+"forwarder": null,
+"ref": "win32u.dll!0x8cf0"
+},
+{
+"name": "NtUserEnableResizeLayoutSynchronization",
+"ordinal": 867,
+"rva": 36112,
+"forwarder": null,
+"ref": "win32u.dll!0x8d10"
+},
+{
+"name": "NtUserEnableScrollBar",
+"ordinal": 868,
+"rva": 9744,
+"forwarder": null,
+"ref": "win32u.dll!0x2610"
+},
+{
+"name": "NtUserEnableSoftwareCursorForScreenCapture",
+"ordinal": 869,
+"rva": 36144,
+"forwarder": null,
+"ref": "win32u.dll!0x8d30"
+},
+{
+"name": "NtUserEnableTouchPad",
+"ordinal": 870,
+"rva": 36176,
+"forwarder": null,
+"ref": "win32u.dll!0x8d50"
+},
+{
+"name": "NtUserEnableWindowGDIScaledDpiMessage",
+"ordinal": 871,
+"rva": 36208,
+"forwarder": null,
+"ref": "win32u.dll!0x8d70"
+},
+{
+"name": "NtUserEnableWindowGroupPolicy",
+"ordinal": 872,
+"rva": 36240,
+"forwarder": null,
+"ref": "win32u.dll!0x8d90"
+},
+{
+"name": "NtUserEnableWindowResizeOptimization",
+"ordinal": 873,
+"rva": 36272,
+"forwarder": null,
+"ref": "win32u.dll!0x8db0"
+},
+{
+"name": "NtUserEndDeferWindowPosEx",
+"ordinal": 874,
+"rva": 5360,
+"forwarder": null,
+"ref": "win32u.dll!0x14f0"
+},
+{
+"name": "NtUserEndMenu",
+"ordinal": 875,
+"rva": 36304,
+"forwarder": null,
+"ref": "win32u.dll!0x8dd0"
+},
+{
+"name": "NtUserEndPaint",
+"ordinal": 876,
+"rva": 4944,
+"forwarder": null,
+"ref": "win32u.dll!0x1350"
+},
+{
+"name": "NtUserEnumDisplayDevices",
+"ordinal": 877,
+"rva": 11632,
+"forwarder": null,
+"ref": "win32u.dll!0x2d70"
+},
+{
+"name": "NtUserEnumDisplayMonitors",
+"ordinal": 878,
+"rva": 6512,
+"forwarder": null,
+"ref": "win32u.dll!0x1970"
+},
+{
+"name": "NtUserEnumDisplaySettings",
+"ordinal": 879,
+"rva": 12560,
+"forwarder": null,
+"ref": "win32u.dll!0x3110"
+},
+{
+"name": "NtUserEvent",
+"ordinal": 880,
+"rva": 36336,
+"forwarder": null,
+"ref": "win32u.dll!0x8df0"
+},
+{
+"name": "NtUserExcludeUpdateRgn",
+"ordinal": 881,
+"rva": 6704,
+"forwarder": null,
+"ref": "win32u.dll!0x1a30"
+},
+{
+"name": "NtUserFillWindow",
+"ordinal": 882,
+"rva": 8432,
+"forwarder": null,
+"ref": "win32u.dll!0x20f0"
+},
+{
+"name": "NtUserFindExistingCursorIcon",
+"ordinal": 883,
+"rva": 6128,
+"forwarder": null,
+"ref": "win32u.dll!0x17f0"
+},
+{
+"name": "NtUserFindWindowEx",
+"ordinal": 884,
+"rva": 7600,
+"forwarder": null,
+"ref": "win32u.dll!0x1db0"
+},
+{
+"name": "NtUserFlashWindowEx",
+"ordinal": 885,
+"rva": 36368,
+"forwarder": null,
+"ref": "win32u.dll!0x8e10"
+},
+{
+"name": "NtUserForceWindowToDpiForTest",
+"ordinal": 886,
+"rva": 36400,
+"forwarder": null,
+"ref": "win32u.dll!0x8e30"
+},
+{
+"name": "NtUserFrostCrashedWindow",
+"ordinal": 887,
+"rva": 36432,
+"forwarder": null,
+"ref": "win32u.dll!0x8e50"
+},
+{
+"name": "NtUserFunctionalizeDisplayConfig",
+"ordinal": 888,
+"rva": 36464,
+"forwarder": null,
+"ref": "win32u.dll!0x8e70"
+},
+{
+"name": "NtUserGetActiveProcessesDpis",
+"ordinal": 889,
+"rva": 36496,
+"forwarder": null,
+"ref": "win32u.dll!0x8e90"
+},
+{
+"name": "NtUserGetAltTabInfo",
+"ordinal": 890,
+"rva": 11504,
+"forwarder": null,
+"ref": "win32u.dll!0x2cf0"
+},
+{
+"name": "NtUserGetAncestor",
+"ordinal": 891,
+"rva": 9584,
+"forwarder": null,
+"ref": "win32u.dll!0x2570"
+},
+{
+"name": "NtUserGetAppImeLevel",
+"ordinal": 892,
+"rva": 36528,
+"forwarder": null,
+"ref": "win32u.dll!0x8eb0"
+},
+{
+"name": "NtUserGetAsyncKeyState",
+"ordinal": 893,
+"rva": 6320,
+"forwarder": null,
+"ref": "win32u.dll!0x18b0"
+},
+{
+"name": "NtUserGetAtomName",
+"ordinal": 894,
+"rva": 9328,
+"forwarder": null,
+"ref": "win32u.dll!0x2470"
+},
+{
+"name": "NtUserGetAutoRotationState",
+"ordinal": 895,
+"rva": 36560,
+"forwarder": null,
+"ref": "win32u.dll!0x8ed0"
+},
+{
+"name": "NtUserGetCIMSSM",
+"ordinal": 896,
+"rva": 36592,
+"forwarder": null,
+"ref": "win32u.dll!0x8ef0"
+},
+{
+"name": "NtUserGetCPD",
+"ordinal": 897,
+"rva": 6352,
+"forwarder": null,
+"ref": "win32u.dll!0x18d0"
+},
+{
+"name": "NtUserGetCaretBlinkTime",
+"ordinal": 898,
+"rva": 11536,
+"forwarder": null,
+"ref": "win32u.dll!0x2d10"
+},
+{
+"name": "NtUserGetCaretPos",
+"ordinal": 899,
+"rva": 36624,
+"forwarder": null,
+"ref": "win32u.dll!0x8f10"
+},
+{
+"name": "NtUserGetClassInfoEx",
+"ordinal": 900,
+"rva": 9808,
+"forwarder": null,
+"ref": "win32u.dll!0x2650"
+},
+{
+"name": "NtUserGetClassName",
+"ordinal": 901,
+"rva": 8016,
+"forwarder": null,
+"ref": "win32u.dll!0x1f50"
+},
+{
+"name": "NtUserGetClipCursor",
+"ordinal": 902,
+"rva": 36656,
+"forwarder": null,
+"ref": "win32u.dll!0x8f30"
+},
+{
+"name": "NtUserGetClipboardAccessToken",
+"ordinal": 903,
+"rva": 36688,
+"forwarder": null,
+"ref": "win32u.dll!0x8f50"
+},
+{
+"name": "NtUserGetClipboardData",
+"ordinal": 904,
+"rva": 11696,
+"forwarder": null,
+"ref": "win32u.dll!0x2db0"
+},
+{
+"name": "NtUserGetClipboardFormatName",
+"ordinal": 905,
+"rva": 11184,
+"forwarder": null,
+"ref": "win32u.dll!0x2bb0"
+},
+{
+"name": "NtUserGetClipboardOwner",
+"ordinal": 906,
+"rva": 10192,
+"forwarder": null,
+"ref": "win32u.dll!0x27d0"
+},
+{
+"name": "NtUserGetClipboardSequenceNumber",
+"ordinal": 907,
+"rva": 6864,
+"forwarder": null,
+"ref": "win32u.dll!0x1ad0"
+},
+{
+"name": "NtUserGetClipboardViewer",
+"ordinal": 908,
+"rva": 36720,
+"forwarder": null,
+"ref": "win32u.dll!0x8f70"
+},
+{
+"name": "NtUserGetComboBoxInfo",
+"ordinal": 909,
+"rva": 36752,
+"forwarder": null,
+"ref": "win32u.dll!0x8f90"
+},
+{
+"name": "NtUserGetControlBrush",
+"ordinal": 910,
+"rva": 7984,
+"forwarder": null,
+"ref": "win32u.dll!0x1f30"
+},
+{
+"name": "NtUserGetControlColor",
+"ordinal": 911,
+"rva": 10992,
+"forwarder": null,
+"ref": "win32u.dll!0x2af0"
+},
+{
+"name": "NtUserGetCurrentDpiInfoForWindow",
+"ordinal": 912,
+"rva": 36784,
+"forwarder": null,
+"ref": "win32u.dll!0x8fb0"
+},
+{
+"name": "NtUserGetCurrentInputMessageSource",
+"ordinal": 913,
+"rva": 36816,
+"forwarder": null,
+"ref": "win32u.dll!0x8fd0"
+},
+{
+"name": "NtUserGetCursor",
+"ordinal": 914,
+"rva": 36848,
+"forwarder": null,
+"ref": "win32u.dll!0x8ff0"
+},
+{
+"name": "NtUserGetCursorFrameInfo",
+"ordinal": 915,
+"rva": 11472,
+"forwarder": null,
+"ref": "win32u.dll!0x2cd0"
+},
+{
+"name": "NtUserGetCursorInfo",
+"ordinal": 916,
+"rva": 36880,
+"forwarder": null,
+"ref": "win32u.dll!0x9010"
+},
+{
+"name": "NtUserGetDC",
+"ordinal": 917,
+"rva": 4464,
+"forwarder": null,
+"ref": "win32u.dll!0x1170"
+},
+{
+"name": "NtUserGetDCEx",
+"ordinal": 918,
+"rva": 8720,
+"forwarder": null,
+"ref": "win32u.dll!0x2210"
+},
+{
+"name": "NtUserGetDManipHookInitFunction",
+"ordinal": 919,
+"rva": 36912,
+"forwarder": null,
+"ref": "win32u.dll!0x9030"
+},
+{
+"name": "NtUserGetDesktopID",
+"ordinal": 920,
+"rva": 36944,
+"forwarder": null,
+"ref": "win32u.dll!0x9050"
+},
+{
+"name": "NtUserGetDisplayAutoRotationPreferences",
+"ordinal": 921,
+"rva": 36976,
+"forwarder": null,
+"ref": "win32u.dll!0x9070"
+},
+{
+"name": "NtUserGetDisplayAutoRotationPreferencesByProcessId",
+"ordinal": 922,
+"rva": 37008,
+"forwarder": null,
+"ref": "win32u.dll!0x9090"
+},
+{
+"name": "NtUserGetDisplayConfigBufferSizes",
+"ordinal": 923,
+"rva": 37040,
+"forwarder": null,
+"ref": "win32u.dll!0x90b0"
+},
+{
+"name": "NtUserGetDoubleClickTime",
+"ordinal": 924,
+"rva": 9712,
+"forwarder": null,
+"ref": "win32u.dll!0x25f0"
+},
+{
+"name": "NtUserGetDpiForCurrentProcess",
+"ordinal": 925,
+"rva": 37072,
+"forwarder": null,
+"ref": "win32u.dll!0x90d0"
+},
+{
+"name": "NtUserGetDpiForMonitor",
+"ordinal": 926,
+"rva": 37104,
+"forwarder": null,
+"ref": "win32u.dll!0x90f0"
+},
+{
+"name": "NtUserGetExtendedPointerDeviceProperty",
+"ordinal": 927,
+"rva": 37136,
+"forwarder": null,
+"ref": "win32u.dll!0x9110"
+},
+{
+"name": "NtUserGetForegroundWindow",
+"ordinal": 928,
+"rva": 6064,
+"forwarder": null,
+"ref": "win32u.dll!0x17b0"
+},
+{
+"name": "NtUserGetGUIThreadInfo",
+"ordinal": 929,
+"rva": 11888,
+"forwarder": null,
+"ref": "win32u.dll!0x2e70"
+},
+{
+"name": "NtUserGetGestureConfig",
+"ordinal": 930,
+"rva": 37168,
+"forwarder": null,
+"ref": "win32u.dll!0x9130"
+},
+{
+"name": "NtUserGetGestureExtArgs",
+"ordinal": 931,
+"rva": 37200,
+"forwarder": null,
+"ref": "win32u.dll!0x9150"
+},
+{
+"name": "NtUserGetGestureInfo",
+"ordinal": 932,
+"rva": 37232,
+"forwarder": null,
+"ref": "win32u.dll!0x9170"
+},
+{
+"name": "NtUserGetGuiResources",
+"ordinal": 933,
+"rva": 37264,
+"forwarder": null,
+"ref": "win32u.dll!0x9190"
+},
+{
+"name": "NtUserGetHDevName",
+"ordinal": 934,
+"rva": 37296,
+"forwarder": null,
+"ref": "win32u.dll!0x91b0"
+},
+{
+"name": "NtUserGetHimetricScaleFactorFromPixelLocation",
+"ordinal": 935,
+"rva": 37328,
+"forwarder": null,
+"ref": "win32u.dll!0x91d0"
+},
+{
+"name": "NtUserGetIconInfo",
+"ordinal": 936,
+"rva": 6672,
+"forwarder": null,
+"ref": "win32u.dll!0x1a10"
+},
+{
+"name": "NtUserGetIconSize",
+"ordinal": 937,
+"rva": 8400,
+"forwarder": null,
+"ref": "win32u.dll!0x20d0"
+},
+{
+"name": "NtUserGetImeHotKey",
+"ordinal": 938,
+"rva": 37360,
+"forwarder": null,
+"ref": "win32u.dll!0x91f0"
+},
+{
+"name": "NtUserGetImeInfoEx",
+"ordinal": 939,
+"rva": 37392,
+"forwarder": null,
+"ref": "win32u.dll!0x9210"
+},
+{
+"name": "NtUserGetInputContainerId",
+"ordinal": 940,
+"rva": 37424,
+"forwarder": null,
+"ref": "win32u.dll!0x9230"
+},
+{
+"name": "NtUserGetInputLocaleInfo",
+"ordinal": 941,
+"rva": 37456,
+"forwarder": null,
+"ref": "win32u.dll!0x9250"
+},
+{
+"name": "NtUserGetInteractiveControlDeviceInfo",
+"ordinal": 942,
+"rva": 37488,
+"forwarder": null,
+"ref": "win32u.dll!0x9270"
+},
+{
+"name": "NtUserGetInteractiveControlInfo",
+"ordinal": 943,
+"rva": 37520,
+"forwarder": null,
+"ref": "win32u.dll!0x9290"
+},
+{
+"name": "NtUserGetInteractiveCtrlSupportedWaveforms",
+"ordinal": 944,
+"rva": 37552,
+"forwarder": null,
+"ref": "win32u.dll!0x92b0"
+},
+{
+"name": "NtUserGetInternalWindowPos",
+"ordinal": 945,
+"rva": 37584,
+"forwarder": null,
+"ref": "win32u.dll!0x92d0"
+},
+{
+"name": "NtUserGetKeyNameText",
+"ordinal": 946,
+"rva": 37616,
+"forwarder": null,
+"ref": "win32u.dll!0x92f0"
+},
+{
+"name": "NtUserGetKeyState",
+"ordinal": 947,
+"rva": 4240,
+"forwarder": null,
+"ref": "win32u.dll!0x1090"
+},
+{
+"name": "NtUserGetKeyboardLayout",
+"ordinal": 948,
+"rva": 37648,
+"forwarder": null,
+"ref": "win32u.dll!0x9310"
+},
+{
+"name": "NtUserGetKeyboardLayoutList",
+"ordinal": 949,
+"rva": 6960,
+"forwarder": null,
+"ref": "win32u.dll!0x1b30"
+},
+{
+"name": "NtUserGetKeyboardLayoutName",
+"ordinal": 950,
+"rva": 37680,
+"forwarder": null,
+"ref": "win32u.dll!0x9330"
+},
+{
+"name": "NtUserGetKeyboardState",
+"ordinal": 951,
+"rva": 7920,
+"forwarder": null,
+"ref": "win32u.dll!0x1ef0"
+},
+{
+"name": "NtUserGetLayeredWindowAttributes",
+"ordinal": 952,
+"rva": 37712,
+"forwarder": null,
+"ref": "win32u.dll!0x9350"
+},
+{
+"name": "NtUserGetListBoxInfo",
+"ordinal": 953,
+"rva": 37744,
+"forwarder": null,
+"ref": "win32u.dll!0x9370"
+},
+{
+"name": "NtUserGetMenuBarInfo",
+"ordinal": 954,
+"rva": 10064,
+"forwarder": null,
+"ref": "win32u.dll!0x2750"
+},
+{
+"name": "NtUserGetMenuIndex",
+"ordinal": 955,
+"rva": 37776,
+"forwarder": null,
+"ref": "win32u.dll!0x9390"
+},
+{
+"name": "NtUserGetMenuItemRect",
+"ordinal": 956,
+"rva": 37808,
+"forwarder": null,
+"ref": "win32u.dll!0x93b0"
+},
+{
+"name": "NtUserGetMessage",
+"ordinal": 957,
+"rva": 4336,
+"forwarder": null,
+"ref": "win32u.dll!0x10f0"
+},
+{
+"name": "NtUserGetMouseMovePointsEx",
+"ordinal": 958,
+"rva": 37840,
+"forwarder": null,
+"ref": "win32u.dll!0x93d0"
+},
+{
+"name": "NtUserGetObjectInformation",
+"ordinal": 959,
+"rva": 7536,
+"forwarder": null,
+"ref": "win32u.dll!0x1d70"
+},
+{
+"name": "NtUserGetOemBitmapSize",
+"ordinal": 960,
+"rva": 37872,
+"forwarder": null,
+"ref": "win32u.dll!0x93f0"
+},
+{
+"name": "NtUserGetOpenClipboardWindow",
+"ordinal": 961,
+"rva": 10640,
+"forwarder": null,
+"ref": "win32u.dll!0x2990"
+},
+{
+"name": "NtUserGetOwnerTransformedMonitorRect",
+"ordinal": 962,
+"rva": 29200,
+"forwarder": null,
+"ref": "win32u.dll!0x7210"
+},
+{
+"name": "NtUserGetPhysicalDeviceRect",
+"ordinal": 963,
+"rva": 37936,
+"forwarder": null,
+"ref": "win32u.dll!0x9430"
+},
+{
+"name": "NtUserGetPointerCursorId",
+"ordinal": 964,
+"rva": 37968,
+"forwarder": null,
+"ref": "win32u.dll!0x9450"
+},
+{
+"name": "NtUserGetPointerDevice",
+"ordinal": 965,
+"rva": 38000,
+"forwarder": null,
+"ref": "win32u.dll!0x9470"
+},
+{
+"name": "NtUserGetPointerDeviceCursors",
+"ordinal": 966,
+"rva": 38032,
+"forwarder": null,
+"ref": "win32u.dll!0x9490"
+},
+{
+"name": "NtUserGetPointerDeviceInputSpace",
+"ordinal": 967,
+"rva": 38064,
+"forwarder": null,
+"ref": "win32u.dll!0x94b0"
+},
+{
+"name": "NtUserGetPointerDeviceOrientation",
+"ordinal": 968,
+"rva": 38096,
+"forwarder": null,
+"ref": "win32u.dll!0x94d0"
+},
+{
+"name": "NtUserGetPointerDeviceProperties",
+"ordinal": 969,
+"rva": 38128,
+"forwarder": null,
+"ref": "win32u.dll!0x94f0"
+},
+{
+"name": "NtUserGetPointerDeviceRects",
+"ordinal": 970,
+"rva": 38160,
+"forwarder": null,
+"ref": "win32u.dll!0x9510"
+},
+{
+"name": "NtUserGetPointerDevices",
+"ordinal": 971,
+"rva": 38192,
+"forwarder": null,
+"ref": "win32u.dll!0x9530"
+},
+{
+"name": "NtUserGetPointerFrameTimes",
+"ordinal": 972,
+"rva": 38224,
+"forwarder": null,
+"ref": "win32u.dll!0x9550"
+},
+{
+"name": "NtUserGetPointerInfoList",
+"ordinal": 973,
+"rva": 38256,
+"forwarder": null,
+"ref": "win32u.dll!0x9570"
+},
+{
+"name": "NtUserGetPointerInputTransform",
+"ordinal": 974,
+"rva": 38288,
+"forwarder": null,
+"ref": "win32u.dll!0x9590"
+},
+{
+"name": "NtUserGetPointerProprietaryId",
+"ordinal": 975,
+"rva": 38320,
+"forwarder": null,
+"ref": "win32u.dll!0x95b0"
+},
+{
+"name": "NtUserGetPointerType",
+"ordinal": 976,
+"rva": 38352,
+"forwarder": null,
+"ref": "win32u.dll!0x95d0"
+},
+{
+"name": "NtUserGetPrecisionTouchPadConfiguration",
+"ordinal": 977,
+"rva": 38384,
+"forwarder": null,
+"ref": "win32u.dll!0x95f0"
+},
+{
+"name": "NtUserGetPriorityClipboardFormat",
+"ordinal": 978,
+"rva": 38416,
+"forwarder": null,
+"ref": "win32u.dll!0x9610"
+},
+{
+"name": "NtUserGetProcessDpiAwarenessContext",
+"ordinal": 979,
+"rva": 38448,
+"forwarder": null,
+"ref": "win32u.dll!0x9630"
+},
+{
+"name": "NtUserGetProcessUIContextInformation",
+"ordinal": 980,
+"rva": 38480,
+"forwarder": null,
+"ref": "win32u.dll!0x9650"
+},
+{
+"name": "NtUserGetProcessWindowStation",
+"ordinal": 981,
+"rva": 5232,
+"forwarder": null,
+"ref": "win32u.dll!0x1470"
+},
+{
+"name": "NtUserGetProp",
+"ordinal": 982,
+"rva": 4592,
+"forwarder": null,
+"ref": "win32u.dll!0x11f0"
+},
+{
+"name": "NtUserGetQueueStatus",
+"ordinal": 983,
+"rva": 38512,
+"forwarder": null,
+"ref": "win32u.dll!0x9670"
+},
+{
+"name": "NtUserGetQueueStatusReadonly",
+"ordinal": 984,
+"rva": 38544,
+"forwarder": null,
+"ref": "win32u.dll!0x9690"
+},
+{
+"name": "NtUserGetRawInputBuffer",
+"ordinal": 985,
+"rva": 38576,
+"forwarder": null,
+"ref": "win32u.dll!0x96b0"
+},
+{
+"name": "NtUserGetRawInputData",
+"ordinal": 986,
+"rva": 38608,
+"forwarder": null,
+"ref": "win32u.dll!0x96d0"
+},
+{
+"name": "NtUserGetRawInputDeviceInfo",
+"ordinal": 987,
+"rva": 38640,
+"forwarder": null,
+"ref": "win32u.dll!0x96f0"
+},
+{
+"name": "NtUserGetRawInputDeviceList",
+"ordinal": 988,
+"rva": 38672,
+"forwarder": null,
+"ref": "win32u.dll!0x9710"
+},
+{
+"name": "NtUserGetRawPointerDeviceData",
+"ordinal": 989,
+"rva": 38704,
+"forwarder": null,
+"ref": "win32u.dll!0x9730"
+},
+{
+"name": "NtUserGetRegisteredRawInputDevices",
+"ordinal": 990,
+"rva": 38736,
+"forwarder": null,
+"ref": "win32u.dll!0x9750"
+},
+{
+"name": "NtUserGetRequiredCursorSizes",
+"ordinal": 991,
+"rva": 38768,
+"forwarder": null,
+"ref": "win32u.dll!0x9770"
+},
+{
+"name": "NtUserGetResizeDCompositionSynchronizationObject",
+"ordinal": 992,
+"rva": 38800,
+"forwarder": null,
+"ref": "win32u.dll!0x9790"
+},
+{
+"name": "NtUserGetScrollBarInfo",
+"ordinal": 993,
+"rva": 8752,
+"forwarder": null,
+"ref": "win32u.dll!0x2230"
+},
+{
+"name": "NtUserGetSharedWindowData",
+"ordinal": 994,
+"rva": 38832,
+"forwarder": null,
+"ref": "win32u.dll!0x97b0"
+},
+{
+"name": "NtUserGetSystemDpiForProcess",
+"ordinal": 995,
+"rva": 38864,
+"forwarder": null,
+"ref": "win32u.dll!0x97d0"
+},
+{
+"name": "NtUserGetSystemMenu",
+"ordinal": 996,
+"rva": 7216,
+"forwarder": null,
+"ref": "win32u.dll!0x1c30"
+},
+{
+"name": "NtUserGetThreadDesktop",
+"ordinal": 997,
+"rva": 8240,
+"forwarder": null,
+"ref": "win32u.dll!0x2030"
+},
+{
+"name": "NtUserGetThreadState",
+"ordinal": 998,
+"rva": 4144,
+"forwarder": null,
+"ref": "win32u.dll!0x1030"
+},
+{
+"name": "NtUserGetTitleBarInfo",
+"ordinal": 999,
+"rva": 8624,
+"forwarder": null,
+"ref": "win32u.dll!0x21b0"
+},
+{
+"name": "NtUserGetTopLevelWindow",
+"ordinal": 1000,
+"rva": 38896,
+"forwarder": null,
+"ref": "win32u.dll!0x97f0"
+},
+{
+"name": "NtUserGetTouchInputInfo",
+"ordinal": 1001,
+"rva": 38928,
+"forwarder": null,
+"ref": "win32u.dll!0x9810"
+},
+{
+"name": "NtUserGetTouchValidationStatus",
+"ordinal": 1002,
+"rva": 38960,
+"forwarder": null,
+"ref": "win32u.dll!0x9830"
+},
+{
+"name": "NtUserGetUniformSpaceMapping",
+"ordinal": 1003,
+"rva": 38992,
+"forwarder": null,
+"ref": "win32u.dll!0x9850"
+},
+{
+"name": "NtUserGetUpdateRect",
+"ordinal": 1004,
+"rva": 6800,
+"forwarder": null,
+"ref": "win32u.dll!0x1a90"
+},
+{
+"name": "NtUserGetUpdateRgn",
+"ordinal": 1005,
+"rva": 8336,
+"forwarder": null,
+"ref": "win32u.dll!0x2090"
+},
+{
+"name": "NtUserGetUpdatedClipboardFormats",
+"ordinal": 1006,
+"rva": 39024,
+"forwarder": null,
+"ref": "win32u.dll!0x9870"
+},
+{
+"name": "NtUserGetWOWClass",
+"ordinal": 1007,
+"rva": 39056,
+"forwarder": null,
+"ref": "win32u.dll!0x9890"
+},
+{
+"name": "NtUserGetWindowBand",
+"ordinal": 1008,
+"rva": 39088,
+"forwarder": null,
+"ref": "win32u.dll!0x98b0"
+},
+{
+"name": "NtUserGetWindowCompositionAttribute",
+"ordinal": 1009,
+"rva": 39120,
+"forwarder": null,
+"ref": "win32u.dll!0x98d0"
+},
+{
+"name": "NtUserGetWindowCompositionInfo",
+"ordinal": 1010,
+"rva": 39152,
+"forwarder": null,
+"ref": "win32u.dll!0x98f0"
+},
+{
+"name": "NtUserGetWindowDC",
+"ordinal": 1011,
+"rva": 7312,
+"forwarder": null,
+"ref": "win32u.dll!0x1c90"
+},
+{
+"name": "NtUserGetWindowDisplayAffinity",
+"ordinal": 1012,
+"rva": 39184,
+"forwarder": null,
+"ref": "win32u.dll!0x9910"
+},
+{
+"name": "NtUserGetWindowFeedbackSetting",
+"ordinal": 1013,
+"rva": 39216,
+"forwarder": null,
+"ref": "win32u.dll!0x9930"
+},
+{
+"name": "NtUserGetWindowGroupId",
+"ordinal": 1014,
+"rva": 39248,
+"forwarder": null,
+"ref": "win32u.dll!0x9950"
+},
+{
+"name": "NtUserGetWindowMinimizeRect",
+"ordinal": 1015,
+"rva": 39280,
+"forwarder": null,
+"ref": "win32u.dll!0x9970"
+},
+{
+"name": "NtUserGetWindowPlacement",
+"ordinal": 1016,
+"rva": 10544,
+"forwarder": null,
+"ref": "win32u.dll!0x2930"
+},
+{
+"name": "NtUserGetWindowProcessHandle",
+"ordinal": 1017,
+"rva": 39312,
+"forwarder": null,
+"ref": "win32u.dll!0x9990"
+},
+{
+"name": "NtUserGetWindowRgnEx",
+"ordinal": 1018,
+"rva": 39344,
+"forwarder": null,
+"ref": "win32u.dll!0x99b0"
+},
+{
+"name": "NtUserGhostWindowFromHungWindow",
+"ordinal": 1019,
+"rva": 39376,
+"forwarder": null,
+"ref": "win32u.dll!0x99d0"
+},
+{
+"name": "NtUserHandleDelegatedInput",
+"ordinal": 1020,
+"rva": 39408,
+"forwarder": null,
+"ref": "win32u.dll!0x99f0"
+},
+{
+"name": "NtUserHardErrorControl",
+"ordinal": 1021,
+"rva": 39440,
+"forwarder": null,
+"ref": "win32u.dll!0x9a10"
+},
+{
+"name": "NtUserHideCaret",
+"ordinal": 1022,
+"rva": 5136,
+"forwarder": null,
+"ref": "win32u.dll!0x1410"
+},
+{
+"name": "NtUserHidePointerContactVisualization",
+"ordinal": 1023,
+"rva": 39472,
+"forwarder": null,
+"ref": "win32u.dll!0x9a30"
+},
+{
+"name": "NtUserHiliteMenuItem",
+"ordinal": 1024,
+"rva": 39504,
+"forwarder": null,
+"ref": "win32u.dll!0x9a50"
+},
+{
+"name": "NtUserHungWindowFromGhostWindow",
+"ordinal": 1025,
+"rva": 39536,
+"forwarder": null,
+"ref": "win32u.dll!0x9a70"
+},
+{
+"name": "NtUserHwndQueryRedirectionInfo",
+"ordinal": 1026,
+"rva": 39568,
+"forwarder": null,
+"ref": "win32u.dll!0x9a90"
+},
+{
+"name": "NtUserHwndSetRedirectionInfo",
+"ordinal": 1027,
+"rva": 39600,
+"forwarder": null,
+"ref": "win32u.dll!0x9ab0"
+},
+{
+"name": "NtUserImpersonateDdeClientWindow",
+"ordinal": 1028,
+"rva": 39632,
+"forwarder": null,
+"ref": "win32u.dll!0x9ad0"
+},
+{
+"name": "NtUserInheritWindowMonitor",
+"ordinal": 1029,
+"rva": 39664,
+"forwarder": null,
+"ref": "win32u.dll!0x9af0"
+},
+{
+"name": "NtUserInitTask",
+"ordinal": 1030,
+"rva": 39696,
+"forwarder": null,
+"ref": "win32u.dll!0x9b10"
+},
+{
+"name": "NtUserInitialize",
+"ordinal": 1031,
+"rva": 39728,
+"forwarder": null,
+"ref": "win32u.dll!0x9b30"
+},
+{
+"name": "NtUserInitializeClientPfnArrays",
+"ordinal": 1032,
+"rva": 39760,
+"forwarder": null,
+"ref": "win32u.dll!0x9b50"
+},
+{
+"name": "NtUserInitializeGenericHidInjection",
+"ordinal": 1033,
+"rva": 39792,
+"forwarder": null,
+"ref": "win32u.dll!0x9b70"
+},
+{
+"name": "NtUserInitializeInputDeviceInjection",
+"ordinal": 1034,
+"rva": 39824,
+"forwarder": null,
+"ref": "win32u.dll!0x9b90"
+},
+{
+"name": "NtUserInitializePointerDeviceInjection",
+"ordinal": 1035,
+"rva": 39856,
+"forwarder": null,
+"ref": "win32u.dll!0x9bb0"
+},
+{
+"name": "NtUserInitializePointerDeviceInjectionEx",
+"ordinal": 1036,
+"rva": 39888,
+"forwarder": null,
+"ref": "win32u.dll!0x9bd0"
+},
+{
+"name": "NtUserInitializeTouchInjection",
+"ordinal": 1037,
+"rva": 39920,
+"forwarder": null,
+"ref": "win32u.dll!0x9bf0"
+},
+{
+"name": "NtUserInjectDeviceInput",
+"ordinal": 1038,
+"rva": 39952,
+"forwarder": null,
+"ref": "win32u.dll!0x9c10"
+},
+{
+"name": "NtUserInjectGenericHidInput",
+"ordinal": 1039,
+"rva": 39984,
+"forwarder": null,
+"ref": "win32u.dll!0x9c30"
+},
+{
+"name": "NtUserInjectGesture",
+"ordinal": 1040,
+"rva": 40016,
+"forwarder": null,
+"ref": "win32u.dll!0x9c50"
+},
+{
+"name": "NtUserInjectKeyboardInput",
+"ordinal": 1041,
+"rva": 40048,
+"forwarder": null,
+"ref": "win32u.dll!0x9c70"
+},
+{
+"name": "NtUserInjectMouseInput",
+"ordinal": 1042,
+"rva": 40080,
+"forwarder": null,
+"ref": "win32u.dll!0x9c90"
+},
+{
+"name": "NtUserInjectPointerInput",
+"ordinal": 1043,
+"rva": 40112,
+"forwarder": null,
+"ref": "win32u.dll!0x9cb0"
+},
+{
+"name": "NtUserInjectTouchInput",
+"ordinal": 1044,
+"rva": 40144,
+"forwarder": null,
+"ref": "win32u.dll!0x9cd0"
+},
+{
+"name": "NtUserInteractiveControlQueryUsage",
+"ordinal": 1045,
+"rva": 40176,
+"forwarder": null,
+"ref": "win32u.dll!0x9cf0"
+},
+{
+"name": "NtUserInternalGetWindowIcon",
+"ordinal": 1046,
+"rva": 40208,
+"forwarder": null,
+"ref": "win32u.dll!0x9d10"
+},
+{
+"name": "NtUserInternalGetWindowText",
+"ordinal": 1047,
+"rva": 7280,
+"forwarder": null,
+"ref": "win32u.dll!0x1c70"
+},
+{
+"name": "NtUserInternalToUnicode",
+"ordinal": 1048,
+"rva": 40240,
+"forwarder": null,
+"ref": "win32u.dll!0x9d30"
+},
+{
+"name": "NtUserInvalidateRect",
+"ordinal": 1049,
+"rva": 4272,
+"forwarder": null,
+"ref": "win32u.dll!0x10b0"
+},
+{
+"name": "NtUserInvalidateRgn",
+"ordinal": 1050,
+"rva": 10160,
+"forwarder": null,
+"ref": "win32u.dll!0x27b0"
+},
+{
+"name": "NtUserIsChildWindowDpiMessageEnabled",
+"ordinal": 1051,
+"rva": 40272,
+"forwarder": null,
+"ref": "win32u.dll!0x9d50"
+},
+{
+"name": "NtUserIsClipboardFormatAvailable",
+"ordinal": 1052,
+"rva": 5648,
+"forwarder": null,
+"ref": "win32u.dll!0x1610"
+},
+{
+"name": "NtUserIsMouseInPointerEnabled",
+"ordinal": 1053,
+"rva": 40304,
+"forwarder": null,
+"ref": "win32u.dll!0x9d70"
+},
+{
+"name": "NtUserIsMouseInputEnabled",
+"ordinal": 1054,
+"rva": 40336,
+"forwarder": null,
+"ref": "win32u.dll!0x9d90"
+},
+{
+"name": "NtUserIsNonClientDpiScalingEnabled",
+"ordinal": 1055,
+"rva": 40368,
+"forwarder": null,
+"ref": "win32u.dll!0x9db0"
+},
+{
+"name": "NtUserIsResizeLayoutSynchronizationEnabled",
+"ordinal": 1056,
+"rva": 40400,
+"forwarder": null,
+"ref": "win32u.dll!0x9dd0"
+},
+{
+"name": "NtUserIsTopLevelWindow",
+"ordinal": 1057,
+"rva": 40432,
+"forwarder": null,
+"ref": "win32u.dll!0x9df0"
+},
+{
+"name": "NtUserIsTouchWindow",
+"ordinal": 1058,
+"rva": 40464,
+"forwarder": null,
+"ref": "win32u.dll!0x9e10"
+},
+{
+"name": "NtUserIsWindowBroadcastingDpiToChildren",
+"ordinal": 1059,
+"rva": 40496,
+"forwarder": null,
+"ref": "win32u.dll!0x9e30"
+},
+{
+"name": "NtUserIsWindowGDIScaledDpiMessageEnabled",
+"ordinal": 1060,
+"rva": 40528,
+"forwarder": null,
+"ref": "win32u.dll!0x9e50"
+},
+{
+"name": "NtUserKillTimer",
+"ordinal": 1061,
+"rva": 5008,
+"forwarder": null,
+"ref": "win32u.dll!0x1390"
+},
+{
+"name": "NtUserLayoutCompleted",
+"ordinal": 1062,
+"rva": 40560,
+"forwarder": null,
+"ref": "win32u.dll!0x9e70"
+},
+{
+"name": "NtUserLinkDpiCursor",
+"ordinal": 1063,
+"rva": 40592,
+"forwarder": null,
+"ref": "win32u.dll!0x9e90"
+},
+{
+"name": "NtUserLoadKeyboardLayoutEx",
+"ordinal": 1064,
+"rva": 40624,
+"forwarder": null,
+"ref": "win32u.dll!0x9eb0"
+},
+{
+"name": "NtUserLockCursor",
+"ordinal": 1065,
+"rva": 40656,
+"forwarder": null,
+"ref": "win32u.dll!0x9ed0"
+},
+{
+"name": "NtUserLockWindowStation",
+"ordinal": 1066,
+"rva": 40688,
+"forwarder": null,
+"ref": "win32u.dll!0x9ef0"
+},
+{
+"name": "NtUserLockWindowUpdate",
+"ordinal": 1067,
+"rva": 12112,
+"forwarder": null,
+"ref": "win32u.dll!0x2f50"
+},
+{
+"name": "NtUserLockWorkStation",
+"ordinal": 1068,
+"rva": 40720,
+"forwarder": null,
+"ref": "win32u.dll!0x9f10"
+},
+{
+"name": "NtUserLogicalToPerMonitorDPIPhysicalPoint",
+"ordinal": 1069,
+"rva": 40752,
+"forwarder": null,
+"ref": "win32u.dll!0x9f30"
+},
+{
+"name": "NtUserLogicalToPhysicalDpiPointForWindow",
+"ordinal": 1070,
+"rva": 40784,
+"forwarder": null,
+"ref": "win32u.dll!0x9f50"
+},
+{
+"name": "NtUserLogicalToPhysicalPoint",
+"ordinal": 1071,
+"rva": 40816,
+"forwarder": null,
+"ref": "win32u.dll!0x9f70"
+},
+{
+"name": "NtUserMNDragLeave",
+"ordinal": 1072,
+"rva": 40848,
+"forwarder": null,
+"ref": "win32u.dll!0x9f90"
+},
+{
+"name": "NtUserMNDragOver",
+"ordinal": 1073,
+"rva": 40880,
+"forwarder": null,
+"ref": "win32u.dll!0x9fb0"
+},
+{
+"name": "NtUserMagControl",
+"ordinal": 1074,
+"rva": 40912,
+"forwarder": null,
+"ref": "win32u.dll!0x9fd0"
+},
+{
+"name": "NtUserMagGetContextInformation",
+"ordinal": 1075,
+"rva": 40944,
+"forwarder": null,
+"ref": "win32u.dll!0x9ff0"
+},
+{
+"name": "NtUserMagSetContextInformation",
+"ordinal": 1076,
+"rva": 40976,
+"forwarder": null,
+"ref": "win32u.dll!0xa010"
+},
+{
+"name": "NtUserMapPointsByVisualIdentifier",
+"ordinal": 1077,
+"rva": 41008,
+"forwarder": null,
+"ref": "win32u.dll!0xa030"
+},
+{
+"name": "NtUserMapVirtualKeyEx",
+"ordinal": 1078,
+"rva": 7024,
+"forwarder": null,
+"ref": "win32u.dll!0x1b70"
+},
+{
+"name": "NtUserMarkWindowForRawMouse",
+"ordinal": 1079,
+"rva": 41040,
+"forwarder": null,
+"ref": "win32u.dll!0xa050"
+},
+{
+"name": "NtUserMenuItemFromPoint",
+"ordinal": 1080,
+"rva": 41072,
+"forwarder": null,
+"ref": "win32u.dll!0xa070"
+},
+{
+"name": "NtUserMessageCall",
+"ordinal": 1081,
+"rva": 4368,
+"forwarder": null,
+"ref": "win32u.dll!0x1110"
+},
+{
+"name": "NtUserMinInitialize",
+"ordinal": 1082,
+"rva": 41104,
+"forwarder": null,
+"ref": "win32u.dll!0xa090"
+},
+{
+"name": "NtUserMinMaximize",
+"ordinal": 1083,
+"rva": 41136,
+"forwarder": null,
+"ref": "win32u.dll!0xa0b0"
+},
+{
+"name": "NtUserModifyUserStartupInfoFlags",
+"ordinal": 1084,
+"rva": 12368,
+"forwarder": null,
+"ref": "win32u.dll!0x3050"
+},
+{
+"name": "NtUserModifyWindowTouchCapability",
+"ordinal": 1085,
+"rva": 41168,
+"forwarder": null,
+"ref": "win32u.dll!0xa0d0"
+},
+{
+"name": "NtUserMoveWindow",
+"ordinal": 1086,
+"rva": 7120,
+"forwarder": null,
+"ref": "win32u.dll!0x1bd0"
+},
+{
+"name": "NtUserMsgWaitForMultipleObjectsEx",
+"ordinal": 1087,
+"rva": 41200,
+"forwarder": null,
+"ref": "win32u.dll!0xa0f0"
+},
+{
+"name": "NtUserNavigateFocus",
+"ordinal": 1088,
+"rva": 41232,
+"forwarder": null,
+"ref": "win32u.dll!0xa110"
+},
+{
+"name": "NtUserNotifyIMEStatus",
+"ordinal": 1089,
+"rva": 41264,
+"forwarder": null,
+"ref": "win32u.dll!0xa130"
+},
+{
+"name": "NtUserNotifyProcessCreate",
+"ordinal": 1090,
+"rva": 8560,
+"forwarder": null,
+"ref": "win32u.dll!0x2170"
+},
+{
+"name": "NtUserNotifyWinEvent",
+"ordinal": 1091,
+"rva": 5584,
+"forwarder": null,
+"ref": "win32u.dll!0x15d0"
+},
+{
+"name": "NtUserOpenClipboard",
+"ordinal": 1092,
+"rva": 10384,
+"forwarder": null,
+"ref": "win32u.dll!0x2890"
+},
+{
+"name": "NtUserOpenDesktop",
+"ordinal": 1093,
+"rva": 9264,
+"forwarder": null,
+"ref": "win32u.dll!0x2430"
+},
+{
+"name": "NtUserOpenInputDesktop",
+"ordinal": 1094,
+"rva": 41296,
+"forwarder": null,
+"ref": "win32u.dll!0xa150"
+},
+{
+"name": "NtUserOpenThreadDesktop",
+"ordinal": 1095,
+"rva": 41328,
+"forwarder": null,
+"ref": "win32u.dll!0xa170"
+},
+{
+"name": "NtUserOpenWindowStation",
+"ordinal": 1096,
+"rva": 9168,
+"forwarder": null,
+"ref": "win32u.dll!0x23d0"
+},
+{
+"name": "NtUserPaintDesktop",
+"ordinal": 1097,
+"rva": 12592,
+"forwarder": null,
+"ref": "win32u.dll!0x3130"
+},
+{
+"name": "NtUserPaintMenuBar",
+"ordinal": 1098,
+"rva": 11344,
+"forwarder": null,
+"ref": "win32u.dll!0x2c50"
+},
+{
+"name": "NtUserPaintMonitor",
+"ordinal": 1099,
+"rva": 41360,
+"forwarder": null,
+"ref": "win32u.dll!0xa190"
+},
+{
+"name": "NtUserPeekMessage",
+"ordinal": 1100,
+"rva": 4176,
+"forwarder": null,
+"ref": "win32u.dll!0x1050"
+},
+{
+"name": "NtUserPerMonitorDPIPhysicalToLogicalPoint",
+"ordinal": 1101,
+"rva": 41392,
+"forwarder": null,
+"ref": "win32u.dll!0xa1b0"
+},
+{
+"name": "NtUserPhysicalToLogicalDpiPointForWindow",
+"ordinal": 1102,
+"rva": 41424,
+"forwarder": null,
+"ref": "win32u.dll!0xa1d0"
+},
+{
+"name": "NtUserPhysicalToLogicalPoint",
+"ordinal": 1103,
+"rva": 41456,
+"forwarder": null,
+"ref": "win32u.dll!0xa1f0"
+},
+{
+"name": "NtUserPostKeyboardInputMessage",
+"ordinal": 1104,
+"rva": 41488,
+"forwarder": null,
+"ref": "win32u.dll!0xa210"
+},
+{
+"name": "NtUserPostMessage",
+"ordinal": 1105,
+"rva": 4624,
+"forwarder": null,
+"ref": "win32u.dll!0x1210"
+},
+{
+"name": "NtUserPostThreadMessage",
+"ordinal": 1106,
+"rva": 7152,
+"forwarder": null,
+"ref": "win32u.dll!0x1bf0"
+},
+{
+"name": "NtUserPrintWindow",
+"ordinal": 1107,
+"rva": 41520,
+"forwarder": null,
+"ref": "win32u.dll!0xa230"
+},
+{
+"name": "NtUserProcessConnect",
+"ordinal": 1108,
+"rva": 11600,
+"forwarder": null,
+"ref": "win32u.dll!0x2d50"
+},
+{
+"name": "NtUserProcessInkFeedbackCommand",
+"ordinal": 1109,
+"rva": 41552,
+"forwarder": null,
+"ref": "win32u.dll!0xa250"
+},
+{
+"name": "NtUserPromoteMouseInPointer",
+"ordinal": 1110,
+"rva": 41584,
+"forwarder": null,
+"ref": "win32u.dll!0xa270"
+},
+{
+"name": "NtUserPromotePointer",
+"ordinal": 1111,
+"rva": 41616,
+"forwarder": null,
+"ref": "win32u.dll!0xa290"
+},
+{
+"name": "NtUserQueryActivationObject",
+"ordinal": 1112,
+"rva": 41648,
+"forwarder": null,
+"ref": "win32u.dll!0xa2b0"
+},
+{
+"name": "NtUserQueryBSDRWindow",
+"ordinal": 1113,
+"rva": 41680,
+"forwarder": null,
+"ref": "win32u.dll!0xa2d0"
+},
+{
+"name": "NtUserQueryDisplayConfig",
+"ordinal": 1114,
+"rva": 41712,
+"forwarder": null,
+"ref": "win32u.dll!0xa2f0"
+},
+{
+"name": "NtUserQueryInformationThread",
+"ordinal": 1115,
+"rva": 41744,
+"forwarder": null,
+"ref": "win32u.dll!0xa310"
+},
+{
+"name": "NtUserQueryInputContext",
+"ordinal": 1116,
+"rva": 41776,
+"forwarder": null,
+"ref": "win32u.dll!0xa330"
+},
+{
+"name": "NtUserQuerySendMessage",
+"ordinal": 1117,
+"rva": 41808,
+"forwarder": null,
+"ref": "win32u.dll!0xa350"
+},
+{
+"name": "NtUserQueryWindow",
+"ordinal": 1118,
+"rva": 4656,
+"forwarder": null,
+"ref": "win32u.dll!0x1230"
+},
+{
+"name": "NtUserRealChildWindowFromPoint",
+"ordinal": 1119,
+"rva": 41840,
+"forwarder": null,
+"ref": "win32u.dll!0xa370"
+},
+{
+"name": "NtUserRealInternalGetMessage",
+"ordinal": 1120,
+"rva": 11216,
+"forwarder": null,
+"ref": "win32u.dll!0x2bd0"
+},
+{
+"name": "NtUserRealWaitMessageEx",
+"ordinal": 1121,
+"rva": 41872,
+"forwarder": null,
+"ref": "win32u.dll!0xa390"
+},
+{
+"name": "NtUserRedrawWindow",
+"ordinal": 1122,
+"rva": 4752,
+"forwarder": null,
+"ref": "win32u.dll!0x1290"
+},
+{
+"name": "NtUserRegisterBSDRWindow",
+"ordinal": 1123,
+"rva": 41904,
+"forwarder": null,
+"ref": "win32u.dll!0xa3b0"
+},
+{
+"name": "NtUserRegisterClassExWOW",
+"ordinal": 1124,
+"rva": 9520,
+"forwarder": null,
+"ref": "win32u.dll!0x2530"
+},
+{
+"name": "NtUserRegisterDManipHook",
+"ordinal": 1125,
+"rva": 41936,
+"forwarder": null,
+"ref": "win32u.dll!0xa3d0"
+},
+{
+"name": "NtUserRegisterEdgy",
+"ordinal": 1126,
+"rva": 41968,
+"forwarder": null,
+"ref": "win32u.dll!0xa3f0"
+},
+{
+"name": "NtUserRegisterErrorReportingDialog",
+"ordinal": 1127,
+"rva": 42000,
+"forwarder": null,
+"ref": "win32u.dll!0xa410"
+},
+{
+"name": "NtUserRegisterHotKey",
+"ordinal": 1128,
+"rva": 42032,
+"forwarder": null,
+"ref": "win32u.dll!0xa430"
+},
+{
+"name": "NtUserRegisterManipulationThread",
+"ordinal": 1129,
+"rva": 42064,
+"forwarder": null,
+"ref": "win32u.dll!0xa450"
+},
+{
+"name": "NtUserRegisterPointerDeviceNotifications",
+"ordinal": 1130,
+"rva": 42096,
+"forwarder": null,
+"ref": "win32u.dll!0xa470"
+},
+{
+"name": "NtUserRegisterPointerInputTarget",
+"ordinal": 1131,
+"rva": 42128,
+"forwarder": null,
+"ref": "win32u.dll!0xa490"
+},
+{
+"name": "NtUserRegisterRawInputDevices",
+"ordinal": 1132,
+"rva": 42160,
+"forwarder": null,
+"ref": "win32u.dll!0xa4b0"
+},
+{
+"name": "NtUserRegisterServicesProcess",
+"ordinal": 1133,
+"rva": 42192,
+"forwarder": null,
+"ref": "win32u.dll!0xa4d0"
+},
+{
+"name": "NtUserRegisterSessionPort",
+"ordinal": 1134,
+"rva": 42224,
+"forwarder": null,
+"ref": "win32u.dll!0xa4f0"
+},
+{
+"name": "NtUserRegisterShellPTPListener",
+"ordinal": 1135,
+"rva": 42256,
+"forwarder": null,
+"ref": "win32u.dll!0xa510"
+},
+{
+"name": "NtUserRegisterTasklist",
+"ordinal": 1136,
+"rva": 42288,
+"forwarder": null,
+"ref": "win32u.dll!0xa530"
+},
+{
+"name": "NtUserRegisterTouchHitTestingWindow",
+"ordinal": 1137,
+"rva": 42320,
+"forwarder": null,
+"ref": "win32u.dll!0xa550"
+},
+{
+"name": "NtUserRegisterTouchPadCapable",
+"ordinal": 1138,
+"rva": 42352,
+"forwarder": null,
+"ref": "win32u.dll!0xa570"
+},
+{
+"name": "NtUserRegisterUserApiHook",
+"ordinal": 1139,
+"rva": 42384,
+"forwarder": null,
+"ref": "win32u.dll!0xa590"
+},
+{
+"name": "NtUserRegisterWindowMessage",
+"ordinal": 1140,
+"rva": 5904,
+"forwarder": null,
+"ref": "win32u.dll!0x1710"
+},
+{
+"name": "NtUserReleaseDC",
+"ordinal": 1141,
+"rva": 42416,
+"forwarder": null,
+"ref": "win32u.dll!0xa5b0"
+},
+{
+"name": "NtUserReleaseDwmHitTestWaiters",
+"ordinal": 1142,
+"rva": 42448,
+"forwarder": null,
+"ref": "win32u.dll!0xa5d0"
+},
+{
+"name": "NtUserRemoteConnect",
+"ordinal": 1143,
+"rva": 42480,
+"forwarder": null,
+"ref": "win32u.dll!0xa5f0"
+},
+{
+"name": "NtUserRemoteRedrawRectangle",
+"ordinal": 1144,
+"rva": 42512,
+"forwarder": null,
+"ref": "win32u.dll!0xa610"
+},
+{
+"name": "NtUserRemoteRedrawScreen",
+"ordinal": 1145,
+"rva": 42544,
+"forwarder": null,
+"ref": "win32u.dll!0xa630"
+},
+{
+"name": "NtUserRemoteStopScreenUpdates",
+"ordinal": 1146,
+"rva": 42576,
+"forwarder": null,
+"ref": "win32u.dll!0xa650"
+},
+{
+"name": "NtUserRemoveClipboardFormatListener",
+"ordinal": 1147,
+"rva": 42608,
+"forwarder": null,
+"ref": "win32u.dll!0xa670"
+},
+{
+"name": "NtUserRemoveInjectionDevice",
+"ordinal": 1148,
+"rva": 42640,
+"forwarder": null,
+"ref": "win32u.dll!0xa690"
+},
+{
+"name": "NtUserRemoveMenu",
+"ordinal": 1149,
+"rva": 11728,
+"forwarder": null,
+"ref": "win32u.dll!0x2dd0"
+},
+{
+"name": "NtUserRemoveProp",
+"ordinal": 1150,
+"rva": 6384,
+"forwarder": null,
+"ref": "win32u.dll!0x18f0"
+},
+{
+"name": "NtUserRemoveVisualIdentifier",
+"ordinal": 1151,
+"rva": 42672,
+"forwarder": null,
+"ref": "win32u.dll!0xa6b0"
+},
+{
+"name": "NtUserReportInertia",
+"ordinal": 1152,
+"rva": 42704,
+"forwarder": null,
+"ref": "win32u.dll!0xa6d0"
+},
+{
+"name": "NtUserRequestMoveSizeOperation",
+"ordinal": 1153,
+"rva": 42736,
+"forwarder": null,
+"ref": "win32u.dll!0xa6f0"
+},
+{
+"name": "NtUserResolveDesktopForWOW",
+"ordinal": 1154,
+"rva": 42768,
+"forwarder": null,
+"ref": "win32u.dll!0xa710"
+},
+{
+"name": "NtUserRestoreWindowDpiChanges",
+"ordinal": 1155,
+"rva": 42800,
+"forwarder": null,
+"ref": "win32u.dll!0xa730"
+},
+{
+"name": "NtUserSBGetParms",
+"ordinal": 1156,
+"rva": 6640,
+"forwarder": null,
+"ref": "win32u.dll!0x19f0"
+},
+{
+"name": "NtUserScrollDC",
+"ordinal": 1157,
+"rva": 7504,
+"forwarder": null,
+"ref": "win32u.dll!0x1d50"
+},
+{
+"name": "NtUserScrollWindowEx",
+"ordinal": 1158,
+"rva": 9968,
+"forwarder": null,
+"ref": "win32u.dll!0x26f0"
+},
+{
+"name": "NtUserSelectPalette",
+"ordinal": 1159,
+"rva": 5072,
+"forwarder": null,
+"ref": "win32u.dll!0x13d0"
+},
+{
+"name": "NtUserSendEventMessage",
+"ordinal": 1160,
+"rva": 42832,
+"forwarder": null,
+"ref": "win32u.dll!0xa750"
+},
+{
+"name": "NtUserSendInput",
+"ordinal": 1161,
+"rva": 8208,
+"forwarder": null,
+"ref": "win32u.dll!0x2010"
+},
+{
+"name": "NtUserSendInteractiveControlHapticsReport",
+"ordinal": 1162,
+"rva": 42864,
+"forwarder": null,
+"ref": "win32u.dll!0xa770"
+},
+{
+"name": "NtUserSetActivationFilter",
+"ordinal": 1163,
+"rva": 42896,
+"forwarder": null,
+"ref": "win32u.dll!0xa790"
+},
+{
+"name": "NtUserSetActiveProcessForMonitor",
+"ordinal": 1164,
+"rva": 42928,
+"forwarder": null,
+"ref": "win32u.dll!0xa7b0"
+},
+{
+"name": "NtUserSetActiveWindow",
+"ordinal": 1165,
+"rva": 10896,
+"forwarder": null,
+"ref": "win32u.dll!0x2a90"
+},
+{
+"name": "NtUserSetAppImeLevel",
+"ordinal": 1166,
+"rva": 42960,
+"forwarder": null,
+"ref": "win32u.dll!0xa7d0"
+},
+{
+"name": "NtUserSetAutoRotation",
+"ordinal": 1167,
+"rva": 42992,
+"forwarder": null,
+"ref": "win32u.dll!0xa7f0"
+},
+{
+"name": "NtUserSetBridgeWindowChild",
+"ordinal": 1168,
+"rva": 43024,
+"forwarder": null,
+"ref": "win32u.dll!0xa810"
+},
+{
+"name": "NtUserSetBrokeredForeground",
+"ordinal": 1169,
+"rva": 43056,
+"forwarder": null,
+"ref": "win32u.dll!0xa830"
+},
+{
+"name": "NtUserSetCalibrationData",
+"ordinal": 1170,
+"rva": 43088,
+"forwarder": null,
+"ref": "win32u.dll!0xa850"
+},
+{
+"name": "NtUserSetCapture",
+"ordinal": 1171,
+"rva": 6480,
+"forwarder": null,
+"ref": "win32u.dll!0x1950"
+},
+{
+"name": "NtUserSetChildWindowNoActivate",
+"ordinal": 1172,
+"rva": 43120,
+"forwarder": null,
+"ref": "win32u.dll!0xa870"
+},
+{
+"name": "NtUserSetClassLong",
+"ordinal": 1173,
+"rva": 10032,
+"forwarder": null,
+"ref": "win32u.dll!0x2730"
+},
+{
+"name": "NtUserSetClassLongPtr",
+"ordinal": 1174,
+"rva": 46192,
+"forwarder": null,
+"ref": "win32u.dll!0xb470"
+},
+{
+"name": "NtUserSetClassWord",
+"ordinal": 1175,
+"rva": 43152,
+"forwarder": null,
+"ref": "win32u.dll!0xa890"
+},
+{
+"name": "NtUserSetClipboardData",
+"ordinal": 1176,
+"rva": 10416,
+"forwarder": null,
+"ref": "win32u.dll!0x28b0"
+},
+{
+"name": "NtUserSetClipboardViewer",
+"ordinal": 1177,
+"rva": 12752,
+"forwarder": null,
+"ref": "win32u.dll!0x31d0"
+},
+{
+"name": "NtUserSetCoreWindow",
+"ordinal": 1178,
+"rva": 43184,
+"forwarder": null,
+"ref": "win32u.dll!0xa8b0"
+},
+{
+"name": "NtUserSetCoreWindowPartner",
+"ordinal": 1179,
+"rva": 43216,
+"forwarder": null,
+"ref": "win32u.dll!0xa8d0"
+},
+{
+"name": "NtUserSetCursor",
+"ordinal": 1180,
+"rva": 4976,
+"forwarder": null,
+"ref": "win32u.dll!0x1370"
+},
+{
+"name": "NtUserSetCursorContents",
+"ordinal": 1181,
+"rva": 43248,
+"forwarder": null,
+"ref": "win32u.dll!0xa8f0"
+},
+{
+"name": "NtUserSetCursorIconData",
+"ordinal": 1182,
+"rva": 9200,
+"forwarder": null,
+"ref": "win32u.dll!0x23f0"
+},
+{
+"name": "NtUserSetCursorPos",
+"ordinal": 1183,
+"rva": 43280,
+"forwarder": null,
+"ref": "win32u.dll!0xa910"
+},
+{
+"name": "NtUserSetDesktopColorTransform",
+"ordinal": 1184,
+"rva": 43312,
+"forwarder": null,
+"ref": "win32u.dll!0xa930"
+},
+{
+"name": "NtUserSetDesktopVisualInputSink",
+"ordinal": 1185,
+"rva": 43344,
+"forwarder": null,
+"ref": "win32u.dll!0xa950"
+},
+{
+"name": "NtUserSetDialogControlDpiChangeBehavior",
+"ordinal": 1186,
+"rva": 43376,
+"forwarder": null,
+"ref": "win32u.dll!0xa970"
+},
+{
+"name": "NtUserSetDisplayAutoRotationPreferences",
+"ordinal": 1187,
+"rva": 43408,
+"forwarder": null,
+"ref": "win32u.dll!0xa990"
+},
+{
+"name": "NtUserSetDisplayConfig",
+"ordinal": 1188,
+"rva": 43440,
+"forwarder": null,
+"ref": "win32u.dll!0xa9b0"
+},
+{
+"name": "NtUserSetDisplayMapping",
+"ordinal": 1189,
+"rva": 43472,
+"forwarder": null,
+"ref": "win32u.dll!0xa9d0"
+},
+{
+"name": "NtUserSetFallbackForeground",
+"ordinal": 1190,
+"rva": 43504,
+"forwarder": null,
+"ref": "win32u.dll!0xa9f0"
+},
+{
+"name": "NtUserSetFeatureReportResponse",
+"ordinal": 1191,
+"rva": 43536,
+"forwarder": null,
+"ref": "win32u.dll!0xaa10"
+},
+{
+"name": "NtUserSetFocus",
+"ordinal": 1192,
+"rva": 6736,
+"forwarder": null,
+"ref": "win32u.dll!0x1a50"
+},
+{
+"name": "NtUserSetForegroundWindowForApplication",
+"ordinal": 1193,
+"rva": 43568,
+"forwarder": null,
+"ref": "win32u.dll!0xaa30"
+},
+{
+"name": "NtUserSetFullscreenMagnifierOffsetsDWMUpdated",
+"ordinal": 1194,
+"rva": 43600,
+"forwarder": null,
+"ref": "win32u.dll!0xaa50"
+},
+{
+"name": "NtUserSetGestureConfig",
+"ordinal": 1195,
+"rva": 43632,
+"forwarder": null,
+"ref": "win32u.dll!0xaa70"
+},
+{
+"name": "NtUserSetImeHotKey",
+"ordinal": 1196,
+"rva": 43664,
+"forwarder": null,
+"ref": "win32u.dll!0xaa90"
+},
+{
+"name": "NtUserSetImeInfoEx",
+"ordinal": 1197,
+"rva": 43696,
+"forwarder": null,
+"ref": "win32u.dll!0xaab0"
+},
+{
+"name": "NtUserSetImeOwnerWindow",
+"ordinal": 1198,
+"rva": 43728,
+"forwarder": null,
+"ref": "win32u.dll!0xaad0"
+},
+{
+"name": "NtUserSetInformationThread",
+"ordinal": 1199,
+"rva": 10928,
+"forwarder": null,
+"ref": "win32u.dll!0x2ab0"
+},
+{
+"name": "NtUserSetInputServiceState",
+"ordinal": 1200,
+"rva": 43760,
+"forwarder": null,
+"ref": "win32u.dll!0xaaf0"
+},
+{
+"name": "NtUserSetInteractiveControlFocus",
+"ordinal": 1201,
+"rva": 43792,
+"forwarder": null,
+"ref": "win32u.dll!0xab10"
+},
+{
+"name": "NtUserSetInteractiveCtrlRotationAngle",
+"ordinal": 1202,
+"rva": 43824,
+"forwarder": null,
+"ref": "win32u.dll!0xab30"
+},
+{
+"name": "NtUserSetInternalWindowPos",
+"ordinal": 1203,
+"rva": 43856,
+"forwarder": null,
+"ref": "win32u.dll!0xab50"
+},
+{
+"name": "NtUserSetKeyboardState",
+"ordinal": 1204,
+"rva": 11376,
+"forwarder": null,
+"ref": "win32u.dll!0x2c70"
+},
+{
+"name": "NtUserSetLayeredWindowAttributes",
+"ordinal": 1205,
+"rva": 43888,
+"forwarder": null,
+"ref": "win32u.dll!0xab70"
+},
+{
+"name": "NtUserSetMagnificationDesktopMagnifierOffsetsDWMUpdated",
+"ordinal": 1206,
+"rva": 43920,
+"forwarder": null,
+"ref": "win32u.dll!0xab90"
+},
+{
+"name": "NtUserSetManipulationInputTarget",
+"ordinal": 1207,
+"rva": 43952,
+"forwarder": null,
+"ref": "win32u.dll!0xabb0"
+},
+{
+"name": "NtUserSetMenu",
+"ordinal": 1208,
+"rva": 43984,
+"forwarder": null,
+"ref": "win32u.dll!0xabd0"
+},
+{
+"name": "NtUserSetMenuContextHelpId",
+"ordinal": 1209,
+"rva": 44016,
+"forwarder": null,
+"ref": "win32u.dll!0xabf0"
+},
+{
+"name": "NtUserSetMenuDefaultItem",
+"ordinal": 1210,
+"rva": 11984,
+"forwarder": null,
+"ref": "win32u.dll!0x2ed0"
+},
+{
+"name": "NtUserSetMenuFlagRtoL",
+"ordinal": 1211,
+"rva": 44048,
+"forwarder": null,
+"ref": "win32u.dll!0xac10"
+},
+{
+"name": "NtUserSetMirrorRendering",
+"ordinal": 1212,
+"rva": 44080,
+"forwarder": null,
+"ref": "win32u.dll!0xac30"
+},
+{
+"name": "NtUserSetMonitorWorkArea",
+"ordinal": 1213,
+"rva": 44112,
+"forwarder": null,
+"ref": "win32u.dll!0xac50"
+},
+{
+"name": "NtUserSetMouseInputRateLimitingTimer",
+"ordinal": 1214,
+"rva": 44144,
+"forwarder": null,
+"ref": "win32u.dll!0xac70"
+},
+{
+"name": "NtUserSetObjectInformation",
+"ordinal": 1215,
+"rva": 44176,
+"forwarder": null,
+"ref": "win32u.dll!0xac90"
+},
+{
+"name": "NtUserSetParent",
+"ordinal": 1216,
+"rva": 7888,
+"forwarder": null,
+"ref": "win32u.dll!0x1ed0"
+},
+{
+"name": "NtUserSetPrecisionTouchPadConfiguration",
+"ordinal": 1217,
+"rva": 44208,
+"forwarder": null,
+"ref": "win32u.dll!0xacb0"
+},
+{
+"name": "NtUserSetProcessDpiAwarenessContext",
+"ordinal": 1218,
+"rva": 44240,
+"forwarder": null,
+"ref": "win32u.dll!0xacd0"
+},
+{
+"name": "NtUserSetProcessInteractionFlags",
+"ordinal": 1219,
+"rva": 44272,
+"forwarder": null,
+"ref": "win32u.dll!0xacf0"
+},
+{
+"name": "NtUserSetProcessMousewheelRoutingMode",
+"ordinal": 1220,
+"rva": 44304,
+"forwarder": null,
+"ref": "win32u.dll!0xad10"
+},
+{
+"name": "NtUserSetProcessRestrictionExemption",
+"ordinal": 1221,
+"rva": 44336,
+"forwarder": null,
+"ref": "win32u.dll!0xad30"
+},
+{
+"name": "NtUserSetProcessUIAccessZorder",
+"ordinal": 1222,
+"rva": 44368,
+"forwarder": null,
+"ref": "win32u.dll!0xad50"
+},
+{
+"name": "NtUserSetProcessWindowStation",
+"ordinal": 1223,
+"rva": 9296,
+"forwarder": null,
+"ref": "win32u.dll!0x2450"
+},
+{
+"name": "NtUserSetProp",
+"ordinal": 1224,
+"rva": 6576,
+"forwarder": null,
+"ref": "win32u.dll!0x19b0"
+},
+{
+"name": "NtUserSetScrollInfo",
+"ordinal": 1225,
+"rva": 5680,
+"forwarder": null,
+"ref": "win32u.dll!0x1630"
+},
+{
+"name": "NtUserSetSensorPresence",
+"ordinal": 1226,
+"rva": 35440,
+"forwarder": null,
+"ref": "win32u.dll!0x8a70"
+},
+{
+"name": "NtUserSetSharedWindowData",
+"ordinal": 1227,
+"rva": 44400,
+"forwarder": null,
+"ref": "win32u.dll!0xad70"
+},
+{
+"name": "NtUserSetShellWindowEx",
+"ordinal": 1228,
+"rva": 44432,
+"forwarder": null,
+"ref": "win32u.dll!0xad90"
+},
+{
+"name": "NtUserSetSysColors",
+"ordinal": 1229,
+"rva": 44464,
+"forwarder": null,
+"ref": "win32u.dll!0xadb0"
+},
+{
+"name": "NtUserSetSystemCursor",
+"ordinal": 1230,
+"rva": 44496,
+"forwarder": null,
+"ref": "win32u.dll!0xadd0"
+},
+{
+"name": "NtUserSetSystemMenu",
+"ordinal": 1231,
+"rva": 12144,
+"forwarder": null,
+"ref": "win32u.dll!0x2f70"
+},
+{
+"name": "NtUserSetSystemTimer",
+"ordinal": 1232,
+"rva": 44528,
+"forwarder": null,
+"ref": "win32u.dll!0xadf0"
+},
+{
+"name": "NtUserSetTargetForResourceBrokering",
+"ordinal": 1233,
+"rva": 44560,
+"forwarder": null,
+"ref": "win32u.dll!0xae10"
+},
+{
+"name": "NtUserSetThreadDesktop",
+"ordinal": 1234,
+"rva": 8688,
+"forwarder": null,
+"ref": "win32u.dll!0x21f0"
+},
+{
+"name": "NtUserSetThreadInputBlocked",
+"ordinal": 1235,
+"rva": 44592,
+"forwarder": null,
+"ref": "win32u.dll!0xae30"
+},
+{
+"name": "NtUserSetThreadLayoutHandles",
+"ordinal": 1236,
+"rva": 44624,
+"forwarder": null,
+"ref": "win32u.dll!0xae50"
+},
+{
+"name": "NtUserSetThreadState",
+"ordinal": 1237,
+"rva": 10672,
+"forwarder": null,
+"ref": "win32u.dll!0x29b0"
+},
+{
+"name": "NtUserSetTimer",
+"ordinal": 1238,
+"rva": 4912,
+"forwarder": null,
+"ref": "win32u.dll!0x1330"
+},
+{
+"name": "NtUserSetWinEventHook",
+"ordinal": 1239,
+"rva": 12048,
+"forwarder": null,
+"ref": "win32u.dll!0x2f10"
+},
+{
+"name": "NtUserSetWindowArrangement",
+"ordinal": 1240,
+"rva": 44656,
+"forwarder": null,
+"ref": "win32u.dll!0xae70"
+},
+{
+"name": "NtUserSetWindowBand",
+"ordinal": 1241,
+"rva": 44688,
+"forwarder": null,
+"ref": "win32u.dll!0xae90"
+},
+{
+"name": "NtUserSetWindowCompositionAttribute",
+"ordinal": 1242,
+"rva": 44720,
+"forwarder": null,
+"ref": "win32u.dll!0xaeb0"
+},
+{
+"name": "NtUserSetWindowCompositionTransition",
+"ordinal": 1243,
+"rva": 44752,
+"forwarder": null,
+"ref": "win32u.dll!0xaed0"
+},
+{
+"name": "NtUserSetWindowDisplayAffinity",
+"ordinal": 1244,
+"rva": 44784,
+"forwarder": null,
+"ref": "win32u.dll!0xaef0"
+},
+{
+"name": "NtUserSetWindowFNID",
+"ordinal": 1245,
+"rva": 8816,
+"forwarder": null,
+"ref": "win32u.dll!0x2270"
+},
+{
+"name": "NtUserSetWindowFeedbackSetting",
+"ordinal": 1246,
+"rva": 44816,
+"forwarder": null,
+"ref": "win32u.dll!0xaf10"
+},
+{
+"name": "NtUserSetWindowGroup",
+"ordinal": 1247,
+"rva": 44848,
+"forwarder": null,
+"ref": "win32u.dll!0xaf30"
+},
+{
+"name": "NtUserSetWindowLong",
+"ordinal": 1248,
+"rva": 7056,
+"forwarder": null,
+"ref": "win32u.dll!0x1b90"
+},
+{
+"name": "NtUserSetWindowLongPtr",
+"ordinal": 1249,
+"rva": 46224,
+"forwarder": null,
+"ref": "win32u.dll!0xb490"
+},
+{
+"name": "NtUserSetWindowPlacement",
+"ordinal": 1250,
+"rva": 10960,
+"forwarder": null,
+"ref": "win32u.dll!0x2ad0"
+},
+{
+"name": "NtUserSetWindowPos",
+"ordinal": 1251,
+"rva": 5296,
+"forwarder": null,
+"ref": "win32u.dll!0x14b0"
+},
+{
+"name": "NtUserSetWindowRgn",
+"ordinal": 1252,
+"rva": 10224,
+"forwarder": null,
+"ref": "win32u.dll!0x27f0"
+},
+{
+"name": "NtUserSetWindowRgnEx",
+"ordinal": 1253,
+"rva": 44880,
+"forwarder": null,
+"ref": "win32u.dll!0xaf50"
+},
+{
+"name": "NtUserSetWindowShowState",
+"ordinal": 1254,
+"rva": 44912,
+"forwarder": null,
+"ref": "win32u.dll!0xaf70"
+},
+{
+"name": "NtUserSetWindowStationUser",
+"ordinal": 1255,
+"rva": 44944,
+"forwarder": null,
+"ref": "win32u.dll!0xaf90"
+},
+{
+"name": "NtUserSetWindowWord",
+"ordinal": 1256,
+"rva": 11152,
+"forwarder": null,
+"ref": "win32u.dll!0x2b90"
+},
+{
+"name": "NtUserSetWindowsHookAW",
+"ordinal": 1257,
+"rva": 11952,
+"forwarder": null,
+"ref": "win32u.dll!0x2eb0"
+},
+{
+"name": "NtUserSetWindowsHookEx",
+"ordinal": 1258,
+"rva": 8528,
+"forwarder": null,
+"ref": "win32u.dll!0x2150"
+},
+{
+"name": "NtUserShowCaret",
+"ordinal": 1259,
+"rva": 5328,
+"forwarder": null,
+"ref": "win32u.dll!0x14d0"
+},
+{
+"name": "NtUserShowCursor",
+"ordinal": 1260,
+"rva": 44976,
+"forwarder": null,
+"ref": "win32u.dll!0xafb0"
+},
+{
+"name": "NtUserShowScrollBar",
+"ordinal": 1261,
+"rva": 6096,
+"forwarder": null,
+"ref": "win32u.dll!0x17d0"
+},
+{
+"name": "NtUserShowSystemCursor",
+"ordinal": 1262,
+"rva": 45008,
+"forwarder": null,
+"ref": "win32u.dll!0xafd0"
+},
+{
+"name": "NtUserShowWindow",
+"ordinal": 1263,
+"rva": 6928,
+"forwarder": null,
+"ref": "win32u.dll!0x1b10"
+},
+{
+"name": "NtUserShowWindowAsync",
+"ordinal": 1264,
+"rva": 12784,
+"forwarder": null,
+"ref": "win32u.dll!0x31f0"
+},
+{
+"name": "NtUserShutdownBlockReasonCreate",
+"ordinal": 1265,
+"rva": 45040,
+"forwarder": null,
+"ref": "win32u.dll!0xaff0"
+},
+{
+"name": "NtUserShutdownBlockReasonQuery",
+"ordinal": 1266,
+"rva": 45072,
+"forwarder": null,
+"ref": "win32u.dll!0xb010"
+},
+{
+"name": "NtUserShutdownReasonDestroy",
+"ordinal": 1267,
+"rva": 45104,
+"forwarder": null,
+"ref": "win32u.dll!0xb030"
+},
+{
+"name": "NtUserSignalRedirectionStartComplete",
+"ordinal": 1268,
+"rva": 45136,
+"forwarder": null,
+"ref": "win32u.dll!0xb050"
+},
+{
+"name": "NtUserSlicerControl",
+"ordinal": 1269,
+"rva": 45168,
+"forwarder": null,
+"ref": "win32u.dll!0xb070"
+},
+{
+"name": "NtUserSoundSentry",
+"ordinal": 1270,
+"rva": 45200,
+"forwarder": null,
+"ref": "win32u.dll!0xb090"
+},
+{
+"name": "NtUserStopAndEndInertia",
+"ordinal": 1271,
+"rva": 45232,
+"forwarder": null,
+"ref": "win32u.dll!0xb0b0"
+},
+{
+"name": "NtUserSwitchDesktop",
+"ordinal": 1272,
+"rva": 45264,
+"forwarder": null,
+"ref": "win32u.dll!0xb0d0"
+},
+{
+"name": "NtUserSystemParametersInfo",
+"ordinal": 1273,
+"rva": 6256,
+"forwarder": null,
+"ref": "win32u.dll!0x1870"
+},
+{
+"name": "NtUserSystemParametersInfoForDpi",
+"ordinal": 1274,
+"rva": 45296,
+"forwarder": null,
+"ref": "win32u.dll!0xb0f0"
+},
+{
+"name": "NtUserTestForInteractiveUser",
+"ordinal": 1275,
+"rva": 45328,
+"forwarder": null,
+"ref": "win32u.dll!0xb110"
+},
+{
+"name": "NtUserThunkedMenuInfo",
+"ordinal": 1276,
+"rva": 12176,
+"forwarder": null,
+"ref": "win32u.dll!0x2f90"
+},
+{
+"name": "NtUserThunkedMenuItemInfo",
+"ordinal": 1277,
+"rva": 8912,
+"forwarder": null,
+"ref": "win32u.dll!0x22d0"
+},
+{
+"name": "NtUserToUnicodeEx",
+"ordinal": 1278,
+"rva": 7952,
+"forwarder": null,
+"ref": "win32u.dll!0x1f10"
+},
+{
+"name": "NtUserTrackMouseEvent",
+"ordinal": 1279,
+"rva": 10736,
+"forwarder": null,
+"ref": "win32u.dll!0x29f0"
+},
+{
+"name": "NtUserTrackPopupMenuEx",
+"ordinal": 1280,
+"rva": 45360,
+"forwarder": null,
+"ref": "win32u.dll!0xb130"
+},
+{
+"name": "NtUserTransformPoint",
+"ordinal": 1281,
+"rva": 45392,
+"forwarder": null,
+"ref": "win32u.dll!0xb150"
+},
+{
+"name": "NtUserTransformRect",
+"ordinal": 1282,
+"rva": 45424,
+"forwarder": null,
+"ref": "win32u.dll!0xb170"
+},
+{
+"name": "NtUserTranslateAccelerator",
+"ordinal": 1283,
+"rva": 4688,
+"forwarder": null,
+"ref": "win32u.dll!0x1250"
+},
+{
+"name": "NtUserTranslateMessage",
+"ordinal": 1284,
+"rva": 4560,
+"forwarder": null,
+"ref": "win32u.dll!0x11d0"
+},
+{
+"name": "NtUserUndelegateInput",
+"ordinal": 1285,
+"rva": 45456,
+"forwarder": null,
+"ref": "win32u.dll!0xb190"
+},
+{
+"name": "NtUserUnhookWinEvent",
+"ordinal": 1286,
+"rva": 12080,
+"forwarder": null,
+"ref": "win32u.dll!0x2f30"
+},
+{
+"name": "NtUserUnhookWindowsHookEx",
+"ordinal": 1287,
+"rva": 7664,
+"forwarder": null,
+"ref": "win32u.dll!0x1df0"
+},
+{
+"name": "NtUserUnloadKeyboardLayout",
+"ordinal": 1288,
+"rva": 45488,
+"forwarder": null,
+"ref": "win32u.dll!0xb1b0"
+},
+{
+"name": "NtUserUnlockWindowStation",
+"ordinal": 1289,
+"rva": 45520,
+"forwarder": null,
+"ref": "win32u.dll!0xb1d0"
+},
+{
+"name": "NtUserUnregisterClass",
+"ordinal": 1290,
+"rva": 9872,
+"forwarder": null,
+"ref": "win32u.dll!0x2690"
+},
+{
+"name": "NtUserUnregisterHotKey",
+"ordinal": 1291,
+"rva": 45552,
+"forwarder": null,
+"ref": "win32u.dll!0xb1f0"
+},
+{
+"name": "NtUserUnregisterSessionPort",
+"ordinal": 1292,
+"rva": 45584,
+"forwarder": null,
+"ref": "win32u.dll!0xb210"
+},
+{
+"name": "NtUserUnregisterUserApiHook",
+"ordinal": 1293,
+"rva": 45616,
+"forwarder": null,
+"ref": "win32u.dll!0xb230"
+},
+{
+"name": "NtUserUpdateDefaultDesktopThumbnail",
+"ordinal": 1294,
+"rva": 45648,
+"forwarder": null,
+"ref": "win32u.dll!0xb250"
+},
+{
+"name": "NtUserUpdateInputContext",
+"ordinal": 1295,
+"rva": 45680,
+"forwarder": null,
+"ref": "win32u.dll!0xb270"
+},
+{
+"name": "NtUserUpdateInstance",
+"ordinal": 1296,
+"rva": 45712,
+"forwarder": null,
+"ref": "win32u.dll!0xb290"
+},
+{
+"name": "NtUserUpdateLayeredWindow",
+"ordinal": 1297,
+"rva": 45744,
+"forwarder": null,
+"ref": "win32u.dll!0xb2b0"
+},
+{
+"name": "NtUserUpdatePerUserSystemParameters",
+"ordinal": 1298,
+"rva": 45776,
+"forwarder": null,
+"ref": "win32u.dll!0xb2d0"
+},
+{
+"name": "NtUserUpdateWindowInputSinkHints",
+"ordinal": 1299,
+"rva": 45808,
+"forwarder": null,
+"ref": "win32u.dll!0xb2f0"
+},
+{
+"name": "NtUserUpdateWindowTrackingInfo",
+"ordinal": 1300,
+"rva": 45840,
+"forwarder": null,
+"ref": "win32u.dll!0xb310"
+},
+{
+"name": "NtUserUserHandleGrantAccess",
+"ordinal": 1301,
+"rva": 45872,
+"forwarder": null,
+"ref": "win32u.dll!0xb330"
+},
+{
+"name": "NtUserValidateRect",
+"ordinal": 1302,
+"rva": 10320,
+"forwarder": null,
+"ref": "win32u.dll!0x2850"
+},
+{
+"name": "NtUserValidateTimerCallback",
+"ordinal": 1303,
+"rva": 4848,
+"forwarder": null,
+"ref": "win32u.dll!0x12f0"
+},
+{
+"name": "NtUserVkKeyScanEx",
+"ordinal": 1304,
+"rva": 5424,
+"forwarder": null,
+"ref": "win32u.dll!0x1530"
+},
+{
+"name": "NtUserWOWCleanup",
+"ordinal": 1305,
+"rva": 45904,
+"forwarder": null,
+"ref": "win32u.dll!0xb350"
+},
+{
+"name": "NtUserWaitAvailableMessageEx",
+"ordinal": 1306,
+"rva": 45936,
+"forwarder": null,
+"ref": "win32u.dll!0xb370"
+},
+{
+"name": "NtUserWaitForInputIdle",
+"ordinal": 1307,
+"rva": 45968,
+"forwarder": null,
+"ref": "win32u.dll!0xb390"
+},
+{
+"name": "NtUserWaitForMsgAndEvent",
+"ordinal": 1308,
+"rva": 46000,
+"forwarder": null,
+"ref": "win32u.dll!0xb3b0"
+},
+{
+"name": "NtUserWaitForRedirectionStartComplete",
+"ordinal": 1309,
+"rva": 46032,
+"forwarder": null,
+"ref": "win32u.dll!0xb3d0"
+},
+{
+"name": "NtUserWaitMessage",
+"ordinal": 1310,
+"rva": 4528,
+"forwarder": null,
+"ref": "win32u.dll!0x11b0"
+},
+{
+"name": "NtUserWindowFromDC",
+"ordinal": 1311,
+"rva": 46064,
+"forwarder": null,
+"ref": "win32u.dll!0xb3f0"
+},
+{
+"name": "NtUserWindowFromPhysicalPoint",
+"ordinal": 1312,
+"rva": 46096,
+"forwarder": null,
+"ref": "win32u.dll!0xb410"
+},
+{
+"name": "NtUserWindowFromPoint",
+"ordinal": 1313,
+"rva": 4784,
+"forwarder": null,
+"ref": "win32u.dll!0x12b0"
+},
+{
+"name": "NtUserYieldTask",
+"ordinal": 1314,
+"rva": 37904,
+"forwarder": null,
+"ref": "win32u.dll!0x9410"
+},
+{
+"name": "NtValidateCompositionSurfaceHandle",
+"ordinal": 1315,
+"rva": 46128,
+"forwarder": null,
+"ref": "win32u.dll!0xb430"
+},
+{
+"name": "NtVisualCaptureBits",
+"ordinal": 1316,
+"rva": 46160,
+"forwarder": null,
+"ref": "win32u.dll!0xb450"
+},
+{
+"name": "gDispatchTableValues",
+"ordinal": 1317,
+"rva": 46248,
+"forwarder": null,
+"ref": "win32u.dll!0xb4a8"
+}
+]
