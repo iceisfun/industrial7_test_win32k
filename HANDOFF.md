@@ -41,7 +41,7 @@ running any of them, and a test-name substring as its only argument to run a sub
     python3 tools/win10_pack.py <payload_dir> --exes a,b,c --mode std --timeout 120
     python3 tools/win10_pack.py <payload_dir> --exes x_clipboard_state_matrix --filter keyed --mode adm
 
-Options: `--mode std|adm|both` (default adm), `--timeout SECS` per exe (default 300; the process tree is killed and
+Options: `--mode std|adm|user|both|all` (default adm; both = adm,std; all = adm,std,user), `--timeout SECS` per exe (default 300; the process tree is killed and
 the exe reported as TIMEOUT), `--filter SUBSTR` test-name substring passed to every exe, `--full` also send the
 `RUN` lines, `--destructive` allow `dx_*` areas (refused otherwise). The payload holds `bin/` (the exes plus the two
 helper exes), `list.txt`, `runner.ps1` and `run.cmd`.
@@ -69,13 +69,14 @@ Per-test output also stays in the guest; COM1 carries OK/FAIL/SKIP/NOTE/SUMMARY 
     python3 tools/win10_results.py serial.log                  # one row per (mode, exe): tests failed skipped checks rc secs status
     python3 tools/win10_results.py serial.log --tests          # one row per test: mode exe test OK|FAIL|SKIP
     python3 tools/win10_results.py serial.log --failures       # the FAIL/SKIP detail lines
+    python3 tools/win10_compare.py serial.log --across-modes   # tests whose result differs between adm, std and user
     python3 tools/win10_results.py serial.log --format json -o run.json
     python3 tools/test_win10_results.py                        # unit test of the parser
 
 Status is OK (summary seen, exe returned 0 or 1), TIMEOUT, NOSUMMARY (crash), HANG (log stops), MISSING. The exit code
 is 0 when the run finished and every exe is OK.
 
-## The two modes and the restricted-admin token
+## The three modes (adm, std, user) and the restricted-admin token
 
 - **adm** is the interactive session's own token. The built-in Administrator is not filtered by UAC there: High
   integrity, Administrators enabled, 24 privileges including the debug privilege.
@@ -93,6 +94,28 @@ is 0 when the run finished and every exe is OK.
   `CheckTokenMembership(Administrators)` false; adm has integrity 0x3000 and Administrators enabled.
 - Known limit: the std token keeps the account's user SID and `TokenIsElevated` still reads 1 (the flag cannot be
   cleared on a derived token). No test decides on it; decide on integrity, privileges or group state.
+
+### user mode: a real local standard account
+
+`--mode user` (or `all`) adds a third pass. The runner creates a throwaway local account inside the guest (`net user
+/add`, Users group only, random 24-character password generated at run time, password change disabled) and starts every
+exe with `build/tools/w32k_runas.exe --user <name> --pass <pw> <exe>`, which calls `CreateProcessWithLogonW` with a
+profile, inside a kill-on-close job. The secondary logon service starts the child in the caller's session on the
+caller's window station and desktop (it grants the new logon access to them), so the account has a genuine interactive
+desktop: `WinSta0\Default`, session 1 (no autologon, no reboot, no scheduled task is needed). A plain
+`Start-Process -Credential` is different: it goes through a different path and lands in a non-interactive window station.
+Before any exe runs, the runner starts `w32k_probe.exe` as the account and accepts it only when it reports a separate
+account (neither the built-in Administrator nor Guest), `is_elevated=0` and window station `WinSta0`; the result is
+framed as `W32K userkind real-user` (or `unavailable`, in which case user mode is skipped and `win10_results.py`
+exits 1). The account is deleted at the end; the guest is thrown away anyway.
+
+What the probe reports in user mode: an account of its own, Medium integrity (0x2000), `TokenIsElevated=0`, elevation
+type default, no restrictions flag, only the standard privileges (change-notify, shutdown, undock, increase working
+set, time zone), Users enabled and Administrators absent from the token, `CheckTokenMembership(Administrators)` false.
+The probe never prints the account name or a machine SID.
+
+Use `python3 tools/win10_compare.py serial.log --across-modes` on a log with several modes to list the tests whose
+result differs between them.
 
 ## Summarize results (the only thing committed)
 

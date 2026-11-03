@@ -15,13 +15,18 @@ static void *tinfo(HANDLE t, TOKEN_INFORMATION_CLASS c) {
     if (p && !GetTokenInformation(t, c, p, n, &n)) { free(p); p = NULL; }
     return p;
 }
-int main(void) {
+int main(int argc, char **argv) {
     setvbuf(stdout, NULL, _IONBF, 0);
     HANDLE t; OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &t);
     DWORD sid = (DWORD)-1; ProcessIdToSessionId(GetCurrentProcessId(), &sid);
     printf("PROBE session=%lu\n", sid);
     TOKEN_USER *u = tinfo(t, TokenUser); char *s = NULL;
-    if (u && ConvertSidToStringSidA(u->User.Sid, &s)) printf("PROBE user_sid=%s\n", s);
+    if (u && ConvertSidToStringSidA(u->User.Sid, &s)) {
+        printf("PROBE user_sid=%s\n", s);
+        /* the account's own RID is guest-specific: classify with well-known RIDs only */
+        const char *k = strstr(s, "-500") ? "builtin-administrator" : strstr(s, "-501") ? "guest" : "other-account";
+        printf("PROBE account=%s\n", k);
+    }
     TOKEN_MANDATORY_LABEL *il = tinfo(t, TokenIntegrityLevel);
     if (il) { PUCHAR n = GetSidSubAuthorityCount(il->Label.Sid); printf("PROBE integrity_rid=0x%lx\n", *GetSidSubAuthority(il->Label.Sid, *n - 1)); }
     TOKEN_ELEVATION_TYPE et = 0; DWORD n; GetTokenInformation(t, TokenElevationType, &et, sizeof et, &n);
@@ -51,7 +56,22 @@ int main(void) {
     printf("PROBE administrators_sid=%s\n", state);
     BOOL isadm = FALSE; CheckTokenMembership(NULL, adm, &isadm);
     printf("PROBE CheckTokenMembership_admin=%d\n", (int)isadm);
+    PSID usr = NULL; ConvertStringSidToSidA("S-1-5-32-545", &usr);
+    BOOL isusr = FALSE; CheckTokenMembership(NULL, usr, &isusr);
+    printf("PROBE CheckTokenMembership_users=%d\n", (int)isusr);
+    if (g) {
+        DWORD ng = 0; char list[1024] = "";
+        for (DWORD i = 0; i < g->GroupCount; i++) {
+            DWORD a = g->Groups[i].Attributes; char *gs = NULL;
+            if (!(a & SE_GROUP_LOGON_ID) && ConvertSidToStringSidA(g->Groups[i].Sid, &gs)) {
+                if (strncmp(gs, "S-1-5-21-", 9) && strlen(list) + strlen(gs) + 8 < sizeof list)
+                    sprintf(list + strlen(list), " %s%s", gs, (a & SE_GROUP_USE_FOR_DENY_ONLY) ? "(deny)" : (a & SE_GROUP_ENABLED) ? "" : "(off)");
+                ng++;
+            }
+        }
+        printf("PROBE groups=%s\n", list);
+    }
     fflush(stdout);
-    system("whoami /user /groups /priv");
+    if (!(argc > 1 && !strcmp(argv[1], "--no-whoami"))) system("whoami /groups /priv");
     return 0;
 }
