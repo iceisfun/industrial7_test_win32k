@@ -396,7 +396,7 @@ RT(fg_cursorframeinfo_static_cursor_has_one_step) {
         if (!c) continue;
         DWORD rate = 0x5a5a5a5a; int steps = 0x5a5a5a5a;
         HANDLE h = UNW(NtUserGetCursorFrameInfo)(c, 0, &rate, &steps);
-        t_note("cursor %d frame0: handle %p rate %lu steps %d", ids[i], h, rate, steps);
+        t_info("cursor %d frame0: handle %p rate %lu steps %d", ids[i], h, rate, steps);   /* an animated cursor reports a rate that differs between guests */
         if (!h) continue;
         tested++;
         if (steps == 1) EXPECT_EQ(rate, 0);              /* _GetCursorFrameInfo: non-animated -> steps 1, rate 0 */

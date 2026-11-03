@@ -223,3 +223,7 @@ after destroying the channel never exceed the count with the channel open.
 The process-wide NT handle count around an adapter open/close varies between fresh guests (it depends on
 what the system has already opened in the process), so the before/open/closed counts are reported through
 t_info only. The test records a measurement and asserts nothing about the absolute values.
+
+## r2_input_pointer_rim_state: stock cursor frame rate
+
+The frame rate that GetCursorFrameInfo reports for an animated stock cursor (for example the wait cursor) is not stable across fresh guests (seen as both 2 and 3). The test now prints that line through t_info only; the stable relation (a non-animated cursor reports one step and rate 0) is still asserted.
