@@ -278,7 +278,8 @@ TEST(r2_teb_peb_field_matrix_ci_worker_tiflags_reported) {
 }
 TEST(r2_teb_peb_field_matrix_ci_compat_flags_reported) {
     struct rsnap m; rt_main_gui(&m);
-    t_note("dwCompatFlags=0x%lx dwCompatFlags2=0x%lx cSpins=%llu", rs_ci32(&m, CIO_dwCompat), rs_ci32(&m, CIO_dwCompat2), rs_ci64(&m, CIO_cSpins));
+    t_note("dwCompatFlags=0x%lx dwCompatFlags2=0x%lx", rs_ci32(&m, CIO_dwCompat), rs_ci32(&m, CIO_dwCompat2));
+    t_info("cSpins=%llu", rs_ci64(&m, CIO_cSpins));
     WK_GUI(w);
     t_note("worker dwCompatFlags=0x%lx dwCompatFlags2=0x%lx", rs_ci32(&w.after, CIO_dwCompat), rs_ci32(&w.after, CIO_dwCompat2));
     wk_finish(&w);
