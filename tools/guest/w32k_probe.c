@@ -22,7 +22,9 @@ int main(int argc, char **argv) {
     printf("PROBE session=%lu\n", sid);
     TOKEN_USER *u = tinfo(t, TokenUser); char *s = NULL;
     if (u && ConvertSidToStringSidA(u->User.Sid, &s)) {
-        printf("PROBE user_sid=%s\n", s);
+        /* the machine part of a local account SID is guest-specific: print the well-known part and the RID only */
+        if (!strncmp(s, "S-1-5-21-", 9) && strrchr(s, '-')) printf("PROBE user_sid=S-1-5-21-<machine>%s\n", strrchr(s, '-'));
+        else printf("PROBE user_sid=%s\n", s);
         /* the account's own RID is guest-specific: classify with well-known RIDs only */
         const char *k = strstr(s, "-500") ? "builtin-administrator" : strstr(s, "-501") ? "guest" : "other-account";
         printf("PROBE account=%s\n", k);

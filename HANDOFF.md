@@ -85,7 +85,7 @@ is 0 when the run finished and every exe is OK.
   privilege removed, Administrators and the other powerful built-in aliases set to deny-only, integrity lowered to
   Medium, owner and default DACL reset to the user SID. It starts the child with `CreateProcessAsUser` on
   `WinSta0\Default` in the same session, inside a kill-on-close job. No logon API is used, so the window station and
-  desktop are the interactive ones. This is a restricted-admin token, not a real standard account: it keeps the
+  desktop are the interactive ones (user mode, below, is the real standard account). This is a restricted-admin token, not a real standard account: it keeps the
   administrator's user SID and profile, so behavior that depends on being a genuinely separate unprivileged account
   (own profile, own SID, no admin group membership at all) is not covered by std mode.
 - Verified with `build/tools/w32k_probe.exe`, which prints the identity it runs with (session, window station and
@@ -102,8 +102,8 @@ is 0 when the run finished and every exe is OK.
 exe with `build/tools/w32k_runas.exe --user <name> --pass <pw> <exe>`, which calls `CreateProcessWithLogonW` with a
 profile, inside a kill-on-close job. The secondary logon service starts the child in the caller's session on the
 caller's window station and desktop (it grants the new logon access to them), so the account has a genuine interactive
-desktop: `WinSta0\Default`, session 1 (no autologon, no reboot, no scheduled task is needed). A plain
-`Start-Process -Credential` is different: it goes through a different path and lands in a non-interactive window station.
+desktop: `WinSta0\Default`, session 1 (no autologon, no reboot, no scheduled task is needed). A plain `Start-Process -Credential` logon was reported to land in a non-interactive window station and
+is not used.
 Before any exe runs, the runner starts `w32k_probe.exe` as the account and accepts it only when it reports a separate
 account (neither the built-in Administrator nor Guest), `is_elevated=0` and window station `WinSta0`; the result is
 framed as `W32K userkind real-user` (or `unavailable`, in which case user mode is skipped and `win10_results.py`
@@ -113,6 +113,14 @@ What the probe reports in user mode: an account of its own, Medium integrity (0x
 type default, no restrictions flag, only the standard privileges (change-notify, shutdown, undock, increase working
 set, time zone), Users enabled and Administrators absent from the token, `CheckTokenMembership(Administrators)` false.
 The probe never prints the account name or a machine SID.
+
+Validated on Windows 10 22H2 (build 19045) with 29 areas in all three modes (clipboard_dde, focus_capture_attach, gap_09,
+gdi_dc_objects, gdi_handle_table, kbd_layouts_state, r2_input_pointer_rim_state, r2_winsta_activation_group_session,
+user_handle_table, user_serverinfo_shared, user_wnd_desktop_heap, win32k_modules_sysinfo, winsta_desktop_objects,
+gdi_regions_clip, gdi_pens_brushes_palettes, msg_send_cross_thread, hooks_winevents, win_create_destroy,
+win_position_zorder, class_registration, cursor_icon_menu, sysparams_colors_metrics, gui_thread_conversion,
+process_session_cleanup, msg_queue_post_peek, paint_dc_cache_regions, scroll_info_structs, win_props_styles_queries,
+ime_hotkeys_misc): user results equal std results test by test; `docs/WIN10_NOTES.md` has the details.
 
 Use `python3 tools/win10_compare.py serial.log --across-modes` on a log with several modes to list the tests whose
 result differs between them.

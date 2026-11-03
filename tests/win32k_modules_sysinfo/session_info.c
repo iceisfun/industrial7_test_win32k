@@ -213,7 +213,7 @@ TEST(win32k_modules_sysinfo_sessproc_all_entries_belong_to_requested_session) {
         if (off >= used) { CHECK(0); break; }
     }
     CHECK(n >= 2);
-    t_note("%d processes in session %lu", n, k_session_id());
+    t_info("%d processes in session %lu", n, k_session_id());
     free(buf);
 }
 TEST(win32k_modules_sysinfo_sessproc_chain_stays_in_returned_length) {
