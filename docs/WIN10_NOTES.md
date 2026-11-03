@@ -253,3 +253,7 @@ Only bits 1..3 (DBCS, IME, MidEast) of SERVERINFO.dwSRVIFlags are stable across 
 ## gap_05 realization cache id
 
 The cache id reported by GetFontRealizationInfo for Arial is a per-boot, per-process counter (observed 44, 309, 658 across runs), so it is no longer part of the printed NOTE. The cache id and instance id go through t_info; the stable fields (kind, file count, face index, simulations) remain in the NOTE.
+
+## scroll_info_structs: cursor info diagnostic
+
+ci_basic_fields printed the cursor position, flags and cursor handle with t_note. The position belongs to the interactive session and differs between guests and modes, so the line made the output non-deterministic. It is now reported with t_info only; the checks (flags subset, position inside the virtual screen) are unchanged.

@@ -606,7 +606,7 @@ TEST(ci_basic_fields) {
     int vw = U(GetSystemMetrics)(SM_CXVIRTUALSCREEN), vh = U(GetSystemMetrics)(SM_CYVIRTUALSCREEN);
     CHECKF(ci.ptScreenPos.x >= vx && ci.ptScreenPos.x < vx + vw && ci.ptScreenPos.y >= vy && ci.ptScreenPos.y < vy + vh,
            "pos %ld,%ld virtual %d,%d %dx%d", ci.ptScreenPos.x, ci.ptScreenPos.y, vx, vy, vw, vh);
-    t_note("cursor flags %#lx hCursor %p pos %ld,%ld", ci.flags, ci.hCursor, ci.ptScreenPos.x, ci.ptScreenPos.y);
+    t_info("cursor flags %#lx hCursor %p pos %ld,%ld", ci.flags, ci.hCursor, ci.ptScreenPos.x, ci.ptScreenPos.y);
 }
 
 TEST(ci_matches_getcursorpos) {
