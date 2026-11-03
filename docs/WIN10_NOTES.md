@@ -274,3 +274,7 @@ The sink test likewise prints the per-boot adapter LUID with t_info; the view id
 The DDE monitor flags value and the raw clipboard sequence counters (before and after `CloseClipboard`) differ from boot to boot, so they are printed through `t_info` only. The stable facts stay as notes: the kernel DDE window class name, and that closing the clipboard after setting unicode text synthesizes three sequence entries.
 
 - r2_display_opm_gamma_dpi: the display device state flags (attached/primary/mirroring bits) vary between guest boots, so physmon_enumerated_devices prints them via t_info only; the printed note keeps the device name, status and monitor count, which are stable.
+
+## gdi_handle_table: cross-thread delete
+
+`gdi_handle_table_reuse_cross_thread_use_and_delete` used to require the deleted object's cell to be free. The cell table is system wide, so another process can already have taken the slot (which bumps the reuse byte); the check was flaky. It now asserts that the handle no longer names a live object: either the cell is free or its generation differs from the handle's. `GetObjectType` on the deleted brush handle is not asserted: on Windows 10 it still reports a brush for it.

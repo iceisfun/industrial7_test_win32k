@@ -180,8 +180,11 @@ TEST(gdi_handle_table_reuse_cross_thread_use_and_delete) {
     CloseHandle(t);
     CHECK(a.type_ok);
     CHECK(a.deleted);
+    /* the shared table is system wide: another process may already have taken the freed slot, which bumps the reuse byte.
+       What must hold is that this handle no longer names a live object: free cell, or a cell of a later generation. */
     struct gh_cell c;
-    CHECK(gh_read(GH_IDX(h), &c) && c.objt == 0);
+    CHECK(gh_read(GH_IDX(h), &c));
+    CHECK(c.objt == 0 || (unsigned)(c.upper >> 8) != GH_UNIQ(h));
 }
 TEST(gdi_handle_table_reuse_object_created_on_thread_survives_thread_exit) {
     GH_NEED();
