@@ -82,3 +82,12 @@ the same area. They are reported as skipped, not passed.
    skip only when it fails. A skip that always fires is listed above as unconditional and needs a stated reason.
 3. A check whose result varies from run to run is not a skip: assert the relation that always holds, or print the value
    with `t_info` (shown only with `W32K_INFO=1`).
+
+## EnableWindow lifecycle (focus_capture_attach, fc_enable_life.c)
+
+No skips and no environment dependence were added; the capture tests skip only when the process cannot take capture. Observed on
+Windows 10 22H2 and asserted exactly: the result is the previous disabled state (0, nonzero, nonzero, 0 for disable, disable,
+enable, enable); every disable, including a repeated one, sends WM_CANCELMODE before the style bit changes; WM_ENABLE is sent only
+on a real change; with capture the order is WM_CANCELMODE, WM_CAPTURECHANGED, WM_ENABLE(FALSE) and capture is gone afterwards;
+IsWindowEnabled reads only the window's own WS_DISABLED bit, so a child of a disabled parent still reports enabled and receives no
+WM_ENABLE, and enabling the parent does not enable a separately disabled child. Both modes give identical logs.
