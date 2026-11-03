@@ -7,6 +7,7 @@
  * (CTouchProcessor::GetThreadPointerData) and a miss is again ERROR_INVALID_PARAMETER.
  */
 #include "rit.h"
+#include "synth.h"
 
 
 #include <stddef.h>
@@ -315,7 +316,7 @@ RT(ptr_devices_no_device_with_buffer) {
 RT(ptr_devices_small_buffer_122) {
     REQUIRE(U(GetPointerDevices));
     UINT n = 0; U(GetPointerDevices)(&n, NULL);
-    if (n == 0) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_AUTO(sy2); SYNTH_ENSURE2_OR_SKIP(sy, sy2, n);
     POINTER_DEVICE_INFO *d = calloc(n + 2, sizeof *d);
     UINT c = n - 1;
     SET_ERR(0);
@@ -328,7 +329,7 @@ RT(ptr_devices_fill_and_roundtrip) {
     REQUIRE(U(GetPointerDevices));
     REQUIRE(U(GetPointerDevice));
     UINT n = 0; U(GetPointerDevices)(&n, NULL);
-    if (n == 0) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_ENSURE_OR_SKIP(sy, n);
     POINTER_DEVICE_INFO *d = calloc(n + 2, sizeof *d);
     UINT c = n;
     CHECK(U(GetPointerDevices)(&c, d));
@@ -407,7 +408,7 @@ RT(ptr_device_properties_invalid) {
 RT(ptr_device_properties_valid_device) {
     REQUIRE(U(GetPointerDeviceProperties));
     UINT n = 0; U(GetPointerDevices)(&n, NULL);
-    if (!n) { t_skip("no pointer devices"); return; }
+    SYNTH_AUTO(sy); SYNTH_ENSURE_OR_SKIP(sy, n);
     POINTER_DEVICE_INFO *d = calloc(n + 1, sizeof *d); UINT c = n;
     U(GetPointerDevices)(&c, d);
     UINT np = 0;
@@ -571,4 +572,158 @@ RT(ptr_target_touch_pen_register_unregister) {
         CHECK(U(UnregisterPointerInputTarget)(h, PT_TOUCH));
     }
     U(DestroyWindow)(h);
+}
+
+/* ---- synthetic devices (real devices made through the public injection API) ---------------------------------------
+ * Windows 10 22H2: a synthetic touch device is a type-3 (touch) pointer device with the requested contacts, 10 properties
+ * and one cursor per contact; a synthetic pen is a type-1 (integrated pen) device with 12 properties, 2 cursors (pen and
+ * eraser) and one contact. Both are HID digitizers (usage page 0x0d, usage 4 touch screen / 2 pen) in the raw input list. */
+static int rit_count_hid(WORD page, WORD usage) {
+    rit_dev d[64]; int n = rit_devices(d, 64), c = 0;
+    for (int i = 0; i < n; i++) {
+        if (d[i].type != RIM_TYPEHID) continue;
+        RID_DEVICE_INFO inf; memset(&inf, 0, sizeof inf); UINT cb = sizeof inf; inf.cbSize = sizeof inf;
+        if (U(GetRawInputDeviceInfoW)(d[i].h, RIDI_DEVICEINFO, &inf, &cb) == (UINT)sizeof inf &&
+            inf.hid.usUsagePage == page && inf.hid.usUsage == usage) c++;
+    }
+    return c;
+}
+static int rit_synth_shape(int type, ULONG contacts, int ptype, UINT nprops, UINT ncursors, WORD usage) {
+    SYNTH_AUTO(sy);
+    int hid0 = rit_count_hid(0x0d, usage);
+    UINT before = synth_count();
+    if (!synth_begin(&sy, type, contacts)) return 0;
+    UINT n = synth_count();
+    CHECK(n == before + 1);
+    CHECK(rit_count_hid(0x0d, usage) == hid0 + 1);
+    POINTER_DEVICE_INFO *d = calloc(n + 1, sizeof *d); UINT c = n;
+    CHECK(U(GetPointerDevices)(&c, d));
+    int found = 0;
+    for (UINT i = 0; i < c; i++) {
+        if (d[i].pointerDeviceType != (POINTER_DEVICE_TYPE)ptype || d[i].maxActiveContacts != contacts) continue;
+        POINTER_DEVICE_INFO one; memset(&one, 0, sizeof one);
+        CHECK(U(GetPointerDevice)(d[i].device, &one));
+        CHECK(one.device == d[i].device && one.pointerDeviceType == d[i].pointerDeviceType);
+        UINT np = 0, nc = 0;
+        CHECK(U(GetPointerDeviceProperties)(d[i].device, &np, NULL));
+        CHECK(U(GetPointerDeviceCursors)(d[i].device, &nc, NULL));
+        if (np == nprops && nc == ncursors) {
+            found++;
+            RECT dr, sr; memset(&dr, 0, sizeof dr); memset(&sr, 0, sizeof sr);
+            CHECK(U(GetPointerDeviceRects)(d[i].device, &dr, &sr));
+            CHECK(dr.right > dr.left && dr.bottom > dr.top);
+            CHECK(sr.right > sr.left && sr.bottom > sr.top);
+        }
+    }
+    free(d);
+    CHECK(found >= 1);
+    return 1;
+}
+RT(ptr_synthetic_touch_device_shape) {
+    REQUIRE(U(CreateSyntheticPointerDevice) && U(GetPointerDevices) && U(GetPointerDevice));
+    REQUIRE(U(GetPointerDeviceProperties) && U(GetPointerDeviceCursors) && U(GetPointerDeviceRects));
+    if (!rit_synth_shape(PT_TOUCH, 3, POINTER_DEVICE_TYPE_TOUCH, 10, 3, 4)) t_skip("a synthetic touch device cannot be created");
+}
+RT(ptr_synthetic_pen_device_shape) {
+    REQUIRE(U(CreateSyntheticPointerDevice) && U(GetPointerDevices) && U(GetPointerDevice));
+    REQUIRE(U(GetPointerDeviceProperties) && U(GetPointerDeviceCursors) && U(GetPointerDeviceRects));
+    if (!rit_synth_shape(PT_PEN, 1, POINTER_DEVICE_TYPE_INTEGRATED_PEN, 12, 2, 2)) t_skip("a synthetic pen device cannot be created");
+}
+RT(ptr_synthetic_device_gone_after_destroy) {
+    REQUIRE(U(CreateSyntheticPointerDevice) && U(GetPointerDevices));
+    UINT before = synth_count();
+    struct synth s;
+    if (!synth_begin(&s, PT_PEN, 1)) { t_skip("a synthetic pen device cannot be created"); return; }
+    CHECK(synth_count() == before + 1);
+    synth_end(&s);
+    CHECK(synth_count() == before);
+}
+static LRESULT CALLBACK rit_pt_proc(HWND w, UINT m, WPARAM wp, LPARAM lp) {
+    static int *seen; 
+    if (m == WM_NCCREATE) { seen = (int *)((CREATESTRUCTW *)lp)->lpCreateParams; }
+    if (m == WM_POINTERDOWN && seen) seen[0]++;
+    if (m == WM_POINTERUPDATE && seen) seen[1]++;
+    if (m == WM_POINTERUP && seen) seen[2]++;
+    return U(DefWindowProcW)(w, m, wp, lp);
+}
+RT(ptr_synthetic_touch_injection_reaches_window) {
+    REQUIRE(U(CreateSyntheticPointerDevice) && U(InjectSyntheticPointerInput) && U(RegisterClassW) && U(CreateWindowExW));
+    SYNTH_AUTO(sy);
+    if (!synth_begin(&sy, PT_TOUCH, 2)) { t_skip("a synthetic touch device cannot be created"); return; }
+    WNDCLASSW wc; memset(&wc, 0, sizeof wc);
+    wc.lpfnWndProc = rit_pt_proc; wc.hInstance = GetModuleHandleW(NULL); wc.lpszClassName = L"rit_pt_inject";
+    U(RegisterClassW)(&wc);
+    int seen[3] = { 0, 0, 0 };
+    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, seen);
+    if (!w) { U(UnregisterClassW)(L"rit_pt_inject", wc.hInstance); t_skip("no window"); return; }
+    k_pump(200);
+    POINTER_TYPE_INFO ti; memset(&ti, 0, sizeof ti);
+    ti.type = PT_TOUCH;
+    POINTER_TOUCH_INFO *t = &ti.touchInfo;
+    t->pointerInfo.pointerType = PT_TOUCH; t->pointerInfo.pointerId = 0;
+    t->pointerInfo.ptPixelLocation.x = 400; t->pointerInfo.ptPixelLocation.y = 300;
+    t->touchMask = TOUCH_MASK_CONTACTAREA | TOUCH_MASK_ORIENTATION | TOUCH_MASK_PRESSURE;
+    t->rcContact.left = 395; t->rcContact.right = 405; t->rcContact.top = 295; t->rcContact.bottom = 305;
+    t->orientation = 90; t->pressure = 32000;
+    t->pointerInfo.pointerFlags = POINTER_FLAG_NEW | POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_DOWN;
+    SET_ERR(0);
+    BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    DWORD e1 = GetLastError();
+    k_pump(300);
+    t->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
+    t->pointerInfo.ptPixelLocation.x = 410; t->rcContact.left = 405; t->rcContact.right = 415;
+    SET_ERR(0);
+    BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    k_pump(300);
+    t->pointerInfo.pointerFlags = POINTER_FLAG_UP;
+    SET_ERR(0);
+    BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    k_pump(300);
+    CHECKF(r1, "inject down gle=%lu", e1);
+    CHECK(r2);
+    CHECK(r3);
+    /* observed on Windows 10 22H2: one WM_POINTERDOWN, at least one WM_POINTERUPDATE, one WM_POINTERUP reach the window under the contact */
+    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d", seen[0]);
+    CHECKF(seen[1] > 0, "WM_POINTERUPDATE x%d", seen[1]);
+    CHECKF(seen[2] == 1, "WM_POINTERUP x%d", seen[2]);
+    U(DestroyWindow)(w);
+    U(UnregisterClassW)(L"rit_pt_inject", wc.hInstance);
+}
+RT(ptr_synthetic_pen_injection_reaches_window) {
+    REQUIRE(U(CreateSyntheticPointerDevice) && U(InjectSyntheticPointerInput) && U(RegisterClassW) && U(CreateWindowExW));
+    SYNTH_AUTO(sy);
+    if (!synth_begin(&sy, PT_PEN, 1)) { t_skip("a synthetic pen device cannot be created"); return; }
+    WNDCLASSW wc; memset(&wc, 0, sizeof wc);
+    wc.lpfnWndProc = rit_pt_proc; wc.hInstance = GetModuleHandleW(NULL); wc.lpszClassName = L"rit_pt_inject_pen";
+    U(RegisterClassW)(&wc);
+    int seen[3] = { 0, 0, 0 };
+    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject_pen", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, seen);
+    if (!w) { U(UnregisterClassW)(L"rit_pt_inject_pen", wc.hInstance); t_skip("no window"); return; }
+    k_pump(200);
+    POINTER_TYPE_INFO ti; memset(&ti, 0, sizeof ti);
+    ti.type = PT_PEN;
+    POINTER_PEN_INFO *p = &ti.penInfo;
+    p->pointerInfo.pointerType = PT_PEN; p->pointerInfo.pointerId = 0;
+    p->pointerInfo.ptPixelLocation.x = 400; p->pointerInfo.ptPixelLocation.y = 300;
+    p->penMask = PEN_MASK_PRESSURE; p->pressure = 512;
+    p->pointerInfo.pointerFlags = POINTER_FLAG_NEW | POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_DOWN;
+    SET_ERR(0);
+    BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    DWORD e1 = GetLastError();
+    k_pump(300);
+    p->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
+    p->pointerInfo.ptPixelLocation.x = 410;
+    BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    k_pump(300);
+    p->pointerInfo.pointerFlags = POINTER_FLAG_UP;
+    BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
+    k_pump(300);
+    CHECKF(r1, "inject down gle=%lu", e1);
+    CHECK(r2);
+    CHECK(r3);
+    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d", seen[0]);
+    CHECKF(seen[1] > 0, "WM_POINTERUPDATE x%d", seen[1]);
+    CHECKF(seen[2] == 1, "WM_POINTERUP x%d", seen[2]);
+    U(DestroyWindow)(w);
+    U(UnregisterClassW)(L"rit_pt_inject_pen", wc.hInstance);
 }
