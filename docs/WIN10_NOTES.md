@@ -268,3 +268,8 @@ runner applies to that exe only; the global --timeout is unchanged for every oth
 estimate was stale.
 
 - user_wnd_desktop_heap: the handle-table entry count (cHandleEntries) differs between fresh guests; it is printed through t_info only, as is the message-only parent handle.
+The sink test likewise prints the per-boot adapter LUID with t_info; the view id (0 on every observed guest) stays a note.
+
+## clipboard_dde: varying diagnostics
+
+The DDE monitor flags value and the raw clipboard sequence counters (before and after `CloseClipboard`) differ from boot to boot, so they are printed through `t_info` only. The stable facts stay as notes: the kernel DDE window class name, and that closing the clipboard after setting unicode text synthesizes three sequence entries.

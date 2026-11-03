@@ -142,7 +142,8 @@ TEST(clipboard_dde_ddeinit_direct_returns_type9_handle) {
         EQ(pid, GetCurrentProcessId());
         char cls[64] = {0};
         U(GetClassNameA)(w, cls, sizeof cls);
-        t_note("monitor flags 0x%lx, kernel DDE window class \"%s\"", mf, cls);
+        t_info("monitor flags 0x%lx", mf);
+        t_note("kernel DDE window class \"%s\"", cls);
     }
     DWORD out = 0x77;
     EQ(upd(inst, &out, 0x20), 0);                    /* live type 9 handle */
