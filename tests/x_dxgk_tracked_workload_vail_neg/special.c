@@ -37,6 +37,8 @@ TEST(x_dispmgr_live_objects_are_type_mismatch) {
     HANDLE tm = CreateWaitableTimerA(NULL, FALSE, NULL), sec = CreateFileMappingA(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, 4096, NULL);
     HANDLE th = OpenThread(THREAD_ALL_ACCESS, FALSE, GetCurrentThreadId()), pr = x_open_self(PROCESS_ALL_ACCESS);
     HANDLE syn = NULL; DuplicateHandle(GetCurrentProcess(), ev, GetCurrentProcess(), &syn, SYNCHRONIZE, FALSE, 0);
+    /* fixture check: the duplicate really is synchronize-only (the event cannot be signalled through it) */
+    if (syn) { SetLastError(0); CHECKF(!SetEvent(syn) && GetLastError() == ERROR_ACCESS_DENIED, "the synchronize-only duplicate is not synchronize-only"); }
     HANDLE all[] = { ev, mx, sm, tm, sec, th, pr, syn };
     const char *nm[] = { "event", "mutex", "semaphore", "waitable timer", "section", "thread", "process", "synchronize-only event" };
     for (unsigned i = 0; i < XARR(all); i++) {
