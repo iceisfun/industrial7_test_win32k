@@ -48,7 +48,7 @@ helper exes), `list.txt`, `runner.ps1` and `run.cmd`.
 
 Keep a payload under about ten minutes of test time, because a boot costs about a minute and a half and a hung guest
 should not hold a slot for long. The standard split used for the full corpus is three payloads: the short areas,
-`quota_limits` alone (about three minutes), and re-runs of anything fixed late. The slowest other areas take under a
+`quota_limits` alone (about 5 to 11 minutes per mode on a real guest; win10_pack.py gives it a 1200 s per-exe timeout floor automatically), and re-runs of anything fixed late. The slowest other areas take under a
 minute.
 
 ## Run

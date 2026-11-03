@@ -257,3 +257,12 @@ The cache id reported by GetFontRealizationInfo for Arial is a per-boot, per-pro
 ## scroll_info_structs: cursor info diagnostic
 
 ci_basic_fields printed the cursor position, flags and cursor handle with t_note. The position belongs to the interactive session and differs between guests and modes, so the line made the output non-deterministic. It is now reported with t_info only; the checks (flags subset, position inside the virtual screen) are unchanged.
+
+## quota_limits runtime (per-exe timeout)
+
+quota_limits fills the GDI and USER object quotas (about 10000 objects per kind) in child processes for every kind and
+scenario, so it needs about 320 to 690 seconds per mode on a real Windows 10 guest (more under host load). That is inherent
+to the area, not a hang: it passes with all tests OK when given enough time and reports TIMEOUT with no summary at the
+default 300 second per-exe limit. win10_pack.py now writes a timeouts.txt (quota_limits=1200 s floor) that the guest
+runner applies to that exe only; the global --timeout is unchanged for every other area. The old "about three minutes"
+estimate was stale.

@@ -29,6 +29,10 @@ echo W32K run.cmd exit %RC% >COM1
 exit /b %RC%
 """
 
+# Areas whose exhaustive quota fills legitimately take longer than the default per-exe timeout on a real guest
+# (quota_limits measured at about 320-640 s per mode). The listed value is a floor for the timeout of that exe only.
+SLOW_TIMEOUTS = {"quota_limits": 1200}
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("out_dir")
@@ -66,8 +70,12 @@ def main():
     shutil.copy(os.path.join(HERE, "guest", "runner.ps1"), a.out_dir)
     open(os.path.join(a.out_dir, "list.txt"), "w", newline="\r\n").write("\n".join(names) + "\n")
     if a.filter: open(os.path.join(a.out_dir, "filter.txt"), "w").write(a.filter)
+    slow = {n: t for n, t in SLOW_TIMEOUTS.items() if n in names and t > a.timeout}
+    if slow:
+        open(os.path.join(a.out_dir, "timeouts.txt"), "w", newline="\r\n").write("".join("%s %d\n" % kv for kv in sorted(slow.items())))
     open(os.path.join(a.out_dir, "run.cmd"), "w", newline="\r\n").write(
         RUN_CMD.format(modes=modes, timeout=a.timeout, full=" -Full" if a.full else ""))
+    if slow: print("per-exe timeout floors: " + ", ".join("%s=%ds" % kv for kv in sorted(slow.items())))
     print("payload %s: %d exes, modes %s, timeout %ds" % (a.out_dir, len(names), modes, a.timeout))
 
 if __name__ == "__main__":
