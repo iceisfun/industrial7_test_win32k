@@ -38,6 +38,7 @@ These are the same in both modes. A machine with the missing hardware or setting
 | focus_capture_attach | 1 | not foreground | the test process is not the foreground process of the interactive session; Windows decides this and the test must not steal the foreground |
 | gdi_handle_table | 8 | handle count not asserted for emf, emf_dc, wmf, wmf_dc, brush_pattern, brush_dibpat; never got the same slot back; the deleted region cell is still held by the handle cache | GDI slot reuse and the per-process handle cache are timing and history dependent; only relations that hold for every outcome are asserted, the rest is skipped |
 | r2_input_pointer_rim_state | 3 | input injection is granted to this process, the denied path is not reachable | the session token holds the right to inject input, so the refusal paths cannot be reached. A token without the right would run them |
+| clipboard_dde | 0 | no window station/display, no window, cannot spawn child | the `renderlife` tests (WM_RENDERFORMAT / WM_RENDERALLFORMATS lifecycle, including the replaced-by-another-process and owner-process-exit arms) need a window and, for two of them, a second process. They run on every interactive Windows 10 guest (adm and std, no skip observed) and skip only without a window station or when the helper cannot be started |
 
 ## Dependences that replaced skips (synthetic input, extra layouts)
 
