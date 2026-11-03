@@ -125,6 +125,22 @@ block and garbage block): on Windows a block shaped like that creates a real key
 accepts it), so the matrix cannot assert a rejection. The creation path is covered by the keyed mutex lifecycle tests of
 the same area. They are reported as skipped, not passed.
 
+## Unreadable pointer arguments (x_dxgk_tracked_workload_vail_neg)
+
+- The unreadable-pointer kinds of the matrix are literal addresses (address 1, a kernel address, all ones, a released
+  region, the top of the user range, 0xDEADBEEF, 0x10000, 0xFFFFFFFF). A literal is only unreadable because nothing is
+  mapped there, so the area also runs every thunk with a committed PAGE_NOACCESS page owned by the test (checked with
+  VirtualQuery before use; a failed fixture is a failure, never a pass). On Windows 10 the thunks answer that page exactly
+  as they answer the literal unreadable pointers.
+- Layout dependence: `x_literal_unreadable_addresses_record_their_mapping_state` queries the mapping state of each literal
+  and prints it through `t_info`. If a literal turns out to be readable memory on some machine, the matching matrix cases
+  skip that kind (with a `t_info` line) and the test is reported as skipped with the count. On the guests used so far no
+  literal is mapped, so nothing is skipped. The kernel-range, all-ones and top-of-user-range literals are asserted to be
+  unusable on every machine.
+- A synchronize-only event handle (duplicated with SYNCHRONIZE) is a valid handle of the event type: the duplicate is
+  created, signalling through it fails with access denied, and the display-manager thunk answers it like any other event
+  handle (type mismatch).
+
 ## SKU, build and version dependence
 
 - The guest is a Home SKU of 22H2 (build 19045). The tests make no Pro/Enterprise feature assumption, but they have not
