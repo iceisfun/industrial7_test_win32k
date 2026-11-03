@@ -69,7 +69,45 @@ int x_model(int sc, enum xshape sh, LONG *want, const char **why) {
     }
 }
 
+/* The no-access page of the current call (see x_noaccess_begin). */
+static void *g_noaccess;
+
+int x_noaccess_begin(void) {
+    MEMORY_BASIC_INFORMATION m;
+    x_noaccess_end();
+    g_noaccess = VirtualAlloc(NULL, 0x1000, MEM_RESERVE | MEM_COMMIT, PAGE_NOACCESS);
+    if (!g_noaccess) return 0;
+    /* the fixture is checked right before it is used: committed, no-access, not a guard page */
+    if (VirtualQuery(g_noaccess, &m, sizeof m) != sizeof m || m.State != MEM_COMMIT || m.Protect != PAGE_NOACCESS || m.RegionSize < 0x1000) {
+        x_noaccess_end();
+        return 0;
+    }
+    return 1;
+}
+void x_noaccess_end(void) {
+    if (g_noaccess) VirtualFree(g_noaccess, 0, MEM_RELEASE);
+    g_noaccess = NULL;
+}
+void *x_noaccess_ptr(void) { return g_noaccess; }
+
+int x_addr_usable(ULONG_PTR a) {
+    MEMORY_BASIC_INFORMATION m;
+    if (!VirtualQuery((void *)a, &m, sizeof m)) return 0;
+    if (m.State != MEM_COMMIT || (m.Protect & (PAGE_GUARD | PAGE_NOACCESS))) return 0;
+    return 1;
+}
+const char *x_addr_state(ULONG_PTR a) {
+    MEMORY_BASIC_INFORMATION m;
+    if (!VirtualQuery((void *)a, &m, sizeof m)) return "not queryable";
+    if (m.State == MEM_FREE) return "free";
+    if (m.State == MEM_RESERVE) return "reserved";
+    if (m.Protect & PAGE_GUARD) return "committed guard";
+    if (m.Protect & PAGE_NOACCESS) return "committed no-access";
+    return "committed accessible";
+}
+
 static ULONG_PTR wild(int v) {
+    if (v == X_WILD_NOACCESS) return (ULONG_PTR)g_noaccess;
     switch (v % X_NWILD) {
     case 0: return 1;
     case 1: return 0xFFFF800000000000ull;
@@ -80,6 +118,15 @@ static ULONG_PTR wild(int v) {
     case 6: return 0x10000;
     default: return 0xFFFFFFFF;
     }
+}
+
+ULONG_PTR x_wild_value(int kind) { return wild(kind); }
+
+/* Is the literal behind an unreadable kind actually readable memory in this process? Kind 3 is a region that was just
+ * released and is never readable, so it is not queried (asking would allocate and release another region). */
+int x_wild_is_readable(int kind) {
+    if (kind % X_NWILD == 3) return 0;
+    return x_addr_usable(wild(kind));
 }
 
 /* n bytes filled with `fill`, ending exactly at the end of a committed page whose successor is inaccessible.
