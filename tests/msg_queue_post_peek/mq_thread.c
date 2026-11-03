@@ -455,9 +455,15 @@ QTEST(msg_queue_post_peek_msgpos_matches_retrieved_message_pt) {
     CHECK(mq_post(h, M1, 0, 0));
     CHECK(mq_peek(&m, h, 0, 0, PM_REMOVE));
     DWORD pos = U(GetMessagePos)();
-    if (pos != (DWORD)MAKELONG(m.pt.x, m.pt.y)) t_note("GetMessagePos 0x%lx vs msg.pt (%ld,%ld)", pos, m.pt.x, m.pt.y);
+    CHECKF(pos == (DWORD)MAKELONG(m.pt.x, m.pt.y), "GetMessagePos 0x%lx vs msg.pt (%ld,%ld)", pos, m.pt.x, m.pt.y);
+    /* msg.pt is the cursor position when the message was posted; the cursor is not moved here, so it still matches.
+       The position itself depends on the session (not asserted or printed). */
     POINT cur;
-    if (U(GetCursorPos) && U(GetCursorPos)(&cur)) t_note("msg.pt (%ld,%ld) cursor (%ld,%ld)", m.pt.x, m.pt.y, cur.x, cur.y);
+    if (!U(GetCursorPos) || !U(GetCursorPos)(&cur)) t_skip("GetCursorPos unavailable");
+    else {
+        t_info("msg.pt (%ld,%ld) cursor (%ld,%ld)", m.pt.x, m.pt.y, cur.x, cur.y);
+        CHECK(cur.x == m.pt.x && cur.y == m.pt.y);
+    }
     U(DestroyWindow)(h);
 }
 

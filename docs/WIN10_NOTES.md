@@ -305,3 +305,10 @@ reports a second, separate down/up pair (down x2, update x0, up x2). Injected ba
 tests now inject the three frames without pumping in between and then wait for the up before counting. The expectations are unchanged.
 
 - gui_thread_conversion: the shared-info note (table pointers and the handle-entry count) varies with the session's handle table size, so it is now diagnostic-only (t_info); the 0 < count <= 0x10000 range check is unchanged. Three fresh guests, all three token modes: identical output, no failures.
+
+## msg_queue_post_peek: message point
+
+`msg_queue_post_peek_msgpos_matches_retrieved_message_pt`: the point of a retrieved posted message equals
+`GetMessagePos` and, with no input moving the pointer, the cursor position. The pointer position itself depends on the
+session, so it is shown only through `t_info` and the test asserts the equalities, not the coordinates. If
+`GetCursorPos` is unavailable the cursor comparison is skipped.
