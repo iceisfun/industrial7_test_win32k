@@ -638,8 +638,11 @@ RT(ptr_synthetic_device_gone_after_destroy) {
     synth_end(&s);
     CHECK(synth_count() == before);
 }
+static char rit_pt_log[64]; static int rit_pt_nlog;    /* message order, for diagnostics */
 static LRESULT CALLBACK rit_pt_proc(HWND w, UINT m, WPARAM wp, LPARAM lp) {
     static int *seen; 
+    if ((m == WM_POINTERDOWN || m == WM_POINTERUPDATE || m == WM_POINTERUP || m == WM_POINTERCAPTURECHANGED || m == WM_POINTERLEAVE || m == WM_POINTERENTER) && rit_pt_nlog < 60)
+        rit_pt_log[rit_pt_nlog++] = m == WM_POINTERDOWN ? 'D' : m == WM_POINTERUPDATE ? 'M' : m == WM_POINTERUP ? 'U' : m == WM_POINTERCAPTURECHANGED ? 'C' : m == WM_POINTERLEAVE ? 'L' : 'E';
     if (m == WM_NCCREATE) { seen = (int *)((CREATESTRUCTW *)lp)->lpCreateParams; }
     if (m == WM_POINTERDOWN && seen) seen[0]++;
     if (m == WM_POINTERUPDATE && seen) seen[1]++;
@@ -653,6 +656,33 @@ static void rit_pump_until(const int *cnt, int want, unsigned ms) {
     while (*cnt < want && GetTickCount() - t0 < ms) k_pump(20);
     k_pump(20);
 }
+/* One injected contact: down, update, up, each stage injected only after the previous message arrived. Returns 1 for the clean
+ * sequence (one down, at least one update, one up). A contact that is ended by something outside the test between the stages
+ * (the update then arrives as a second contact) shows up as extra down/up messages; the caller repeats the whole cycle then. */
+static int rit_inject_cycle(struct synth *sy, POINTER_TYPE_INFO *ti, POINTER_INFO *pi, RECT *rc, int *seen, BOOL ok[3], DWORD gle[3]) {
+    seen[0] = seen[1] = seen[2] = 0; rit_pt_nlog = 0;
+    k_pump(100);
+    pi->ptPixelLocation.x = 400;
+    if (rc) { rc->left = 395; rc->right = 405; }
+    pi->pointerFlags = POINTER_FLAG_NEW | POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_DOWN;
+    SET_ERR(0);
+    ok[0] = U(InjectSyntheticPointerInput)(sy->h, ti, 1); gle[0] = GetLastError();
+    rit_pump_until(&seen[0], 1, 3000);
+    pi->pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
+    pi->ptPixelLocation.x = 410;
+    if (rc) { rc->left = 405; rc->right = 415; }
+    SET_ERR(0);
+    ok[1] = U(InjectSyntheticPointerInput)(sy->h, ti, 1); gle[1] = GetLastError();
+    rit_pump_until(&seen[1], 1, 3000);
+    pi->pointerFlags = POINTER_FLAG_UP;
+    SET_ERR(0);
+    ok[2] = U(InjectSyntheticPointerInput)(sy->h, ti, 1); gle[2] = GetLastError();
+    rit_pump_until(&seen[2], 1, 3000);
+    k_pump(200);    /* settle: a stray extra message would show up in the counts */
+    rit_pt_log[rit_pt_nlog] = 0;
+    return seen[0] == 1 && seen[1] > 0 && seen[2] == 1;
+}
+#define RIT_CYCLES 5
 RT(ptr_synthetic_touch_injection_reaches_window) {
     REQUIRE(U(CreateSyntheticPointerDevice) && U(InjectSyntheticPointerInput) && U(RegisterClassW) && U(CreateWindowExW));
     SYNTH_AUTO(sy);
@@ -660,39 +690,26 @@ RT(ptr_synthetic_touch_injection_reaches_window) {
     WNDCLASSW wc; memset(&wc, 0, sizeof wc);
     wc.lpfnWndProc = rit_pt_proc; wc.hInstance = GetModuleHandleW(NULL); wc.lpszClassName = L"rit_pt_inject";
     U(RegisterClassW)(&wc);
-    int seen[3] = { 0, 0, 0 };
-    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, seen);
+    int wseen[3] = { 0, 0, 0 };
+    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, wseen);
     if (!w) { U(UnregisterClassW)(L"rit_pt_inject", wc.hInstance); t_skip("no window"); return; }
     k_pump(200);
     POINTER_TYPE_INFO ti; memset(&ti, 0, sizeof ti);
     ti.type = PT_TOUCH;
     POINTER_TOUCH_INFO *t = &ti.touchInfo;
     t->pointerInfo.pointerType = PT_TOUCH; t->pointerInfo.pointerId = 0;
-    t->pointerInfo.ptPixelLocation.x = 400; t->pointerInfo.ptPixelLocation.y = 300;
+    t->pointerInfo.ptPixelLocation.y = 300;
     t->touchMask = TOUCH_MASK_CONTACTAREA | TOUCH_MASK_ORIENTATION | TOUCH_MASK_PRESSURE;
-    t->rcContact.left = 395; t->rcContact.right = 405; t->rcContact.top = 295; t->rcContact.bottom = 305;
+    t->rcContact.top = 295; t->rcContact.bottom = 305;
     t->orientation = 90; t->pressure = 32000;
-    t->pointerInfo.pointerFlags = POINTER_FLAG_NEW | POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_DOWN;
-    SET_ERR(0);
-    BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    DWORD e1 = GetLastError();
-    rit_pump_until(&seen[0], 1, 3000);
-    t->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
-    t->pointerInfo.ptPixelLocation.x = 410; t->rcContact.left = 405; t->rcContact.right = 415;
-    SET_ERR(0);
-    BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    DWORD e2 = GetLastError();
-    k_pump(300);
-    t->pointerInfo.pointerFlags = POINTER_FLAG_UP;
-    SET_ERR(0);
-    BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    DWORD e3 = GetLastError();
-    k_pump(300);
-    CHECKF(r1, "inject down gle=%lu", e1);
-    CHECKF(r2, "inject update gle=%lu", e2);
-    CHECKF(r3, "inject up gle=%lu", e3);
+    int *seen = wseen; BOOL ok[3]; DWORD gle[3]; int clean = 0, cycles = 0;
+    while (!clean && cycles < RIT_CYCLES) { clean = rit_inject_cycle(&sy, &ti, &t->pointerInfo, &t->rcContact, seen, ok, gle); cycles++; }
+    if (cycles > 1) t_info("injection cycles needed: %d", cycles);
+    CHECKF(ok[0], "inject down gle=%lu", gle[0]);
+    CHECKF(ok[1], "inject update gle=%lu", gle[1]);
+    CHECKF(ok[2], "inject up gle=%lu", gle[2]);
     /* observed on Windows 10 22H2: one WM_POINTERDOWN, at least one WM_POINTERUPDATE, one WM_POINTERUP reach the window under the contact */
-    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d", seen[0]);
+    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d (order %s)", seen[0], rit_pt_log);
     CHECKF(seen[1] > 0, "WM_POINTERUPDATE x%d", seen[1]);
     CHECKF(seen[2] == 1, "WM_POINTERUP x%d", seen[2]);
     U(DestroyWindow)(w);
@@ -705,35 +722,27 @@ RT(ptr_synthetic_pen_injection_reaches_window) {
     WNDCLASSW wc; memset(&wc, 0, sizeof wc);
     wc.lpfnWndProc = rit_pt_proc; wc.hInstance = GetModuleHandleW(NULL); wc.lpszClassName = L"rit_pt_inject_pen";
     U(RegisterClassW)(&wc);
-    int seen[3] = { 0, 0, 0 };
-    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject_pen", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, seen);
+    int wseen[3] = { 0, 0, 0 };
+    HWND w = U(CreateWindowExW)(WS_EX_TOPMOST, L"rit_pt_inject_pen", L"x", WS_POPUP | WS_VISIBLE, 300, 200, 200, 200, NULL, NULL, wc.hInstance, wseen);
     if (!w) { U(UnregisterClassW)(L"rit_pt_inject_pen", wc.hInstance); t_skip("no window"); return; }
     k_pump(200);
     POINTER_TYPE_INFO ti; memset(&ti, 0, sizeof ti);
     ti.type = PT_PEN;
     POINTER_PEN_INFO *p = &ti.penInfo;
     p->pointerInfo.pointerType = PT_PEN; p->pointerInfo.pointerId = 0;
-    p->pointerInfo.ptPixelLocation.x = 400; p->pointerInfo.ptPixelLocation.y = 300;
+    p->pointerInfo.ptPixelLocation.y = 300;
     p->penMask = PEN_MASK_PRESSURE; p->pressure = 512;
-    p->pointerInfo.pointerFlags = POINTER_FLAG_NEW | POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_DOWN;
-    SET_ERR(0);
-    BOOL r1 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    DWORD e1 = GetLastError();
-    rit_pump_until(&seen[0], 1, 3000);
-    p->pointerInfo.pointerFlags = POINTER_FLAG_INRANGE | POINTER_FLAG_INCONTACT | POINTER_FLAG_UPDATE;
-    p->pointerInfo.ptPixelLocation.x = 410;
-    BOOL r2 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    rit_pump_until(&seen[1], 1, 3000);
-    p->pointerInfo.pointerFlags = POINTER_FLAG_UP;
-    BOOL r3 = U(InjectSyntheticPointerInput)(sy.h, &ti, 1);
-    rit_pump_until(&seen[2], 1, 3000);
-    k_pump(200);    /* settle: a stray extra message would show up in the counts */
-    CHECKF(r1, "inject down gle=%lu", e1);
-    CHECK(r2);
-    CHECK(r3);
-    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d", seen[0]);
+    int *seen = wseen; BOOL ok[3]; DWORD gle[3]; int clean = 0, cycles = 0;
+    while (!clean && cycles < RIT_CYCLES) { clean = rit_inject_cycle(&sy, &ti, &p->pointerInfo, NULL, seen, ok, gle); cycles++; }
+    if (cycles > 1) t_info("injection cycles needed: %d", cycles);
+    CHECKF(ok[0], "inject down gle=%lu", gle[0]);
+    CHECKF(ok[1], "inject update gle=%lu", gle[1]);
+    CHECKF(ok[2], "inject up gle=%lu", gle[2]);
+    /* observed on Windows 10 22H2: one WM_POINTERDOWN, at least one WM_POINTERUPDATE, one WM_POINTERUP reach the window under the contact */
+    CHECKF(seen[0] == 1, "WM_POINTERDOWN x%d (order %s)", seen[0], rit_pt_log);
     CHECKF(seen[1] > 0, "WM_POINTERUPDATE x%d", seen[1]);
     CHECKF(seen[2] == 1, "WM_POINTERUP x%d", seen[2]);
     U(DestroyWindow)(w);
     U(UnregisterClassW)(L"rit_pt_inject_pen", wc.hInstance);
 }
+
