@@ -245,3 +245,6 @@ injections, so the update arrived as a new contact. The tests now inject each st
 The failure was not reproduced on four fresh guests either before or after the change.
 
 - gap_01 font realization info: the realization cache id (second and third words of NtGdiGetRealizationInfo output) depends on how many font realizations the session created earlier, so it differs between runs. The tests now print only the return values and the size field as notes; the words go through t_info.
+
+## user_handle_table: SERVERINFO.dwSRVIFlags
+Only bits 1..3 (DBCS, IME, MidEast) of SERVERINFO.dwSRVIFlags are stable across fresh Windows 10 guests; a higher bit (0x100) was seen to differ between boots. The test now prints only `flags & 0xe` as a note and reports the full value through t_info.
