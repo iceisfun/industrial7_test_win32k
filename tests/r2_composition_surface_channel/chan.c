@@ -82,7 +82,7 @@ RT(destroy_channel_is_not_a_handle_close) {
     struct rc_chan c = rc_chan_create();
     if (!c.ok) { t_skip("no channel"); return; }
     unsigned long h1 = rc_handles();
-    t_note("handle count around CreateChannel: %lu -> %lu", h0, h1);
+    t_info("handle count around CreateChannel: %lu -> %lu", h0, h1);
     rc_chan_destroy(&c);
     unsigned long h2 = rc_handles();
     CHECKF(h2 <= h1, "handles after destroy %lu > before %lu", h2, h1);   /* nothing grew across destroy */
