@@ -266,3 +266,5 @@ to the area, not a hang: it passes with all tests OK when given enough time and 
 default 300 second per-exe limit. win10_pack.py now writes a timeouts.txt (quota_limits=1200 s floor) that the guest
 runner applies to that exe only; the global --timeout is unchanged for every other area. The old "about three minutes"
 estimate was stale.
+
+- user_wnd_desktop_heap: the handle-table entry count (cHandleEntries) differs between fresh guests; it is printed through t_info only, as is the message-only parent handle.
