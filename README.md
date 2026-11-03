@@ -2,13 +2,13 @@
 
 > ## STATUS: verified on genuine Windows 10 22H2
 >
-> 103 areas and 16501 tests. The 85 non-`dx_` areas (16121 tests) pass on a genuine Windows 10 22H2 x64 guest
+> 103 areas and 16511 tests. The 85 non-`dx_` areas (16131 tests) pass on a genuine Windows 10 22H2 x64 guest
 > (build 19045, interactive session) in both modes, with 0 failed tests:
 >
 > | Mode | Pass | Fail | Skip |
 > |---|---|---|---|
-> | adm (elevated Administrator) | 16070 | 0 | 51 |
-> | std (restricted-admin token) | 16008 | 0 | 113 |
+> | adm (elevated Administrator) | 16082 | 0 | 49 |
+> | std (restricted-admin token) | 16020 | 0 | 111 |
 >
 > Skips are conditional and carry a printed reason (`docs/WIN10_NOTES.md`). Three repeated runs gave identical
 > per-test results and printed lines (`results/win10/DETERMINISM.md`). The 18 `dx_` areas change system state and
@@ -92,7 +92,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | Area | Purpose | Safety | Tests | Win10 skipped adm | Win10 skipped std |
 |---|---|---|---|---|---|
 | class_registration | RegisterClass/atoms, class structures, CallProc handles (NtUserRegisterClassExWOW, GetClassInfo, SetClassLong) | safe (non-destructive) | 147 | 0 | 0 |
-| clipboard_dde | clipboard ownership/formats/sequence, DDE, per-winsta isolation | safe (non-destructive) | 203 | 0 | 0 |
+| clipboard_dde | clipboard ownership/formats/sequence, DDE, per-winsta isolation | safe (non-destructive) | 209 | 0 | 0 |
 | core_k_helpers | self-test of common/k.c helpers | safe (non-destructive) | 9 | 0 | 0 |
 | cursor_icon_menu | cursors, icons, menus, ClipCursor state | safe (non-destructive) | 273 | 0 | 0 |
 | dcomp_flip_dxgk_neg | DComposition / FlipObject / Dxgk / OneCore stubs: stub layout and early-exit negatives | safe (non-destructive) | 166 | 0 | 0 |
@@ -125,7 +125,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | gap_06 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 112 | 0 | 0 |
 | gap_07 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 147 | 3 | 3 |
 | gap_08 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 117 | 0 | 0 |
-| gap_09 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 137 | 2 | 2 |
+| gap_09 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 141 | 0 | 0 |
 | gap_10 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 134 | 0 | 0 |
 | gap_11 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 66 | 1 | 1 |
 | gdi_bitmaps_dib | bitmaps and DIB sections (section memory, DIBSECTION fields) | safe (non-destructive) | 430 | 0 | 0 |

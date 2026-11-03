@@ -4,8 +4,6 @@ focus_capture_attach	SKIP not foreground
 gap_07	SKIP no pointer devices
 gap_07	SKIP no pointer devices
 gap_07	SKIP no pointer devices
-gap_09	SKIP cannot open the window station directory (status 0xc0000022)
-gap_09	SKIP absolute open denied (error 5)
 gap_11	SKIP none to query
 gdi_font_metrics_text	SKIP face wingdings not mapped (not installed)
 gdi_handle_table	SKIP never got the same slot back

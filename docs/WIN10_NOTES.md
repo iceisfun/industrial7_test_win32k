@@ -47,10 +47,26 @@ In adm mode these run; in std mode the refusal is expected, observed and the dep
 | r2_winsta_activation_group_session | 14 + 1 | CreateWindowStation refused for the unprivileged token; directory not readable | same, plus one object directory that a Medium token may not read |
 | win32k_modules_sysinfo | 9 | CreateWindowStation failed (5); object directories denied for this token | `\ObjectTypes`, `\Sessions\<n>`, window station directories need administrator access |
 | kbd_layouts_state | 2 (plus the layout skip) | GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token | the restricted token cannot read the async key state; the result is the same on Windows, only the token differs |
-| gap_09 | 2 in adm, 2 in std | absolute open denied (error 5); rooted open denied (error 5) in adm; cannot open the window station directory (access denied status) in std | opens of the window station directory by absolute or rooted name are refused with access denied for both tokens, and the std token is refused the directory itself |
+
+Raw `NtUserOpenWindowStation` (gap_09): the former two skips are now passes in both modes. The cause was the test, not the token:
+the name `\Windows\WindowStations\...` resolves in the system (session 0) namespace, where the interactive station is refused with
+access denied for every token and every access mask (asserted as a denial: `gap9_winsta_direct_absolute_global_path_denied`,
+`gap9_winsta_direct_rooted_global_directory_denied`). The session's own directory `\Sessions\<n>\Windows\WindowStations` opens
+the station absolute or rooted (`gap9_winsta_direct_absolute_path`, `gap9_winsta_direct_rooted_path`; the rooted case opens the
+directory with traverse access only, which both tokens are granted). A denial from the station's own ACL is built in the test
+by impersonating a restricted token (`gap9_winsta_direct_open_denied_for_restricted_impersonation`, restricting SID Everyone and an
+unrelated SID, absolute, rooted and user32 paths all give error 5 and succeed again after the revert), so it needs no second
+account. `gap9_winsta_direct_directory_query_access_depends_on_token` branches on integrity: query access to the two window station
+directories is granted at High and refused (STATUS_ACCESS_DENIED) at Medium.
+
+Foreign-window checks use a real second process: `clipboard_dde` (t_foreign.c) and `r2_winsta_activation_group_session`
+(`cwmfex_window_of_other_process_is_denied_helper_window`, which replaces the old shell-window test and its "no foreign shell window"
+skip) re-launch the test exe as a helper that creates a hidden window and, for the clipboard cases, takes or holds the clipboard.
+Dependence: the guest must allow a second process in the same window station (it does in both modes); each test waits up to ten
+seconds for the helper window and fails (does not skip) if it never appears. These tests never touch the desktop or shell windows.
 
 Other tests branch on integrity or privilege without skipping: they assert the Windows 10 outcome for the token they run under
-(for example the clipboard-owner and foreign-window checks pick the expectation from the integrity level). Where adm and std give
+(for example the window station directory query test). Where adm and std give
 different outcomes the test names both.
 
 ## Unconditional skips by design
