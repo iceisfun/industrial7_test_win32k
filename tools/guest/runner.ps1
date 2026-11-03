@@ -22,6 +22,11 @@ Copy-Item -Recurse -Force (Join-Path $Payload 'bin\*') $bin
 $list = @(Get-Content (Join-Path $Payload 'list.txt') | Where-Object { $_.Trim() })
 $filter = ''
 if (Test-Path (Join-Path $Payload 'filter.txt')) { $filter = (Get-Content (Join-Path $Payload 'filter.txt') -Raw).Trim() }
+# optional per-exe timeout floors ("<exe> <secs>" per line): slow areas keep their own limit, others use -Timeout
+$tmo = @{}
+if (Test-Path (Join-Path $Payload 'timeouts.txt')) {
+    foreach ($l in (Get-Content (Join-Path $Payload 'timeouts.txt'))) { $f = $l.Trim() -split '\s+'; if ($f.Count -eq 2) { $tmo[$f[0]] = [int]$f[1] } }
+}
 Send ("W32K begin modes=$Modes exes=$($list.Count) timeout=$Timeout")
 $os = (Get-CimInstance Win32_OperatingSystem)
 Send ("W32K os build=$($os.BuildNumber) version=$($os.Version) sku=$($os.OperatingSystemSKU) arch=$($os.OSArchitecture)")
@@ -73,7 +78,8 @@ foreach ($mode in ($Modes -split ',')) {
         $psi.CreateNoWindow = $true
         $sw = [Diagnostics.Stopwatch]::StartNew()
         $p = [Diagnostics.Process]::Start($psi)
-        $done = $p.WaitForExit($Timeout * 1000)
+        $limit = $Timeout; if ($tmo.ContainsKey($exe) -and $tmo[$exe] -gt $limit) { $limit = $tmo[$exe] }
+        $done = $p.WaitForExit($limit * 1000)
         $code = 'TIMEOUT'
         if ($done) { $code = $p.ExitCode } else { & taskkill /F /T /PID $p.Id 2>&1 | Out-Null; Start-Sleep -Milliseconds 500 }
         $secs = [math]::Round($sw.Elapsed.TotalSeconds, 1)
