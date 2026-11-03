@@ -272,3 +272,5 @@ The sink test likewise prints the per-boot adapter LUID with t_info; the view id
 ## clipboard_dde: varying diagnostics
 
 The DDE monitor flags value and the raw clipboard sequence counters (before and after `CloseClipboard`) differ from boot to boot, so they are printed through `t_info` only. The stable facts stay as notes: the kernel DDE window class name, and that closing the clipboard after setting unicode text synthesizes three sequence entries.
+
+- r2_display_opm_gamma_dpi: the display device state flags (attached/primary/mirroring bits) vary between guest boots, so physmon_enumerated_devices prints them via t_info only; the printed note keeps the device name, status and monitor count, which are stable.

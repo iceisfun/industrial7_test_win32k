@@ -112,7 +112,9 @@ T2(physmon_enumerated_devices_report_only_documented_statuses) {
         CHECKF(status_allowed(st), "%ls (state 0x%lx): status 0x%lx", d[i].name, d[i].flags, R2_NTST(st));
         if (st == 0) CHECKF(cnt >= 1 && cnt < 64, "%ls: count %lu", d[i].name, cnt);
         else CHECKF(cnt == 0xFFFF, "%ls: count written on failure", d[i].name);
-        t_note("%ls state=0x%lx -> status 0x%lx count=%lu", d[i].name, d[i].flags, R2_NTST(st), cnt);
+        /* the device state flags (attached, primary, mirroring...) depend on how the guest display came up: info only */
+        t_info("%ls state=0x%lx", d[i].name, d[i].flags);
+        t_note("%ls -> status 0x%lx count=%lu", d[i].name, R2_NTST(st), cnt);
     }
 }
 T2(physmon_count_agrees_with_opm_suggested_size_and_is_stable) {
