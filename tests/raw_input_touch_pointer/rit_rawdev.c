@@ -8,11 +8,21 @@
  * each test.
  */
 #include "rit.h"
+#include "synth.h"
 #include <wchar.h>
 
 static int dev_or_skip(rit_dev *d, int cap) {
     int n = rit_devices(d, cap);
     if (n == 0) t_skip("no raw input devices on this machine (VM without HID?)");
+    return n;
+}
+
+/* The raw input devices with at least one HID device in them: when the system has none, a synthetic touch device (a HID
+ * digitizer in the raw input list) is created into *sy, which the caller declares with SYNTH_AUTO. */
+static int hid_dev_or_synth(rit_dev *d, int cap, struct synth *sy) {
+    int n = rit_devices(d, cap);
+    for (int i = 0; i < n; i++) if (d[i].type == RIM_TYPEHID) return n;
+    if (U(CreateSyntheticPointerDevice) && synth_begin(sy, PT_TOUCH, 5)) n = rit_devices(d, cap);
     return n;
 }
 
@@ -313,8 +323,9 @@ RT(devinfo_deviceinfo_keyboard) {
 }
 
 RT(devinfo_deviceinfo_hid) {
-    rit_dev d[64]; int n = dev_or_skip(d, 64);
-    if (!n) return;
+    SYNTH_AUTO(sy);
+    rit_dev d[64]; int n = hid_dev_or_synth(d, 64, &sy);
+    if (!n) { t_skip("no raw input devices"); return; }
     int seen = 0;
     for (int i = 0; i < n; i++) {
         if (d[i].type != RIM_TYPEHID) continue;
@@ -325,7 +336,7 @@ RT(devinfo_deviceinfo_hid) {
         CHECK(inf.hid.usUsagePage != 0);              /* a HID TLC always has a usage page */
         seen++;
     }
-    if (!seen) t_skip("no HID device");
+    if (!seen) t_skip("no HID device and a synthetic one cannot be created");
 }
 
 /* ---- RIDI_DEVICENAME -------------------------------------------------------------------- */
@@ -455,8 +466,9 @@ RT(devinfo_preparsed_non_hid_is_empty) {
 }
 
 RT(devinfo_preparsed_hid_size_protocol) {
-    rit_dev d[64]; int n = dev_or_skip(d, 64);
-    if (!n) return;
+    SYNTH_AUTO(sy);
+    rit_dev d[64]; int n = hid_dev_or_synth(d, 64, &sy);
+    if (!n) { t_skip("no raw input devices"); return; }
     int seen = 0;
     for (int i = 0; i < n; i++) {
         if (d[i].type != RIM_TYPEHID) continue;
@@ -476,7 +488,7 @@ RT(devinfo_preparsed_hid_size_protocol) {
         free(buf);
         seen++;
     }
-    if (!seen) t_skip("no HID device with preparsed data");
+    if (!seen) t_skip("no HID device with preparsed data and a synthetic one cannot be created");
 }
 
 /* ---- RIDI_DEVICEHEALTH (undocumented, 0x2000000c) --------------------------------------- */
