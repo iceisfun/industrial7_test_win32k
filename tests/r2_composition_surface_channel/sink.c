@@ -89,7 +89,7 @@ RT(sink_explicit_create_query_close) {
     CHECK_ST(q2(s, &luid), 0);
     CHECK(luid != 0);
     CHECK_ST(q3(s, &vid), 0);
-    t_note("sink luid=0x%llx view id=%u", (unsigned long long)luid, vid);
+    t_info("sink luid=0x%llx", (unsigned long long)luid); t_note("sink view id=%u", vid);
     {   ULONGLONG l2 = 0; CHECK_ST(q2(s, &l2), 0); CHECK(l2 == luid); }       /* stable */
     close_sink(s);
     imp = 0xDEADBEEFu;
