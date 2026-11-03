@@ -6,7 +6,7 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 ## Size
 
 - Areas: 103 (85 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
-- Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16501
+- Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16131
 
 ## Tests by category (area name prefix)
 
@@ -15,20 +15,19 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 | x_ | 14 | 3249 | extended negative and matrix areas |
 | gdi_ | 12 | 2954 | GDI objects and drawing |
 | r2_ | 12 | 1766 | second-round matrices (internals, tables, quotas, display) |
-| gap_ | 12 | 1430 | gap-fill areas for syscall families |
+| gap_ | 12 | 1434 | gap-fill areas for syscall families |
 | user_ | 3 | 980 | USER handle table, shared info, desktop heap |
 | win_ | 3 | 690 | window creation, position, properties |
 | win32k_ | 2 | 613 | mitigation policy, module and system information |
 | msg_ | 3 | 512 | messages, timers, atoms |
 | raw_ | 1 | 424 | raw input, touch, pointer |
-| dx_ | 18 | 380 | destructive or state-changing (guarded, not part of the Windows 10 runs) |
 | ime_ | 1 | 333 | IME, hotkeys, misc |
 | cursor_ | 1 | 273 | cursors, icons, menus |
 | paint_ | 1 | 272 | painting, DC cache, regions |
 | display_ | 1 | 247 | monitors and DPI |
 | focus_ | 1 | 215 | focus, capture, attach |
 | process_ | 1 | 214 | process and session cleanup |
-| clipboard_ | 1 | 203 | clipboard and DDE |
+| clipboard_ | 1 | 209 | clipboard and DDE |
 | sysparams_ | 1 | 196 | system parameters, colors, metrics |
 | sc_ | 3 | 184 | syscall layer (stubs, raw calls, dispatch) |
 | scroll_ | 1 | 171 | scroll bars and structures |
@@ -43,6 +42,7 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 | teb_ | 1 | 70 | TEB/PEB win32 fields |
 | kprobe_ | 1 | 66 | user-pointer probing |
 | core_ | 1 | 9 | harness self-test |
+| dx_ | 18 | 0 | destructive or state-changing (guarded, not part of the Windows 10 runs) |
 
 ## Syscall coverage
 
@@ -51,9 +51,7 @@ Win32u service table: 1316 syscalls. Levels of evidence are explained in `COVERA
 | Level | Syscalls | Share |
 |---|---|---|
 | Direct (a test calls the `Nt*` stub) | 916 | 69.6% |
-| Statically mapped route only | 2 | 0.2% |
-| Route reaches it, including those also direct | 500 | 38.0% |
-| Neither | 398 | 30.2% |
+| Not called directly | 400 | 30.4% |
 | Witnessed kernel entry | not measured | |
 
 176 of the direct syscalls are thin (one call site or at most three checks).
@@ -64,8 +62,8 @@ Pass = tests - failed - skipped. Skips are conditional and carry a reason (`docs
 
 | Mode | Areas | Tests | Pass | Fail | Skip | Checks passed |
 |---|---|---|---|---|---|---|
-| adm (elevated Administrator token) | 85 | 16121 | 16070 | 0 | 51 | 374769 |
-| std (unprivileged token) | 85 | 16121 | 16008 | 0 | 113 | 374289 |
+| adm (elevated Administrator token) | 85 | 16131 | 16082 | 0 | 49 | 374875 |
+| std (unprivileged token) | 85 | 16131 | 16020 | 0 | 111 | 374395 |
 
 ## Determinism
 
