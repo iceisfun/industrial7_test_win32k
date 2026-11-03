@@ -75,6 +75,26 @@ the same area. They are reported as skipped, not passed.
 - `dx_` areas are guarded, change system state and have not been run on Windows 10, so they have no Windows 10 skips or
   reasons recorded yet.
 
+## Check counts and the thunk sweep (environment dependence that is not a skip)
+
+- Check totals are never an expectation, but they should not move for no reason. Three sources were found and removed:
+  `win_position_zorder` asserted once per entry of an enumerated desktop window list (three tests), so its total followed the
+  number of top-level windows on the desktop at that moment (it varied between boots and between runs of one boot by a few
+  dozen); each of those loops is now one aggregate check. `clipboard_dde_listener_foreign_process_window_denied` ran one check
+  more in the restricted mode (the call is refused there and the error is verified) than in the administrator mode (the call is
+  accepted); it now runs one check on either outcome. Both areas now report the same total in every run and in both modes.
+- Intrinsic dependence that remains: an area that asserts per enumerated system object (window stations, loaded modules) still
+  has a total that follows that set; no such area is compared by total.
+- `sc_stub_layout_thunk_sweep_user32_gdi32` failed once in both modes of one boot and never again (more than fifty runs of the
+  whole area, first after logon, after other areas, in both modes, did not reproduce it). Not reproduced, so the root cause is
+  NOT confirmed. Most likely cause: the sweep took "a thunk target inside win32u" to mean "within 0x40000 bytes above the
+  win32u base", but the win32u image is only 0x22000 bytes long. System images get a base that is chosen once per boot and
+  shared by both modes of that boot, so on a boot that places another module (for example KERNELBASE or msvcrt) within the
+  0x1e000 bytes after win32u, a thunk into that module is judged to land in win32u and is not a win32u export entry. That fits
+  "both modes failed in the same boot, later boots passed". The sweep now uses the image's own SizeOfImage, and a new test
+  (`sc_stub_layout_thunk_sweep_owner_module_agrees_with_image_range`) compares that range classification with the loader's owner
+  module of every thunk target.
+
 ## Rules for adding a skip
 
 1. The reason string states the condition in plain words and nothing machine specific (no handles, ids, paths).
