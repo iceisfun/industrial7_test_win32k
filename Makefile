@@ -4,9 +4,13 @@ CC      = x86_64-w64-mingw32-gcc
 CFLAGS  ?= -O1 -Wall -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-variable -Wno-format
 AREAS   := $(notdir $(wildcard tests/*))
 EXES    := $(addprefix build/,$(addsuffix .exe,$(AREAS)))
-TOOLEXES := build/tools/w32k_runas.exe build/tools/w32k_probe.exe
+TOOLEXES := build/tools/w32k_runas.exe build/tools/w32k_probe.exe build/tools/w32k_gdiinit.exe
 all: $(EXES) $(TOOLEXES)
 # Guest-side helpers used by tools/win10_pack.py (not test areas).
+# user32-only import on purpose: gdi32 must not appear in the import table.
+build/tools/w32k_gdiinit.exe: tools/guest/w32k_gdiinit.c
+	@mkdir -p build/tools
+	$(CC) $(CFLAGS) -o $@ $< -static -luser32
 build/tools/%.exe: tools/guest/%.c
 	@mkdir -p build/tools
 	$(CC) $(CFLAGS) -o $@ $< -static -ladvapi32

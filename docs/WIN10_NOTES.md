@@ -72,6 +72,13 @@ the same area. They are reported as skipped, not passed.
 - Loading order: the first win32k syscall of a process without user32 loaded is fatal on Windows 10 (the callback table is
   missing and the process ends with a fatal user-callback exception). Tests that need to observe a fresh process run in
   child processes that load user32 first or install a callback table; this is a property of the build, not of a SKU.
+- Initialisation order (`gdi_init_order`): the fixture `w32k_gdiinit.exe` imports kernel32 and user32 only (the area checks
+  its import table), so gdi32 is loaded through user32's dependency. On Windows 10 the process is already connected before
+  the entry point (GDI shared handle table view, kernel callback table, win32 thread of the initial thread all present,
+  GdiDCAttributeList 0x14, no GDI object yet) and a new thread has no win32 thread until its first win32k service. The
+  area asserts relations (same table and callback table on every thread, object count is process wide) and never prints
+  addresses or handles. If the fixture executable is not next to the test (a bare build without the tools folder) the
+  tests skip with "fixture executable not available next to the test"; in a packed payload they always run.
 - `dx_` areas are guarded, change system state and have not been run on Windows 10, so they have no Windows 10 skips or
   reasons recorded yet.
 
