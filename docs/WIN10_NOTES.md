@@ -291,3 +291,8 @@ The number of times a freshly created and deleted memory DC lands in the same ha
 (handle_reuse_never_revives_old_handle) depends on what else allocates GDI objects in the session, so it differs
 between guests (63 versus 43 seen). The assertions (old handle is dead, reissued handle differs) are unchanged; only
 the count is reported through t_info instead of t_note.
+
+## user_serverinfo_shared: WinEvent mask is environment dependent
+The shared-info WinEvent hook mask also carries categories hooked by unrelated system processes, so its raw value
+differs between boots (for example one extra category bit). The test now prints before/during/after only through
+t_info; the relational checks (mask nonzero while hooked, existing bits preserved, IsWinEventHookInstalled true) are unchanged.

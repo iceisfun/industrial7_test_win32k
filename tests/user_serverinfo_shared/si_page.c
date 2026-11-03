@@ -249,7 +249,8 @@ TEST(user_serverinfo_shared_winevent_mask_tracks_hook) {
     CHECK((during & before) == before);
     CHECK(U(UnhookWinEvent)(h));
     unsigned long after = si_u32(psi, SI_WinEventMask);
-    t_note("WinEvent mask before=0x%lx during=0x%lx after=0x%lx", before, during, after);
+    /* the mask also carries categories hooked by unrelated system processes, which vary per boot */
+    t_info("WinEvent mask before=0x%lx during=0x%lx after=0x%lx", before, during, after);
 }
 TEST(user_serverinfo_shared_winevent_mask_new_bit_added) {
     char *psi = si_get(); if (!psi) return;
