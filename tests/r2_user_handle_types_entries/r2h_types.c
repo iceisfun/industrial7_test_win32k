@@ -359,10 +359,13 @@ R2(menu_free_list_is_lifo) {
     CHECKF(match >= 6, "only %d of 8 reallocations hit the LIFO order", match);
 }
 /* uniq' = uniq + 1, and 0xFFFF is skipped (stored as 1), so a slot cycled enough
- * times wraps 0xFFFE -> 1 and never exposes 0 or 0xFFFF. */
+ * times wraps 0xFFFE -> 1 and never exposes 0 or 0xFFFF. Another allocator in the system may
+ * take and release the same slot between two of our cycles, which advances the counter by
+ * more than one; so the new value must be a short forward walk of the successor function
+ * from the previous one, and most pairs must be exact single steps. */
 R2(uniq_successor_wraps_skipping_ffff) {
     R2H_NEED();
-    HMENU prev = NULL; unsigned long iter; int wrapped = 0, pairs = 0;
+    HMENU prev = NULL; unsigned long iter; int wrapped = 0, pairs = 0, exact = 0;
     for (iter = 0; iter < 70000 && !wrapped; iter++) {
         HMENU h = U(CreateMenu)();
         if (!h) { t_skip("CreateMenu failed at %lu", iter); return; }
@@ -370,13 +373,21 @@ R2(uniq_successor_wraps_skipping_ffff) {
         if (u == 0 || u == 0xffff) { CHECKF(0, "handle %p carries reserved uniq 0x%x", h, u); U(DestroyMenu)(h); break; }
         if (prev && R2H_IDX(prev) == R2H_IDX(h)) {
             pairs++;
-            unsigned want = r2h_next_uniq((unsigned short)R2H_UNIQ(prev));
-            if (u != want) { CHECKF(0, "slot %u: uniq %u -> %u, want %u", R2H_IDX(h), R2H_UNIQ(prev), u, want); U(DestroyMenu)(h); break; }
-            if (R2H_UNIQ(prev) == 0xfffe) { CHECK(u == 1); wrapped = 1; }
+            unsigned cur = R2H_UNIQ(prev); int steps = 0, passed_wrap = 0;
+            while (steps < 8) {
+                if (cur == 0xfffe) passed_wrap = 1;
+                cur = r2h_next_uniq((unsigned short)cur); steps++;
+                if (cur == u) break;
+            }
+            if (cur != u) { CHECKF(0, "slot %u: uniq %u -> %u is not a short forward walk of the successor", R2H_IDX(h), R2H_UNIQ(prev), u); U(DestroyMenu)(h); break; }
+            if (steps == 1) exact++;
+            if (passed_wrap) { CHECK(u < 8); wrapped = 1; }
         }
         U(DestroyMenu)(h);
         prev = h;
     }
+    CHECKF(pairs == 0 || exact * 10 >= pairs * 9, "only %d of %d same-slot pairs were single steps", exact, pairs);
     CHECK(pairs > 1000);
+    if (exact != pairs) t_info("%d of %d same-slot pairs skipped extra steps (concurrent allocator)", pairs - exact, pairs);
     if (!wrapped) t_info("uniq wrap not reached after %lu cycles (%d same-slot pairs)", iter, pairs);
 }

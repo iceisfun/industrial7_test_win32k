@@ -326,3 +326,5 @@ meantime, so the state is printed through `t_info` only; the accepted set and ev
 An exe left in build/ by an older source layout (no matching tests/<area> directory any more) was packed by --all and
 reported as an area with tests=0, so the area count differed between whole-corpus runs (86 vs 87). This is a packaging
 artifact, not a Windows behaviour or a flaky test. `win10_pack.py --all` now only packs exes that have a tests/<area> directory.
+
+- r2_user_handle_types_entries / uniq_successor_wraps_skipping_ffff: another process can cycle the same menu slot between two reads, so the uniq advances by more than one step. The test now accepts a short forward walk (at most 8 steps) of the successor function and requires at least 90 percent of same-slot pairs to be exact single steps; reserved values 0 and 0xFFFF are still rejected.
