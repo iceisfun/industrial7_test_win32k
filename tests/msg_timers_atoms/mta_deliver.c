@@ -323,7 +323,7 @@ TEST(msg_timers_atoms_qs_timer_flag) {
     CHECK(!qs_timer_set());
     MEQ(U(SetTimer)(w, 1, 150, NULL), 1);
     int hit = 0;
-    DWORD end = GetTickCount() + WAIT_MS;
+    DWORD end = GetTickCount() + 15000;          /* generous: a stalled guest may take seconds to run the 150 ms timer */
     while (!hit && (LONG)(end - GetTickCount()) > 0) { hit = qs_timer_set(); if (!hit) Sleep(5); }
     CHECK(hit);                                  /* RIT sets the QS_TIMER wake bit when the timer comes due */
     MSG m;
@@ -331,7 +331,7 @@ TEST(msg_timers_atoms_qs_timer_flag) {
     CHECK(peek_timer(w, &m));
     int still = qs_timer_set();
     if (GetTickCount() - t0 < 80) CHECK(!still);   /* retrieving the message clears the bit until the next expiry */
-    else t_note("slow run (%lu ms), QS_TIMER recheck skipped", GetTickCount() - t0);
+    else t_info("slow run (%lu ms), QS_TIMER recheck skipped", GetTickCount() - t0);
     U(KillTimer)(w, 1);
     mta_drain_timers();
     mta_destroy(w);
@@ -360,7 +360,7 @@ TEST(msg_timers_atoms_posted_message_beats_wm_timer) {
     int hit = 0;
     DWORD end = GetTickCount() + WAIT_MS;
     while (!hit && (LONG)(end - GetTickCount()) > 0) { hit = qs_timer_set(); if (!hit) Sleep(5); }
-    REQUIRE(hit);
+    if (!hit) { CHECKF(0, "QS_TIMER not set within %d ms of a 20 ms timer", WAIT_MS); U(KillTimer)(w, 1); mta_drain_timers(); mta_destroy(w); return; }
     CHECK(U(PostMessageW)(w, WM_APP + 1, 1, 2));
     MSG m; UINT first = 0;
     for (int i = 0; i < 10 && !first; i++)
@@ -383,34 +383,42 @@ TEST(msg_timers_atoms_sent_message_does_not_consume_timer) {
 }
 TEST(msg_timers_atoms_missed_expirations_coalesce) {
     MTA_WIN(w);
-    mta_drain_timers();
-    MEQ(U(SetTimer)(w, 1, 100, NULL), 1);
-    Sleep(450);                       /* several periods pass with the queue not being read */
-    MSG m; int c = 0;
-    DWORD t0 = GetTickCount();
-    while (c < 8 && peek_timer(w, &m)) c++;
-    DWORD dt = GetTickCount() - t0;
-    CHECK(c >= 1);
-    if (dt < 60) CHECKF(c == 1, "%d WM_TIMER messages for one timer after missed expirations", c);   /* one pending WM_TIMER per timer */
-    else t_note("burst took %lu ms, coalescing count %d not asserted", dt, c);
-    U(KillTimer)(w, 1);
+    int judged = 0;
+    for (int attempt = 0; attempt < 6 && !judged; attempt++) {
+        mta_drain_timers();
+        MEQ(U(SetTimer)(w, 1, 100, NULL), 1);
+        Sleep(450);                       /* several periods pass with the queue not being read */
+        MSG m; int c = 0;
+        DWORD t0 = GetTickCount();
+        while (c < 8 && peek_timer(w, &m)) c++;
+        DWORD dt = GetTickCount() - t0;
+        U(KillTimer)(w, 1);
+        CHECK(c >= 1);
+        if (dt < 60) { judged = 1; CHECKF(c == 1, "%d WM_TIMER messages for one timer after missed expirations", c); }   /* one pending WM_TIMER per timer */
+        else t_info("attempt %d: burst took %lu ms (too slow to judge), count %d", attempt, dt, c);
+    }
+    if (!judged) t_skip("no attempt drained the burst fast enough to judge coalescing (slow guest)");
     mta_drain_timers();
     mta_destroy(w);
 }
 TEST(msg_timers_atoms_one_message_per_timer_after_burst) {
     MTA_WIN(w);
-    mta_drain_timers();
-    MEQ(U(SetTimer)(w, 1, 100, NULL), 1);
-    MEQ(U(SetTimer)(w, 2, 100, NULL), 2);
-    Sleep(450);
-    MSG m; int c1 = 0, c2 = 0, n = 0;
-    DWORD t0 = GetTickCount();
-    while (n++ < 12 && peek_timer(w, &m)) { if (m.wParam == 1) c1++; else if (m.wParam == 2) c2++; }
-    DWORD dt = GetTickCount() - t0;
-    CHECK(c1 >= 1); CHECK(c2 >= 1);
-    if (dt < 60) { MEQ(c1, 1); MEQ(c2, 1); }
-    else t_note("burst took %lu ms, counts %d/%d not asserted", dt, c1, c2);
-    U(KillTimer)(w, 1); U(KillTimer)(w, 2);
+    int judged = 0;
+    for (int attempt = 0; attempt < 6 && !judged; attempt++) {
+        mta_drain_timers();
+        MEQ(U(SetTimer)(w, 1, 100, NULL), 1);
+        MEQ(U(SetTimer)(w, 2, 100, NULL), 2);
+        Sleep(450);
+        MSG m; int c1 = 0, c2 = 0, n = 0;
+        DWORD t0 = GetTickCount();
+        while (n++ < 12 && peek_timer(w, &m)) { if (m.wParam == 1) c1++; else if (m.wParam == 2) c2++; }
+        DWORD dt = GetTickCount() - t0;
+        U(KillTimer)(w, 1); U(KillTimer)(w, 2);
+        CHECK(c1 >= 1); CHECK(c2 >= 1);
+        if (dt < 60) { judged = 1; MEQ(c1, 1); MEQ(c2, 1); }
+        else t_info("attempt %d: burst took %lu ms (too slow to judge), counts %d/%d", attempt, dt, c1, c2);
+    }
+    if (!judged) t_skip("no attempt drained the burst fast enough to judge coalescing (slow guest)");
     mta_drain_timers();
     mta_destroy(w);
 }
@@ -421,7 +429,7 @@ TEST(msg_timers_atoms_peek_without_remove_leaves_timer) {
     int hit = 0;
     DWORD end = GetTickCount() + WAIT_MS;
     while (!hit && (LONG)(end - GetTickCount()) > 0) { hit = qs_timer_set(); if (!hit) Sleep(5); }
-    REQUIRE(hit);
+    if (!hit) { CHECKF(0, "QS_TIMER not set within %d ms of a 20 ms timer", WAIT_MS); U(KillTimer)(w, 1); mta_drain_timers(); mta_destroy(w); return; }
     MSG m;
     CHECK(U(PeekMessageW)(&m, w, WM_TIMER, WM_TIMER, PM_NOREMOVE));
     MEQ(m.wParam, 1);
