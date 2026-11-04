@@ -253,7 +253,7 @@ R2_SCN(padding_slots_stay_silent_after_a_wide_workload) {
         if (r2_hit[i]) distinct++;
         if (i >= r2_nlive) KF(r2_hit[i] == 0, "padding slot %u called", i);
     }
-    KNOTE("%u distinct ApiNumbers used by the workload", distinct);
+    t_info("%u distinct ApiNumbers used by the workload", distinct);   /* varies by one with timing of incidental callbacks */
     KW(distinct >= 6);
     return 0;
 }
