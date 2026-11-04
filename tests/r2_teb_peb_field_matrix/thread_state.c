@@ -317,7 +317,7 @@ TEST(r2_teb_peb_field_matrix_send_cross_thread_callback_window_cache_is_a_valid_
     FXW();
     REQUIRE(cross_send(0) == 1);
     unsigned long long h = rs_ci64(&g_send.s, CIO_cbHwnd), p = rs_ci64(&g_send.s, CIO_cbPwnd);
-    t_note("inside sent message: CallbackWnd hwnd=0x%llx pwnd=0x%llx (window %p)", h, p, (void *)g_hw);
+    t_info("inside sent message: CallbackWnd hwnd=0x%llx pwnd=0x%llx (window %p)", h, p, (void *)g_hw);
     if (h == (unsigned long long)(ULONG_PTR)g_hw) {
         unsigned long long hh = 0;
         CHECK(p != 0);
