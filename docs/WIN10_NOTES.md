@@ -312,3 +312,18 @@ tests now inject the three frames without pumping in between and then wait for t
 `GetMessagePos` and, with no input moving the pointer, the cursor position. The pointer position itself depends on the
 session, so it is shown only through `t_info` and the test asserts the equalities, not the coordinates. If
 `GetCursorPos` is unavailable the cursor comparison is skipped.
+
+## r2_user_handle_types_entries: entry state after an in-handler DestroyWindow
+
+`window_destroyed_inside_cross_thread_send` accepts a freed entry (next uniqueness value), a flagged zombie, or a slot already taken by another object
+(different uniqueness). On Windows 10 22H2 which of "freed" and "reused" is seen varies from run to run with what else allocates a handle in the
+meantime, so the state is printed through `t_info` only; the accepted set and every check are unchanged.
+
+## gdi_handle_table: GetObjectType on a stale handle
+
+`GetObjectType` on a just-deleted handle returned different values on different fresh guests (a stale brush handle reported a brush on some boots and 0 on others), depending on whether the freed slot or a handle cache still held the object. The value is now a `t_info` diagnostic instead of a printed note; the `NtGdiDeleteObjectApp(stale)` and `NtGdiGetDCObject(stale)` checks stay asserted.
+
+## Stale exe in build/ shows up as an area with zero tests
+An exe left in build/ by an older source layout (no matching tests/<area> directory any more) was packed by --all and
+reported as an area with tests=0, so the area count differed between whole-corpus runs (86 vs 87). This is a packaging
+artifact, not a Windows behaviour or a flaky test. `win10_pack.py --all` now only packs exes that have a tests/<area> directory.

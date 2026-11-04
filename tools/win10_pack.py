@@ -46,7 +46,10 @@ def main():
     a = ap.parse_args()
     build = os.path.join(ROOT, "build")
     if a.all:
-        names = sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(build, "*.exe")))
+        # only exes that still have a tests/<area> directory: a stale exe left in build/ by an older layout
+        # would otherwise run as an area with zero tests and make the area count differ between runs
+        names = sorted(n for n in (os.path.basename(p)[:-4] for p in glob.glob(os.path.join(build, "*.exe")))
+                       if os.path.isdir(os.path.join(ROOT, "tests", n)))
     elif a.exes:
         names = [n.strip() for n in a.exes.split(",") if n.strip()]
     else:
