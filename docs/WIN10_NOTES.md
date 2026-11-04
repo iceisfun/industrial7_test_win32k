@@ -334,3 +334,13 @@ artifact, not a Windows behaviour or a flaky test. `win10_pack.py --all` now onl
 ## clipboard_dde foreign helper start-up race
 
 The helper in "own"/"delayed" mode becomes the clipboard owner inside EmptyClipboard, while it still has the clipboard open and before it calls CloseClipboard. A test that only waited for GetClipboardOwner() == helper window could therefore observe GetOpenClipboardWindow() still returning the helper window. The start-up wait now also waits until no window has the clipboard open.
+
+## msg_send_cross_thread: SendMessageTimeoutW timeout upper bound
+
+`msc_cross_smto_timeout_reports_error_timeout` asked for a 300 ms timeout against a 1200 ms handler and
+asserted the call returned in under 1150 ms. On a heavily loaded guest the sending thread can be
+descheduled past the handler's whole sleep and only observe the (already expired) timeout afterwards,
+so the elapsed time says nothing about the timeout. The test now retries such a stalled attempt (bounded,
+4 attempts); the lower bound (never fires early) is checked on every attempt, the upper bound and the
+`ERROR_TIMEOUT` / zero-result relation on an attempt that was not stalled. If every attempt stalls the
+test skips with a plain reason.
