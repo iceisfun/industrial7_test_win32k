@@ -125,18 +125,27 @@ TEST(msc_cross_smto_timeout_reports_error_timeout) {
     struct msc_worker wk; MSC_NEED_WORKER(wk, 0, 0);
     HANDLE done = CreateEventW(NULL, FALSE, FALSE, NULL);
     wk.beh->done = done;
-    ULONG_PTR res = 0x5555;
-    SetLastError(0);
-    LONGLONG t0 = msc_qpc();
-    LRESULT r = SendMessageTimeoutW(wk.w, MSC_SLEEP, 1200, 0, SMTO_NORMAL, 300, &res);
-    double ms = msc_ms_since(t0);
-    DWORD err = GetLastError();
-    EQ(r, 0);
-    EQ(err, ERROR_TIMEOUT);                    /* 1460, documented */
-    CHECKF(ms >= 270.0 && ms < 1150.0, "timeout fired after %.1f ms (asked 300)", ms);
-    t_note("result slot after timeout: 0x%llx", (unsigned long long)res);
-    /* a timed-out message is not recalled: the receiver still runs it to completion */
-    CHECK(WaitForSingleObject(done, 4000) == WAIT_OBJECT_0);
+    /* The sender can be descheduled for longer than the handler's sleep on a loaded guest, in which case the
+     * wait is only noticed after the handler has finished and the elapsed time says nothing about the timeout.
+     * Such an attempt is retried (bounded); what is asserted is that an attempt that was not stalled times out
+     * with the documented error after roughly the requested time. */
+    int good = 0;
+    for (int attempt = 0; attempt < 4 && !good; attempt++) {
+        ULONG_PTR res = 0x5555;
+        SetLastError(0);
+        LONGLONG t0 = msc_qpc();
+        LRESULT r = SendMessageTimeoutW(wk.w, MSC_SLEEP, 1200, 0, SMTO_NORMAL, 300, &res);
+        double ms = msc_ms_since(t0);
+        DWORD err = GetLastError();
+        if (r == 0) {
+            EQ(err, ERROR_TIMEOUT);            /* 1460, documented */
+            CHECKF(ms >= 270.0, "timeout fired after %.1f ms (asked 300)", ms);
+            if (ms < 1150.0) { good = 1; t_note("result slot after timeout: 0x%llx", (unsigned long long)res); }
+        }
+        /* a timed-out message is not recalled: the receiver still runs it to completion */
+        CHECK(WaitForSingleObject(done, 4000) == WAIT_OBJECT_0);
+    }
+    CHECKF(good, "no unstalled attempt timed out in range");
     CHECK(msc_log_count(MSC_SLEEP) >= 1);
     CloseHandle(done); wk.beh->done = NULL;
     msc_worker_stop(&wk);
