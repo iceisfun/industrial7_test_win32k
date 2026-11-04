@@ -370,3 +370,11 @@ the worker thread's `OpenClipboard(NULL)` once, while the same test passed on ot
 for a bounded time (about 2 s) while the refusal is access-denied; the thread-cannot-open-while-held tests still do a
 single attempt and must be refused. The `GetOpenClipboardWindow() == NULL` checks after a close wait, bounded, for the
 transient holder to go away before asserting. No expectation was relaxed: a persistent holder still fails the test.
+
+## x_clipboard_state_matrix: clipboard briefly held by another process
+
+The clipboard is one object per window station, so another process can open it for a moment right after this test closes
+it. Two sampled checks were flaky (seen once each in separate guests): a second thread's `OpenClipboard(NULL)` right after
+the first thread's close (`thread_can_open_after_first_closes_u32`), and `GetOpenClipboardWindow() == NULL` right after a
+close. Both now wait, bounded (2 seconds), for the clipboard to become free (the thread retries only while the refusal is
+access-denied) and then assert as before. The "cannot open while the first holds it" checks are unchanged.
