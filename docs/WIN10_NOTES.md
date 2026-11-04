@@ -353,3 +353,11 @@ The helper takes clipboard ownership with EmptyClipboard while it still has the 
 ## msg_send_cross_thread: SendMessageTimeout timeout latency
 
 `msc_cross_smto_timeout_reports_error_timeout` failed once in a whole-corpus run (elapsed 1254 ms against a 300 ms timeout, with the handler sleeping 1200 ms) and passed on every isolated fresh guest. The sender thread had been stalled past the end of the handler, so the elapsed time carried no information about the timeout. The test now retries (bounded, 4 attempts) like its sibling, requires the documented `ERROR_TIMEOUT` and a lower bound on every timed-out attempt, and requires at least one unstalled attempt to time out within the 270..1150 ms window.
+
+## kcb_dispatch_drawitem_cross_thread_owner_fires_slot: owner window creation
+
+Across repeated whole-corpus runs this test was OK except once, when it skipped because the worker thread's top-level
+owner window was not available within the 5 s wait (a loaded guest; the area passed 3 of 3 times on fresh guests in
+both token modes after the change, and the original skip was not reproduced). The wait for the owner window is now 30 s
+(it still ends as soon as the window exists), and the failure code / timeout is recorded through t_info. The skip itself
+stays, since creating a window is environment-dependent, and no assertion was changed.
