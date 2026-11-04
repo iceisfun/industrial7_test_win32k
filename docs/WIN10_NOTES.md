@@ -385,3 +385,7 @@ The numeric desktop handle reported by the child is a value from the child's own
 number is also an open handle in the parent depends on what each process happened to open, so the observation is
 not stable across guests. It is now informational only (`t_info`); the check that the child reported a thread
 desktop stays an assertion.
+
+## r2_user_handle_types_entries: uniq successor with a concurrent allocator
+
+The handle-table uniq counter of a slot can advance by more than one between two cycles of the test when another process allocates and releases the same slot. The test therefore accepts a short forward walk (up to 8 steps) of the successor function and requires at least 90% of same-slot pairs to be exact single steps; skipped steps are reported through t_info only. Verified identical OK in both modes on three fresh Windows 10 22H2 guests.
