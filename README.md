@@ -2,21 +2,17 @@
 
 > ## STATUS: verified on genuine Windows 10 22H2
 >
-> 104 areas. The 85 non-`dx_` areas of the earlier run (16131 tests) pass on a genuine Windows 10 22H2 x64 guest
-> (build 19045, interactive session) in both modes, with 0 failed tests:
->
-> Areas and test totals include the pass 3 additions (104 areas, 16568 tests; the added tests were counted statically, to be
-> re-measured with `--list`). The Windows 10 numbers below are from the earlier run of the 85 areas and 16131 tests; the pass 3
-> additions and changed areas are pending a new Windows 10 run, and the figures will be updated after it. `--mode user` (a real
-> standard account) is available besides adm and std.
+> 104 areas. The 86 non-`dx_` areas (16211 tests per mode) ran on a genuine Windows 10 22H2 x64 guest (build 19045, interactive
+> session) in adm, std and user (real standard account) mode, with 0 failed tests in the committed run:
 >
 > | Mode | Pass | Fail | Skip |
 > |---|---|---|---|
-> | adm (elevated Administrator) | 16082 | 0 | 49 |
-> | std (restricted-admin token) | 16020 | 0 | 111 |
+> | adm (elevated Administrator) | 16172 | 0 | 39 |
+> | std (restricted-admin token) | 16110 | 0 | 101 |
+> | user (real standard account) | 16110 | 0 | 101 |
 >
-> Skips are conditional and carry a printed reason (`docs/WIN10_NOTES.md`). Three repeated runs gave identical
-> per-test results and printed lines (`results/win10/DETERMINISM.md`). The 18 `dx_` areas change system state and
+> Skips are conditional and carry a printed reason (`docs/WIN10_NOTES.md`). A second whole-corpus run differed in
+> three timing-dependent tests (`results/win10/DETERMINISM.md`); determinism over three runs is not yet shown for this build. The 18 `dx_` areas change system state and
 > have not been run on Windows 10. Statistics: `results/STATS.md`; syscall coverage at three levels of evidence
 > (direct, statically mapped route, witnessed kernel entry): `COVERAGE.md`; how to pack, run and parse:
 > `HANDOFF.md`.

@@ -1,5 +1,34 @@
 # Determinism of the corpus on Windows 10 22H2 (19045)
 
+## Latest comparison (pass 3 build, 86 non-dx_ areas, 16211 tests per mode, adm + std + user)
+Result: NOT yet demonstrated over 3 complete runs. Two complete whole-corpus runs (f2a, f2b) were compared with
+`tools/win10_compare.py <log> <log> --lines`; the third (f2c) is incomplete (no usable log: the copy of its serial log failed),
+so there is no 3-way comparison for this build.
+
+| Mode | f2a vs f2b | f2a | f2b |
+|---|---|---|---|
+| adm | 0 differences | 16172 pass, 0 fail, 39 skip | 16172 pass, 0 fail, 39 skip |
+| std | 13 line differences | 16110 pass, 0 fail, 101 skip | 16108 pass, 1 fail, 102 skip |
+| user | 6 line differences | 16110 pass, 0 fail, 101 skip | 16109 pass, 1 fail, 101 skip |
+
+The differences are three timing-dependent tests, each OK in one run and not in the other:
+- `msg_timers_atoms_one_message_per_timer_after_burst` (std, f2b FAIL at mta_deliver.c:417/418): the burst was drained slowly on a loaded
+  guest. A later commit (125a2ee) retries slow drains and reports them via `t_info`; it was not part of the f2 runs and has not been
+  re-measured on Windows 10.
+- `msc_cross_smto_timeout_reports_error_timeout` (user, f2b FAIL at msc_cross.c:142: timeout reported after 249.6 ms for 300 ms asked).
+  Not fixed; not re-measured.
+- `msc_cross_hung_receiver_abortifhung_waits_for_timeout` (std, f2a OK, f2b SKIP "caller stalled until the receiver resumed pumping").
+  This is the documented conditional skip (docs/WIN10_NOTES.md), but it changes the skip count between runs.
+
+Earlier passes of the same corpus (r1, r2, r3 runs of other builds) also saw single failures that did not repeat
+(`gdi_handle_table` reuse.c:184 in adm and `raw_input_touch_pointer` rit_pointer.c:686-688 in std, run r2; `quota_limits` needs
+about 320 to 600 s per mode and times out at a 300 s per-exe limit, so it is run with 900 s or more). The committed summaries
+(`adm/`, `std/`, `user/`) are those of the complete run f2a, which had no failure in any mode.
+
+---
+
+## Earlier method and results (previous build, 85 areas, adm and std)
+
 ## Method
 The corpus was run on fresh Windows 10 22H2 x64 guests, adm mode first and std mode second in the same guest, three times with
 the final build, and the logs were compared with `tools/win10_compare.py <log> <log> <log> --lines`: per-test results and every

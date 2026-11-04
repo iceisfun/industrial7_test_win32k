@@ -14,7 +14,7 @@ input list, no pointer (touch or pen) device and no other HID device, one keyboa
   interactive session on `WinSta0\Default`.
 
 Every test either asserts what Windows does or skips with a printed reason. A skip never counts as a pass: it is listed
-per mode in `results/win10/*/failing_tests.tsv`. All skips below were identical in all three determinism runs. The
+per mode in `results/win10/*/failing_tests.tsv`. Skips below were identical in the runs compared, except the timing-dependent one listed under "Known differences between runs". The
 numbers are tests (the area header comments say what each measures).
 
 ## Skips that depend on the hardware or configuration of the guest
@@ -401,3 +401,12 @@ weakened.
 ## msg_timers_atoms: timer burst coalescing checks
 
 The two "missed expirations" tests (one WM_TIMER per timer after a burst) only judge a burst that was drained in under 60 ms. A slower drain (loaded guest) is retried up to 6 times, the slow attempts are reported through t_info only (no varying NOTE line), and if no attempt is fast enough the test ends with a plain skip. On unloaded Windows 10 22H2 guests the first attempt is judged and exactly one message per timer is observed.
+
+## Known differences between runs (pass 3 build, runs f2a and f2b)
+Measured skip totals of the committed run (f2a): adm 39, std 101, user 101; every one is in the tables above (adm: the hardware and
+session groups plus x_d3dkmt_badhandle_matrix_a 6; std and user add kbd_layouts_state 2, r2_winsta_activation_group_session 15,
+win32k_modules_sysinfo 9, winsta_desktop_objects 36). Timing-dependent results seen in the second run only:
+- `msg_timers_atoms_one_message_per_timer_after_burst` FAIL in std (a slow burst drain); `msc_cross_smto_timeout_reports_error_timeout`
+  FAIL in user (timeout reported after 249.6 ms for 300 ms asked); `msc_cross_hung_receiver_abortifhung_waits_for_timeout` SKIP in std
+  (caller stalled). The first was reworked in commit 125a2ee (not yet re-run on Windows 10); the other two are open.
+- `quota_limits` needs 320 to 600 s per mode; run it with a per-exe timeout of 900 s or more.
