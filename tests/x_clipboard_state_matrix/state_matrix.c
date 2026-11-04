@@ -166,7 +166,10 @@ static void fx_reset(void) {
         if (g_c[i].listener) { U(RemoveClipboardFormatListener)(g_w[i]); g_c[i].listener = 0; }
     }
     U(CloseClipboard)();
-    if (g_w[0] && U(OpenClipboard)(g_w[0])) { U(EmptyClipboard)(); U(CloseClipboard)(); }
+    /* the clipboard is shared by the window station: wait (bounded) for a transient foreign holder, otherwise
+     * the previous test's owner would stay and receive WM_DESTROYCLIPBOARD during the next test */
+    if (g_w[0] && x_open(g_w[0])) { U(EmptyClipboard)(); U(CloseClipboard)(); }
+    k_pump(5);
     for (int i = 0; i < 3; i++) if (g_w[i]) { memset(&g_c[i], 0, sizeof g_c[i]); }
 }
 static void fx_end(int *p) { (void)p; if (g_w[0]) fx_reset(); }
