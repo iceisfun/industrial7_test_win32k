@@ -1,3 +1,4 @@
 group	runs	areas	tests	differences
 standard areas, both modes, per-test results and printed lines	3	70	12725	0
 x_ areas, both modes, per-test results and printed lines	3	14	3249	0
+pass 3 build, 86 areas, adm+std+user, f2a vs f2b (f2c incomplete)	2	86	16211	19 (std 13 lines, user 6 lines; adm 0)

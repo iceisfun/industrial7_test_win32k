@@ -6,16 +6,20 @@ into per-area and per-test results. The tooling described here was verified end 
 
 ## Where things stand
 
-- 104 areas, 16568 tests (`results/STATS.md`; the pass 3 additions were counted statically and are to be re-measured with `--list`). The 18 `dx_` areas change system state and are only run on purpose.
-- The 85 other areas of the earlier run (16131 tests) were run on Windows 10 22H2 in both modes; the pass 3 additions and the changed areas are pending a new run, and these numbers will be updated after it. `--mode user` (a real standard account) is also available:
+- 104 areas (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
+- The 86 other areas (16211 tests per mode, build 19045) were run on Windows 10 22H2 in adm, std and user mode (complete run f2a, the
+  committed summaries); measured:
 
   | Mode | Areas | Tests | Pass | Fail | Skip |
   |---|---|---|---|---|---|
-  | adm | 85 | 16131 | 16082 | 0 | 49 |
-  | std | 85 | 16131 | 16020 | 0 | 111 |
+  | adm | 86 | 16211 | 16172 | 0 | 39 |
+  | std | 86 | 16211 | 16110 | 0 | 101 |
+  | user (real standard account) | 86 | 16211 | 16110 | 0 | 101 |
 
-- Every skip is conditional, has a printed reason and is stable (`docs/WIN10_NOTES.md`).
-- Three runs of the same build gave identical per-test results and printed lines (`results/win10/DETERMINISM.md`).
+- Every skip is conditional and has a printed reason (`docs/WIN10_NOTES.md`).
+- Determinism is NOT fully shown for this build: two complete runs (f2a, f2b) differ in three timing-dependent tests (one FAIL in
+  std, one in user, one conditional skip); the third run is incomplete. See `results/win10/DETERMINISM.md`. An older build was
+  identical over three runs.
 - A test that fails on genuine Windows 10 is a bug in the test (wrong expectation, environment dependence or flakiness).
   Fix the test so that it asserts what Windows does; do not weaken a check into meaninglessness.
 
