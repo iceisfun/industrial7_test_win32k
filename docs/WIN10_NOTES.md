@@ -360,3 +360,12 @@ owner window was not available within the 5 s wait (a loaded guest; the area pas
 both token modes after the change, and the original skip was not reproduced). The wait for the owner window is now 30 s
 (it still ends as soon as the window exists), and the failure code / timeout is recorded through t_info. The skip itself
 stays, since creating a window is environment-dependent, and no assertion was changed.
+
+## x_clipboard_state_matrix: second-thread open after close, and "nobody holds it open" checks
+
+The clipboard is shared by the whole window station, and other processes (clipboard watchers) can hold it open for a
+moment right after the test closes it. One whole-corpus run therefore saw `thread_can_open_after_first_closes_u32` fail in
+the worker thread's `OpenClipboard(NULL)` once, while the same test passed on other runs. The worker now retries the open
+for a bounded time (about 2 s) while the refusal is access-denied; the thread-cannot-open-while-held tests still do a
+single attempt and must be refused. The `GetOpenClipboardWindow() == NULL` checks after a close wait, bounded, for the
+transient holder to go away before asserting. No expectation was relaxed: a persistent holder still fails the test.
