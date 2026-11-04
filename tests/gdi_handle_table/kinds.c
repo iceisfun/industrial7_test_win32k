@@ -97,7 +97,8 @@ static void t_stale(const struct gh_kind *k) {
     if (k->type7 == 0x01 && UN(NtGdiGetDCObject))
         CHECK(UN(NtGdiGetDCObject)((HANDLE)h, 0x100000) == NULL);
     DWORD t = U(GetObjectType)((HGDIOBJ)h);
-    t_note("%s GetObjectType(stale)=%lu", k->name, t);
+    /* the answer depends on whether the freed slot was re-used meanwhile (a brush handle may still report a brush): not stable, diagnostic only */
+    t_info("%s GetObjectType(stale)=%lu", k->name, t);
 }
 
 static void t_getentry(const struct gh_kind *k) {
