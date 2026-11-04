@@ -396,3 +396,7 @@ reset (`fx_reset`) therefore waits, bounded, for the clipboard before emptying i
 the previous test's owner in place, and the next test's first empty sent it `WM_DESTROYCLIPBOARD`, which broke the
 absolute "never told" count of an unrelated window. Thread-open checks retry only on access-denied. No expectation was
 weakened.
+
+## msg_timers_atoms: timer burst coalescing checks
+
+The two "missed expirations" tests (one WM_TIMER per timer after a burst) only judge a burst that was drained in under 60 ms. A slower drain (loaded guest) is retried up to 6 times, the slow attempts are reported through t_info only (no varying NOTE line), and if no attempt is fast enough the test ends with a plain skip. On unloaded Windows 10 22H2 guests the first attempt is judged and exactly one message per timer is observed.
