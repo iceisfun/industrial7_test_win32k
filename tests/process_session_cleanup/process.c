@@ -586,7 +586,8 @@ static void sess_case(int what) {
         HDESK theirs = (HDESK)(ULONG_PTR)c.s->v[4];
         if (theirs != dk) {
             DWORD fl = 0;
-            if (!GetHandleInformation(theirs, &fl)) t_note("child desktop handle %p is not open in the parent", theirs);
+            /* whether the numeric value happens to be open in the parent depends on the handle table: informational only */
+            if (!GetHandleInformation(theirs, &fl)) t_info("child desktop handle %p is not open in the parent", theirs);
         }
         CHECK(c.s->v[3] != 0);
         break;

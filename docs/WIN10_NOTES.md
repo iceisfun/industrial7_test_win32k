@@ -377,3 +377,10 @@ it. Two sampled checks were flaky (seen once each in separate guests): a second 
 the first thread's close (`thread_can_open_after_first_closes_u32`), and `GetOpenClipboardWindow() == NULL` right after a
 close. Both now wait, bounded (2 seconds), for the clipboard to become free (the thread retries only while the refusal is
 access-denied) and then assert as before. The "cannot open while the first holds it" checks are unchanged.
+
+## process_session_cleanup: child desktop handle value
+
+The numeric desktop handle reported by the child is a value from the child's own handle table. Whether the same
+number is also an open handle in the parent depends on what each process happened to open, so the observation is
+not stable across guests. It is now informational only (`t_info`); the check that the child reported a thread
+desktop stays an assertion.
