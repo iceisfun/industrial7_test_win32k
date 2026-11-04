@@ -345,3 +345,7 @@ so the elapsed time says nothing about the timeout. The test now retries such a 
 4 attempts); the lower bound (never fires early) is checked on every attempt, the upper bound and the
 `ERROR_TIMEOUT` / zero-result relation on an attempt that was not stalled. If every attempt stalls the
 test skips with a plain reason.
+
+## clipboard_dde: foreign owner helper
+
+The helper takes clipboard ownership with EmptyClipboard while it still has the clipboard open, and closes it a moment later. The parent used to treat "owner is the helper" as ready, so GetOpenClipboardWindow could still report the helper's window and the following "nothing is open" check failed on some boots. The start-up wait now also waits until no window has the clipboard open before the test continues. The asserted values are unchanged.
