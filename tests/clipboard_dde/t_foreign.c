@@ -70,7 +70,8 @@ static int fw_start(struct fw *f, const char *mode) {
     for (int i = 0; i < 500 && !f->h; i++) { f->h = U(FindWindowA)(cls, NULL); if (!f->h) Sleep(20); }
     if (!f->h) return 0;
     if (!strcmp(mode, "own") || !strcmp(mode, "delayed"))
-        for (int i = 0; i < 500 && U(GetClipboardOwner)() != f->h; i++) Sleep(20);
+        /* the owner is set by EmptyClipboard while the helper still has the clipboard open: wait for the close too */
+        for (int i = 0; i < 500 && (U(GetClipboardOwner)() != f->h || U(GetOpenClipboardWindow)() != NULL); i++) Sleep(20);
     if (!strcmp(mode, "hold"))
         for (int i = 0; i < 500 && U(GetOpenClipboardWindow)() != f->h; i++) Sleep(20);
     return 1;

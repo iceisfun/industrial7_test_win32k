@@ -330,3 +330,7 @@ artifact, not a Windows behaviour or a flaky test. `win10_pack.py --all` now onl
 - r2_user_handle_types_entries / uniq_successor_wraps_skipping_ffff: another process can cycle the same menu slot between two reads, so the uniq advances by more than one step. The test now accepts a short forward walk (at most 8 steps) of the successor function and requires at least 90 percent of same-slot pairs to be exact single steps; reserved values 0 and 0xFFFF are still rejected.
 
 - r2_teb_peb_field_matrix: the CallbackWnd hwnd/pwnd lines are values that vary per run (a window handle can be only five hex digits, below the scrub threshold), so they are printed with t_info; the relation checks are unchanged.
+
+## clipboard_dde foreign helper start-up race
+
+The helper in "own"/"delayed" mode becomes the clipboard owner inside EmptyClipboard, while it still has the clipboard open and before it calls CloseClipboard. A test that only waited for GetClipboardOwner() == helper window could therefore observe GetOpenClipboardWindow() still returning the helper window. The start-up wait now also waits until no window has the clipboard open.
