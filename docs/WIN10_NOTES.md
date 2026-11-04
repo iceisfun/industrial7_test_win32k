@@ -348,3 +348,7 @@ test skips with a plain reason.
 ## clipboard_dde: foreign owner helper
 
 The helper takes clipboard ownership with EmptyClipboard while it still has the clipboard open, and closes it a moment later. The parent used to treat "owner is the helper" as ready, so GetOpenClipboardWindow could still report the helper's window and the following "nothing is open" check failed on some boots. The start-up wait now also waits until no window has the clipboard open before the test continues. The asserted values are unchanged.
+
+## msg_send_cross_thread: SendMessageTimeout timeout latency
+
+`msc_cross_smto_timeout_reports_error_timeout` failed once in a whole-corpus run (elapsed 1254 ms against a 300 ms timeout, with the handler sleeping 1200 ms) and passed on every isolated fresh guest. The sender thread had been stalled past the end of the handler, so the elapsed time carried no information about the timeout. The test now retries (bounded, 4 attempts) like its sibling, requires the documented `ERROR_TIMEOUT` and a lower bound on every timed-out attempt, and requires at least one unstalled attempt to time out within the 270..1150 ms window.
