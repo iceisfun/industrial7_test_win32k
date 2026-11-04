@@ -327,7 +327,7 @@ TEST(r2_teb_peb_field_matrix_ci_worker_callbackwnd_cache_points_at_its_window) {
     /* user32!SendMessageW trusts CI+0x48 as the tagWND* whenever hwnd == CI+0x40; the head of a tagWND is its handle */
     WK_GUI(w);
     unsigned long long h = rs_ci64(&w.after, CIO_cbHwnd), p = rs_ci64(&w.after, CIO_cbPwnd), hh = 0;
-    t_note("CallbackWnd hwnd=0x%llx pwnd=0x%llx", h, p);
+    t_info("CallbackWnd hwnd=0x%llx pwnd=0x%llx", h, p);
     if (h && p && k_try_read((void *)(ULONG_PTR)p, &hh, 8)) EXPECT_EQ(hh, h);
     wk_finish(&w);
 }
