@@ -34,6 +34,7 @@ struct kcb_di_worker {
                    * why this test still gets cross-thread delivery despite that). */
     char owner_class[40];
     DWORD type, ctl_id;
+    volatile DWORD create_err; /* GetLastError() of the owner CreateWindowExA, 0 if it succeeded */
 };
 
 /* What the owner window procedure received for WM_DRAWITEM. The kernel's argument block lives on a callback stack that is
@@ -61,6 +62,7 @@ static DWORD WINAPI kcb_di_thread_proc(LPVOID arg) {
     RegisterClassA(&wc);
     wk->owner = CreateWindowExA(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE, wk->owner_class, "kcb_di_owner",
                                  WS_POPUP | WS_VISIBLE, -32000, -32000, 100, 100, NULL, NULL, GetModuleHandleA(NULL), NULL);
+    if (!wk->owner) wk->create_err = GetLastError() ? GetLastError() : 0xFFFFFFFFul;
     SetEvent(wk->ready);
     if (!wk->owner) return 1;
     for (int i = 0; i < 250 && !wk->stop; i++) k_pump(20);
@@ -77,7 +79,13 @@ static BOOL kcb_di_start(struct kcb_di_worker *wk) {
     if (!wk->ready) return FALSE;
     wk->thread = CreateThread(NULL, 0, kcb_di_thread_proc, wk, 0, NULL);
     if (!wk->thread) { CloseHandle(wk->ready); return FALSE; }
-    WaitForSingleObject(wk->ready, 5000);
+    /* The thread signals `ready` right after CreateWindowExA returns; on a loaded guest the first GUI call of a fresh
+     * thread can take well over a few seconds, so wait generously (the wait ends as soon as the window exists). */
+    if (WaitForSingleObject(wk->ready, 30000) != WAIT_OBJECT_0) {
+        t_info("owner window not created within the wait");
+    } else if (!wk->owner) {
+        t_info("owner CreateWindowExA failed, err=%lu", (unsigned long)wk->create_err);
+    }
     if (!wk->owner) { InterlockedExchange(&wk->stop, 1); WaitForSingleObject(wk->thread, 5000);
         CloseHandle(wk->thread); CloseHandle(wk->ready); return FALSE; }
     return TRUE;
