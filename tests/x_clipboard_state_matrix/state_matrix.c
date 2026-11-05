@@ -123,6 +123,12 @@ static BOOL x_open(HWND h) {
     for (int i = 0; i < 40; i++) { if (U(OpenClipboard)(h)) return TRUE; Sleep(25); }
     return FALSE;
 }
+/* After our own close, some other process may open the clipboard for a moment (the clipboard is shared
+ * by the window station), so "nobody holds it open" is waited for, bounded, instead of sampled once. */
+static int x_none_open(void) {
+    for (int i = 0; i < 80; i++) { if (U(GetOpenClipboardWindow)() == NULL) return 1; Sleep(25); }
+    return 0;
+}
 static int x_enum(UINT *out, int cap) {  /* clipboard must be open by the caller */
     int n = 0; UINT f = 0;
     while ((f = U(EnumClipboardFormats)(f)) != 0) { if (n < cap) out[n] = f; n++; if (n > 4096) break; }
@@ -160,7 +166,10 @@ static void fx_reset(void) {
         if (g_c[i].listener) { U(RemoveClipboardFormatListener)(g_w[i]); g_c[i].listener = 0; }
     }
     U(CloseClipboard)();
-    if (g_w[0] && U(OpenClipboard)(g_w[0])) { U(EmptyClipboard)(); U(CloseClipboard)(); }
+    /* the clipboard is shared by the window station: wait (bounded) for a transient foreign holder, otherwise
+     * the previous test's owner would stay and receive WM_DESTROYCLIPBOARD during the next test */
+    if (g_w[0] && x_open(g_w[0])) { U(EmptyClipboard)(); U(CloseClipboard)(); }
+    k_pump(5);
     for (int i = 0; i < 3; i++) if (g_w[i]) { memset(&g_c[i], 0, sizeof g_c[i]); }
 }
 static void fx_end(int *p) { (void)p; if (g_w[0]) fx_reset(); }
@@ -616,7 +625,7 @@ TEST(ownership_open_invalid_window_fails_1400) {
     SETUP();
     SetLastError(0);
     CHECK(!U(OpenClipboard)((HWND)(ULONG_PTR)0x7ffe1234)); EXPECT_ERR(ERROR_INVALID_WINDOW_HANDLE);
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
 }
 TEST(ownership_open_with_window_of_other_thread_succeeds) {
     SETUP();
@@ -631,16 +640,16 @@ TEST(ownership_open_window_reports_open_window) {
     SETUP();
     /* another process (a clipboard watcher) may hold the clipboard for a moment: wait for it */
     for (int i = 0; i < 80 && U(GetOpenClipboardWindow)() != NULL; i++) Sleep(25);
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
     CHECK(x_open(g_w[0]));
     CHECK(U(GetOpenClipboardWindow)() == g_w[0]);
     U(CloseClipboard)();
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
 }
 TEST(ownership_open_null_window_reports_null_open_window) {
     SETUP();
     CHECK(x_open(NULL));
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
     /* but the clipboard is open: a second thread cannot open it */
     U(CloseClipboard)();
 }
@@ -657,7 +666,7 @@ TEST(ownership_one_close_closes_after_reopen) {
     CHECK(U(CloseClipboard)());
     SetLastError(0);
     CHECK(!U(CloseClipboard)()); EXPECT_ERR(ERROR_CLIPBOARD_NOT_OPEN);
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
 }
 TEST(ownership_reopen_with_other_window_same_thread_fails) {
     SETUP();
@@ -666,7 +675,7 @@ TEST(ownership_reopen_with_other_window_same_thread_fails) {
     CHECK(!U(OpenClipboard)(g_w[1])); EXPECT_ERR(ERROR_ACCESS_DENIED);
     CHECK(U(GetOpenClipboardWindow)() == g_w[0]);
     U(CloseClipboard)();
-    CHECK(U(GetOpenClipboardWindow)() == NULL);
+    CHECK(x_none_open());
 }
 
 /* ---- second thread ------------------------------------------------------------------------- */
@@ -686,6 +695,18 @@ static DWORD WINAPI th_try_open(void *p) {
     struct tctx *t = p;
     SetLastError(0); t->open_a = U(OpenClipboard)(NULL); t->open_err = GetLastError();
     if (t->open_a) U(CloseClipboard)();
+    return 0;
+}
+/* same as th_try_open, but tolerates the clipboard being held open for a moment by another process
+ * (the clipboard is one per window station): retries only while the refusal is access-denied, like x_open */
+static DWORD WINAPI th_open_retry(void *p) {
+    struct tctx *t = p;
+    for (int i = 0; i < 80; i++) {
+        SetLastError(0); t->open_a = U(OpenClipboard)(NULL); t->open_err = GetLastError();
+        if (t->open_a) { U(CloseClipboard)(); break; }
+        if (t->open_err != ERROR_ACCESS_DENIED) break;
+        Sleep(25);
+    }
     return 0;
 }
 static DWORD WINAPI th_try_empty(void *p) {
@@ -724,7 +745,7 @@ RT(thread_cannot_open_while_first_holds) {
 RT(thread_can_open_after_first_closes) {
     struct tctx t = { r };
     CHECK(x_open(g_w[0])); U(CloseClipboard)();
-    run_th(th_try_open, &t);
+    run_th(th_open_retry, &t);
     CHECK(t.open_a);
 }
 RT(thread_cannot_empty_while_first_holds) {

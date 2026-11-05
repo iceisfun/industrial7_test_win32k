@@ -133,7 +133,7 @@ R2(window_destroyed_inside_cross_thread_send) {
         CHECK(zs.read_after);
         const char *st = "?";
         CHECKF(zombie_or_free(zs.idx, zs.uniq, UT_WINDOW, &st), "entry after in-handler DestroyWindow is %s (type %u flags 0x%02x uniq %u)", st, zs.after.type, zs.after.flags, zs.after.uniq);
-        t_note("entry state right after DestroyWindow inside a cross-thread send: %s", st);
+        t_info("entry state right after DestroyWindow inside a cross-thread send: %s", st);
     }
     CHECK(wait_gone(zs.idx, zs.uniq, UT_WINDOW, 3000));
     CHECK(!U(IsWindow)(zs.w));

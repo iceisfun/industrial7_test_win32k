@@ -1,0 +1,102 @@
+exe	detail
+display_monitors_dpi	SKIP needs two monitors, the system has one and a virtual second display cannot be created without a display driver
+focus_capture_attach	SKIP not foreground
+gdi_font_metrics_text	SKIP face wingdings not mapped (not installed)
+gdi_handle_table	SKIP never got the same slot back
+gdi_handle_table	SKIP handle count not asserted for wmf
+gdi_handle_table	SKIP handle count not asserted for wmf_dc
+gdi_handle_table	SKIP handle count not asserted for emf
+gdi_handle_table	SKIP handle count not asserted for emf_dc
+gdi_handle_table	SKIP handle count not asserted for brush_dibpat
+gdi_handle_table	SKIP handle count not asserted for brush_pattern
+gdi_handle_table	SKIP rgn_rect: the deleted object's cell is still held by the handle cache (objt 0x04)
+gdi_metafile_print_neg	SKIP missing export: n > 0
+gdi_metafile_print_neg	SKIP the display driver reports no pixel formats to the kernel (no OpenGL support in this configuration)
+gdi_metafile_print_neg	SKIP the display driver has no OpenGL support here: SetPixelFormat succeeds but the format is not retained
+kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token: no cache is published
+kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token
+r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable
+r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable: a valid request would create a device
+r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable: the descriptor would be read
+r2_teb_peb_field_matrix	SKIP no batching
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP directory not readable
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
+raw_input_touch_pointer	SKIP devices present
+user_wnd_desktop_heap	SKIP HWND_TOP does not move a window that owns a default IME window
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_mitigation	SKIP no audit attribute
+win32k_modules_sysinfo	SKIP CreateWindowStation failed (5)
+win32k_modules_sysinfo	SKIP \Sessions\1: access denied for this token
+win32k_modules_sysinfo	SKIP \Windows\WindowStations: access denied for this token
+win32k_modules_sysinfo	SKIP \Sessions\1\Windows\WindowStations: access denied for this token
+win32k_modules_sysinfo	SKIP \Sessions\1\Windows\WindowStations: access denied for this token
+win32k_modules_sysinfo	SKIP \Sessions\1\Windows\WindowStations: access denied for this token
+win32k_modules_sysinfo	SKIP \ObjectTypes: access denied for this token
+win32k_modules_sysinfo	SKIP \ObjectTypes: access denied for this token
+win32k_modules_sysinfo	SKIP CreateWindowStation failed (5)
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests

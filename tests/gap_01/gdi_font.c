@@ -400,7 +400,8 @@ TEST(gap1_realizationinfo_small_struct) {
     DWORD buf[8]; memset(buf, 0x5a, sizeof buf);
     buf[0] = 0x10;
     int r = f(d.dc, buf);
-    t_note("GetRealizationInfo(0x10) -> %d: %08lx %08lx %08lx %08lx", r, (unsigned long)buf[0], (unsigned long)buf[1], (unsigned long)buf[2], (unsigned long)buf[3]);
+    t_note("GetRealizationInfo(0x10) -> %d, size field %08lx", r, (unsigned long)buf[0]);
+    t_info("GetRealizationInfo words: %08lx %08lx %08lx", (unsigned long)buf[1], (unsigned long)buf[2], (unsigned long)buf[3]);
     CHECK(r != 0);
     EXPECT_EQ(buf[0], 0x10);
     EXPECT_EQ(buf[4], 0x5a5a5a5au);                          /* exactly cbSize bytes are copied back */
@@ -436,7 +437,8 @@ TEST(gap1_realizationinfo_differs_by_font) {
     if (!gap_dc_open(&a, L"Arial", -16) || !gap_dc_open(&b, L"Courier New", -16)) { t_skip("setup"); return; }
     DWORD ia[4] = { 0x10 }, ib[4] = { 0x10 };
     int ra = f(a.dc, ia), rb = f(b.dc, ib);
-    t_note("Arial: %d %08lx %08lx %08lx / Courier: %d %08lx %08lx %08lx", ra, (unsigned long)ia[1], (unsigned long)ia[2], (unsigned long)ia[3], rb, (unsigned long)ib[1], (unsigned long)ib[2], (unsigned long)ib[3]);
+    t_note("Arial: %d / Courier: %d", ra, rb);
+    t_info("Arial: %08lx %08lx %08lx / Courier: %08lx %08lx %08lx", (unsigned long)ia[1], (unsigned long)ia[2], (unsigned long)ia[3], (unsigned long)ib[1], (unsigned long)ib[2], (unsigned long)ib[3]);
     CHECK(ra != 0 && rb != 0);
     gap_dc_close(&a); gap_dc_close(&b);
 }

@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Build a payload directory for a Windows 10 run of the corpus.
 
-usage: win10_pack.py <out_dir> [--exes a,b,c | --all] [--mode std|adm|both] [--timeout SECS]
+usage: win10_pack.py <out_dir> [--exes a,b,c | --all] [--mode std|adm|user|both|all] [--timeout SECS]
                      [--filter SUBSTR] [--destructive] [--full]
 
 The payload holds bin/ (the selected test exes plus the helper exes), list.txt, runner.ps1 and run.cmd.
 run.cmd sets COM1 to 115200,n,8,1 and drives runner.ps1, which frames every line on COM1 with the prefix
 "W32K " (see tools/win10_results.py for the grammar). Modes: adm = the session's own (elevated Administrator)
-token; std = a restricted-admin token (not a real standard account) in the same interactive session (tools/guest/w32k_runas.c). The payload
+token; std = a restricted-admin token (not a real standard account) in the same interactive session (tools/guest/w32k_runas.c);
+user = a real throwaway local standard account created by the runner inside the guest (random password, Users group only,
+Medium integrity, not elevated), launched with the secondary logon service into the interactive session. --mode both = adm,std;
+--mode all = adm,std,user. The payload
 exits 0 only when the runner reached "W32K done"; a test failing or timing out does not change that.
 Exes named dx_* change system state and are refused unless --destructive is given.
 Build first with `make -j8`."""
@@ -26,12 +29,16 @@ echo W32K run.cmd exit %RC% >COM1
 exit /b %RC%
 """
 
+# Areas whose exhaustive quota fills legitimately take longer than the default per-exe timeout on a real guest
+# (quota_limits measured at about 320-640 s per mode). The listed value is a floor for the timeout of that exe only.
+SLOW_TIMEOUTS = {"quota_limits": 1200}
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("out_dir")
     ap.add_argument("--exes", help="comma-separated area names (without .exe)")
     ap.add_argument("--all", action="store_true", help="every non-dx_ area in build/")
-    ap.add_argument("--mode", choices=["std", "adm", "both"], default="adm")
+    ap.add_argument("--mode", choices=["std", "adm", "user", "both", "all"], default="adm")
     ap.add_argument("--timeout", type=int, default=300, help="per-exe timeout in seconds")
     ap.add_argument("--filter", default="", help="test-name substring passed to every exe")
     ap.add_argument("--destructive", action="store_true", help="allow dx_* areas")
@@ -39,7 +46,10 @@ def main():
     a = ap.parse_args()
     build = os.path.join(ROOT, "build")
     if a.all:
-        names = sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(build, "*.exe")))
+        # only exes that still have a tests/<area> directory: a stale exe left in build/ by an older layout
+        # would otherwise run as an area with zero tests and make the area count differ between runs
+        names = sorted(n for n in (os.path.basename(p)[:-4] for p in glob.glob(os.path.join(build, "*.exe")))
+                       if os.path.isdir(os.path.join(ROOT, "tests", n)))
     elif a.exes:
         names = [n.strip() for n in a.exes.split(",") if n.strip()]
     else:
@@ -51,20 +61,24 @@ def main():
     for n in names:
         if n in helpers: continue
         if not os.path.isfile(os.path.join(build, n + ".exe")): ap.error("build/%s.exe missing (run make)" % n)
-    modes = {"std": "std", "adm": "adm", "both": "adm,std"}[a.mode]
+    modes = {"std": "std", "adm": "adm", "user": "user", "both": "adm,std", "all": "adm,std,user"}[a.mode]
     if os.path.exists(a.out_dir): shutil.rmtree(a.out_dir)
     b = os.path.join(a.out_dir, "bin"); os.makedirs(b)
     for n in names:
         if n not in helpers: shutil.copy(os.path.join(build, n + ".exe"), b)
-    for h in ("w32k_runas.exe", "w32k_probe.exe"):
+    for h in ("w32k_runas.exe", "w32k_probe.exe", "w32k_gdiinit.exe"):
         src = os.path.join(build, "tools", h)
         if not os.path.isfile(src): ap.error("build/tools/%s missing (run make)" % h)
         shutil.copy(src, b)
     shutil.copy(os.path.join(HERE, "guest", "runner.ps1"), a.out_dir)
     open(os.path.join(a.out_dir, "list.txt"), "w", newline="\r\n").write("\n".join(names) + "\n")
     if a.filter: open(os.path.join(a.out_dir, "filter.txt"), "w").write(a.filter)
+    slow = {n: t for n, t in SLOW_TIMEOUTS.items() if n in names and t > a.timeout}
+    if slow:
+        open(os.path.join(a.out_dir, "timeouts.txt"), "w", newline="\r\n").write("".join("%s %d\n" % kv for kv in sorted(slow.items())))
     open(os.path.join(a.out_dir, "run.cmd"), "w", newline="\r\n").write(
         RUN_CMD.format(modes=modes, timeout=a.timeout, full=" -Full" if a.full else ""))
+    if slow: print("per-exe timeout floors: " + ", ".join("%s=%ds" % kv for kv in sorted(slow.items())))
     print("payload %s: %d exes, modes %s, timeout %ds" % (a.out_dir, len(names), modes, a.timeout))
 
 if __name__ == "__main__":

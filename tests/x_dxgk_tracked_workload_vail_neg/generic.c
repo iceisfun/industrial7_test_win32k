@@ -49,6 +49,7 @@ static void t_wild_pointers(int sc) {
     XRESOLVE(f, sc, 0); ULONG_PTR a[8];
     XMODEL(sc, XS_WILD0, w0); XMODEL(sc, XS_WILD_ALL, w1);
     for (int v = 0; v < NWILD; v++) {
+        if (x_wild_is_readable(v)) { t_info("kind %d is readable memory here, not tested", v); continue; }
         x_args(XS_WILD0, 0, v, a);    X_ST(x_call(sc, 0, a), w0, "%s(unreadable first argument, kind %d)", xsc_tab[sc].nt, v);
         x_args(XS_WILD_ALL, 0, v, a); X_ST(x_call(sc, 0, a), w1, "%s(unreadable value in every argument, kind %d)", xsc_tab[sc].nt, v);
     }
@@ -57,6 +58,7 @@ static void t_wild_later(int sc) {
     XRESOLVE(f, sc, 0); ULONG_PTR a[8];
     XMODEL(sc, XS_WILDN, w);
     for (int pos = 1; pos < 8; pos++) for (int v = 0; v < NWILD; v += 3) {
+        if (x_wild_is_readable(v)) { t_info("kind %d is readable memory here, not tested (argument %d)", v, pos); continue; }
         x_args(XS_WILDN, pos, v, a);
         X_ST(x_call(sc, 0, a), w, "%s(unreadable argument %d, kind %d)", xsc_tab[sc].nt, pos, v);
     }

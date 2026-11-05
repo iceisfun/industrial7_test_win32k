@@ -5,44 +5,44 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 
 ## Size
 
-- Areas: 103 (85 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
-- Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16501
+- Areas: 112 (94 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
+- Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16211
 
 ## Tests by category (area name prefix)
 
 | Prefix | Areas | Tests | What |
 |---|---|---|---|
-| x_ | 14 | 3249 | extended negative and matrix areas |
-| gdi_ | 12 | 2954 | GDI objects and drawing |
+| x_ | 22 | 3272 | extended negative and matrix areas |
+| gdi_ | 13 | 2964 | GDI objects and drawing |
 | r2_ | 12 | 1766 | second-round matrices (internals, tables, quotas, display) |
-| gap_ | 12 | 1430 | gap-fill areas for syscall families |
+| gap_ | 12 | 1434 | gap-fill areas for syscall families |
 | user_ | 3 | 980 | USER handle table, shared info, desktop heap |
 | win_ | 3 | 690 | window creation, position, properties |
-| win32k_ | 2 | 613 | mitigation policy, module and system information |
+| win32k_ | 2 | 642 | mitigation policy, module and system information |
 | msg_ | 3 | 512 | messages, timers, atoms |
-| raw_ | 1 | 424 | raw input, touch, pointer |
-| dx_ | 18 | 380 | destructive or state-changing (guarded, not part of the Windows 10 runs) |
+| raw_ | 1 | 429 | raw input, touch, pointer |
 | ime_ | 1 | 333 | IME, hotkeys, misc |
 | cursor_ | 1 | 273 | cursors, icons, menus |
 | paint_ | 1 | 272 | painting, DC cache, regions |
 | display_ | 1 | 247 | monitors and DPI |
-| focus_ | 1 | 215 | focus, capture, attach |
+| focus_ | 1 | 220 | focus, capture, attach |
+| clipboard_ | 1 | 215 | clipboard and DDE |
 | process_ | 1 | 214 | process and session cleanup |
-| clipboard_ | 1 | 203 | clipboard and DDE |
 | sysparams_ | 1 | 196 | system parameters, colors, metrics |
-| sc_ | 3 | 184 | syscall layer (stubs, raw calls, dispatch) |
+| sc_ | 3 | 185 | syscall layer (stubs, raw calls, dispatch) |
 | scroll_ | 1 | 171 | scroll bars and structures |
 | dcomp_ | 1 | 166 | composition, flip objects, DxgKrnl negatives |
 | winsta_ | 1 | 163 | window stations and desktops |
 | class_ | 1 | 147 | window class registration |
 | quota_ | 1 | 144 | quotas and limits |
-| kbd_ | 1 | 139 | keyboard layouts and state |
+| kbd_ | 1 | 140 | keyboard layouts and state |
 | gui_ | 1 | 123 | GUI thread conversion |
 | hooks_ | 1 | 96 | hooks and win events |
 | kcb_ | 1 | 72 | kernel callbacks |
 | teb_ | 1 | 70 | TEB/PEB win32 fields |
 | kprobe_ | 1 | 66 | user-pointer probing |
 | core_ | 1 | 9 | harness self-test |
+| dx_ | 18 | 0 | destructive or state-changing (guarded, not part of the Windows 10 runs) |
 
 ## Syscall coverage
 
@@ -51,9 +51,7 @@ Win32u service table: 1316 syscalls. Levels of evidence are explained in `COVERA
 | Level | Syscalls | Share |
 |---|---|---|
 | Direct (a test calls the `Nt*` stub) | 916 | 69.6% |
-| Statically mapped route only | 2 | 0.2% |
-| Route reaches it, including those also direct | 500 | 38.0% |
-| Neither | 398 | 30.2% |
+| Not called directly | 400 | 30.4% |
 | Witnessed kernel entry | not measured | |
 
 176 of the direct syscalls are thin (one call site or at most three checks).
@@ -64,8 +62,10 @@ Pass = tests - failed - skipped. Skips are conditional and carry a reason (`docs
 
 | Mode | Areas | Tests | Pass | Fail | Skip | Checks passed |
 |---|---|---|---|---|---|---|
-| adm (elevated Administrator token) | 85 | 16121 | 16070 | 0 | 51 | 374769 |
-| std (unprivileged token) | 85 | 16121 | 16008 | 0 | 113 | 374289 |
+| adm (elevated Administrator token) | 86 | 16211 | 16172 | 0 | 39 | 391028 |
+| std (unprivileged token) | 86 | 16211 | 16110 | 0 | 101 | 390636 |
+
+Areas without a Windows 10 result: x_layered_layered_attr_state_style, x_layered_layered_attr_ulw_child_xproc, x_layered_layered_attr_validation, x_ntqip_qip_basic_quota_handles, x_ntqip_qip_debug_protocol_invalid, x_ntqip_qip_image_session_peb, x_ntqip_qip_mitigation_policy_job_energy, x_ntqip_qip_sched_security
 
 ## Determinism
 
@@ -73,6 +73,7 @@ Pass = tests - failed - skipped. Skips are conditional and carry a reason (`docs
 |---|---|---|---|---|
 | standard areas, both modes, per-test results and printed lines | 3 | 70 | 12725 | 0 |
 | x_ areas, both modes, per-test results and printed lines | 3 | 14 | 3249 | 0 |
+| pass 3 build, 86 areas, adm+std+user, f2a vs f2b (f2c incomplete) | 2 | 86 | 16211 | 19 (std 13 lines, user 6 lines; adm 0) |
 
 See `results/win10/DETERMINISM.md` for the method and what was fixed to get there.
 

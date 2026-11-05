@@ -62,6 +62,19 @@ int x_model(int sc, enum xshape sh, LONG *want, const char **skip_reason);
 /* Builds an argument vector of a shape (fresh blocks each time). */
 #define X_NWILD 8
 void x_args(enum xshape sh, int pos, int variant, ULONG_PTR a[8]);   /* pos: the argument index for the BLOCKN/WILDN shapes; variant: which unreadable value (0..X_NWILD-1) */
+/* A fresh committed PAGE_NOACCESS page held until x_noaccess_end(); x_noaccess_begin() returns 0 (a fixture failure,
+ * never a pass) when the allocation or the VirtualQuery of it does not show a committed no-access page. Passing the
+ * variant X_WILD_NOACCESS to x_args puts that page's address wherever an unreadable value goes. */
+#define X_WILD_NOACCESS 100
+int x_noaccess_begin(void);
+void x_noaccess_end(void);
+void *x_noaccess_ptr(void);
+/* Mapping state of an address by VirtualQuery: usable = committed and neither no-access nor guard. */
+int x_addr_usable(ULONG_PTR a);
+const char *x_addr_state(ULONG_PTR a);
+/* The literal values behind the unreadable kinds 0..X_NWILD-1 (kind 3 is a released region, so it is a fresh address). */
+ULONG_PTR x_wild_value(int kind);
+int x_wild_is_readable(int kind);   /* 1 when the literal of that kind is readable memory here (never for the released-region kind) */
 /* 1 = administrator-class token at high integrity, 0 = medium-or-lower integrity token, -1 = mixed. */
 int x_privileged(void);
 /* Calls through win32u (via == 0) or gdi32 (via == 1). */

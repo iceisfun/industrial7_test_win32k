@@ -293,7 +293,8 @@ TEST(clipboard_dde_seq_close_after_change_not_decreasing) {
     CHECK(U(CloseClipboard)());                    /* MungeClipData adds CF_LOCALE/CF_TEXT/CF_OEMTEXT */
     DWORD s1 = U(GetClipboardSequenceNumber)();
     CHECK(s1 >= s0);
-    t_note("sequence before close %lu, after close %lu (synthesized entries %lu)", s0, s1, s1 - s0);
+    t_info("sequence before close %lu, after close %lu", s0, s1);
+    t_note("synthesized entries on close %lu", s1 - s0);
 }
 
 static DWORD WINAPI thr_seq(LPVOID p) { *(DWORD *)p = U(GetClipboardSequenceNumber)(); return 0; }

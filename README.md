@@ -2,16 +2,21 @@
 
 > ## STATUS: verified on genuine Windows 10 22H2
 >
-> 103 areas and 16501 tests. The 85 non-`dx_` areas (16121 tests) pass on a genuine Windows 10 22H2 x64 guest
-> (build 19045, interactive session) in both modes, with 0 failed tests:
+> 112 areas. The 86 non-`dx_` areas with a committed `results/win10/*/summary.tsv` row (16211 tests per mode) ran on a genuine
+> Windows 10 22H2 x64 guest (build 19045, interactive session) in adm, std and user (real standard account) mode, with 0
+> failed tests in the committed run. Eight further areas (NtQueryInformationProcess and layered-window) were verified on
+> Windows 10 by their own author (0 failures, identical over three fresh-guest runs); see `docs/NTQIP_LAYERED.md` for their
+> per-area counts and skips. Their results are not yet folded into `results/win10/*/summary.tsv`, so `results/STATS.md`
+> lists them under "Areas without a Windows 10 result" (an input-file gap, not a sign they are unverified).
 >
 > | Mode | Pass | Fail | Skip |
 > |---|---|---|---|
-> | adm (elevated Administrator) | 16070 | 0 | 51 |
-> | std (restricted-admin token) | 16008 | 0 | 113 |
+> | adm (elevated Administrator) | 16172 | 0 | 39 |
+> | std (restricted-admin token) | 16110 | 0 | 101 |
+> | user (real standard account) | 16110 | 0 | 101 |
 >
-> Skips are conditional and carry a printed reason (`docs/WIN10_NOTES.md`). Three repeated runs gave identical
-> per-test results and printed lines (`results/win10/DETERMINISM.md`). The 18 `dx_` areas change system state and
+> Skips are conditional and carry a printed reason (`docs/WIN10_NOTES.md`). A second whole-corpus run differed in
+> three timing-dependent tests (`results/win10/DETERMINISM.md`); determinism over three runs is not yet shown for this build. The 18 `dx_` areas change system state and
 > have not been run on Windows 10. Statistics: `results/STATS.md`; syscall coverage at three levels of evidence
 > (direct, statically mapped route, witnessed kernel entry): `COVERAGE.md`; how to pack, run and parse:
 > `HANDOFF.md`.
@@ -92,7 +97,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | Area | Purpose | Safety | Tests | Win10 skipped adm | Win10 skipped std |
 |---|---|---|---|---|---|
 | class_registration | RegisterClass/atoms, class structures, CallProc handles (NtUserRegisterClassExWOW, GetClassInfo, SetClassLong) | safe (non-destructive) | 147 | 0 | 0 |
-| clipboard_dde | clipboard ownership/formats/sequence, DDE, per-winsta isolation | safe (non-destructive) | 203 | 0 | 0 |
+| clipboard_dde | clipboard ownership/formats/sequence, DDE, per-winsta isolation | safe (non-destructive) | 209 | 0 | 0 |
 | core_k_helpers | self-test of common/k.c helpers | safe (non-destructive) | 9 | 0 | 0 |
 | cursor_icon_menu | cursors, icons, menus, ClipCursor state | safe (non-destructive) | 273 | 0 | 0 |
 | dcomp_flip_dxgk_neg | DComposition / FlipObject / Dxgk / OneCore stubs: stub layout and early-exit negatives | safe (non-destructive) | 166 | 0 | 0 |
@@ -125,13 +130,14 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | gap_06 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 112 | 0 | 0 |
 | gap_07 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 147 | 3 | 3 |
 | gap_08 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 117 | 0 | 0 |
-| gap_09 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 137 | 2 | 2 |
+| gap_09 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 141 | 0 | 0 |
 | gap_10 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 134 | 0 | 0 |
 | gap_11 | coverage gap-fill: syscalls left over by the feature areas | safe (non-destructive) | 66 | 1 | 1 |
 | gdi_bitmaps_dib | bitmaps and DIB sections (section memory, DIBSECTION fields) | safe (non-destructive) | 430 | 0 | 0 |
 | gdi_blit_raster | BitBlt/StretchBlt/raster ops results | safe (non-destructive) | 258 | 0 | 0 |
 | gdi_d3dkmt_dd | D3DKMT thunks, DirectDraw/DxEng syscalls | safe (non-destructive) | 215 | 0 | 0 |
 | gdi_dc_objects | DC creation/selection/save/restore, object types | safe (non-destructive) | 169 | 0 | 0 |
+| gdi_init_order | process GDI/USER initialisation state before and after the first win32k service (fixture exe, relations only) | safe (non-destructive) | 5 | - | - |
 | gdi_dcattr_batching | DC_ATTR pages, GDI TEB batch, flushing | safe (non-destructive) | 143 | 0 | 0 |
 | gdi_font_enum_resources | font enumeration and private font resources | safe (non-destructive) | 187 | 0 | 0 |
 | gdi_font_metrics_text | font creation, text metrics, glyph/text syscalls | safe (non-destructive) | 230 | 1 | 1 |
@@ -139,7 +145,7 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | gdi_metafile_print_neg | metafile/printing syscall negatives | safe (non-destructive) | 204 | 3 | 3 |
 | gdi_paths_xform_draw | paths, transforms, drawing results | safe (non-destructive) | 321 | 0 | 0 |
 | gdi_pens_brushes_palettes | pens, brushes, palettes, BRUSHATTR | safe (non-destructive) | 182 | 0 | 0 |
-| gdi_regions_clip | regions and clipping | safe (non-destructive) | 136 | 0 | 0 |
+| gdi_regions_clip | regions and clipping | safe (non-destructive) | 141 | 0 | 0 |
 | gui_thread_conversion | first-GUI-call thread conversion, TEB/PEB win32 fields (child processes) | safe (non-destructive); child processes | 123 | 0 | 0 |
 | hooks_winevents | SetWindowsHookEx / WinEvent hooks and callbacks | safe (non-destructive) | 96 | 0 | 0 |
 | ime_hotkeys_misc | IME, hotkeys, assorted NtUser queries | safe (non-destructive) | 333 | 0 | 0 |
@@ -189,7 +195,15 @@ Test counts are the registered tests of the built exe. Win10 columns are the ski
 | x_gdi_brush_palette_dib_neg | parameter matrices and consistency for DIB and pattern brushes, nearest palette index, system palette use, colour-correct palette, halftone palettes, StretchDIBits, MonoBitmap and glyph indices | safe (non-destructive) | 162 | 0 | 0 |
 | x_gdi_font_charset_embed | charset per font across GetTextCharset, GetTextCharsetInfo, NtGdiGetCharSet, LOGFONT and FONTSIGNATURE; embedded-font counter; EUDC and font-link switches; remote/merge font attach; EngComputeGlyphSet; PolyTextOutW against ExtTextOutW; direct NtGdiHfontCreate | safe (non-destructive); child processes | 250 | 0 | 0 |
 | x_gdi_region_clip_neg | return-code matrices for the thin clip, elliptic/round-rect region, bounds, unrealize, window-extent and MoveTo syscalls | safe (non-destructive) | 250 | 0 | 0 |
+| x_layered_layered_attr_state_style | layered-window (WS_EX_LAYERED) attribute get/set state and style interaction: colour-key and alpha attribute round trip, style-bit add/remove semantics, redraw-on-change behaviour; see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 113 | 0 | 0 |
+| x_layered_layered_attr_ulw_child_xproc | UpdateLayeredWindowIndirect and layered-attribute cross-process/cross-thread isolation: child-process helpers, UIPI, excluded-window and cross-thread ownership cases; see `docs/NTQIP_LAYERED.md` | safe (non-destructive); child processes | 301 | 0 | 16 (helpers need a medium-integrity child; the restricted token is itself medium) |
+| x_layered_layered_attr_validation | parameter validation of the layered-window attribute and UpdateLayeredWindow syscalls: handle, flag and buffer-shape matrices; see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 142 | 0 | 0 |
 | x_menu_accel_hotkey_lifetime | ownership and lifetime of accelerator tables, menus and hotkeys: create/copy/destroy of tables from other threads and processes (handle forms, buffers, wrong object kinds), EndMenu on and off the menu-owning thread, SetMenuFlagRtoL on menus of other threads, processes and desktops and after window/parent destruction, RegisterHotKey ownership between threads, hotkey release on thread and process end, IME hotkey table shared across threads and processes, MNDragOver/MNDragLeave with and without a tracked drag-drop menu; popup menus opened off a timer, no input sent | safe (non-destructive); child processes, worker threads, an extra desktop | 169 | 0 | 0 |
+| x_ntqip_qip_basic_quota_handles | NtQueryInformationProcess classes 0-4, 14, 15, 20, 38, 42, 51, 54, 55, 58, 71 (basic info, quota, io counters, vm counters, handle count, working set watch, etc.); see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 113 | 0 | 1 (working set watch needs a privilege the restricted token lacks) |
+| x_ntqip_qip_debug_protocol_invalid | NtQueryInformationProcess length/alignment/handle protocol swept over every information class, handle kind and invalid class id; see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 224 | 0 | 0 |
+| x_ntqip_qip_image_session_peb | NtQueryInformationProcess classes 19, 21, 23, 24, 26-28, 37, 43, 44, 47, 49, 50, 60, 66, 67, 89, 97 (wow64, affinity, device map, session, image name, PEB-derived fields); see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 171 | 0 | 5 |
+| x_ntqip_qip_mitigation_policy_job_energy | NtQueryInformationProcess classes 52, 64, 65, 69, 70, 72, 73, 75-77, 79, 81, 82, 84, 85, 88 (mitigation policy, job, energy/telemetry); see `docs/NTQIP_LAYERED.md` | safe (non-destructive); child processes | 114 | 0 | 5 (coverage blob refused for the restricted token; test process already inside a job) |
+| x_ntqip_qip_sched_security | NtQueryInformationProcess classes 10, 12, 18, 22, 29, 33, 34, 36, 39, 45, 46, 59, 61, 74, 87, 92, 94, 96 (scheduling, priority, security-relevant classes); see `docs/NTQIP_LAYERED.md` | safe (non-destructive) | 145 | 0 | 1 (the session-0 service process cannot be opened by the restricted token) |
 | x_opm_ddcci_neg | rejection matrices for the OPM protected-output, certificate, DDC/CI monitor-control and gamma-capability syscalls: exact statuses for bogus handles, buffer sizes, device names and pointers; physical-monitor handle lifetime; dxva2 error values | safe (non-destructive); never creates a protected output or writes a monitor setting | 241 | 0 | 0 |
 | x_pointer_touch_inertia_neg | argument screening of the pointer-info list, proprietary-id, frame-discard and pointer-injection syscalls (kind/size table, id, count and overflow limits, unwritable pointers, synthetic touch and pen devices in child processes, no input injected); touch-window capability round trip with per-window isolation and other-thread refusals; touch validation status; compositor-only manipulation and inertia entry points and the ReportInertia screening order; mouse-in-pointer promotion, touch pad registration, himetric scale factors, raw-mouse marking, mouse input state | safe (non-destructive); child processes, worker threads | 246 | 0 | 0 |
 | x_thread_desktop_heap_multi | per-thread versus per-process win32k state: queue change/wake bits (NtUserGetQueueStatusReadonly against GetQueueStatus) across worker threads, RealWaitMessageEx and RealInternalGetMessage on the caller's own queue, message extra info, focus/active/capture/caret per thread and not inherited, NavigateFocus and ClearForeground denials, CheckProcessSession, CheckAccessForIntegrityLevel and NotifyProcessCreate from threads and child processes, DisableProcessWindowFiltering in children, per-window resize layout synchronisation flag (Begin/Completed, Enable/Is, ConfirmResizeCommit), thread desktop and DPI context, and what is gone when a thread or child process ends (windows, hooks, carets, user-object counts) versus what stays (GDI objects, menus, classes) | safe (non-destructive); child processes, worker threads | 163 | 0 | 0 |

@@ -406,7 +406,7 @@ TEST(gdi_d3dkmt_dd_openhdc_nt_handle_count_roundtrip) {
     dk_close_ok(o.hAdapter);
     U(ReleaseDC)(NULL, dc);
     GetProcessHandleCount(GetCurrentProcess(), &c2);
-    t_note("NT handle count before=%lu open=%lu closed=%lu", (unsigned long)c0, (unsigned long)c1, (unsigned long)c2);
+    t_info("NT handle count before=%lu open=%lu closed=%lu", (unsigned long)c0, (unsigned long)c1, (unsigned long)c2);
 }
 
 /* ---- CloseAdapter validation ---------------------------------------------------------------------- */

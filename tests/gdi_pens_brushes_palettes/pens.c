@@ -40,7 +40,8 @@ TEST(pens_createpen_handle_type_bits) {
     /* ExtCreatePen ORs 0x300000 (old-style pen) into the handle type */
     CHECKF(PB_T7(p) == T7_PEN, "type7 0x%x", PB_T7(p));
     CHECK(!PB_STOCKED(p));
-    CHECK(((ULONG_PTR)p >> 32) == 0);
+    /* a GDI handle is a 32-bit value that the kernel hands out sign-extended: the upper half is all zero or all one */
+    CHECK((LONG_PTR)p == (LONG_PTR)(int)(unsigned)(ULONG_PTR)p);
     pb_del(p);
 }
 TEST(pens_createpen_cell_state) {

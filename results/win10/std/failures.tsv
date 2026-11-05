@@ -1,12 +1,6 @@
 exe	detail
-display_monitors_dpi	SKIP needs two monitors
+display_monitors_dpi	SKIP needs two monitors, the system has one and a virtual second display cannot be created without a display driver
 focus_capture_attach	SKIP not foreground
-gap_07	SKIP no pointer devices
-gap_07	SKIP no pointer devices
-gap_07	SKIP no pointer devices
-gap_09	SKIP cannot open the window station directory (status 0xc0000022)
-gap_09	SKIP absolute open denied (error 5)
-gap_11	SKIP none to query
 gdi_font_metrics_text	SKIP face wingdings not mapped (not installed)
 gdi_handle_table	SKIP never got the same slot back
 gdi_handle_table	SKIP handle count not asserted for wmf
@@ -19,9 +13,8 @@ gdi_handle_table	SKIP rgn_rect: the deleted object's cell is still held by the h
 gdi_metafile_print_neg	SKIP missing export: n > 0
 gdi_metafile_print_neg	SKIP the display driver reports no pixel formats to the kernel (no OpenGL support in this configuration)
 gdi_metafile_print_neg	SKIP the display driver has no OpenGL support here: SetPixelFormat succeeds but the format is not retained
-kbd_layouts_state	SKIP only 1 layout
-kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token: no cache is published
-kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this (restricted) token
+kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token: no cache is published
+kbd_layouts_state	SKIP GetAsyncKeyState is refused with ERROR_ACCESS_DENIED for this unprivileged token
 r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable
 r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable: a valid request would create a device
 r2_input_pointer_rim_state	SKIP inputInjection is granted to this process on this system, the denied path is not reachable: the descriptor would be read
@@ -41,12 +34,7 @@ r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unpr
 r2_winsta_activation_group_session	SKIP directory not readable
 r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
 r2_winsta_activation_group_session	SKIP CreateWindowStation refused for the unprivileged token (gle=5)
-raw_input_touch_pointer	SKIP no HID device with preparsed data
-raw_input_touch_pointer	SKIP no HID device
 raw_input_touch_pointer	SKIP devices present
-raw_input_touch_pointer	SKIP no pointer devices
-raw_input_touch_pointer	SKIP no pointer devices
-raw_input_touch_pointer	SKIP no pointer devices
 user_wnd_desktop_heap	SKIP HWND_TOP does not move a window that owns a default IME window
 win32k_mitigation	SKIP no audit attribute
 win32k_mitigation	SKIP no audit attribute
@@ -106,3 +94,9 @@ winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integ
 winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
 winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
 winsta_desktop_objects	SKIP object creation denied (error 5): needs a high-integrity administrator token
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a filled block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP creating thunk: a garbage block may create an object
+x_d3dkmt_badhandle_matrix_a	SKIP zero block creates an object; covered by the keyed mutex lifecycle tests

@@ -7,6 +7,7 @@
  * NTSTATUS->Win32 error follow the object manager rules). */
 #include "g9.h"
 #include <winternl.h>
+#include <sddl.h>
 
 UDECL(HWINSTA, NtUserOpenWindowStation, (OBJECT_ATTRIBUTES *oa, ACCESS_MASK access));
 
@@ -181,51 +182,167 @@ TEST(gap9_winsta_closed_handle_not_usable) {
     EXPECT_ERR(0);       /* Windows 10 fails the call without setting a last error for a closed handle */
 }
 
-TEST(gap9_winsta_direct_absolute_path) {
-    REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation));
-    /* no root directory: an absolute object name is resolved by the object manager in the session namespace */
-    WCHAR path[] = L"\\Windows\\WindowStations\\WinSta0";
-    UNICODE_STRING us; us.Buffer = path; us.Length = (USHORT)(lstrlenW(path) * 2); us.MaximumLength = us.Length + 2;
+/* Object names for the raw syscall.  user32 opens the station relative to the session's window station directory
+ * ("\Sessions\<n>\Windows\WindowStations"); the name "\Windows\WindowStations" resolves in the system (session 0)
+ * namespace instead, where the interactive station is not reachable for any token. */
+typedef LONG (NTAPI *G9_OpenDir_t)(PHANDLE, ACCESS_MASK, POBJECT_ATTRIBUTES);
+#define G9_DIR_TRAVERSE 2u
+#define G9_DIR_QUERY    1u
+#define G9_STATUS_ACCESS_DENIED ((LONG)0xC0000022)
+static void g9_session_dir(WCHAR *out) { DWORD sid = 0; ProcessIdToSessionId(GetCurrentProcessId(), &sid); wsprintfW(out, L"\\Sessions\\%lu\\Windows\\WindowStations", sid); }
+static LONG g9_open_dir(const WCHAR *path, ACCESS_MASK acc, HANDLE *out) {
+    G9_OpenDir_t f = (G9_OpenDir_t)t_proc_in("ntdll.dll", "NtOpenDirectoryObject");
+    WCHAR buf[160]; lstrcpyW(buf, path);
+    UNICODE_STRING us; us.Buffer = buf; us.Length = (USHORT)(lstrlenW(buf) * 2); us.MaximumLength = us.Length + 2;
     OBJECT_ATTRIBUTES oa; memset(&oa, 0, sizeof oa);
     oa.Length = sizeof oa; oa.ObjectName = &us; oa.Attributes = OBJ_CASE_INSENSITIVE;
+    *out = NULL;
+    return f ? f(out, acc, &oa) : (LONG)0xC0000002;
+}
+static HWINSTA g9_raw_open(const WCHAR *name, HANDLE root, ACCESS_MASK acc, DWORD *err) {
+    WCHAR buf[200]; lstrcpyW(buf, name);
+    UNICODE_STRING us; us.Buffer = buf; us.Length = (USHORT)(lstrlenW(buf) * 2); us.MaximumLength = us.Length + 2;
+    OBJECT_ATTRIBUTES oa; memset(&oa, 0, sizeof oa);
+    oa.Length = sizeof oa; oa.RootDirectory = root; oa.ObjectName = &us; oa.Attributes = OBJ_CASE_INSENSITIVE;
     SetLastError(0);
-    HWINSTA h = UN(NtUserOpenWindowStation)(&oa, WINSTA_READATTRIBUTES);
-    if (!h) {
-        /* Observed on Windows 10: a raw open of the absolute name (with or without an elevated token) is denied, user32 opens
-         * the station relative to a directory handle instead; see gap9_winsta_direct_rooted_path */
-        DWORD e = GetLastError();
-        t_note("absolute open failed, error %lu", e);
-        t_skip("absolute open denied (error %lu)", e);
-        return;
-    }
+    HWINSTA h = UN(NtUserOpenWindowStation)(&oa, acc);
+    *err = GetLastError();
+    return h;
+}
+
+TEST(gap9_winsta_direct_absolute_path) {
+    REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation));
+    /* no root directory: the absolute name is resolved by the object manager; the session's own namespace path works */
+    WCHAR path[200], dir[160];
+    g9_session_dir(dir); lstrcpyW(path, dir); lstrcatW(path, L"\\WinSta0");
+    DWORD e;
+    HWINSTA h = g9_raw_open(path, NULL, WINSTA_READATTRIBUTES, &e);
+    CHECKF(h != NULL, "raw absolute open failed, error %lu", e);
+    if (!h) return;
     CHECK(type_is((HANDLE)h, L"WindowStation") != 0);
-    EXPECT_WSTR(path, L"\\Windows\\WindowStations\\WinSta0");   /* only the Service-... name is rewritten */
+    CHECK(granted((HANDLE)h) & WINSTA_READATTRIBUTES);
     U(CloseWindowStation)(h);
 }
 
 TEST(gap9_winsta_direct_rooted_path) {
     REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation));
-    typedef LONG (NTAPI *OpenDir_t)(PHANDLE, ACCESS_MASK, POBJECT_ATTRIBUTES);
-    OpenDir_t open_dir = (OpenDir_t)t_proc_in("ntdll.dll", "NtOpenDirectoryObject");
-    REQUIRE(open_dir);
-    WCHAR dpath[] = L"\\Windows\\WindowStations";
-    UNICODE_STRING du; du.Buffer = dpath; du.Length = (USHORT)(lstrlenW(dpath) * 2); du.MaximumLength = du.Length + 2;
-    OBJECT_ATTRIBUTES da; memset(&da, 0, sizeof da);
-    da.Length = sizeof da; da.ObjectName = &du; da.Attributes = OBJ_CASE_INSENSITIVE;
+    WCHAR dir[160]; g9_session_dir(dir);
     HANDLE root = NULL;
-    LONG st = open_dir(&root, 3 /* DIRECTORY_QUERY | DIRECTORY_TRAVERSE */, &da);
-    if (st < 0) { t_skip("cannot open the window station directory (status 0x%lx)", (unsigned long)st); return; }
-    WCHAR name[] = L"WinSta0";
-    UNICODE_STRING us; us.Buffer = name; us.Length = (USHORT)(lstrlenW(name) * 2); us.MaximumLength = us.Length + 2;
-    OBJECT_ATTRIBUTES oa; memset(&oa, 0, sizeof oa);
-    oa.Length = sizeof oa; oa.RootDirectory = root; oa.ObjectName = &us; oa.Attributes = OBJ_CASE_INSENSITIVE;
-    SetLastError(0);
-    HWINSTA h = UN(NtUserOpenWindowStation)(&oa, WINSTA_READATTRIBUTES);
-    DWORD e = GetLastError();
+    LONG st = g9_open_dir(dir, G9_DIR_TRAVERSE, &root);          /* traverse is enough for a rooted open, for both tokens */
+    CHECKF(st >= 0, "session window station directory not openable, status %lu", (unsigned long)(ULONG)st);
+    if (st < 0) return;
+    DWORD e;
+    HWINSTA h = g9_raw_open(L"WinSta0", root, WINSTA_READATTRIBUTES, &e);
     CloseHandle(root);
-    if (!h) { t_note("rooted open failed, error %lu", e); t_skip("rooted open denied (error %lu)", e); return; }
+    CHECKF(h != NULL, "raw rooted open failed, error %lu", e);
+    if (!h) return;
     CHECK(type_is((HANDLE)h, L"WindowStation") != 0);
     U(CloseWindowStation)(h);
+}
+
+TEST(gap9_winsta_direct_absolute_global_path_denied) {
+    REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation));
+    /* "\Windows\WindowStations\WinSta0" is the system namespace's station: refused with access denied whatever the
+     * access mask and attributes, for the administrator and the restricted token alike */
+    static const ACCESS_MASK acc[] = { WINSTA_READATTRIBUTES, 0x37F, MAXIMUM_ALLOWED, 0 };
+    for (unsigned i = 0; i < sizeof acc / sizeof acc[0]; i++) {
+        DWORD e;
+        HWINSTA h = g9_raw_open(L"\\Windows\\WindowStations\\WinSta0", NULL, acc[i], &e);
+        CHECKF(h == NULL, "access 0x%lx unexpectedly opened", (unsigned long)acc[i]);
+        if (h) { U(CloseWindowStation)(h); continue; }
+        CHECKF(e == ERROR_ACCESS_DENIED, "access 0x%lx error %lu", (unsigned long)acc[i], e);
+    }
+}
+
+TEST(gap9_winsta_direct_rooted_global_directory_denied) {
+    REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation));
+    HANDLE root = NULL;
+    LONG st = g9_open_dir(L"\\Windows\\WindowStations", G9_DIR_TRAVERSE, &root);
+    CHECKF(st >= 0, "global directory not openable for traverse, status %lu", (unsigned long)(ULONG)st);
+    if (st < 0) return;
+    DWORD e;
+    HWINSTA h = g9_raw_open(L"WinSta0", root, WINSTA_READATTRIBUTES, &e);   /* the directory is reachable, the station in it is not */
+    CHECK(h == NULL);
+    if (h) U(CloseWindowStation)(h); else EXPECT_ERR(ERROR_ACCESS_DENIED);
+    CloseHandle(root);
+}
+
+TEST(gap9_winsta_direct_directory_query_access_depends_on_token) {
+    REQUIRE(UN(NtUserOpenWindowStation));
+    /* querying the window station directories needs administrator rights: the High integrity administrator token may,
+     * the Medium restricted token is refused with STATUS_ACCESS_DENIED (traverse alone is granted to both) */
+    HANDLE a = NULL, b = NULL;
+    WCHAR dir[160]; g9_session_dir(dir);
+    LONG s1 = g9_open_dir(dir, G9_DIR_QUERY | G9_DIR_TRAVERSE, &a);
+    LONG s2 = g9_open_dir(L"\\Windows\\WindowStations", G9_DIR_QUERY | G9_DIR_TRAVERSE, &b);
+    if (a) CloseHandle(a);
+    if (b) CloseHandle(b);
+    if (k_integrity_level() >= SECURITY_MANDATORY_HIGH_RID) {
+        CHECKF(s1 >= 0, "session directory query status %lu", (unsigned long)(ULONG)s1);
+        CHECKF(s2 >= 0, "global directory query status %lu", (unsigned long)(ULONG)s2);
+    } else {
+        CHECK(s1 == G9_STATUS_ACCESS_DENIED);
+        CHECK(s2 == G9_STATUS_ACCESS_DENIED);
+    }
+}
+
+/* An impersonation token restricted to a SID that no window station ACL grants: the station's own access check refuses. */
+static HANDLE g9_restricted_impersonation(int unrelated_sid) {
+    HANDLE pt = NULL, rt = NULL, it = NULL;
+    if (!OpenProcessToken(GetCurrentProcess(), TOKEN_DUPLICATE | TOKEN_QUERY | TOKEN_ASSIGN_PRIMARY, &pt)) return NULL;
+    BYTE sid[SECURITY_MAX_SID_SIZE]; DWORD n = sizeof sid;
+    SID_AND_ATTRIBUTES rs; memset(&rs, 0, sizeof rs); rs.Sid = sid;
+    if (unrelated_sid) {
+        SID_IDENTIFIER_AUTHORITY nt = SECURITY_NT_AUTHORITY;
+        PSID s = NULL;
+        if (!AllocateAndInitializeSid(&nt, 5, 21, 1111111111, 2222222222u, 3333333333u, 4444, 0, 0, 0, &s)) { CloseHandle(pt); return NULL; }
+        CopySid(sizeof sid, sid, s); FreeSid(s);
+    } else if (!CreateWellKnownSid(WinWorldSid, NULL, sid, &n)) { CloseHandle(pt); return NULL; }
+    if (CreateRestrictedToken(pt, 0, 0, NULL, 0, NULL, 1, &rs, &rt)) {
+        if (!DuplicateTokenEx(rt, TOKEN_ALL_ACCESS, NULL, SecurityImpersonation, TokenImpersonation, &it)) it = NULL;
+        CloseHandle(rt);
+    }
+    CloseHandle(pt);
+    return it;
+}
+
+TEST(gap9_winsta_direct_open_denied_for_restricted_impersonation) {
+    REQUIRE(UN(NtUserOpenWindowStation)); REQUIRE(U(CloseWindowStation)); REQUIRE(U(OpenWindowStationW));
+    WCHAR dir[160], path[200];
+    g9_session_dir(dir); lstrcpyW(path, dir); lstrcatW(path, L"\\WinSta0");
+    HANDLE root = NULL;
+    LONG st = g9_open_dir(dir, G9_DIR_TRAVERSE, &root);
+    CHECKF(st >= 0, "session window station directory not openable, status %lu", (unsigned long)(ULONG)st);
+    if (st < 0) return;
+    for (int kind = 0; kind < 2; kind++) {
+        HANDLE it = g9_restricted_impersonation(kind);
+        CHECKF(it != NULL, "restricted impersonation token (%d) not created, error %lu", kind, GetLastError());
+        if (!it) continue;
+        CHECK(SetThreadToken(NULL, it));
+        DWORD ea, er, eu;
+        HWINSTA ha = g9_raw_open(path, NULL, WINSTA_READATTRIBUTES, &ea);
+        HWINSTA hr = g9_raw_open(L"WinSta0", root, WINSTA_READATTRIBUTES, &er);
+        SetLastError(0);
+        HWINSTA hu = U(OpenWindowStationW)(L"WinSta0", FALSE, WINSTA_READATTRIBUTES);
+        eu = GetLastError();
+        SetThreadToken(NULL, NULL);
+        CHECKF(ha == NULL, "absolute open with restricted token %d succeeded", kind);
+        if (!ha) CHECKF(ea == ERROR_ACCESS_DENIED, "absolute error %lu", ea);
+        CHECKF(hr == NULL, "rooted open with restricted token %d succeeded", kind);
+        if (!hr) CHECKF(er == ERROR_ACCESS_DENIED, "rooted error %lu", er);
+        CHECKF(hu == NULL, "user32 open with restricted token %d succeeded", kind);
+        if (!hu) CHECKF(eu == ERROR_ACCESS_DENIED, "user32 error %lu", eu);
+        if (ha) U(CloseWindowStation)(ha);
+        if (hr) U(CloseWindowStation)(hr);
+        if (hu) U(CloseWindowStation)(hu);
+        /* the same calls succeed again once the thread has reverted */
+        DWORD e;
+        HWINSTA h = g9_raw_open(path, NULL, WINSTA_READATTRIBUTES, &e);
+        CHECKF(h != NULL, "open after revert failed, error %lu", e);
+        if (h) U(CloseWindowStation)(h);
+        CloseHandle(it);
+    }
+    CloseHandle(root);
 }
 
 TEST(gap9_winsta_direct_absolute_path_missing) {

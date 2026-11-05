@@ -510,7 +510,7 @@ TEST(user_wnd_desktop_heap_rel_message_only_parent_not_desktop) {
     HWND par = wv_link(&w, W_PARENT);
     CHECK(par != NULL && par != (HWND)(ULONG_PTR)-1);
     CHECK(par != U(GetDesktopWindow)());
-    t_note("message-only parent hwnd %p (desktop %p)", par, U(GetDesktopWindow)());
+    t_info("message-only parent hwnd %p (desktop %p)", par, U(GetDesktopWindow)());
     CHECK(!U(IsWindowVisible)(h));
     END();
 }

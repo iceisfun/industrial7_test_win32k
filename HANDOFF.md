@@ -6,16 +6,24 @@ into per-area and per-test results. The tooling described here was verified end 
 
 ## Where things stand
 
-- 103 areas, 16501 tests (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
-- The 85 other areas (16121 tests) were run on Windows 10 22H2 in both modes:
+- 112 areas (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose. Eight areas
+  (NtQueryInformationProcess and layered-window, merged from master) were verified on Windows 10 by their own author;
+  see `docs/NTQIP_LAYERED.md` for the per-area counts and skips. Their results are not yet folded into
+  `results/win10/*/summary.tsv`, so `results/STATS.md` still lists them under "Areas without a Windows 10 result"
+  (a `tools/stats.py` input gap, not a sign they are unverified).
+- The 86 other areas (16211 tests per mode, build 19045) were run on Windows 10 22H2 in adm, std and user mode (complete run f2a, the
+  committed summaries); measured:
 
   | Mode | Areas | Tests | Pass | Fail | Skip |
   |---|---|---|---|---|---|
-  | adm | 85 | 16121 | 16070 | 0 | 51 |
-  | std | 85 | 16121 | 16008 | 0 | 113 |
+  | adm | 86 | 16211 | 16172 | 0 | 39 |
+  | std | 86 | 16211 | 16110 | 0 | 101 |
+  | user (real standard account) | 86 | 16211 | 16110 | 0 | 101 |
 
-- Every skip is conditional, has a printed reason and is stable (`docs/WIN10_NOTES.md`).
-- Three runs of the same build gave identical per-test results and printed lines (`results/win10/DETERMINISM.md`).
+- Every skip is conditional and has a printed reason (`docs/WIN10_NOTES.md`).
+- Determinism is NOT fully shown for this build: two complete runs (f2a, f2b) differ in three timing-dependent tests (one FAIL in
+  std, one in user, one conditional skip); the third run is incomplete. See `results/win10/DETERMINISM.md`. An older build was
+  identical over three runs.
 - A test that fails on genuine Windows 10 is a bug in the test (wrong expectation, environment dependence or flakiness).
   Fix the test so that it asserts what Windows does; do not weaken a check into meaninglessness.
 
@@ -41,14 +49,14 @@ running any of them, and a test-name substring as its only argument to run a sub
     python3 tools/win10_pack.py <payload_dir> --exes a,b,c --mode std --timeout 120
     python3 tools/win10_pack.py <payload_dir> --exes x_clipboard_state_matrix --filter keyed --mode adm
 
-Options: `--mode std|adm|both` (default adm), `--timeout SECS` per exe (default 300; the process tree is killed and
+Options: `--mode std|adm|user|both|all` (default adm; both = adm,std; all = adm,std,user), `--timeout SECS` per exe (default 300; the process tree is killed and
 the exe reported as TIMEOUT), `--filter SUBSTR` test-name substring passed to every exe, `--full` also send the
 `RUN` lines, `--destructive` allow `dx_*` areas (refused otherwise). The payload holds `bin/` (the exes plus the two
 helper exes), `list.txt`, `runner.ps1` and `run.cmd`.
 
 Keep a payload under about ten minutes of test time, because a boot costs about a minute and a half and a hung guest
 should not hold a slot for long. The standard split used for the full corpus is three payloads: the short areas,
-`quota_limits` alone (about three minutes), and re-runs of anything fixed late. The slowest other areas take under a
+`quota_limits` alone (about 5 to 11 minutes per mode on a real guest; win10_pack.py gives it a 1200 s per-exe timeout floor automatically), and re-runs of anything fixed late. The slowest other areas take under a
 minute.
 
 ## Run
@@ -69,13 +77,14 @@ Per-test output also stays in the guest; COM1 carries OK/FAIL/SKIP/NOTE/SUMMARY 
     python3 tools/win10_results.py serial.log                  # one row per (mode, exe): tests failed skipped checks rc secs status
     python3 tools/win10_results.py serial.log --tests          # one row per test: mode exe test OK|FAIL|SKIP
     python3 tools/win10_results.py serial.log --failures       # the FAIL/SKIP detail lines
+    python3 tools/win10_compare.py serial.log --across-modes   # tests whose result differs between adm, std and user
     python3 tools/win10_results.py serial.log --format json -o run.json
     python3 tools/test_win10_results.py                        # unit test of the parser
 
 Status is OK (summary seen, exe returned 0 or 1), TIMEOUT, NOSUMMARY (crash), HANG (log stops), MISSING. The exit code
 is 0 when the run finished and every exe is OK.
 
-## The two modes and the restricted-admin token
+## The three modes (adm, std, user) and the restricted-admin token
 
 - **adm** is the interactive session's own token. The built-in Administrator is not filtered by UAC there: High
   integrity, Administrators enabled, 24 privileges including the debug privilege.
@@ -84,7 +93,7 @@ is 0 when the run finished and every exe is OK.
   privilege removed, Administrators and the other powerful built-in aliases set to deny-only, integrity lowered to
   Medium, owner and default DACL reset to the user SID. It starts the child with `CreateProcessAsUser` on
   `WinSta0\Default` in the same session, inside a kill-on-close job. No logon API is used, so the window station and
-  desktop are the interactive ones. This is a restricted-admin token, not a real standard account: it keeps the
+  desktop are the interactive ones (user mode, below, is the real standard account). This is a restricted-admin token, not a real standard account: it keeps the
   administrator's user SID and profile, so behavior that depends on being a genuinely separate unprivileged account
   (own profile, own SID, no admin group membership at all) is not covered by std mode.
 - Verified with `build/tools/w32k_probe.exe`, which prints the identity it runs with (session, window station and
@@ -93,6 +102,36 @@ is 0 when the run finished and every exe is OK.
   `CheckTokenMembership(Administrators)` false; adm has integrity 0x3000 and Administrators enabled.
 - Known limit: the std token keeps the account's user SID and `TokenIsElevated` still reads 1 (the flag cannot be
   cleared on a derived token). No test decides on it; decide on integrity, privileges or group state.
+
+### user mode: a real local standard account
+
+`--mode user` (or `all`) adds a third pass. The runner creates a throwaway local account inside the guest (`net user
+/add`, Users group only, random 24-character password generated at run time, password change disabled) and starts every
+exe with `build/tools/w32k_runas.exe --user <name> --pass <pw> <exe>`, which calls `CreateProcessWithLogonW` with a
+profile, inside a kill-on-close job. The secondary logon service starts the child in the caller's session on the
+caller's window station and desktop (it grants the new logon access to them), so the account has a genuine interactive
+desktop: `WinSta0\Default`, session 1 (no autologon, no reboot, no scheduled task is needed). A plain `Start-Process -Credential` logon was reported to land in a non-interactive window station and
+is not used.
+Before any exe runs, the runner starts `w32k_probe.exe` as the account and accepts it only when it reports a separate
+account (neither the built-in Administrator nor Guest), `is_elevated=0` and window station `WinSta0`; the result is
+framed as `W32K userkind real-user` (or `unavailable`, in which case user mode is skipped and `win10_results.py`
+exits 1). The account is deleted at the end; the guest is thrown away anyway.
+
+What the probe reports in user mode: an account of its own, Medium integrity (0x2000), `TokenIsElevated=0`, elevation
+type default, no restrictions flag, only the standard privileges (change-notify, shutdown, undock, increase working
+set, time zone), Users enabled and Administrators absent from the token, `CheckTokenMembership(Administrators)` false.
+The probe never prints the account name or a machine SID.
+
+Validated on Windows 10 22H2 (build 19045) with 29 areas in all three modes (clipboard_dde, focus_capture_attach, gap_09,
+gdi_dc_objects, gdi_handle_table, kbd_layouts_state, r2_input_pointer_rim_state, r2_winsta_activation_group_session,
+user_handle_table, user_serverinfo_shared, user_wnd_desktop_heap, win32k_modules_sysinfo, winsta_desktop_objects,
+gdi_regions_clip, gdi_pens_brushes_palettes, msg_send_cross_thread, hooks_winevents, win_create_destroy,
+win_position_zorder, class_registration, cursor_icon_menu, sysparams_colors_metrics, gui_thread_conversion,
+process_session_cleanup, msg_queue_post_peek, paint_dc_cache_regions, scroll_info_structs, win_props_styles_queries,
+ime_hotkeys_misc): user results equal std results test by test; `docs/WIN10_NOTES.md` has the details.
+
+Use `python3 tools/win10_compare.py serial.log --across-modes` on a log with several modes to list the tests whose
+result differs between them.
 
 ## Summarize results (the only thing committed)
 

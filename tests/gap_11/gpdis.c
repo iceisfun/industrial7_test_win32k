@@ -7,6 +7,7 @@
  *   success: one 8-byte value is stored through the (probe-clamped) out pointer; return 1.
  * Failure never writes the out pointer. NULL/kernel out pointers are for kprobe_user_pointers only. */
 #include "g11.h"
+#include "synth.h"
 
 #define SENT64 0xA5A5A5A5A5A5A5A5ull
 #define GP_NEED() NtUserGetPointerDeviceInputSpace_pfn gp = (NtUserGetPointerDeviceInputSpace_pfn)g11_nt("NtUserGetPointerDeviceInputSpace"); \
@@ -102,7 +103,8 @@ TEST(gap11_gpdis_enumerated_devices_consistent) {
     GP_NEED();
     REQUIRE(U(GetPointerDevices));
     UINT32 n = 0;
-    if (!U(GetPointerDevices)(&n, NULL) || n == 0) { t_note("no pointer devices (err %lu)", GetLastError()); t_skip("none to query"); return; }
+    SYNTH_AUTO(sy); UINT sn = 0; SYNTH_ENSURE_OR_SKIP(sy, sn);
+    if (!U(GetPointerDevices)(&n, NULL) || n == 0) { t_skip("none to query"); return; }
     if (n > 64) n = 64;
     POINTER_DEVICE_INFO *d = calloc(n, sizeof *d);
     if (!d) { t_skip("no memory"); return; }

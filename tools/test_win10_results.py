@@ -36,4 +36,23 @@ class T(unittest.TestCase):
         self.assertEqual(runs[("adm", "b")]["status"], "NOSUMMARY")
         self.assertEqual(runs[("adm", "c")]["status"], "TIMEOUT")
         self.assertEqual(runs[("std", "d")]["status"], "HANG")
+USERLOG = """W32K begin modes=user exes=2 timeout=60
+W32K mode user
+W32K userkind real-user
+W32K start w32k_probe
+W32K out w32k_probe | PROBE account=other-account
+W32K rc w32k_probe 0 0.1
+W32K start a
+W32K out a | OK   t1
+W32K out a | SUMMARY tests=1 failed=0 skipped=0 checks_pass=1 checks_fail=0
+W32K rc a 0 0.2
+W32K done
+"""
+class U(unittest.TestCase):
+    def test_user_mode(self):
+        r = W.parse(USERLOG); runs = {(x["mode"], x["exe"]): x for x in r["runs"]}
+        self.assertEqual(r["info"]["userkind"], "real-user")
+        self.assertEqual(runs[("user", "a")]["status"], "OK")
+        self.assertEqual(runs[("user", "w32k_probe")]["status"], "OUT")
+        self.assertTrue(r["done"])
 if __name__ == "__main__": unittest.main()
