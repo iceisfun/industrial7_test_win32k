@@ -6,7 +6,11 @@ into per-area and per-test results. The tooling described here was verified end 
 
 ## Where things stand
 
-- 104 areas (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose.
+- 112 areas (`results/STATS.md`). The 18 `dx_` areas change system state and are only run on purpose. Eight areas
+  (NtQueryInformationProcess and layered-window, merged from master) were verified on Windows 10 by their own author;
+  see `docs/NTQIP_LAYERED.md` for the per-area counts and skips. Their results are not yet folded into
+  `results/win10/*/summary.tsv`, so `results/STATS.md` still lists them under "Areas without a Windows 10 result"
+  (a `tools/stats.py` input gap, not a sign they are unverified).
 - The 86 other areas (16211 tests per mode, build 19045) were run on Windows 10 22H2 in adm, std and user mode (complete run f2a, the
   committed summaries); measured:
 

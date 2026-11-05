@@ -5,14 +5,14 @@ summaries under `results/win10/`. Windows 10 means 22H2 x64 (build 19045), one i
 
 ## Size
 
-- Areas: 104 (86 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
+- Areas: 112 (94 run on Windows 10, 18 `dx_` areas that change system state and are not run there)
 - Tests (`TEST()` registrations plus generated ones, counted from the built exes): 16211
 
 ## Tests by category (area name prefix)
 
 | Prefix | Areas | Tests | What |
 |---|---|---|---|
-| x_ | 14 | 3272 | extended negative and matrix areas |
+| x_ | 22 | 3272 | extended negative and matrix areas |
 | gdi_ | 13 | 2964 | GDI objects and drawing |
 | r2_ | 12 | 1766 | second-round matrices (internals, tables, quotas, display) |
 | gap_ | 12 | 1434 | gap-fill areas for syscall families |
@@ -64,6 +64,8 @@ Pass = tests - failed - skipped. Skips are conditional and carry a reason (`docs
 |---|---|---|---|---|---|---|
 | adm (elevated Administrator token) | 86 | 16211 | 16172 | 0 | 39 | 391028 |
 | std (unprivileged token) | 86 | 16211 | 16110 | 0 | 101 | 390636 |
+
+Areas without a Windows 10 result: x_layered_layered_attr_state_style, x_layered_layered_attr_ulw_child_xproc, x_layered_layered_attr_validation, x_ntqip_qip_basic_quota_handles, x_ntqip_qip_debug_protocol_invalid, x_ntqip_qip_image_session_peb, x_ntqip_qip_mitigation_policy_job_energy, x_ntqip_qip_sched_security
 
 ## Determinism
 
